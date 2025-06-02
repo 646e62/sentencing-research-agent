@@ -1,0 +1,214 @@
+* 1: planning and design
+** 1.1: define scope and objectives
+- The objective is to create a tool that will extract sentencing data from a reported criminal sentencing decision
+- The tool will be used to extract sentencing data from all levels of criminal court in Canada and from all jurisdictions
+** 1.2: understand sentencing details
+- Types of sentence
+- Keywords & phrases associated with sentencing
+** 1.3: review judgment structure
+- Examine sentencing decisions to find
+  - Common locations for charge information (beginning of the judgment, typically)
+  - Common patterns for sentencing data location (beginning & end of the judgment, typically)
+  - Common location for extraneous information that can get confused for valid sentencing data
+    - Prior criminal convictions and sentences
+    - Sentencing data from cases the court considers
+- Track paragraph numbers
+** 1.4: LangChain vs LangGraph
+- Decide whether to use LangChain or LangGraph
+- The project proposal suggests LangChain is likely enough, but contemplates experimenting with LangGraph as well
+** 1.5: outline agent behaviour
+- Define how the agent will operate
+  - Extract decision data from HTML
+  - Determine whether the case is an appeal
+    - If the court level is provincial, it is not an appeal
+    - If the court level is court of appeal or supreme court, it is an appeal
+    - If the court level is superior court, it might be an appeal and should be analyzed to determine if that's true
+  - Identifies the names of the offenders sentenced
+  - Identify the offences the offender was convicted of
+  - Match the offences to the correct code
+  - Identify the offence date
+  - Identify the quantum the offender received for each sentence
+  - Cite the paragraph numbers and sentence(s) relied on for each evaluation
+  - Convert sentence quantums to days
+- Define whether the agent requires memory
+  - I've run a few quick tests with GPT4.1-mini to see how it handles
+  - At this stage, it looks like giving the agent some memory would be useful
+** 1.6: data outputs and citation formatting
+- Each sentence received should be conceptually treated as a separate object with the following attributes
+  - case_id: str
+  - offender_name: str
+  - offence_code: str
+  - offence_date
+  - sentence_imposed: list of tuples
+    - tuples:
+      - penalty: str
+      - quantum: float
+      - quantum_type: str (ie days, months, and years)
+      - mode: str (consecutive, concurrent, or unspecified)
+    - required for offences where an offender receives multiple penalties for the same offence (eg, jail plus probation)
+  - Citation data for
+    - offender_name
+    - offence_code
+    - offence_date
+    - sentence
+  - Appeal information:
+    - is_appeal: Bool
+    - dissent: Bool
+    - lower_court_sentence_varied: Bool
+    - higher_court_varied_sentence: Bool
+  - Timestamps
+    - time_analysis_started
+    - time_analysis_stopped
+  - Testing
+    - human_verified: Bool
+    - human_modified: Bool
+* 2: environment and setup
+** 2.1: Python environment setup
+- Create a new venv with the required libraries
+  - LangChain
+  - LangGraph
+  - LLM APIs (OpenAI, HuggingFace)
+  - BeautifulSoup
+- Ensure the LangChain version supports tool calling and extraction chains
+** 2.2: install and setup PostgreSQL
+- Follow a tutorial or use code assistance to setup PostgreSQL locally
+** 2.3: database configuration
+- Create a database and a user
+- Password protect it
+- Document connection info
+  - Host
+  - Port
+  - Name
+  - User/password
+- Install a GUI (pgAdmin, DBeaver) for data inspection
+** 2.4: Python DB libraries
+- Install psycopg2 (or psycopg2-binary)
+- Write a short test script that uses psycopg2.connect() to the new database and runs a simple query (e.g., SELECT version();) to confirm the connection works
+** 2.5: database schema setup
+- Setup a table `sentences` with columns for:
+  - uid (case_citation + offender + offence_code + count)
+  - count
+  - case_citation
+  - offender
+  - offence_code
+  - sentence_type
+  - sentence_quantum
+  - citation_paragraph
+  - citation_text
+  - timestamps
+** 2.6: Firefox extension boilerplate
+- Create a manifest.json file with the necessary fields (eg, name, description, version, etc)
+- Configure the content_scripts so that the extension verifies the domain
+  - Consider whether script injection is necessary to do so
+- Configure the extension to convert the page's text content into markdown format
+* 3: frontend browser extension development
+** 3.1: content script implementation
+- Write the content script to gather HTML content and convert it into markdown text
+  - One option is document.documentElement.innerHTML
+  - The other is to use DOM methods to extract the text of all paragraphs
+** 3.2: messaging vs data transfer
+- Determine how to send page data to the background script by using either:
+  - A direct API call from content scripts
+    - Send the content to a backend API
+    - Ensure CORS permissions are handled by adding the API URL into the manifest.json file
+  - Via background scripts
+** 3.3: user interface trigger
+- Browser action icon that runs the program when clicked or triggered by a keyboard shortcut
+  - Suggest either browser.tabs.executeScript or browser.runtime.sendMessage
+** 3.4: display results to the user
+- Browser action icon opens a new window or tab to provide the user with the information
+- The new window displays feedback as the program executes its steps
+- The new window displays the results in a human-readable format
+- The window provides the user with an option of downloading the sentencing info in one format or another
+* 4: LangChain agent extraction logic
+** 4.1: HTML parsing strategy
+- Extract text using bs4 or something similar
+- Check some of the other repos to try to reuse some other HTML to markdown tools I've used in the past
+** 4.2: select LLM and API
+- OpenAI's GPT-4.1-mini or -nano for now
+- Try out open or local LLMs in future or production versions
+** 4.3: prompt design for extraction
+- Create prompts to extract the required info
+  - E.g.: "You are a legal analysis assistant. Extract sentencing information (sentence type and duration/amount) from the following court decision. Provide the output as: Sentence Type, Sentence Quantum, and a direct quote from the decision with its paragraph number."
+- Consider using few-shot prompting to guide the model
+- Emphasize that if information isn't present, it shouldn't be included
+- The model should be reminded not to hallucinate
+** 4.4: structured output schema
+- Use LangChain's output processor to have the LLM return a JSON file that fits the data schemata outlined above
+- Consider outlining a Pydantic model with fields like sentence_type: Optional[str] and sentence_duration: Optional[str] with descriptions (e.g. "Type of sentence (imprisonment, probation, fine, etc)", "Quantum of sentence (duration or amount)")
+** 4.5: handling large texts
+- Given the large model context that the test LLM has (1M context window) at a relatively affordable price ($0.4USD/1M) and the relatively small length of most sentencing decisions, large texts should not be an issue for all but the most unusual cases
+- The issue should be addressed but it isn't urgent
+** 4.6: LangChain chains & tools
+- Build the extraction logic as a LangChain chain or agent
+- One approach is to get the input text, send a prompt, and parse the output
+- Another approach is to use LangChain's extraction chain with tool calling
+  - Consider the tutorial at https://python.langchain.com/docs/tutorials/extraction/#:~:text=In%20this%20tutorial%2C%20we%20will,this%20context%20to%20improve%20performance
+- If multiple steps appear necessary, consider using LangGraph or a sequential chain
+- Aim for simplicity: one well-crafted prompt can likely handle the whole job
+** 4.7: incorporate citations
+- Ensure that the model cites its sources, including the paragraph number and the text the model use to draw its conclusion
+- This makes it easier for human auditors to verify the model's results
+* 5: backend integration and data storage
+** 5.1: setup an API endpoint
+- Develop a small web service that the browser extension can talk to
+- Flask or FastAPI are possible solutions
+- Define an endpoint that accepts the markdown text
+- Run the LangChain agent with the service
+- Doing so "decouples the browser UI from the heavy LLM processing, and is more secure (no API keys in the extension code)."
+** 5.2: integrate LangChain into the backend
+- Call the LangChain agent developed in 4.6
+- Ensure the model is wrapped with error handling to account for failure or timing out
+- Structure the response as JSON to return to the extension
+** 5.3: database insert
+- Using either psycopg2 or SQLAlchemy insert the extracted record into PostgreSQL
+- Prepare an INSERT statement or use an ORM model save
+** 5.4: database code
+- Use a context manager to open a psycopg2 connection and cursor
+- Parameterize the INSERT to avoid SQL injection
+- Handle exceptions with try-except pairs
+- Log errors
+- After integration, run the end-to-end flow: content script -> backend -> DB, and verify the new row is added
+** 5.5: citation storage
+- Use the citation_parser to gather case data from the CanLII citation
+- Setup backend CanLII API for this purpose
+* 6: testing and validation
+** 6.1: unit tests for parsing and extraction
+- Test the HTML parsing and extraction logic on sample data
+- Use some example cases from different court types to test the results
+- Verify that the model cites actual text and is not hallucinating
+** 6.2: integration testing (extension & backend)
+- Test the browser extension and observe the end-to-end flow
+- Check backend logs to make sure that requests are received and processed
+- Compare display info with recorded results
+- Run the analysis on cases from every court level and jurisdiction
+** 6.3: database verification
+- Ensure that the extraction report was successfully written to the database
+  - All fields populated
+  - No truncation issues with text lengths
+** 6.4: edge case testing
+- Check non-sentencing cases like trial decisions or unrelated appeals
+- Test cases with multiple counts, multiple offenders
+- Verify that consecutive/concurrent functionality is working as expected
+** 6.5: performance checks
+- Check how long analyses are taking
+* 7: documentation and next steps
+** 7.1: user documentation
+- Write a brief guide on how to use the extension
+- Provide installation instructions for setting up the backend
+- Provide operational instructions
+- Mention prerequisites (API keys, backend needs to be running)
+** 7.2: developer documentation
+- Document the system design and code structure
+- Explain the LangChain chain and prompts
+- Explain the extension messaging
+- Explain the database format
+- Include instructions for setting up the database schema
+** 7.3: PostgreSQL familiarization
+- Get familiar with PostgreSQL
+** 7.4: potential enhancements
+- List potential improvements
+** 7.5: milestone: functional MVP
+- MVP: a Firefox extension + backend service that allows a user to click a button on a CanLII case and receive the sentencing info with a citation. The data gets saved to PostgreSQL for later use. 
+** 7.6: resources and libraries recap
+- Reassess the resources used and resources available for other projects

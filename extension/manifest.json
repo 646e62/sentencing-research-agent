@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Sentencing Research Agent",
+  "version": "0.1",
+  "description": "Analyzes sentencing data from Canadian court decisions.",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/icon48.png",
+    "default_title": "Extract Sentencing Data"
+  },
+  "web_accessible_resources": [
+    "icons/icon48.png",
+    "icons/icon128.png"
+  ]
+}
