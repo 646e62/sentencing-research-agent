@@ -24,8 +24,12 @@ def extract_markdown(payload: HTMLPayload):
     markdown = html_to_markdown(payload.html)
     cleaned_markdown = clean_header(markdown)
     header, body = split_header_and_body(cleaned_markdown)
+    # Split body into paragraphs
+    body_paragraphs = [p.strip() for p in body.split("\n__\n") if p.strip()]
+    statistics = {"paragraph_count": len(body_paragraphs)}
     return {
         "cleaned_header": header,
-        "body": body
+        "body_paragraphs": body_paragraphs,
+        "statistics": statistics
     }
 

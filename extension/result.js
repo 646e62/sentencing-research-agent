@@ -11,11 +11,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         } catch (e) {
             // fallback for old format
         }
-        if (data && data.cleaned_header !== undefined && data.body !== undefined) {
+        if (data && data.cleaned_header !== undefined && Array.isArray(data.body_paragraphs)) {
+            let statsHtml = '';
+            if (data.statistics && typeof data.statistics.paragraph_count === 'number') {
+                statsHtml = `<div><b>Statistics:</b></div><div>Paragraph count: ${data.statistics.paragraph_count}</div><hr>`;
+            }
+            let paragraphsHtml = data.body_paragraphs.map(p => `<p>${p.replace(/</g, '&lt;')}</p>`).join('');
             contentDiv.innerHTML = `
+                ${statsHtml}
                 <div><b>Cleaned Header:</b></div><pre>${data.cleaned_header.replace(/</g, '&lt;')}</pre>
                 <hr>
-                <div><b>Body:</b></div><pre>${data.body.replace(/</g, '&lt;')}</pre>
+                <div><b>Body Paragraphs:</b></div>${paragraphsHtml}
             `;
             await browser.storage.local.remove('markdown_result');
         } else if (result.markdown_result) {
