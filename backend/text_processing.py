@@ -50,21 +50,15 @@ def clean_header(header: str) -> str:
     return header[start_pos:].strip()
 
 def split_header_and_body(text: str, target_string: str = "\n__\n") -> Tuple[str, str]:
-    """Split text into header and body at the second occurrence of target_string."""
+    """Split text into header and body at the first occurrence of target_string."""
     first_occurrence = text.find(target_string)
     if first_occurrence == -1:
         return "", text  # No header found
-        
-    second_occurrence = text.find(target_string, first_occurrence + 1)
-    if second_occurrence == -1:
-        return "", text  # No second occurrence found
-        
     # Get the raw header and clean it
-    raw_header = text[:second_occurrence].strip()
+    raw_header = text[:first_occurrence].strip()
     header = clean_header(raw_header)
-    
     # Get the body
-    body = text[second_occurrence + len(target_string):].strip()
+    body = text[first_occurrence + len(target_string):].strip()
     return header, body
 
 def extract_citation(header: str) -> str:

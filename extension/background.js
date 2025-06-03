@@ -49,8 +49,8 @@ browser.runtime.onMessage.addListener(async (message, sender) => {
             }
             const data = await response.json();
             console.log("[Sentencing Research Agent] Received data from backend:", data);
-            // Save markdown to storage
-            await browser.storage.local.set({ markdown_result: data.markdown });
+            // Save full backend response (including cleaned_markdown) as JSON string
+            await browser.storage.local.set({ markdown_result: JSON.stringify(data) });
             const url = browser.runtime.getURL("result.html");
             console.log("[Sentencing Research Agent] Opening result.html as popup window...");
             // Close previous popup if it exists

@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from bs4 import BeautifulSoup
-from backend.text_processing import html_to_markdown, extract_citation, get_metadata_from_citation
+from backend.text_processing import html_to_markdown, extract_citation, get_metadata_from_citation, clean_header, split_header_and_body
 
 app = FastAPI()
 
@@ -20,7 +20,12 @@ class HTMLPayload(BaseModel):
 
 @app.post("/extract-markdown")
 def extract_markdown(payload: HTMLPayload):
-    """Convert HTML to Markdown using html_to_markdown utility."""
+    """Convert HTML to Markdown, split into cleaned header and body."""
     markdown = html_to_markdown(payload.html)
-    return {"markdown": markdown}
+    cleaned_markdown = clean_header(markdown)
+    header, body = split_header_and_body(cleaned_markdown)
+    return {
+        "cleaned_header": header,
+        "body": body
+    }
 
