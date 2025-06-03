@@ -27,7 +27,13 @@ def extract_markdown(payload: HTMLPayload):
     # Split body into paragraphs
     body_paragraphs = [p.strip() for p in body.split("\n__\n") if p.strip()]
     statistics = {"paragraph_count": len(body_paragraphs)}
+    # Extract citation (first line of cleaned header, remove leading '# ')
+    citation_line = header.splitlines()[0].strip() if header else ''
+    citation = citation_line[2:].strip() if citation_line.startswith('# ') else citation_line
+    citation_metadata = get_metadata_from_citation(citation)
     return {
+        "citation": citation,
+        "citation_metadata": citation_metadata,
         "cleaned_header": header,
         "body_paragraphs": body_paragraphs,
         "statistics": statistics
