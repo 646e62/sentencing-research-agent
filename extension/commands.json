@@ -1,0 +1,7 @@
+[
+  {
+    "command": "_execute_browser_action",
+    "description": "Extract sentencing data",
+    "shortcut": "Ctrl+Shift+X"
+  }
+]

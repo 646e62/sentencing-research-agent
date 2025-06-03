@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <g stroke="#000" stroke-width="3" fill="none">
+    <!-- Gavel handle -->
+    <rect x="36" y="40" width="20" height="6" rx="2" fill="#fff"/>
+    <!-- Gavel head -->
+    <rect x="18" y="28" width="18" height="8" rx="2" fill="#fff"/>
+    <!-- Gavel base -->
+    <rect x="10" y="54" width="44" height="4" rx="2" fill="#fff"/>
+  </g>
+</svg>
