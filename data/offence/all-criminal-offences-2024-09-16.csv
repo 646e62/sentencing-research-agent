@@ -1,0 +1,619 @@
+section,offence_name,minimum_indictable,maximum_indictable,minimum_sc,maximum_sc
+cc_46(1),high treason,255y,255y,,
+cc_46(2),treason,255y,255y,,
+cc_50(1)(a),assisting alien enemy to leave canada,,14y,,
+cc_50(1)(b),omitting to prevent treason,,14y,,
+cc_51,intimidating parliament or legislature,,14y,,
+cc_52,sabotage,,10y,,sc
+cc_52.1,sabotage — essential infrastructure,,10y,,sc
+cc_52.2,sabotage — device,,10y,,
+cc_53,inciting to mutiny,,14y,,
+cc_54,assisting deserter,,,,sc
+cc_56,offences in relation to members of rcmp,,,,sc
+cc_56.1,identity documents,,5y,,sc
+cc_57(1),forgery of or uttering forged passport,,14y,,
+cc_57(2),false statement in relation to passport,,2y,,sc
+cc_57(3),possession of forged passport,,5y,,sc
+cc_58,fraudulent use of certificate of citizenship,,2y,,sc
+cc_61,sedition,,14y,,
+cc_62,offences in relation to military forces,,5y,,sc
+cc_65(1),riot,,2y,,sc
+cc_65(2),riot — concealment of identity,,10y,,sc
+cc_66(1),unlawful assembly,,,,sc
+cc_66(2),unlawful assembly — concealment of identity,,5y,,sc
+cc_68,offences related to proclamation,,255y,,
+cc_69,neglect by peace officer,,2y,,sc
+cc_70,contravening an order in council,,5y,,sc
+cc_72(1),forcible entry,,2y,,sc
+cc_72(2),forcible detainer,,2y,,sc
+cc_74,piracy,,255y,,
+cc_75,piratical acts,,14y,,
+cc_76,hijacking,,255y,,
+cc_77,endangering safety of aircraft or airport,,255y,,
+cc_78,offensive weapons and explosive substances,,14y,,
+cc_78.1(1),seizing control of ship or fixed platform,,255y,,
+cc_78.1(2),endangering safety of ship or fixed platform,,255y,,
+cc_78.1(3),false communication,,255y,,
+cc_78.1(4),threats causing death or injury,,255y,,
+cc_80(a),breach of duty re explosive — causing death,,255y,,
+cc_80(b),breach of duty re explosive — causing bodily harm,,14y,,
+cc_81(1)(a),using explosives likely to cause serious harm,,255y,,
+cc_81(1)(b),handling explosives with harmful intent,,255y,,
+cc_81(1)(c),handling explosives with intent to damage property,,14y,,
+cc_81(1)(d),making or possessing explosives with harmful intent,,14y,,
+cc_82(1),possessing explosives,,5y,,sc
+cc_82(2),possessing explosives — criminal organization,,14y,,
+cc_82.3,possessing radioactive materials or devices,,255y,,
+cc_82.4,using radioactive materials or devices,,255y,,
+cc_82.5,commit indictable offence — radioactive materials,,255y,,
+cc_82.6,threatening to commit a radioactive materials offence,,14y,,
+cc_83,prize fighting,,,,sc
+cc_83.02,collecting property for terrorist activities,,10y,,
+cc_83.03(1),providing property or services for terrorist purposes,,10y,,
+cc_83.03(2),providing property or services for use by a terrorist group,,10y,,
+cc_83.04,using or possessing property for terrorist purposes,,10y,,
+cc_83.08,dealing with terrorist property,,10y,,100000&729d
+cc_83.1,failure to disclose terrorist property,,10y,,100000&729d
+cc_83.11,failure to audit for listed terrorist entities,,10y,,100000&729d
+cc_83.18,participate in terrorist group activity,,10y,,
+cc_83.181,leaving canada to participate in terrorist group activity,,10y,,
+cc_83.19,facilitating terrorist activity,,14y,,
+cc_83.191,leaving canada to facilitate terrorist activity,,14y,,
+cc_83.2,commit indictable offence — benefit terrorist group,,255y,,
+cc_83.201,leave canada to commit offence for terrorist group,,255y,,
+cc_83.202,leaving canada to commit offence that is terrorist activity,,14y,,
+cc_83.21,instructing to carry out activity for terrorist group,,255y,,
+cc_83.22,instructing to carry out terrorist activity,,255y,,
+cc_83.221,counselling commission of terrorism offence,,5y,,
+cc_83.23(1)(a),concealing person who carried out terrorist activity — commit offence punishable by 255y,,14y,,
+cc_83.23(1)(b),concealing person who carried out terrorist activity — other,,10y,,
+cc_83.23(2),concealing person who is likely to carry out terrorist activity,,10y,,
+cc_83.231(2),hoax — terrorist activity,,5y,,sc
+cc_83.231(3),hoax causing bodily harm — terrorist activity,,10y,,sc
+cc_83.231(4),hoax causing death — terrorist activity,,255y,,
+cc_83.27,terrorist activity,,255y,,
+cc_85(1),using firearm in commission of offence,,14y,,
+cc_85(2),using imitation firearm in commission of offence,,14y,,
+cc_86(1),careless use of firearm,,2y,,sc
+cc_86(2),contravention of storage regulations — firearm,,2y,,sc
+cc_87,pointing a firearm,,5y,,sc
+cc_88,possesion of weapon for dangerous purpose,,10y,,sc
+cc_89,carrying weapon while attending public meeting,,,,sc
+cc_90,carrying concealed weapon,,5y,,sc
+cc_91(1),unauthorized possession of firearm,,5y,,sc
+cc_91(2),unauthorized possession of prohibited weapon or restricted weapon,,5y,,sc
+cc_92(1),possession of firearm knowing its possession is unauthorized,,10y,,
+cc_92(2),possession of prohibited weapon device or ammunition knowing its possession is unauthorized,,10y,,
+cc_93,possession at unauthorized place,,5y,,sc
+cc_94,unauthorized possession in motor vehicle,,10y,,sc
+cc_95,possession of prohibited or restricted firearm with ammunition,,14y,,sc
+cc_96,possession of weapon obtained by commission of offence,,14y,,sc
+cc_98,breaking and entering to steal firearm,,255y,,
+cc_98.1,robbery to steal firearm,,255y,,
+cc_99(2)#1,weapons trafficking — firearm — first offence,3y,14y,,
+cc_99(2)#s,weapons trafficking — firearm — subsequent offence,5y,14y,,
+cc_99(3),weapons trafficking — other,,14y,,
+cc_100(2)#1,possession for purpose of weapons trafficking — firearm — first offence,3y,14y,,
+cc_100(2)#s,possession for purpose of weapons trafficking — firearm — subsequent offence,5y,14y,,
+cc_100(3),possession for purpose of weapons trafficking — other,,14y,,
+cc_101,transfer without authority,,5y,,sc
+cc_102,making automatic firearm,1y,10y,,sc
+cc_102.1,possession or distribution of computer data — firearm manufacture,,10y,,sc
+cc_103(2)#1,importing or exporting knowing it is unauthorized — firearm — first offence,3y,14y,,
+cc_103(2)#s,importing or exporting knowing it is unauthorized — firearm — subsequent offence,5y,14y,,
+cc_103(3),importing or exporting knowing it is unauthorized — other,,14y,,
+cc_104,importing or exporting knowing it is unauthorized — firearm,,5y,,sc
+cc_104.1,altering cartridge magazine,,5y,,sc
+cc_105,losing or finding — firearm,,5y,,sc
+cc_106,destroying — firearm,,5y,,sc
+cc_107,false statements — firearm,,5y,,sc
+cc_108,tampering with serial number,,5y,,sc
+cc_117.01,possession contrary to order,,10y,,sc
+cc_119,bribery of judicial officers,,14y,,
+cc_120,bribery of officers,,14y,,
+cc_121,frauds on the government,,5y,,sc
+cc_121.1,selling tobacco products and raw leaf tobacco,,5y,,sc
+cc_122,breach of trust by public officer,,5y,,sc
+cc_123,municipal corruption,,5y,,
+cc_123(1),municipal corruption,,,,sc
+cc_123(2),influencing municipal official,,5y,,sc
+cc_124,selling or purchasing office,,5y,,sc
+cc_125,influencing or negotiating appointments or dealing in offices,,5y,,sc
+cc_126,disobeying a statute,,2y,,sc
+cc_127,disobeying order of court,,2y,,sc
+cc_128,misconduct of officers executing process,,2y,,sc
+cc_129,offences relating to public or peace officer,,2y,,sc
+cc_130,personating peace officer,,5y,,sc
+cc_132,perjury,,14y,,
+cc_134,false statement,,,,sc
+cc_136,witness giving contradictory evidence,,14y,,
+cc_137,fabricating evidence,,14y,,
+cc_138,offences relating to affidavits,,14y,,
+cc_139(1),obstructing justice — surety indemnity,,2y,,sc
+cc_139(2),obstructing justice — other,,10y,,sc
+cc_140,public mischief,,5y,,sc
+cc_141,compounding indictable offence,,2y,,sc
+cc_142,corruptly taking reward for recovery of goods,,5y,,sc
+cc_144,prison breach,,10y,,sc
+cc_145(1),escape and being at large without excuse,,2y,,sc
+cc_145(2),failure to attend court or surrender,,2y,,sc
+cc_145(3),failure to comply with appearance notice or summons,,2y,,sc
+cc_145(4),failure to comply with undertaking,,2y,,sc
+cc_145(5),failure to comply with order,,2y,,sc
+cc_146,permitting or assisting escape,,14y,,sc
+cc_147,rescue or permitting escape,,5y,,sc
+cc_148,assisting prisoner of war to escape,,5y,,sc
+cc_151,sexual interference,1y,14y,90d,729d
+cc_152,invitation to sexual touching,1y,14y,90d,729d
+cc_153(1)(a),sexual exploitation — touching,1y,14y,90d,729d
+cc_153(1)(b),sexual exploitation — invitation to touching,1y,14y,90d,729d
+cc_153.1,sexual exploitation of person with disability,,10y,,sc
+cc_155#1,incest — under 16,5y,14y,,
+cc_155#2,incest — other,,14y,,
+cc_160(1),bestiality,,10y,,sc
+cc_160(2),compelling the commission of bestiality,,10y,,sc
+cc_160(3),bestiality in presence of or by child,1y,14y,6m,sc
+cc_161(4),failure to comply with 161 order,,4y,,sc
+cc_162(1),voyeurism,,5y,,sc
+cc_162(4),printing publication of voyeuristic recordings,,5y,,sc
+cc_162.1,publication of an intimate image without consent,,5y,,sc
+cc_162.2(4),failure to comply with prohibition order,,4y,,sc
+cc_163,obscene materials,,2y,,sc
+cc_163.1(2),making child pornography,1y,14y,,
+cc_163.1(3),distribution of child pornography,1y,14y,,
+cc_163.1(4),possession of child pornography,1y,10y,6m,729d
+cc_163.1(4.1),accessing child pornography,1y,10y,6m,729d
+cc_167,immoral theatrical performance,,2y,,sc
+cc_168,mailing obscene matter,,2y,,sc
+cc_170,parent or guardian procuring sexual activity,1y,14y,,
+cc_171,householder permitting sexual activity,1y,14y,,
+cc_171.1,making sexually explicit material available to child,6m,14y,90d,729d
+cc_172,corrupting children,,2y,,sc
+cc_172.1,luring a child,1y,14y,6m,729d
+cc_172.2,agreement or arrangement — sexual offence against child,1y,14y,6m,729d
+cc_173(1),indecent acts,,2y,,sc
+cc_173(2),exposure,90,2y,30,6m
+cc_174,nudity,,,,sc
+cc_175,cause disturbance,,,,sc
+cc_176,obstructing or violence to or arrest of officiating clergyman,,2y,,sc
+cc_177,trespassing at night,,,,sc
+cc_180,common nuisance,,2y,,sc
+cc_182,dead body,,5y,,sc
+cc_184,interception,,5y,,sc
+cc_184.5,interception of radio-based telephone,,5y,,sc
+cc_191,possession — private communication interception device,,2y,,sc
+cc_193,disclosure of information,,2y,,sc
+cc_193.1,disclosure of information received from interception of radio-based telephone communications,,2y,,sc
+cc_201(1),keeping gaming or betting house,,2y,,sc
+cc_201(2),person found in or owner permitting use,,,,sc
+cc_202#1,betting pool-selling book-making — first offence,,2y,,
+cc_202#2,betting pool-selling book-making — second offence,14d,2y,,
+cc_202#s,betting pool-selling book-making — subsequent offence,3m,2y,,
+cc_203#1,placing bets on behalf of others — first offence,,2y,,
+cc_203#2,placing bets on behalf of others — second offence,14d,2y,,
+cc_203#s,placing bets on behalf of others — subsequent offence,3m,2y,,
+cc_204,contravention — horse racing regulations,,2y,,sc
+cc_206(1),offence in relation to lotteries and games of chance,,2y,,
+cc_206(4),ticket sales in relation to lotteries and games of chance,,,,sc
+cc_207(3)(a),offence — permitted lotteries — unauthorized management or operation,,2y,,sc
+cc_207(3)(b),offence — permitted lotteries — unauthorized participation,,,,sc
+cc_207.1(3)(a),offence — lottery scheme on an international cruise ship — unauthorized management or operation,,2y,,sc
+cc_207.1(3)(b),offence — lottery scheme on an international cruise ship — unauthorized participation,,,,sc
+cc_209,cheating at play,,2y,,sc
+cc_213(1),stopping or impeding traffic — sexual services for consideration,,,,sc
+cc_213(1.1),communicating to provide sexual services for consideration,,,,sc
+cc_215,offence — duty of persons to provide necessaries,,5y,,sc
+cc_218,abandoning child,,5y,,sc
+cc_220(a),criminal negligence causing death — firearm,4y,255y,,
+cc_220(b),criminal negligence causing death — other,,255y,,
+cc_221,criminal negligence causing bodily harm,,10y,,sc
+cc_231(2),murder — first degree,255y,255y,,
+cc_231(7),murder — second degree,255y,255y,,
+cc_236(a),manslaughter — firearm,4y,255y,,
+cc_236(b),manslaughter,,255y,,
+cc_237,infanticide,,5y,,sc
+cc_238,killing unborn child in act of birth,,255y,,
+cc_239(1)(a)#1,attempt to commit murder — restricted or prohibited firearm — first offence,5y,255y,,
+cc_239(1)(a)#s,attempt to commit murder — restricted or prohibited firearm — subsequent offence,7y,255y,,
+cc_239(1)(a.1),attempt to commit murder — firearm,4y,255y,,
+cc_239(1)(b),attempt to commit murder,,255y,,
+cc_240,accessory after the fact to murder,,255y,,
+cc_240.1,removal without informed consent — trafficking in human organs,,14y,,
+cc_241,counselling or aiding suicide,,14y,,
+cc_241.3,failure to comply with safeguards — medical assistance in dying,,5y,,sc
+cc_241.31(4),failure to comply — filing information — medical assistance in dying,,2y,,sc
+cc_241.31(5),failure to comply — regulations — medical assistance in dying,,2y,,sc
+cc_241.4,forgery — medical assistance in dying,,5y,,sc
+cc_242,neglect to obtain assistance in childbirth,,5y,,sc
+cc_243,concealing body of child,,2y,,sc
+cc_244(2)(a)#1,discharging firearm with intent — restricted or prohibited firearm — first offence,5y,255y,,
+cc_244(2)(a)#s,discharging firearm with intent — restricted or prohibited firearm — subsequent offence,7y,255y,,
+cc_244(2)(b),discharging firearm with intent,,14y,,
+cc_244.1,causing bodily harm with intent — air gun or pistol,,14y,,
+cc_244.2(3)(a)#1,discharging firearm — recklessness — restricted or prohibited firearm — first offence,5y,14y,,
+cc_244.2(3)(a)#s,discharging firearm — recklessness — restricted or prohibited firearm — subsequent offence,7y,14y,,
+cc_244.2(3)(b),discharging firearm — recklessness,,14y,,
+cc_245(1)(a),administering noxious thing — intent to cause bodily harm or endanger 255y,,14y,,
+cc_245(1)(b),administering noxious thing — intent to aggrieve or annoy,,2y,,
+cc_246(a),overcoming resistance to commission of offence — choking,,255y,,
+cc_246(b),overcoming resistance to commission of offence — noxious substance,,255y,,
+cc_247(1),traps likely to cause bodily harm,,5y,,sc
+cc_247(2),traps likely to cause bodily harm — causing bodily harm,,10y,,sc
+cc_247(3),traps likely to cause bodily harm — offence-related place,,10y,,sc
+cc_247(4),traps likely to cause bodily harm — offence-related place — causing bodily harm ,,14y,,
+cc_247(5),traps likely to cause bodily harm — death,,255y,,
+cc_248,interfering with transportation facility,,255y,,
+cc_262,impeding attempt to save life,,10y,,sc
+cc_263(3)(c),offences — duty to safeguard opening in ice or excavation on land,,,,sc
+cc_264,criminal harassment,,10y,,sc
+cc_264.1(1)(a),uttering threats — death or bodily harm,,5y,,sc
+cc_264.1(1)(b),uttering threats — damage property,,2y,,sc
+cc_264.1(1)(c),uttering threats — kill animal,,2y,,sc
+cc_266,assault,,5y,,sc
+cc_267(a),assault with a weapon,,10y,,sc
+cc_267(b),assault causing bodily harm,,10y,,sc
+cc_267(c),assault and choking suffocating or strangling,,10y,,sc
+cc_268,aggravated assault,,14y,,
+cc_269,unlawfully causing bodily harm,,10y,,sc
+cc_269.1,torture,,14y,,
+cc_270,assaulting a peace officer,,5y,,sc
+cc_270.01,assaulting a peace officer with a weapon or causing bodily harm,,10y,,sc
+cc_270.02,aggravated assault of a peace officer,,14y,,
+cc_270.1,disarming a peace officer,,5y,,sc
+cc_271(a),sexual assault,,10y,,18m
+cc_271(b),sexual assault — complainant under 16,1y,14y,6m,729d
+cc_272(2)(a)#1,sexual assault with a weapon threats to a third party or causing bodily harm — restricted or prohibited firearm or criminal organization — first offence,5y,14y,,
+cc_272(2)(a)#s,sexual assault with a weapon threats to a third party or causing bodily harm — restricted or prohibited firearm or criminal organization — subsequent offence,7y,14y,,
+cc_272(2)(a.1),sexual assault with a weapon threats to a third party or causing bodily harm — firearm,4y,14y,,
+cc_272(2)(a.2),sexual assault with a weapon threats to a third party or causing bodily harm — complainant under 16,5y,14y,,
+cc_272(2)(b),sexual assault with a weapon threats to a third party or causing bodily harm,,14y,,
+cc_273(2)(a)#1,aggravated sexual assault — restricted or prohibited firearm or criminal organization — first offence,5y,255y,,
+cc_273(2)(a)#s,aggravated sexual assault — restricted or prohibited firearm or criminal organization — subsequent offence,7y,255y,,
+cc_273(2)(a.1),aggravated sexual assault — firearm,4y,255y,,
+cc_273(2)(a.2),aggravated sexual assault — complainant under 16,5y,255y,,
+cc_273(2)(b),aggravated sexual assault,,255y,,
+cc_273.3,removal of child from canada — sexual offences,,5y,,sc
+cc_279(1.1)(a)#1,kidnapping — restricted or prohibited firearm or criminal organization — first offence,5y,255y,,
+cc_279(1.1)(a)#s,kidnapping — restricted or prohibited firearm or criminal organization — subsequent offence,7y,255y,,
+cc_279(1.1)(a.1),kidnapping — firearm,4y,255y,,
+cc_279(1.1)(a.2),kidnapping — complainant under 16,5y,255y,,
+cc_279(1.1)(b),kidnapping,,255y,,
+cc_279(2),forcible confinement,,10y,,sc
+cc_279.01(1)(a),trafficking in persons — additional violent offence,5y,255y,,
+cc_279.01(1)(b),trafficking in persons,,14y,,
+cc_279.011(1)(a),trafficking of a person under the age of eighteen years — additional violent offence,6y,255y,,
+cc_279.011(1)(b),trafficking of a person under the age of eighteen years,5y,14y,,
+cc_279.02(1),material benefit — trafficking,,10y,,sc
+cc_279.02(2),material benefit — trafficking of person under 18 years,2y,14y,,
+cc_279.03(1),withholding or destroying documents — trafficking,,5y,,sc
+cc_279.03(2),withholding or destroying documents — trafficking of person under 18 years,1y,14y,,
+cc_279.1(2)(a)#1,hostage taking — restricted or prohibited firearm or criminal organization — first offence,5y,255y,,
+cc_279.1(2)(a)#s,hostage taking — restricted or prohibited firearm or criminal organization — subsequent offence,7y,255y,,
+cc_279.1(2)(a.1),hostage taking — firearm,4y,255y,,
+cc_279.1(2)(b),hostage taking,,255y,,
+cc_280,abduction of person under age of 16,,5y,,sc
+cc_281,abduction of person under age of 14,,10y,,sc
+cc_282,abduction in contravention of custody or parenting order,,10y,,sc
+cc_283,abduction,,10y,,sc
+cc_286.1(1)(a)(i)#1,obtaining sexual services for consideration — public place — first offence,2000$,5y,1000$,5000&729d
+cc_286.1(1)(a)(i)#s,obtaining sexual services for consideration — public place — subsequent offence,4000$,5y,2000$,5000&729d
+cc_286.1(1)(a)(ii)#1,obtaining sexual services for consideration — first offence,1000$,5y,500$,5000&729d
+cc_286.1(1)(a)(ii)#s,obtaining sexual services for consideration — subsequent offence,2000$,5y,1000$,5000&729d
+cc_286.1(2)#1,obtaining sexual services for consideration from person under 18 years — first offence,6m,10y,,
+cc_286.1(2)#s,obtaining sexual services for consideration from person under 18 years — subsequent offence,1y,10y,,
+cc_286.2(1),material benefit from sexual services,,10y,,sc
+cc_286.2(2),material benefit from sexual services provided by person under 18 years,2y,14y,,
+cc_286.3(1),procuring,,14y,,
+cc_286.3(2),procuring — person under 18 years,5y,14y,,
+cc_286.4,advertising sexual services,,5y,,sc
+cc_291,bigamy,,5y,,sc
+cc_292,procuring feigned marriage,,5y,,sc
+cc_293,polygamy,,5y,,sc
+cc_293.1,forced marriage,,5y,,sc
+cc_293.2,marriage under age of 16 years,,5y,,sc
+cc_294,pretending to solemnize marriage,,2y,,sc
+cc_295,marriage contrary to law,,2y,,sc
+cc_300,libel — publishing libel known to be false,,5y,,sc
+cc_301,libel — publishing defamatory libel,,2y,,sc
+cc_302,libel — extortion,,5y,,sc
+cc_318,advocating genocide,,5y,,
+cc_319(1),public incitement of hatred,,2y,,sc
+cc_319(2),wilful promotion of hatred,,2y,,sc
+cc_319(2.1),wilful promotion of antisemitism,,2y,,sc
+cc_320.102,conversion therapy,,5y,,sc
+cc_320.103,conversion therapy — promoting or advertising,,2y,,sc
+cc_320.104,conversion therapy — material benefit,,2y,,sc
+cc_320.13(1),dangerous operation,,10y,,sc
+cc_320.13(2)#1,dangerous operation — causing bodily harm — first offence,1000$,14y,1000$,5000&729d
+cc_320.13(2)#2,dangerous operation — causing bodily harm — second offence,30d,14y,30d,5000&729d
+cc_320.13(2)#s,dangerous operation — causing bodily harm — subsequent offence,120d,14y,120d,5000&729d
+cc_320.13(3)#1,dangerous operation — causing death — first offence,1000$,255y,,
+cc_320.13(3)#2,dangerous operation — causing death — second offence,30d,255y,,
+cc_320.13(3)#s,dangerous operation — causing death — subsequent offence,120d,255y,,
+cc_320.14(1)#1#a,operation while impaired — first offence,1000$,10y,1000$,5000&729d
+cc_320.14(1)#1#b,operation while impaired — first offence — BAC between 120mg and 160mg,1500$,10y,1500$,5000&729d
+cc_320.14(1)#1#c,operation while impaired — first offence — BAC over 160mg,2000$,10y,2000$,5000&729d
+cc_320.14(1)#2,operation while impaired — second offence,30d,10y,30d,5000&729d
+cc_320.14(1)#s,operation while impaired — subsequent offence,120d,10y,120d,5000&729d
+cc_320.14(2)#1,operation while impaired — causing bodily harm — first offence,1000$,14y,1000$,5000&729d
+cc_320.14(2)#2,operation while impaired — causing bodily harm — second offence,30d,14y,30d,5000&729d
+cc_320.14(2)#s,operation while impaired — causing bodily harm — subsequent offence,120d,14y,120d,5000&729d
+cc_320.14(3)#1,operation while impaired — causing death — first offence,1000$,255y,,
+cc_320.14(3)#2,operation while impaired — causing death — second offence,30d,255y,,
+cc_320.14(3)#s,operation while impaired — causing death — subsequent offence,120d,255y,,
+cc_320.14(4),operation while impaired — low blood drug concentration,,,,1000$
+cc_320.15(1)#1,failure or refusal to comply with demand — first offence,2000$,10y,1000$,5000&729d
+cc_320.15(1)#2,failure or refusal to comply with demand — second offence,30d,10y,30d,5000&729d
+cc_320.15(1)#s,failure or refusal to comply with demand — subsequent offence,120d,10y,120d,5000&729d
+cc_320.15(2)#1,failure or refusal to comply with demand — accident resulting in bodily harm — first offence,1000$,10y,1000$,5000&729d
+cc_320.15(2)#2,failure or refusal to comply with demand — accident resulting in bodily harm — second offence,30d,10y,30d,5000&729d
+cc_320.15(2)#s,failure or refusal to comply with demand — accident resulting in bodily harm — subsequent offence,120d,10y,120d,5000&729d
+cc_320.15(3)#1,failure or refusal to comply with demand — accident resulting in death — first offence,1000$,255y,,
+cc_320.15(3)#2,failure or refusal to comply with demand — accident resulting in death — second offence,30d,255y,,
+cc_320.15(3)#s,failure or refusal to comply with demand — accident resulting in death — subsequent offence,120d,255y,,
+cc_320.16(1),failure to stop after accident,,10y,,sc
+cc_320.16(2)#1,failure to stop after accident — accident resulting in bodily harm — first offence,1000$,10y,1000$,5000&729d
+cc_320.16(2)#2,failure to stop after accident — accident resulting in bodily harm — second offence,30d,10y,30d,5000&729d
+cc_320.16(2)#s,failure to stop after accident — accident resulting in bodily harm — subsequent offence,120d,10y,120d,5000&729d
+cc_320.16(3)#1,failure to stop after accident — accident resulting in death — first offence,1000$,255y,,
+cc_320.16(3)#2,failure to stop after accident — accident resulting in death — second offence,30d,255y,,
+cc_320.16(3)#s,failure to stop after accident — accident resulting in death — subsequent offence,120d,255y,,
+cc_320.17,flight from peace officer,,10y,,sc
+cc_320.18,operation while prohibited,,10y,,sc
+cc_327,possession of device to obtain telecommunication facility or service,,2y,,sc
+cc_333.1(1)#1,motor vehicle theft,,10y,,sc
+cc_333.1(1)#s,motor vehicle theft — third or subsequent offence,6m,10y,,
+cc_333.1(3),motor vehicle theft — violence used threatened or attempted,,14y,,
+cc_333.1(4),motor vehicle theft — criminal organization,,14y,,
+cc_333.2(1),possession of device for purpose of committing theft,,10y,,sc
+cc_333.2(2),distribution of device linked to theft,,10y,,sc
+cc_334(a),theft over $5000,,10y,,sc
+cc_334(b),theft under $5000,,2y,,sc
+cc_335,taking motor vehicle or vessel or found therein without consent,,,,sc
+cc_336,criminal breach of trust,,14y,,
+cc_338(1),fraudulently taking cattle or defacing brand,,5y,,sc
+cc_338(2),theft of cattle,,10y,,sc
+cc_339(1),taking possession of drift timber,,5y,,sc
+cc_339(2),dealer in second-hand goods — registered lumbering equipment,,,,sc
+cc_340,destroying documents of title,,10y,,sc
+cc_341,fraudulent concealment,,2y,,sc
+cc_342(1),theft forgery of credit card,,10y,,sc
+cc_342(3),unauthorized use of credit card data,,10y,,sc
+cc_342.01,instruments for copying credit card data or forging or falsifying credit cards,,10y,,sc
+cc_342.1,unauthorized use of computer,,10y,,sc
+cc_342.2,possession of device to obtain unauthorized use of computer system or commit mischief,,2y,,sc
+cc_344(1)(a)#1,robbery — restricted or prohibited firearm or criminal organization — first offence,5y,255y,,
+cc_344(1)(a)#s,robbery — restricted or prohibited firearm or criminal organization — subsequent offence,7y,255y,,
+cc_344(1)(b),robbery,,255y,,
+cc_345,stopping mail with intent,,255y,,
+cc_346(1.1)(a)#1,extortion — restricted or prohibited firearm or criminal organization — first offence,5y,255y,,
+cc_346(1.1)(a)#s,extortion — restricted or prohibited firearm or criminal organization — subsequent offence,7y,255y,,
+cc_346(1.1)(b),extortion,,255y,,
+cc_347,criminal interest rate,,5y,,25000&729d
+cc_348(1)(d),breaking and entering with intent committing offence or breaking out — dwelling-house,,255y,,
+cc_348(1)(e),breaking and entering with intent committing offence or breaking out — non-dwelling-house,,10y,,
+cc_349,being unlawfully in dwelling-house,,10y,,sc
+cc_351(1),possession of break-in instrument,,10y,,sc
+cc_351(2),disguise with intent,,10y,,sc
+cc_352,possession of instruments for breaking into coin-operated or currency exchange devices,,2y,,sc
+cc_353,selling automobile master key,,2y,,sc
+cc_353.1,tampering with vehicle identification number,,5y,,sc
+cc_355(a),possessing property obtained by crime — over $5000,,10y,,sc
+cc_355(b),possessing property obtained by crime — under $5000,,2y,,sc
+cc_355.5(a),possessing or trafficking in property obtained by crime — over $5000,,14y,,
+cc_355.5(b),possessing or trafficking in property obtained by crime — under $5000,,5y,,sc
+cc_356,theft from mail,,10y,,sc
+cc_357,bringing into canada property obtained by crime,,10y,,sc
+cc_362(2)(a),false pretence or false statement — theft over $5000,,10y,,sc
+cc_362(2)(b),false pretence or false statement — theft under $5000,,2y,,sc
+cc_362(3),false pretence or false statement — other,,10y,,sc
+cc_363,obtaining execution of valuable security by fraud,,5y,,sc
+cc_364,fraudulently obtaining food beverage or accommodation,,,,sc
+cc_367,forgery,,10y,,sc
+cc_368,use traffkcing or possession of forged document,,10y,,sc
+cc_368.1,forgery instruments,,14y,,sc
+cc_369,exchequer bill paper public seals,,14y,,
+cc_372(1),false information,,2y,,sc
+cc_372(2),indecent communications,,2y,,sc
+cc_372(3),harassing communications,,2y,,sc
+cc_374,draw document without authority,,14y,,
+cc_375,obtaining by instrument based on forged document,,14y,,
+cc_376(1),counterfeiting stamp,,14y,,
+cc_376(2),counterfeiting mark,,14y,,
+cc_377,damaging documents,,5y,,sc
+cc_378,offences in relation to registers,,5y,,sc
+cc_380(1)(a),fraud — over $5000,,14y,,
+cc_380(1)(b),fraud — under $5000,,2y,,sc
+cc_380(1.1),fraud — over $1000000,2y,14y,,
+cc_380(2),fraud — affecting public market,,14y,,
+cc_380.2,failure to comply with prohibition order,,2y,,sc
+cc_381,using mails to defraud,,2y,,sc
+cc_382,fraudulent manipulation of stock exchange transactions,,10y,,sc
+cc_382.1(1),prohibited insider trading,,10y,,sc
+cc_382.1(2),prohibited insider trading — tipping,,5y,,sc
+cc_383,gaming in stocks or merchandise,,5y,,sc
+cc_384,broker reducing stock by selling for their own account,,5y,,sc
+cc_385,fraudulent concealment of title documents,,2y,,sc
+cc_386,fraudulent registration of title,,5y,,sc
+cc_387,fraudulent sale of real property,,2y,,sc
+cc_388,misleading receipt,,2y,,sc
+cc_389,fraudlent disposal of goods on which money advanced,,2y,,sc
+cc_390,fraudulent receipts under bank act,,2y,,sc
+cc_391(1),trade secret,,14y,,sc
+cc_391(2),trade secret — prior knowledge,,14y,,sc
+cc_392,disposal of property to defraud creditors,,2y,,sc
+cc_393(1),commit fraud in relation to fares,,2y,,sc
+cc_393(2),enduce fraud in relation to fares,,2y,,sc
+cc_393(3),fraudulently obtaining transportation,,,,sc
+cc_394,fraud in relation to valuable minerals,,5y,,sc
+cc_394.1,possession of stolen or fraudulently obtained valuable minerals,,5y,,sc
+cc_396,offences in relation to mines,,10y,,sc
+cc_397(1),falsification of books and documents,,5y,,sc
+cc_397(2),being privy to falsification of books and documents,,5y,,sc
+cc_398,falsifying employment record,,,,sc
+cc_399,false return by public officer,,5y,,sc
+cc_400,false prospectus,,10y,,sc
+cc_401,obtaining carriabe by false billing,,,,sc
+cc_402.2,theft of or trafficking in identity information,,5y,,sc
+cc_403,identity fraud,,10y,,sc
+cc_405,acknowledging instrument in false name,,5y,,sc
+cc_407,forging trademark,,2y,,sc
+cc_408,passing off,,2y,,sc
+cc_409,instruments for forging trademark,,2y,,sc
+cc_410,other offences in relation to trademarks,,2y,,sc
+cc_411,used goods sold without disclosure,,2y,,sc
+cc_415,offences in relation to wreck,,2y,,sc
+cc_417(1),applying or removing marks without authority,,2y,,sc
+cc_417(2),unlawful transactions in public stores,,2y,,sc
+cc_418(1),selling defective stores to her majesty,,14y,,
+cc_418(2),offences by representatives,,14y,,
+cc_419,unlawful use of military uniforms or certifictes,,,,sc
+cc_420,military stores,,5y,,sc
+cc_422,criminal breach of contract,,5y,,sc
+cc_423,intimidation,,5y,,sc
+cc_423.1,intimidation of a justice system participant or journalist,,14y,,
+cc_423.2,intimidation — health services,,10y,,sc
+cc_424,threat against internationally protected person,,5y,,sc
+cc_424.1,threat against united nations or associated personnel,,10y,,sc
+cc_425,offences by employers,,,,sc
+cc_425.1,threats and retaliation against employees,,5y,,sc
+cc_426,secret commissions,,5y,,sc
+cc_430(2),mischief — endangering 255y,,255y,,
+cc_430(3),mischief — over $5000,,10y,,sc
+cc_430(4),mischief — under $5000,,2y,,sc
+cc_430(4.1),mischief — religious property educational institutions,,10y,,sc
+cc_430(4.11)#1,mischief — war memorials — first offence,1000$,10y,1000$,729d
+cc_430(4.11)#2,mischief — war memorials — second offence,14d,10y,14d,729d
+cc_430(4.11)#s,mischief — war memorials — subsequent offence,30d,10y,30d,729d
+cc_430(4.2),mischief — cultural property,,10y,,sc
+cc_430(5),mischief — computer data,,10y,,sc
+cc_430(5.1),mischief — omitting to prevent mischief to data,,10y,,sc
+cc_431,attack on premises residence or transport of internationally protected person,,14y,,
+cc_431.1,attack on premises residence or transport of united nations or associated personnel,,14y,,
+cc_431.2,explosive or other lethal device,,255y,,
+cc_432(1),unauthorized recording of a movie,,2y,,sc
+cc_432(2),unauthorized recording for purpose of sale,,5y,,sc
+cc_433,arson — disregard for human 255y,,255y,,
+cc_434,arson — damage to property,,14y,,
+cc_434.1,arson — own property,,14y,,
+cc_435,arson — fraudulent purpose,,10y,,sc
+cc_436,arson — negligence,,5y,,sc
+cc_436.1,possession of incendiary material,,5y,,sc
+cc_437,false alarm of fire,,2y,,sc
+cc_438(1),interfering with saving of wrecked vessel,,5y,,sc
+cc_438(2),interfering with saving of wreck,,,,sc
+cc_439,interfering with marine signal,,10y,,sc
+cc_440,removing natural bar without permission,,2y,,sc
+cc_441,occupant injuring building,,5y,,sc
+cc_442,interfering with boundary lines,,,,sc
+cc_443,interfering with international boundary marks,,5y,,sc
+cc_445,injuring or endangering other animals,,5y,,10000&729d
+cc_445.01(2)(a),killing or injuring certain animals — law enforcement animal killed,6m,5y,,
+cc_445.01(2)(b),killing or injuring certain animals,,5y,,10000&729d
+cc_445.1,causing unnecessary suffering — animals,,5y,,10000&729d
+cc_445.2,owning or breeding cetaceans,,,,200000$
+cc_446,causing damage or injury — animals,,2y,,sc
+cc_447,arena for animal fighting,,5y,,10000&729d
+cc_449,making — counterfeit money,,14y,,
+cc_450,possession — counterfeit money,,14y,,
+cc_451,having clippings produced by altering currency,,5y,,sc
+cc_452,uttering counterfeit money,,14y,,
+cc_453,uttering coin,,2y,,sc
+cc_454,possess or manufacture slugs and tokens,,,,sc
+cc_455,clipping and uttering clipped coin,,14y,,
+cc_456,defacing current coins,,,,sc
+cc_457,likeness of bank notes,,,,sc
+cc_458,making having or dealing in instruments for counterfeiting,,14y,,
+cc_459,conveying instruments for coining out of mint,,14y,,
+cc_460,advertising and dealing in counterfeit money,,5y,,sc
+cc_462.31(1),laundering proceeds of crime,,10y,,sc
+cc_462.31(2.1),laundering proceeds of crime — criminal organization,,14y,,
+cc_463(a),attempts accessories — punishable by life,,14y,,
+cc_463(b),attempts accessories — punishable by 14y or less,,7y,,
+cc_463(c),attempts accessories — sc conviction,,,,sc
+cc_463(d),attempts accessories — hybrid,,7y,,sc
+cc_464,counselling offence that is not committed — indictable,,14y,,sc
+cc_465(1)(a),conspiracy — murder,,255y,,
+cc_465(1)(b)(i),conspiracy — indictable punishable by 14y or less,,10y,,sc
+cc_465(1)(b)(ii),conspiracy — indictable punihsable by less than 14y,,5y,,sc
+cc_465(1)(c),conspiracy — indictable — other,,255y,,
+cc_465(1)(d),conspiracy — sc,,,,sc
+cc_467.11,participation in activities of criminal organization,,5y,,sc
+cc_467.111(a),recruitment of members by a criminal organization — victim under 18,6m,5y,,
+cc_467.111(b),recruitment of members by a criminal organization,,5y,,
+cc_467.12,commission of offence for criminal organization,,14y,,
+cc_467.13,instructing commission of offence for criminal organization,,255y,,
+cc_486.6,failure to comply with publication ban — victims and witnesses,,,,sc
+cc_487.0197,failure to comply with preservation demand,,,,5000$
+cc_487.0198,failure to comply with preservation or production order,,,,250000&729d
+cc_487.0199,failure to comply with destruction order,,,,sc
+cc_487.0552,failure to comply with order or summons,,2y,,sc
+cc_487.08(3),improper use of bodily substances seized — warrant,,,,sc
+cc_487.08(4),improper use of bodily substances seized — order authorization,,2y,,sc
+cc_490.031,failure to comply with soira or nda order,,10000&729,,10000&729d
+cc_490.0311,providing false information re soira,,10000&729,,10000&729d
+cc_490.0312,failure to advise police re soira,,,,sc
+cc_490.8,failure to comply with restraint order,,5y,,sc
+cc_517,failure to comply with publication ban — bail,,,,sc
+cc_539,failure to comply with publication ban — preliminary inquiry evidence,,,,sc
+cc_542,failure to comply with publication ban — preliminary inquiry documents,,,,sc
+cc_648,failure to comply with publication ban — jury evidence,,,,sc
+cc_649,disclosure of jury proceedings,,,,sc
+cc_672.37,improper application for federal employment,,,,sc
+cc_672.501,failure to comply with order restricting publication — sexual offences,,,,sc
+cc_708,contempt,,,,100&90d
+cc_732.11,improper use or disclosure of bodily substances seized — probatin order,,,,sc
+cc_733.1,failure to comply with probation order,,4y,,sc
+cc_742.31,improper use or disclosure of bodily substances seized — conditional sentence,,,,sc
+cc_743.21,failure to comply with non-communication order — conditional sentence order,,2y,,sc
+cc_753.3,failure to comply with long-term supervision order,,10y,,sc
+cc_810.4,improper use or disclosure of bodily substances seized — recognizance,,,,sc
+cc_811,breach of recognizance,,4y,,sc
+cannabis_8,cannabis possession,None,1824d,None,5000$&6m
+cannabis_9(5)(b)(i),cannabis distribution or possession for the purpose,None,14y,None,5000$&6m
+cannabis_9(5)(b)(ii),cannabis distribution or possession for the purpose — recipient under 18,None,14y,None,15000$&18m
+cannabis_9(5)(b)(iii),cannabis distribution or possession for the purpose — organizations,None,None,None,100000
+cannabis_10(5)(b)(i),selling cannabis or possession for the purpose,None,14y,None,5000$&6m
+cannabis_10(5)(b)(ii),selling cannabis or possession for the purpose — recipient under 18,None,14y,None,15000$&18m
+cannabis_10(5)(b)(iii),selling cannabis or possession for the purpose — organizations,None,14y,None,100000
+cannabis_11(3)(b)(i),cannabis importing and exporting or possession for the purpose,None,14y,None,5000$&6m
+cannabis_11(3)(b)(ii),cannabis importing and exporting or possession for the purpose — organizations,None,14y,None,300000
+cannabis_12(9)(b)(i),cannabis production,None,14y,None,5000$&6m
+cannabis_12(9)(b)(ii),cannabis production — organizations,None,14y,None,100000
+cannabis_13(2)(b)(i),cannabis possession for use in production or distribution of illicit cannabis,None,7y,None,5000$&6m
+cannabis_13(2)(b)(ii),cannabis possession for use in production or distribution of illicit cannabis — organizations,None,7y,None,100000
+cannabis_14(2)(b)(i),use of young person,,14y,None,15000$&18m
+cannabis_14(2)(b)(ii),use of young person — organizations,,14y,None,100000
+cdsa_4(1)#1#1,possession of substance — schedule i — first offence,,7y,,1000$&6m
+cdsa_4(1)#1#s,possession of substance — schedule i — subsequent offence,,7y,,2000$&1y
+cdsa_4(3),possession of substance — schedule i — first offence,,7y,,1000$&6m
+cdsa_4(3),possession of substance — schedule i — subsequent offence,,7y,,2000$&1y
+cdsa_4(4),possession of substance — schedule ii — first offence,,1824d,,1000$&6m
+cdsa_4(4),possession of substance — schedule ii — subsequent offence,,1824d,,2000$&1y
+cdsa_4(6),possession of substance — schedule iii — first offence,,3y,,1000$&6m
+cdsa_4(6),possession of substance — schedule iii — subsequent offence,,3y,,2000$&1y
+cdsa_4(7)(a)(i),obtaining substance — schedule i — first offence,,7y,,1000$&6m
+cdsa_4(7)(a)(i),obtaining substance — schedule i — subsequent offence,,7y,,2000$&1y
+cdsa_4(7)(a)(ii),obtaining substance — schedule ii — first offence,,1824d,,1000$&6m
+cdsa_4(7)(a)(ii),obtaining substance — schedule ii — subsequent offence,,1824d,,2000$&1y
+cdsa_4(7)(a)(iii),obtaining substance — schedule iii — first offence,,3y,,1000$&6m
+cdsa_4(7)(a)(iii),obtaining substance — schedule iii — subsequent offence,,3y,,2000$&1y
+cdsa_4(7)(a)(iv),obtaining substance — schedule iv — first offence,,5y,,1000$&6m
+cdsa_4(7)(a)(iv),obtaining substance — schedule iv — subsequent offence,,5y,,2000$&1y
+cdsa_5(1)#1,trafficking in substance — schedule i or ii,,255y,,
+cdsa_5(1)#2,trafficking in substance — schedule iii or v,,10y,,18m
+cdsa_5(1)#3,possession for the purpose of trafficking — schedule iv,,3y,,1y
+cdsa_5(2)#1,possession for the purpose of trafficking — schedule i or ii,,255y,,
+cdsa_5(2)#2,possession for the purpose of trafficking— schedule iii or v,,10y,,18m
+cdsa_5(2)#3,possession for the purpose of trafficking — schedule iv,,3y,,1y
+cdsa_6(3)(a),importing substance — schedule i or ii,,255y,,
+cdsa_6(3)(b),importing substance — schedule iii or v or vi,,10y,,18m
+cdsa_6(3)(c),importing substance — schedule iv,,3y,,1y
+cdsa_7(1),production of substance — schedule i or ii,,255y,,
+cdsa_7(2),production of substance — schedule iii or v,,255y,,18m
+cdsa_7(3),production of substance — schedule iv,,3y,,1y
+cdsa_7.1_(2)(a),possession sale for use in production of or trafficking in substance — schedule i or ii or ii or v,,10y,,18m
+cdsa_7.1_(2)(b),possession sale for use in production of or trafficking in substance — schedule iv,,3y,,1y
+ycja_136,inducing a young person,,2y,,sc
+ycja_138,failure to comply with pulibication bans,,2y,,sc
+ycja_139,failure to comply with detention or placement order,,2y,,sc

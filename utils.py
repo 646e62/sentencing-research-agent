@@ -13,7 +13,7 @@ def csv_to_pandas(file_path: str) -> pd.DataFrame:
     stored in the CSV files into a pandas dataframe.
 
     Args:
-        file_path: The path to the CSV file
+        file_path: The path to the CSV filecs
     Returns:
         A pandas dataframe
     """

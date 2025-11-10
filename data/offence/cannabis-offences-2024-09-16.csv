@@ -1,0 +1,16 @@
+section,offence_name,minimum_indictable,maximum_indictable,minimum_sc,maximum_sc
+cannabis_8,cannabis possession,None,1824d,None,5000$&6m
+cannabis_9(5)(b)(i),cannabis distribution or possession for the purpose,None,14y,None,5000$&6m
+cannabis_9(5)(b)(ii),cannabis distribution or possession for the purpose — recipient under 18,None,14y,None,15000$&18m
+cannabis_9(5)(b)(iii),cannabis distribution or possession for the purpose — organizations,None,None,None,100000
+cannabis_10(5)(b)(i),selling cannabis or possession for the purpose,None,14y,None,5000$&6m
+cannabis_10(5)(b)(ii),selling cannabis or possession for the purpose — recipient under 18,None,14y,None,15000$&18m
+cannabis_10(5)(b)(iii),selling cannabis or possession for the purpose — organizations,None,14y,None,100000
+cannabis_11(3)(b)(i),cannabis importing and exporting or possession for the purpose,None,14y,None,5000$&6m
+cannabis_11(3)(b)(ii),cannabis importing and exporting or possession for the purpose — organizations,None,14y,None,300000
+cannabis_12(9)(b)(i),cannabis production,None,14y,None,5000$&6m
+cannabis_12(9)(b)(ii),cannabis production — organizations,None,14y,None,100000
+cannabis_13(2)(b)(i),cannabis possession for use in production or distribution of illicit cannabis,None,7y,None,5000$&6m
+cannabis_13(2)(b)(ii),cannabis possession for use in production or distribution of illicit cannabis — organizations,None,7y,None,100000
+cannabis_14(2)(b)(i),use of young person,,14y,None,15000$&18m
+cannabis_14(2)(b)(ii),use of young person — organizations,,14y,None,100000
