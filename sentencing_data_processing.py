@@ -20,72 +20,66 @@ EXPECTED_MASTER_COLUMNS = [
 ]
 
 # UID string parsing tools
-def parse_uid_string(uid_str: Union[str, float]) -> dict:
+from typing import Dict, Optional, Union
+
+import pandas as pd
+
+
+def parse_uid_string(uid_str: Union[str, float]) -> Dict[str, Optional[str]]:
     """
     Parse a UID string into its components.
-    
+
     The UID may have between 3 and 4 components:
     - First: case ID
     - Second: docket identifier
     - Third: count
     - Fourth (optional): defendant ID (defaults to "a" if not present)
-    
+
+    If more than four underscore-separated parts are present, only the first
+    four are used and the rest are ignored.
+
     Args:
-        uid_str: The UID string to parse (e.g., "2024abcj264_230980468P1_1" or "2024mbpc96_None_1_a")
-        
+        uid_str: The UID string to parse (e.g., "2024abcj264_230980468P1_1"
+            or "2024mbpc96_None_1_a").
+
     Returns:
-        A dictionary with keys: 'case_id', 'docket', 'count', 'defendant'
-        Returns None values if string is empty/invalid
+        A dictionary with keys: 'case_id', 'docket', 'count', 'defendant'.
+        Returns None values if the string is empty/invalid.
     """
+
     # Handle NaN, None, or empty strings
-    if pd.isna(uid_str) or uid_str == '' or uid_str is None:
-        return {'case_id': None, 'docket': None, 'count': None, 'defendant': 'a'}
-    
-    # Convert to string if not already
+    if uid_str is None or pd.isna(uid_str):
+        return {
+            "case_id": None,
+            "docket": None,
+            "count": None,
+            "defendant": "a",
+        }
+
     uid_str = str(uid_str).strip()
-    
-    # Split by underscore
-    parts = uid_str.split('_')
-    
-    # Initialize result with default defendant
-    result = {'case_id': None, 'docket': None, 'count': None, 'defendant': 'a'}
-    
-    # Handle different numbers of parts
-    if len(parts) == 2:
-        # 2 parts: case_id_count (no docket identifier)
-        result['case_id'] = parts[0]
-        result['docket'] = None
-        result['count'] = parts[1]
-        result['defendant'] = 'a'
+    if uid_str == "":
+        return {
+            "case_id": None,
+            "docket": None,
+            "count": None,
+            "defendant": "a",
+        }
 
-    elif len(parts) == 3:
-        # 3 parts: case_id_docket_count
-        result['case_id'] = parts[0]
-        result['docket'] = parts[1]
-        result['count'] = parts[2]
-        result['defendant'] = 'a'
+    # Split the string by underscores and extract the components
+    parts = uid_str.split("_")
 
-    elif len(parts) == 4:
-        # 4 parts: case_id_docket_count_defendant
-        result['case_id'] = parts[0]
-        result['docket'] = parts[1]
-        result['count'] = parts[2]
-        result['defendant'] = parts[3]
+    case_id = parts[0] if len(parts) >= 1 else None
+    docket = parts[1] if len(parts) >= 2 else None
+    count = parts[2] if len(parts) >= 3 else None
+    defendant = parts[3] if len(parts) >= 4 else "a"
 
-    else:
-        # Unexpected format, try to extract what we can
-        if len(parts) >= 1:
-            result['case_id'] = parts[0]
-        if len(parts) >= 2:
-            result['docket'] = parts[1]
-        if len(parts) >= 3:
-            result['count'] = parts[2]
-        if len(parts) >= 4:
-            result['defendant'] = parts[3]
-        else:
-            result['defendant'] = 'a'
-    
-    return result
+    return {
+        "case_id": case_id,
+        "docket": docket,
+        "count": count,
+        "defendant": defendant,
+    }
+
 
 def process_uid_string(uid_str: Union[str, float], verbose: bool = True) -> dict:
     """
