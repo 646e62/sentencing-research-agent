@@ -6,7 +6,7 @@ rules and the CanLII API.
 """
 
 import logging
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List, TypedDict
 
 import requests
 
@@ -14,6 +14,34 @@ from config import Config
 import legal_citation_parser
 
 logger = logging.getLogger(__name__)
+
+REQUEST_TIMEOUT_SECONDS = 10
+
+class CitationMetadata(TypedDict):
+    citation: str
+    case_id: Optional[str]
+    style_of_cause: Optional[str]
+    atomic_citation: Optional[str]
+    citation_type: Optional[str]
+    official_reporter_citation: Optional[str]
+    year: Optional[str]
+    court: Optional[str]
+    decision_number: Optional[str]
+    jurisdiction: Optional[str]
+    court_name: Optional[str]
+    court_level: Optional[str]
+    long_url: Optional[str]
+    short_url: Optional[str]
+    language: Optional[str]
+    docket_number: Optional[str]
+    decision_date: Optional[str]
+    keywords: List[str]
+    categories: List[str]
+
+class CitingCasesResult(TypedDict):
+    cases: List[Dict[str, Any]]
+    error: Optional[str]
+    metadata: Optional[Dict[str, Any]]
 
 def _parse_citation(citation: str) -> Optional[Dict[str, Any]]:
     """
@@ -34,7 +62,7 @@ def _parse_citation(citation: str) -> Optional[Dict[str, Any]]:
     return citation_data
 
 
-def get_metadata_from_citation(citation: str) -> Dict[str, Any]:
+def get_metadata_from_citation(citation: str) -> CitationMetadata:
     """Extract all metadata from a citation using the legal citation parser."""
     try:
         citation_data = _parse_citation(citation)
@@ -42,7 +70,7 @@ def get_metadata_from_citation(citation: str) -> Dict[str, Any]:
             return {}
             
         # Map the fields from citation_data to our desired structure
-        metadata = {
+        metadata: CitationMetadata = {
             "citation": citation,  # Keep the original citation string
             "case_id": citation_data.get('uid'),
             "style_of_cause": citation_data.get('style_of_cause'),
@@ -70,7 +98,7 @@ def get_metadata_from_citation(citation: str) -> Dict[str, Any]:
         logger.error(f"Error getting metadata from citation: {str(e)}")
         return {}
 
-def get_citing_cases(citation: str) -> Dict:
+def get_citing_cases(citation: str, timeout_seconds: int = REQUEST_TIMEOUT_SECONDS) -> CitingCasesResult:
     """Fetch cases that cite this decision from CanLII API."""
     try:
         api_key = Config.CANLII_API_KEY
@@ -88,7 +116,7 @@ def get_citing_cases(citation: str) -> Dict:
         url = f"https://api.canlii.org/v1/caseCitator/en/{court_name}/{decision_code}/citingCases?api_key={api_key}"
         logger.info("Making CanLII API request")  # Don't log the URL with API key
         
-        response = requests.get(url)
+        response = requests.get(url, timeout=timeout_seconds)
         
         if response.status_code == 429:
             logger.warning("CanLII API rate limit reached")

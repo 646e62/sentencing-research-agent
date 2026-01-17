@@ -8,15 +8,31 @@ summaries.
 
 import re
 import os
-from pathlib import Path
-from typing import Dict, Any, Tuple
-import logging
-import html2text
 import json
+import logging
+from pathlib import Path
+from typing import Dict, Any, Tuple, Optional, List, TypedDict
 
-from metadata_processing import get_metadata_from_citation, get_citing_cases
+import html2text
+
+from metadata_processing import (
+    CitationMetadata,
+    CitingCasesResult,
+    get_metadata_from_citation,
+    get_citing_cases,
+)
 
 logger = logging.getLogger(__name__)
+
+class ProcessedTextResult(TypedDict):
+    _body: str
+    header: Optional[str]
+    metadata: CitationMetadata
+    legislation_cited: Optional[str]
+    decisions_cited: Optional[str]
+    decisions_citing: List[Dict[str, Any]]
+    sentencing_data: Any
+    processing_log: List[str]
 
 def html_to_markdown(html_content: str) -> str:
     """Convert HTML to Markdown format."""
@@ -96,7 +112,7 @@ def extract_citation(header: str) -> str:
         logger.error(f"Error extracting citation: {str(e)}")
         return ""
 
-def extract_legislation(header: str) -> str:
+def extract_legislation(header: str) -> Optional[str]:
     """Extract legislation cited section from header if it exists."""
     try:
         # Try English markers first
@@ -129,7 +145,7 @@ def extract_legislation(header: str) -> str:
         logger.error(f"Error extracting legislation: {str(e)}")
         return None
 
-def extract_decisions(header: str) -> str:
+def extract_decisions(header: str) -> Optional[str]:
     """Extract decisions cited section from header if it exists."""
     try:
         # Try English marker first
@@ -171,7 +187,7 @@ def extract_decisions(header: str) -> str:
         logger.error(f"Error extracting decisions: {str(e)}")
         return None
 
-def extract_canlii_summary(header: str) -> str:
+def extract_canlii_summary(header: str) -> Optional[str]:
     """Extract CanLII summary section from header if it exists."""
     try:
         # Look for the start marker
@@ -263,7 +279,7 @@ def save_processed_text(text_dict: Dict[str, Any], title: str) -> Tuple[str, boo
         logger.error(f"Error saving processed text: {str(e)}")
         raise
 
-def process_text(text: str, include_header: bool = False) -> Dict[str, Any]:
+def process_text(text: str, include_header: bool = False) -> ProcessedTextResult:
     """Process HTML content and return structured data."""
     try:
         logger.info("Starting document processing...")
@@ -308,11 +324,11 @@ def process_text(text: str, include_header: bool = False) -> Dict[str, Any]:
         
         # Make CanLII API call early to space out the API calls
         logger.info("Fetching citing cases from CanLII API...")
-        api_response = get_citing_cases(citation)
+        api_response: CitingCasesResult = get_citing_cases(citation)
         decisions_citing = api_response.get('cases', [])
         logger.info(f"Found {len(decisions_citing)} citing cases")
         
-        result = {
+        result: ProcessedTextResult = {
             "_body": body,  # Internal field
             "header": header if include_header else None,
             "metadata": metadata,
