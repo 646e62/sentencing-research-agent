@@ -23,10 +23,16 @@ logger = logging.getLogger(__name__)
 # Type aliases
 ParsedDate = Dict[str, Optional[str]]
 JailParseResult = Union[pd.DataFrame, str, None]
+RowLike = Union[pd.Series, Dict[str, Any], tuple, list]
+
 class ConditionsResult(TypedDict):
     time: Optional[float]
     unit: Optional[str]
     type: Optional[str]
+
+class AppealResult(TypedDict):
+    court: Optional[str]
+    result: Optional[str]
 
 # Regular expressions and constants
 _EMPTY_RESULT: ParsedDate = {
@@ -46,6 +52,7 @@ _CONDITION_RE = re.compile(
     r'^\s*(\d+(?:\.\d+)?)\s*([ymd])\s*-(probation|discharge|ltso|ircs|parole)\s*$',
     re.IGNORECASE,
 )
+_EMPTY_APPEAL: AppealResult = {'court': None, 'result': None}
 
 EXPECTED_MASTER_COLUMNS = [
     "uid",
@@ -57,19 +64,17 @@ EXPECTED_MASTER_COLUMNS = [
     "fine",
     "appeal",
 ]
-
-# Unit map and conversions
 UNIT_MAP = {
     'y': 'y',   # years
     'm': 'm',   # months
     'd': 'd',   # days
 }
-
 _UNIT_DAY_FACTORS = {
     'y': 365,
     'm': 30,   # overridden for quantity == 12
     'd': 1,
 }
+COLUMNS = ['uid', 'offence', 'date', 'jail', 'mode', 'conditions', 'fine', 'appeal']
 
 # UID string parsing tools
 def parse_uid_string(uid_str: Union[str, float]) -> Dict[str, Optional[str]]:
@@ -475,76 +480,62 @@ def parse_conditions_string(conditions_str: Any) -> ConditionsResult:
     return {'time': time, 'unit': unit, 'type': ctype}
 
 # Fine string parsing tools
-def parse_fine_string(fine_str: Union[str, float, int]) -> Optional[str]:
+def parse_fine_string(fine_str: Any) -> Optional[str]:
     """
     Parse a fine string and format it as currency with two decimal places.
-    
-    Args:
-        fine_str: The fine value (can be string, float, or int)
-        
-    Returns:
-        A formatted string with dollar sign and two decimal places (e.g., "$1000.00")
-        Returns None if fine is empty/invalid
+
+    Examples:
+        "1000"      -> "$1000.00"
+        "$1,234.5"  -> "$1234.50"
+        NaN / None  -> None
     """
-    # Handle NaN, None, or empty strings
-    if pd.isna(fine_str) or fine_str == '' or fine_str is None:
+
+    if pd.isna(fine_str):
         return None
-    
-    # Convert to string if not already
-    fine_str = str(fine_str).strip()
-    
-    # Remove any existing dollar signs or commas
-    fine_str = fine_str.replace('$', '').replace(',', '').strip()
-    
-    # Try to convert to float
+
+    s = str(fine_str).strip()
+    if not s:
+        return None
+
+    # Remove common formatting characters
+    s = s.replace('$', '').replace(',', '').strip()
+
     try:
-        fine_value = float(fine_str)
-        # Format to two decimal places with dollar sign
-        return f"${fine_value:.2f}"
+        value = float(s)
     except (ValueError, TypeError):
-        # If conversion fails, return None
         return None
+
+    return f"${value:.2f}"
 
 # Appeal string parsing tools
-def parse_appeal_string(appeal_str: Union[str, float]) -> dict:
+def parse_appeal_string(appeal_str: Any) -> AppealResult:
     """
-    Parse an appeal string into its components: court appealed to and result.
-    
-    The appeal string consists of two parts separated by an underscore:
-    - First part: court appealed to
-    - Second part: result
-    
-    Args:
-        appeal_str: The appeal string to parse (e.g., "2024skca79_upheld")
-        
-    Returns:
-        A dictionary with keys: 'court', 'result'
-        Returns None values if string is empty/invalid
+    Parse an appeal string into: court appealed to and result.
+
+    Examples:
+        "2024skca79_upheld" -> {'court': '2024skca79', 'result': 'upheld'}
+        "2024skca79"        -> {'court': '2024skca79', 'result': None}
+        NaN / None / ""     -> {'court': None, 'result': None}
     """
-    # Handle NaN, None, or empty strings
-    if pd.isna(appeal_str) or appeal_str == '' or appeal_str is None:
-        return {'court': None, 'result': None}
-    
-    # Convert to string if not already
-    appeal_str = str(appeal_str).strip()
-    
-    # Split by underscore
-    parts = appeal_str.split('_', 1)  # Split only on first underscore
-    
-    if len(parts) == 2:
-        return {
-            'court': parts[0].strip(),
-            'result': parts[1].strip()
-        }
-    else:
-        # If no underscore found or only one part, return what we have
-        return {
-            'court': parts[0].strip() if len(parts) > 0 else None,
-            'result': None
-        }
+
+    if pd.isna(appeal_str):
+        return _EMPTY_APPEAL.copy()
+
+    s = str(appeal_str).strip()
+    if not s:
+        return _EMPTY_APPEAL.copy()
+
+    court, sep, result = s.partition('_')
+
+    court = court.strip() or None
+    result = result.strip() or None
+
+    return {
+        'court': court,
+        'result': result,
+    }
 
 # Full row processing function
-
 def process_master_row(
     row_data: Union[pd.Series, dict, tuple, list],
     offences_file: str = 'data/offence/all-criminal-offences-current.csv',
@@ -730,7 +721,6 @@ def process_master_row(
         'fine': fine_formatted,
         'appeal': appeal_parsed
     }
-
 
 def load_master_csv(master_file: str = 'data/case/master.csv') -> pd.DataFrame:
     """
