@@ -237,7 +237,7 @@ def save_processed_text(text_dict: Dict[str, Any], title: str) -> Tuple[str, boo
     Returns tuple of (filepath, was_overwritten, base_filename)"""
     try:
         # Use the specified directory
-        save_dir = '/home/daniel/Tresorit/jurimetrics/data/json'
+        save_dir = './data/json/case-data'
         
         # Create the directory if it doesn't exist
         os.makedirs(save_dir, exist_ok=True)
