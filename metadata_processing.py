@@ -102,7 +102,7 @@ def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
         return metadata
         
     except Exception as e:
-        logger.error(f"Error getting metadata from citation: {str(e)}")
+        logger.error("Error getting metadata from citation: %s", e)
         return None
 
 def get_citing_cases(citation: str, timeout_seconds: int = REQUEST_TIMEOUT_SECONDS) -> CitingCasesResult:
@@ -144,6 +144,6 @@ def get_citing_cases(citation: str, timeout_seconds: int = REQUEST_TIMEOUT_SECON
         }
         
     except Exception as e:
-        logger.error(f"Error fetching citing cases: {str(e)}")
+        logger.error("Error fetching citing cases: %s", e)
         return {"error": str(e), "cases": [], "metadata": None}
 
