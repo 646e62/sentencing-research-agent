@@ -232,10 +232,9 @@ def parse_offence_string(offence_str: Union[str, float],
     if offence_code == '':
         return {'offence_code': None, 'offence_name': None}
     
+    # Check if the code has a _ycja suffix and remove it if it does
     original_code = offence_code
     has_ycja = '_ycja' in offence_code
-
-    # Normalize for matching
     normalized_code = offence_code.replace('_ycja', '') if has_ycja else offence_code
     
     # Load offences lookup if not provided
