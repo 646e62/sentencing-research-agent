@@ -20,9 +20,6 @@ EXPECTED_MASTER_COLUMNS = [
 ]
 
 # UID string parsing tools
-from typing import Dict, Optional, Union
-
-import pandas as pd
 
 
 def parse_uid_string(uid_str: Union[str, float]) -> Dict[str, Optional[str]]:
