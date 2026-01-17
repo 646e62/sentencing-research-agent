@@ -2,9 +2,22 @@
 Data processing tools for the sentencing data analysis project.
 """
 
+import argparse
 import re
+import sys
 import pandas as pd
 from typing import Union, Optional
+
+EXPECTED_MASTER_COLUMNS = [
+    "uid",
+    "offence",
+    "date",
+    "jail",
+    "mode",
+    "conditions",
+    "fine",
+    "appeal",
+]
 
 # UID string parsing tools
 
@@ -101,7 +114,7 @@ def parse_uid_string(uid_str: Union[str, float]) -> dict:
     
     return result
 
-def process_uid_string(uid_str: Union[str, float]) -> dict:
+def process_uid_string(uid_str: Union[str, float], verbose: bool = True) -> dict:
     """
     Process a UID string, parse it, and print the components to terminal.
     
@@ -115,14 +128,42 @@ def process_uid_string(uid_str: Union[str, float]) -> dict:
     parsed = parse_uid_string(uid_str)
     
     # Print results
-    print(f"UID string: {uid_str}")
-    print(f"  Case ID: {parsed['case_id']}")
-    print(f"  Docket: {parsed['docket']}")
-    print(f"  Count: {parsed['count']}")
-    print(f"  Defendant: {parsed['defendant']}")
-    print("=" * 60)
+    if verbose:
+        print(f"UID string: {uid_str}")
+        print(f"  Case ID: {parsed['case_id']}")
+        print(f"  Docket: {parsed['docket']}")
+        print(f"  Count: {parsed['count']}")
+        print(f"  Defendant: {parsed['defendant']}")
+        print("=" * 60)
     
     return parsed
+
+
+# Master CSV schema validation
+def validate_master_schema(
+    df: pd.DataFrame,
+    required_columns: Optional[list[str]] = None,
+    strict: bool = False,
+) -> dict:
+    """
+    Validate the expected schema for master.csv.
+
+    Args:
+        df: DataFrame to validate
+        required_columns: Optional list of required column names
+        strict: If True, raise ValueError on missing columns
+
+    Returns:
+        A dict with keys: 'missing', 'extra', 'required'
+    """
+    required = required_columns or EXPECTED_MASTER_COLUMNS
+    missing = [col for col in required if col not in df.columns]
+    extra = [col for col in df.columns if col not in required]
+
+    if strict and missing:
+        raise ValueError(f"Missing required columns: {missing}")
+
+    return {"missing": missing, "extra": extra, "required": required}
 
 
 # Offence string parsing tools
@@ -239,8 +280,11 @@ def parse_offence_string(offence_str: Union[str, float],
     # No match found
     return {'offence_code': original_code, 'offence_name': None}
 
-def process_offence_string(offence_str: Union[str, float],
-                          offences_file: str = 'data/offence/all-criminal-offences-current.csv') -> dict:
+def process_offence_string(
+    offence_str: Union[str, float],
+    offences_file: str = 'data/offence/all-criminal-offences-current.csv',
+    verbose: bool = True,
+) -> dict:
     """
     Process an offence string, parse it, match against lookup table, and print results.
     
@@ -255,10 +299,11 @@ def process_offence_string(offence_str: Union[str, float],
     parsed = parse_offence_string(offence_str, offences_file=offences_file)
     
     # Print results
-    print(f"Offence string: {offence_str}")
-    print(f"  Offence code: {parsed['offence_code']}")
-    print(f"  Offence name: {parsed['offence_name']}")
-    print("=" * 60)
+    if verbose:
+        print(f"Offence string: {offence_str}")
+        print(f"  Offence code: {parsed['offence_code']}")
+        print(f"  Offence name: {parsed['offence_name']}")
+        print("=" * 60)
     
     return parsed
 
@@ -303,7 +348,7 @@ def parse_date_string(date_str: Union[str, float]) -> dict:
     
     return result
 
-def process_date_string(date_str: Union[str, float]) -> dict:
+def process_date_string(date_str: Union[str, float], verbose: bool = True) -> dict:
     """
     Process a date string, parse it, and print the components to terminal.
     
@@ -317,15 +362,16 @@ def process_date_string(date_str: Union[str, float]) -> dict:
     parsed = parse_date_string(date_str)
     
     # Print results
-    print(f"Date string: {date_str}")
-    if parsed['offence_date'] is not None:
-        print(f"  Offence date: {parsed['offence_date']}")
-    elif parsed['offence_start_date'] is not None:
-        print(f"  Offence start date: {parsed['offence_start_date']}")
-        print(f"  Offence end date: {parsed['offence_end_date']}")
-    else:
-        print(f"  Offence date: {parsed['offence_date']}")
-    print("=" * 60)
+    if verbose:
+        print(f"Date string: {date_str}")
+        if parsed['offence_date'] is not None:
+            print(f"  Offence date: {parsed['offence_date']}")
+        elif parsed['offence_start_date'] is not None:
+            print(f"  Offence start date: {parsed['offence_start_date']}")
+            print(f"  Offence end date: {parsed['offence_end_date']}")
+        else:
+            print(f"  Offence date: {parsed['offence_date']}")
+        print("=" * 60)
     
     return parsed
 
@@ -431,7 +477,7 @@ def calculate_total_days(df: Union[pd.DataFrame, str, None]) -> Optional[int]:
     
     return total_days
 
-def process_jail_string(jail_str: Union[str, float]) -> None:
+def process_jail_string(jail_str: Union[str, float], verbose: bool = True) -> None:
     """
     Process a jail string, create a dataframe, calculate total days, and print results.
     
@@ -452,10 +498,11 @@ def process_jail_string(jail_str: Union[str, float]) -> None:
         total_days = calculate_total_days(df)
     
     # Print the dataframe
-    if df is None:
-        print(f"{jail_str} -> unrecognized sentence format")
-    else:
-        print(f"{jail_str} -> {total_days} days")
+    if verbose:
+        if df is None:
+            print(f"{jail_str} -> unrecognized sentence format")
+        else:
+            print(f"{jail_str} -> {total_days} days")
 
     return total_days
 
@@ -566,7 +613,7 @@ def parse_conditions_string(conditions_str: Union[str, float]) -> dict:
     # If no pattern matches, return None values
     return result
 
-def process_conditions_string(conditions_str: Union[str, float]) -> None:
+def process_conditions_string(conditions_str: Union[str, float], verbose: bool = True) -> None:
     """
     Process a conditions string, parse it, and print the components to terminal.
     
@@ -638,7 +685,7 @@ def parse_fine_string(fine_str: Union[str, float, int]) -> Optional[str]:
         # If conversion fails, return None
         return None
 
-def process_fine_string(fine_str: Union[str, float, int]) -> Optional[str]:
+def process_fine_string(fine_str: Union[str, float, int], verbose: bool = True) -> Optional[str]:
     """
     Process a fine string, parse it, format it, and print the result to terminal.
     
@@ -652,9 +699,10 @@ def process_fine_string(fine_str: Union[str, float, int]) -> Optional[str]:
     formatted_fine = parse_fine_string(fine_str)
     
     # Print results
-    print(f"Fine string: {fine_str}")
-    print(f"  Formatted fine: {formatted_fine}")
-    print("=" * 60)
+    if verbose:
+        print(f"Fine string: {fine_str}")
+        print(f"  Formatted fine: {formatted_fine}")
+        print("=" * 60)
     
     return formatted_fine
 
@@ -698,7 +746,7 @@ def parse_appeal_string(appeal_str: Union[str, float]) -> dict:
             'result': None
         }
 
-def process_appeal_string(appeal_str: Union[str, float]) -> dict:
+def process_appeal_string(appeal_str: Union[str, float], verbose: bool = True) -> dict:
     """
     Process an appeal string, parse it, and print the components to terminal.
     
@@ -712,17 +760,21 @@ def process_appeal_string(appeal_str: Union[str, float]) -> dict:
     parsed = parse_appeal_string(appeal_str)
     
     # Print results
-    print(f"Appeal string: {appeal_str}")
-    print(f"  Court: {parsed['court']}")
-    print(f"  Result: {parsed['result']}")
-    print("=" * 60)
+    if verbose:
+        print(f"Appeal string: {appeal_str}")
+        print(f"  Court: {parsed['court']}")
+        print(f"  Result: {parsed['result']}")
+        print("=" * 60)
     
     return parsed
 
 # Full row processing function
 
-def process_master_row(row_data: Union[pd.Series, dict, tuple, list],
-                       offences_file: str = 'data/offence/all-criminal-offences-current.csv') -> dict:
+def process_master_row(
+    row_data: Union[pd.Series, dict, tuple, list],
+    offences_file: str = 'data/offence/all-criminal-offences-current.csv',
+    verbose: bool = True,
+) -> dict:
     """
     Process a full row from master.csv and parse all fields.
     
@@ -771,65 +823,67 @@ def process_master_row(row_data: Union[pd.Series, dict, tuple, list],
         raise ValueError("row_data must be a pandas Series, dict, tuple, or list")
     
     # Parse all fields
-    print("=" * 80)
-    print("PROCESSING MASTER CSV ROW")
-    print("=" * 80)
-    print()
+    printer = print if verbose else (lambda *args, **kwargs: None)
+
+    printer("=" * 80)
+    printer("PROCESSING MASTER CSV ROW")
+    printer("=" * 80)
+    printer()
     
     # UID
-    print("UID:")
+    printer("UID:")
     uid_parsed = parse_uid_string(uid)
-    print(f"  Case ID: {uid_parsed['case_id']}")
-    print(f"  Docket: {uid_parsed['docket']}")
-    print(f"  Count: {uid_parsed['count']}")
-    print(f"  Defendant: {uid_parsed['defendant']}")
-    print()
+    printer(f"  Case ID: {uid_parsed['case_id']}")
+    printer(f"  Docket: {uid_parsed['docket']}")
+    printer(f"  Count: {uid_parsed['count']}")
+    printer(f"  Defendant: {uid_parsed['defendant']}")
+    printer()
     
     # Offence
-    print("OFFENCE:")
+    printer("OFFENCE:")
     offence_parsed = parse_offence_string(offence, offences_file=offences_file)
-    print(f"  Offence code: {offence_parsed['offence_code']}")
-    print(f"  Offence name: {offence_parsed['offence_name']}")
-    print()
+    printer(f"  Offence code: {offence_parsed['offence_code']}")
+    printer(f"  Offence name: {offence_parsed['offence_name']}")
+    printer()
     
     # Date
-    print("DATE:")
+    printer("DATE:")
     date_parsed = parse_date_string(date)
     if date_parsed['offence_date'] is not None:
-        print(f"  Offence date: {date_parsed['offence_date']}")
+        printer(f"  Offence date: {date_parsed['offence_date']}")
     else:
-        print(f"  Offence start date: {date_parsed['offence_start_date']}")
-        print(f"  Offence end date: {date_parsed['offence_end_date']}")
-    print()
+        printer(f"  Offence start date: {date_parsed['offence_start_date']}")
+        printer(f"  Offence end date: {date_parsed['offence_end_date']}")
+    printer()
     
     # Jail
-    print("JAIL:")
+    printer("JAIL:")
     jail_df = parse_jail_string(jail)
     if jail_df is None:
-        print("  Sentence: unrecognized format")
+        printer("  Sentence: unrecognized format")
         jail_total_days = None
     elif isinstance(jail_df, str) and jail_df == "indeterminate":
-        print("  Sentence: indeterminate")
+        printer("  Sentence: indeterminate")
         jail_total_days = None
     else:
-        print("  Sentence components:")
+        printer("  Sentence components:")
         if not jail_df.empty:
-            print(jail_df.to_string(index=False))
+            printer(jail_df.to_string(index=False))
         else:
-            print("  (no jail sentence)")
+            printer("  (no jail sentence)")
         jail_total_days = calculate_total_days(jail_df)
-        print(f"  Total days: {jail_total_days}")
-    print()
+        printer(f"  Total days: {jail_total_days}")
+    printer()
     
     # Mode
-    print("MODE:")
+    printer("MODE:")
     mode_parsed = parse_mode_string(mode)
-    print(f"  Jail type: {mode_parsed[0]}")
-    print(f"  Sentence mode: {mode_parsed[1]}")
-    print()
+    printer(f"  Jail type: {mode_parsed[0]}")
+    printer(f"  Sentence mode: {mode_parsed[1]}")
+    printer()
     
     # Conditions
-    print("CONDITIONS:")
+    printer("CONDITIONS:")
     conditions_parsed = parse_conditions_string(conditions)
     time = conditions_parsed['time']
     unit = conditions_parsed['unit']
@@ -857,26 +911,26 @@ def process_master_row(row_data: Union[pd.Series, dict, tuple, list],
             cond_type = 'conditional discharge'
     
     if time is not None:
-        print(f"  Time length: {time} {unit}")
+        printer(f"  Time length: {time} {unit}")
     else:
-        print(f"  Time length: None")
-    print(f"  Type: {cond_type}")
-    print()
+        printer(f"  Time length: None")
+    printer(f"  Type: {cond_type}")
+    printer()
     
     # Fine
-    print("FINE:")
+    printer("FINE:")
     fine_formatted = parse_fine_string(fine)
-    print(f"  Formatted fine: {fine_formatted}")
-    print()
+    printer(f"  Formatted fine: {fine_formatted}")
+    printer()
     
     # Appeal
-    print("APPEAL:")
+    printer("APPEAL:")
     appeal_parsed = parse_appeal_string(appeal)
-    print(f"  Court: {appeal_parsed['court']}")
-    print(f"  Result: {appeal_parsed['result']}")
-    print()
+    printer(f"  Court: {appeal_parsed['court']}")
+    printer(f"  Result: {appeal_parsed['result']}")
+    printer()
     
-    print("=" * 80)
+    printer("=" * 80)
     
     # Return all parsed data
     return {
@@ -901,3 +955,75 @@ def process_master_row(row_data: Union[pd.Series, dict, tuple, list],
         'fine': fine_formatted,
         'appeal': appeal_parsed
     }
+
+
+def load_master_csv(master_file: str = 'data/case/master.csv') -> pd.DataFrame:
+    """
+    Load the master CSV into a DataFrame.
+
+    Args:
+        master_file: Path to the master CSV file
+
+    Returns:
+        A pandas DataFrame
+    """
+    return pd.read_csv(master_file, on_bad_lines='skip', engine='python')
+
+
+def run_cli() -> int:
+    """
+    Minimal CLI for validating and sampling master.csv parsing.
+    """
+    parser = argparse.ArgumentParser(description="Sentencing data processing helpers")
+    parser.add_argument(
+        "--master",
+        default="data/case/master.csv",
+        help="Path to master CSV",
+    )
+    parser.add_argument(
+        "--offences",
+        default="data/offence/all-criminal-offences-current.csv",
+        help="Path to offences CSV",
+    )
+    parser.add_argument(
+        "--row-index",
+        type=int,
+        default=0,
+        help="Row index to parse from master CSV",
+    )
+    parser.add_argument(
+        "--validate-only",
+        action="store_true",
+        help="Only validate schema, do not parse rows",
+    )
+    parser.add_argument(
+        "--quiet",
+        action="store_true",
+        help="Suppress printing during row parsing",
+    )
+
+    args = parser.parse_args()
+    df = load_master_csv(args.master)
+    schema = validate_master_schema(df)
+    if schema["missing"]:
+        print(f"Missing columns: {schema['missing']}")
+        return 1
+    if schema["extra"]:
+        print(f"Extra columns: {schema['extra']}")
+
+    if args.validate_only:
+        print("Schema validation passed.")
+        return 0
+
+    if df.empty:
+        print("Master CSV is empty.")
+        return 1
+
+    row_index = max(0, min(args.row_index, len(df) - 1))
+    row = df.iloc[row_index]
+    process_master_row(row, offences_file=args.offences, verbose=not args.quiet)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(run_cli())
