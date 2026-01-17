@@ -8,6 +8,32 @@ from typing import Union, Optional
 
 # UID string parsing tools
 
+def normalize_uid_defendant(uid_str: Union[str, float], default_defendant: str = 'a') -> Union[str, float]:
+    """
+    Normalize the defendant component in a UID string.
+
+    - Converts a trailing "_1" defendant component to "_a"
+    - Leaves other formats unchanged
+
+    Args:
+        uid_str: The UID string to normalize
+        default_defendant: The normalized default defendant identifier
+
+    Returns:
+        A normalized UID string, or the original value if empty/invalid
+    """
+    if pd.isna(uid_str) or uid_str == '' or uid_str is None:
+        return uid_str
+
+    uid_str = str(uid_str).strip()
+    parts = uid_str.split('_')
+    if len(parts) == 4 and parts[-1] == '1':
+        parts[-1] = default_defendant
+        return '_'.join(parts)
+
+    return uid_str
+
+
 def parse_uid_string(uid_str: Union[str, float]) -> dict:
     """
     Parse a UID string into its components.
@@ -27,16 +53,16 @@ def parse_uid_string(uid_str: Union[str, float]) -> dict:
     """
     # Handle NaN, None, or empty strings
     if pd.isna(uid_str) or uid_str == '' or uid_str is None:
-        return {'case_id': None, 'docket': None, 'count': None, 'defendant': '1'}
+        return {'case_id': None, 'docket': None, 'count': None, 'defendant': 'a'}
     
     # Convert to string if not already
-    uid_str = str(uid_str).strip()
+    uid_str = normalize_uid_defendant(uid_str, default_defendant='a')
     
     # Split by underscore
     parts = uid_str.split('_')
     
     # Initialize result with default defendant
-    result = {'case_id': None, 'docket': None, 'count': None, 'defendant': '1'}
+    result = {'case_id': None, 'docket': None, 'count': None, 'defendant': 'a'}
     
     # Handle different numbers of parts
     if len(parts) == 2:
@@ -44,14 +70,14 @@ def parse_uid_string(uid_str: Union[str, float]) -> dict:
         result['case_id'] = parts[0]
         result['docket'] = None
         result['count'] = parts[1]
-        result['defendant'] = '1'
+        result['defendant'] = 'a'
 
     elif len(parts) == 3:
         # 3 parts: case_id_docket_count
         result['case_id'] = parts[0]
         result['docket'] = parts[1]
         result['count'] = parts[2]
-        result['defendant'] = '1'
+        result['defendant'] = 'a'
 
     elif len(parts) == 4:
         # 4 parts: case_id_docket_count_defendant
@@ -71,7 +97,7 @@ def parse_uid_string(uid_str: Union[str, float]) -> dict:
         if len(parts) >= 4:
             result['defendant'] = parts[3]
         else:
-            result['defendant'] = '1'
+            result['defendant'] = 'a'
     
     return result
 
@@ -211,7 +237,7 @@ def parse_offence_string(offence_str: Union[str, float],
                 }
     
     # No match found
-    return {'offence_code': offence_code, 'offence_name': None}
+    return {'offence_code': original_code, 'offence_name': None}
 
 def process_offence_string(offence_str: Union[str, float],
                           offences_file: str = 'data/offence/all-criminal-offences-current.csv') -> dict:
@@ -306,18 +332,20 @@ def process_date_string(date_str: Union[str, float]) -> dict:
 
 # Jail string parsing tools
 
-def parse_jail_string(jail_str: Union[str, float]) -> Union[pd.DataFrame, str]:
+def parse_jail_string(jail_str: Union[str, float]) -> Union[pd.DataFrame, str, None]:
     """
     Parse a jail sentence string into a dataframe with quantity and unit columns.
     
     If the string contains "&", it splits by "&" and parses each component.
     If the string is "indeterminate", returns the string "indeterminate".
+    If the string is non-empty but unparseable, returns None.
     
     Args:
         jail_str: The jail sentence string to parse (e.g., "1y&6m&3d" or "12m")
         
     Returns:
-        A pandas DataFrame with 'quantity' and 'unit' columns, or the string "indeterminate"
+        A pandas DataFrame with 'quantity' and 'unit' columns, the string
+        "indeterminate", or None if the string is unparseable
     """
     # Handle NaN, None, or empty strings
     if pd.isna(jail_str) or jail_str == '' or jail_str is None:
@@ -350,10 +378,13 @@ def parse_jail_string(jail_str: Union[str, float]) -> Union[pd.DataFrame, str]:
     
     # Create dataframe
     df = pd.DataFrame(data)
+
+    if df.empty:
+        return None
     
     return df
 
-def calculate_total_days(df: Union[pd.DataFrame, str]) -> Optional[int]:
+def calculate_total_days(df: Union[pd.DataFrame, str, None]) -> Optional[int]:
     """
     Calculate total days from a dataframe of jail components.
     
@@ -373,6 +404,9 @@ def calculate_total_days(df: Union[pd.DataFrame, str]) -> Optional[int]:
     Returns:
         Total number of days as an integer, or None if indeterminate
     """
+    if df is None:
+        return None
+
     if isinstance(df, str) and df == "indeterminate":
         return None
     
@@ -410,13 +444,18 @@ def process_jail_string(jail_str: Union[str, float]) -> None:
     df = parse_jail_string(jail_str)
     
     # Calculate total days# Calculate and print total days
-    if isinstance(df, str):
+    if df is None:
+        total_days = None
+    elif isinstance(df, str):
         total_days = "indeterminate sentence"
     else:
         total_days = calculate_total_days(df)
     
     # Print the dataframe
-    print(f"{jail_str} -> {total_days} days")
+    if df is None:
+        print(f"{jail_str} -> unrecognized sentence format")
+    else:
+        print(f"{jail_str} -> {total_days} days")
 
     return total_days
 
@@ -766,7 +805,10 @@ def process_master_row(row_data: Union[pd.Series, dict, tuple, list],
     # Jail
     print("JAIL:")
     jail_df = parse_jail_string(jail)
-    if isinstance(jail_df, str) and jail_df == "indeterminate":
+    if jail_df is None:
+        print("  Sentence: unrecognized format")
+        jail_total_days = None
+    elif isinstance(jail_df, str) and jail_df == "indeterminate":
         print("  Sentence: indeterminate")
         jail_total_days = None
     else:
@@ -844,7 +886,8 @@ def process_master_row(row_data: Union[pd.Series, dict, tuple, list],
         'jail': {
             'components': jail_df if not isinstance(jail_df, str) else None,
             'total_days': jail_total_days,
-            'is_indeterminate': isinstance(jail_df, str) and jail_df == "indeterminate"
+            'is_indeterminate': isinstance(jail_df, str) and jail_df == "indeterminate",
+            'is_unrecognized': jail_df is None
         },
         'mode': {
             'jail_type': mode_parsed[0],

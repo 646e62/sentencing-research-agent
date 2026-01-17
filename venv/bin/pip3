@@ -1,4 +1,4 @@
-#!/home/daniel/Programs/sentencing-research-agent/venv/bin/python3
+#!/home/daniel/Projects/sentencing-research-agent/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
