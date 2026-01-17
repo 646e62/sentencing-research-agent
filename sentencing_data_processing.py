@@ -133,9 +133,14 @@ def validate_master_schema(
     Returns:
         A dict with keys: 'missing', 'extra', 'required'
     """
-    required = required_columns or EXPECTED_MASTER_COLUMNS
-    missing = [col for col in required if col not in df.columns]
-    extra = [col for col in df.columns if col not in required]
+
+    required = list(required_columns or EXPECTED_MASTER_COLUMNS)
+
+    required_set = set(required)
+    columns_set = set(df.columns)
+    
+    missing = sorted(required_set - columns_set)
+    extra = sorted(columns_set - required_set)
 
     if strict and missing:
         raise ValueError(f"Missing required columns: {missing}")
