@@ -6,7 +6,7 @@ import argparse
 import re
 import sys
 import pandas as pd
-from typing import Union, Optional
+from typing import Dict, Union, Optional
 
 EXPECTED_MASTER_COLUMNS = [
     "uid",
@@ -20,7 +20,6 @@ EXPECTED_MASTER_COLUMNS = [
 ]
 
 # UID string parsing tools
-
 
 def parse_uid_string(uid_str: Union[str, float]) -> Dict[str, Optional[str]]:
     """
