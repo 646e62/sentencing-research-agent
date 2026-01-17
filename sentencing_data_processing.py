@@ -7,7 +7,7 @@ import re
 import sys
 import logging
 import pandas as pd
-from typing import Dict, Union, Optional
+from typing import Dict, Union, Optional, List
 
 logger = logging.getLogger(__name__)
 
@@ -162,36 +162,50 @@ def load_offences_lookup(offences_file: str = 'data/offence/all-criminal-offence
     """
     return pd.read_csv(offences_file, on_bad_lines='skip', engine='python')
 
-def normalize_offence_code(offence_code: str) -> list:
+def normalize_offence_code(offence_code: str) -> List[str]:
     """
     Generate possible variations of an offence code for matching.
-    
+
     Handles variations like:
-    - "cc_101" -> ["cc_101"]
-    - "101" -> ["101", "cc_101"]
+    - "cc_101"      -> ["cc_101", "cc101"]
+    - "cc101"       -> ["cc101", "cc_101"]
+    - "101"         -> ["101", "cc_101"]
     - "cc344(1)(b)" -> ["cc344(1)(b)", "cc_344(1)(b)"]
-    
-    Args:
-        offence_code: The offence code to normalize
-        
-    Returns:
-        A list of possible code variations to try matching
+
+    The input string is always the first element in the returned list.
+    Variants are ordered from most to least similar and are deduplicated.
     """
-    variations = [offence_code]
+
+    # Normalize simple whitespace
+    code = offence_code.strip()
+
+    candidates: List[str] = []
+    candidates.append(code)  # always include original as first
+
+    # 1. If it doesn't start with "cc" at all, add "cc_" + code
+    if not code.startswith('cc'):
+        candidates.append('cc_' + code)
+
+    # 2. If it starts with "cc" but not with "cc_", add a version with underscore
+    elif code.startswith('cc') and not code.startswith('cc_'):
+        # "cc344(1)(b)" -> "cc_344(1)(b)"
+        candidates.append('cc_' + code[2:])
+
+    # 3. If it starts with "cc_", also try without underscore
+    elif code.startswith('cc_'):
+        # "cc_344(1)(b)" -> "cc344(1)(b)"
+        candidates.append('cc' + code[3:])
+
+    # 4. Deduplicate while preserving order
+    seen = set()
+    unique_candidates: List[str] = []
+    for c in candidates:
+        if c not in seen:
+            seen.add(c)
+            unique_candidates.append(c)
+
+    return unique_candidates
     
-    # If it doesn't start with "cc", try adding "cc_"
-    if not offence_code.startswith('cc'):
-        variations.append('cc_' + offence_code)
-    
-    # If it starts with "cc" but not "cc_", try adding underscore
-    elif offence_code.startswith('cc') and not offence_code.startswith('cc_'):
-        variations.append('cc_' + offence_code[2:])
-    
-    # If it starts with "cc_", also try without underscore
-    elif offence_code.startswith('cc_'):
-        variations.append('cc' + offence_code[3:])
-    
-    return variations
 
 def parse_offence_string(offence_str: Union[str, float], 
                          offences_df: Optional[pd.DataFrame] = None,
@@ -208,58 +222,53 @@ def parse_offence_string(offence_str: Union[str, float],
         A dictionary with keys: 'offence_code', 'offence_name'
         Returns None values if string is empty/invalid or no match found
     """
+
     # Handle NaN, None, or empty strings
-    if pd.isna(offence_str) or offence_str == '' or offence_str is None:
+    if offence_str is None or (isinstance(offence_str, float) and pd.isna(offence_str)):
+        return {'offence_code': None, 'offence_name': None}
+
+    offence_code = str(offence_str).strip()
+
+    if offence_code == '':
         return {'offence_code': None, 'offence_name': None}
     
-    # Convert to string if not already
-    offence_code = str(offence_str).strip()
-    
-    # Strip common suffixes like "_ycja" before matching
-    # Store original for return value
     original_code = offence_code
-    if '_ycja' in offence_code:
-        offence_code = offence_code.replace('_ycja', '')
+    has_ycja = '_ycja' in offence_code
+
+    # Normalize for matching
+    normalized_code = offence_code.replace('_ycja', '') if has_ycja else offence_code
     
     # Load offences lookup if not provided
     if offences_df is None:
         offences_df = load_offences_lookup(offences_file)
-    
-    # Check if original code has _ycja suffix
-    has_ycja = '_ycja' in original_code
-    
-    # Try to match the offence code (using normalized version)
-    # First try exact match
-    match = offences_df[offences_df['section'] == offence_code]
-    
-    if len(match) > 0:
-        matched_code = offence_code  # The code that matched
-        offence_name = match.iloc[0]['offence_name']
-        # Append " (YCJA)" if _ycja suffix was present
+
+    # First try exact (normalized) match
+    match = offences_df.loc[offences_df['section'] == normalized_code]
+    if not match.empty:
+        offence_name = match['offence_name'].iat[0]
         if has_ycja and offence_name:
-            offence_name = offence_name + ' (YCJA)'
+            offence_name += ' (YCJA)'
         return {
-            'offence_code': matched_code,  # Return the matched code from lookup table
+            'offence_code': normalized_code,
             'offence_name': offence_name
         }
-    
+
     # Try variations
-    variations = normalize_offence_code(offence_code)
+    variations = normalize_offence_code(normalized_code)
     for variation in variations:
-        if variation != offence_code:  # Skip the one we already tried
-            match = offences_df[offences_df['section'] == variation]
-            if len(match) > 0:
-                matched_code = variation  # The variation that matched
-                offence_name = match.iloc[0]['offence_name']
-                # Append " (YCJA)" if _ycja suffix was present
-                if has_ycja and offence_name:
-                    offence_name = offence_name + ' (YCJA)'
-                return {
-                    'offence_code': matched_code,  # Return the matched code from lookup table
-                    'offence_name': offence_name
-                }
-    
-    # No match found
+        if variation == normalized_code:
+            continue
+        match = offences_df.loc[offences_df['section'] == variation]
+        if not match.empty:
+            offence_name = match['offence_name'].iat[0]
+            if has_ycja and offence_name:
+                offence_name += ' (YCJA)'
+            return {
+                'offence_code': variation,
+                'offence_name': offence_name
+            }
+
+    # No match found: return original code but no name
     return {'offence_code': original_code, 'offence_name': None}
 
 def process_offence_string(
