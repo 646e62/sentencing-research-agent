@@ -30,7 +30,7 @@ class TestMetadataProcessing(unittest.TestCase):
         with patch.object(metadata_processing, "_parse_citation", return_value=parsed):
             metadata = metadata_processing.get_metadata_from_citation("2024 SKCA 79")
 
-        self.assertEqual(metadata["citation"], "2024 SKCA 79")
+        self.assertEqual(metadata["citation"], "R v Example, 2024 SKCA 79 (CanLII)")
         self.assertEqual(metadata["case_id"], "2024skca79")
         self.assertEqual(metadata["court"], "SKCA")
         self.assertEqual(metadata["keywords"], ["sentencing"])
@@ -38,7 +38,7 @@ class TestMetadataProcessing(unittest.TestCase):
     def test_get_metadata_from_citation_handles_parse_failure(self) -> None:
         with patch.object(metadata_processing, "_parse_citation", return_value=None):
             metadata = metadata_processing.get_metadata_from_citation("bad citation")
-        self.assertEqual(metadata, {})
+        self.assertIsNone(metadata)
 
     def test_get_citing_cases_missing_api_key(self) -> None:
         with patch.object(metadata_processing.Config, "CANLII_API_KEY", ""):

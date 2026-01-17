@@ -75,10 +75,23 @@ def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
         citation_data = _parse_citation(citation)
         if not citation_data:
             return None
-            
+        
+        style_of_cause = citation_data.get('style_of_cause', '')
+        atomic_citation = citation_data.get('atomic_citation', '')
+
+        # Build the normalized citation string
+        if style_of_cause and atomic_citation:
+            formatted_citation = f"{style_of_cause}, {atomic_citation} (CanLII)"
+        elif style_of_cause:
+            formatted_citation = f"{style_of_cause} (CanLII)"
+        elif atomic_citation:
+            formatted_citation = f"{atomic_citation} (CanLII)"
+        else:
+            formatted_citation = citation
+
         # Map the fields from citation_data to our desired structure
         metadata: CitationMetadata = {
-            "citation": citation,  # Keep the original citation string
+            "citation": formatted_citation,  # Keep the original citation string
             "case_id": citation_data.get('uid'),
             "style_of_cause": citation_data.get('style_of_cause'),
             "atomic_citation": citation_data.get('atomic_citation'),
