@@ -1,5 +1,14 @@
 """
-Data processing tools for the sentencing data analysis project.
+Sentencing data processing tools.
+
+This module provides tools for processing sentencing data from the master.csv 
+file. It includes functions for parsing various fields from the data, such as 
+the UID, offence, date, jail, mode, conditions, fine, and appeal. It also 
+includes functions for validating the schema of the master.csv file and for 
+sampling rows from the file.
+
+The module is designed to be used as a library, but it also includes a minimal 
+CLI for validating and sampling the master.csv file.
 """
 
 import argparse
@@ -10,8 +19,6 @@ import pandas as pd
 from typing import Any, Dict, Union, Optional, List, TypedDict
 
 logger = logging.getLogger(__name__)
-
-
 
 # Type aliases
 ParsedDate = Dict[str, Optional[str]]
@@ -468,7 +475,6 @@ def parse_conditions_string(conditions_str: Any) -> ConditionsResult:
     return {'time': time, 'unit': unit, 'type': ctype}
 
 # Fine string parsing tools
-
 def parse_fine_string(fine_str: Union[str, float, int]) -> Optional[str]:
     """
     Parse a fine string and format it as currency with two decimal places.
@@ -500,7 +506,6 @@ def parse_fine_string(fine_str: Union[str, float, int]) -> Optional[str]:
         return None
 
 # Appeal string parsing tools
-
 def parse_appeal_string(appeal_str: Union[str, float]) -> dict:
     """
     Parse an appeal string into its components: court appealed to and result.
