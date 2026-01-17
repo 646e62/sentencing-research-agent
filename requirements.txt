@@ -1,2 +1,6 @@
 pandas==2.3.3
+beautifulsoup4==4.12.3
+html2text==2024.10.24
+requests==2.32.3
+legal-citation-parser==0.2.6
 

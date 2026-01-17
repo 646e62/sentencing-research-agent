@@ -14,6 +14,8 @@ import logging
 import html2text
 import json
 
+from metadata_processing import get_metadata_from_citation, get_citing_cases
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
