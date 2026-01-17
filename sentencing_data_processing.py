@@ -7,9 +7,17 @@ import re
 import sys
 import logging
 import pandas as pd
-from typing import Dict, Union, Optional, List
+from typing import Any, Dict, Union, Optional, List
 
 logger = logging.getLogger(__name__)
+
+ParsedDate = Dict[str, Optional[str]]
+
+_EMPTY_RESULT: ParsedDate = {
+'offence_date': None,
+'offence_start_date': None,
+'offence_end_date': None,
+}
 
 EXPECTED_MASTER_COLUMNS = [
     "uid",
@@ -291,6 +299,7 @@ def process_offence_string(
     Returns:
         A dictionary with the parsed offence components (same shape as parse_offence_string).
     """
+
     parsed = parse_offence_string(
         offence_str,
         offences_df=offences_df,
@@ -309,71 +318,34 @@ def process_offence_string(
 
 
 # Date string parsing tools
-
-def parse_date_string(date_str: Union[str, float]) -> dict:
+def parse_date_string(date_str: Any) -> ParsedDate:
     """
     Parse a date string into its components.
-    
-    If there is no ampersand, returns the value as "offence_date".
-    If there is an ampersand, returns "offence_start_date" and "offence_end_date".
-    
-    Args:
-        date_str: The date string to parse (e.g., "2024-12-18" or "1970-09-01&1981-07-01")
-        
-    Returns:
-        A dictionary with keys:
-        - "offence_date" (if no ampersand)
-        - "offence_start_date" and "offence_end_date" (if ampersand present)
-        Returns None values if string is empty/invalid
-    """
-    # Handle NaN, None, or empty strings
-    if pd.isna(date_str) or date_str == '' or date_str is None:
-        return {'offence_date': None, 'offence_start_date': None, 'offence_end_date': None}
-    
-    # Convert to string if not already
-    date_str = str(date_str).strip()
-    
-    # Initialize result
-    result = {'offence_date': None, 'offence_start_date': None, 'offence_end_date': None}
-    
-    # Check if ampersand is present
-    if '&' in date_str:
-        # Split by ampersand
-        parts = date_str.split('&', 1)
-        result['offence_start_date'] = parts[0].strip()
-        result['offence_end_date'] = parts[1].strip()
-    else:
-        # No ampersand, single date
-        result['offence_date'] = date_str
-    
-    return result
 
-def process_date_string(date_str: Union[str, float], verbose: bool = True) -> dict:
+    - If no '&', returns "offence_date".
+    - If '&' present, returns "offence_start_date" and "offence_end_date".
+    - Returns None values if input is empty/invalid-like.
     """
-    Process a date string, parse it, and print the components to terminal.
-    
-    Args:
-        date_str: The date string to process
-        
-    Returns:
-        A dictionary with the parsed date components
-    """
-    # Parse the string
-    parsed = parse_date_string(date_str)
-    
-    # Print results
-    if verbose:
-        print(f"Date string: {date_str}")
-        if parsed['offence_date'] is not None:
-            print(f"  Offence date: {parsed['offence_date']}")
-        elif parsed['offence_start_date'] is not None:
-            print(f"  Offence start date: {parsed['offence_start_date']}")
-            print(f"  Offence end date: {parsed['offence_end_date']}")
-        else:
-            print(f"  Offence date: {parsed['offence_date']}")
-        print("=" * 60)
-    
-    return parsed
+
+    if pd.isna(date_str) or date_str is None:
+        return _EMPTY_RESULT.copy()
+
+    # Normalize to string
+    s = str(date_str).strip()
+    if not s:
+        return _EMPTY_RESULT.copy()
+
+    result = _EMPTY_RESULT.copy()
+
+    # Split by '&' if present
+    if '&' in s:
+        start, end = (part.strip() for part in s.split('&', 1))
+        result['offence_start_date'] = start or None
+        result['offence_end_date'] = end or None
+    else:
+        result['offence_date'] = s
+
+    return result
 
 
 # Jail string parsing tools
