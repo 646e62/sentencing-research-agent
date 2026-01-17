@@ -26,6 +26,29 @@ logger = logging.getLogger(__name__)
 ParsedDate = Dict[str, Optional[str]]
 JailParseResult = Union[pd.DataFrame, str, None]
 RowLike = Union[pd.Series, Dict[str, Any], tuple, list]
+ModeResult = tuple[Optional[str], Optional[str]]
+FineResult = Optional[str]
+
+class UidParts(TypedDict):
+    case_id: Optional[str]
+    docket: Optional[str]
+    count: Optional[str]
+    defendant: Optional[str]
+
+class OffenceResult(TypedDict):
+    offence_code: Optional[str]
+    offence_name: Optional[str]
+
+class SchemaResult(TypedDict):
+    missing: List[str]
+    extra: List[str]
+    required: List[str]
+
+class JailSummary(TypedDict):
+    components: Optional[List[Dict[str, Any]]]
+    total_days: Optional[int]
+    is_indeterminate: bool
+    is_unrecognized: bool
 
 class ConditionsResult(TypedDict):
     time: Optional[float]
@@ -35,6 +58,18 @@ class ConditionsResult(TypedDict):
 class AppealResult(TypedDict):
     court: Optional[str]
     result: Optional[str]
+
+class ParsedRow(TypedDict):
+    uid: UidParts
+    offence: OffenceResult
+    date: ParsedDate
+    jail: JailSummary
+    mode: Dict[str, Optional[str]]
+    conditions: Dict[str, Optional[Any]]
+    fine: FineResult
+    appeal: AppealResult
+
+JsonValue = Union[Dict[str, Any], List[Any], str, int, float, bool, None]
 
 # Regular expressions and constants
 _EMPTY_RESULT: ParsedDate = {
@@ -79,7 +114,7 @@ _UNIT_DAY_FACTORS = {
 COLUMNS = ['uid', 'offence', 'date', 'jail', 'mode', 'conditions', 'fine', 'appeal']
 
 # UID string parsing tools
-def parse_uid_string(uid_str: Union[str, float]) -> Dict[str, Optional[str]]:
+def parse_uid_string(uid_str: Union[str, float]) -> UidParts:
     """
     Parse a UID string into its components.
 
@@ -139,7 +174,7 @@ def process_uid_string(
     log: bool = False,
     log_level: int = logging.INFO,
     logger_override: Optional[logging.Logger] = None,
-) -> Dict[str, Optional[str]]:
+) -> UidParts:
     """
     Process a UID string, parse it, and optionally log the components.
 
@@ -175,7 +210,7 @@ def validate_master_schema(
     df: pd.DataFrame,
     required_columns: Optional[list[str]] = None,
     strict: bool = False,
-) -> dict:
+) -> SchemaResult:
     """
     Validate the expected schema for master.csv.
 
@@ -260,7 +295,7 @@ def normalize_offence_code(offence_code: str) -> List[str]:
     
 def parse_offence_string(offence_str: Union[str, float], 
                          offences_df: Optional[pd.DataFrame] = None,
-                         offences_file: str = 'data/offence/all-criminal-offences-current.csv') -> dict:
+                         offences_file: str = 'data/offence/all-criminal-offences-current.csv') -> OffenceResult:
     """
     Parse an offence string and match it against the offences lookup table.
     
@@ -433,7 +468,7 @@ def calculate_total_days(
     return int(total_days)
 
 # Mode string parsing tools
-def parse_mode_string(mode_str: Any) -> tuple[Optional[str], Optional[str]]:
+def parse_mode_string(mode_str: Any) -> ModeResult:
     """
     Parse a mode string by splitting at the first hyphen.
 
@@ -482,7 +517,7 @@ def parse_conditions_string(conditions_str: Any) -> ConditionsResult:
     return {'time': time, 'unit': unit, 'type': ctype}
 
 # Fine string parsing tools
-def parse_fine_string(fine_str: Any) -> Optional[str]:
+def parse_fine_string(fine_str: Any) -> FineResult:
     """
     Parse a fine string and format it as currency with two decimal places.
 
@@ -562,10 +597,11 @@ def process_master_row(
     row_data: RowLike,
     offences_file: str = 'data/offence/all-criminal-offences-current.csv',
     verbose: bool = True,  # kept for backwards compatibility, but unused
-) -> dict:
+) -> ParsedRow:
     """
     Process a full row from master.csv and parse all fields.
     """
+    
     row = _row_to_dict(row_data)
     uid = row['uid']
     offence = row['offence']
@@ -722,7 +758,7 @@ def run_cli() -> int:
     row = df.iloc[row_index]
     parsed = process_master_row(row, offences_file=args.offences, verbose=not args.quiet)
 
-    def _make_json_safe(value: Any) -> Any:
+    def _make_json_safe(value: Any) -> JsonValue:
         if isinstance(value, pd.DataFrame):
             return value.to_dict(orient="records")
         if isinstance(value, dict):
