@@ -12,7 +12,10 @@ from typing import Any, Dict, Union, Optional, List
 logger = logging.getLogger(__name__)
 
 ParsedDate = Dict[str, Optional[str]]
+JailParseResult = Union[pd.DataFrame, str, None]
 
+_JAIL_RE = re.compile(r'(\d+(?:\.\d+)?)\s*([ymd])', re.IGNORECASE)
+_JAIL_COLUMNS = ['quantity', 'unit']
 _EMPTY_RESULT: ParsedDate = {
 'offence_date': None,
 'offence_start_date': None,
@@ -29,6 +32,14 @@ EXPECTED_MASTER_COLUMNS = [
     "fine",
     "appeal",
 ]
+
+# Map all accepted unit variants to canonical codes
+UNIT_MAP = {
+    'y': 'y',   # years
+    'm': 'm',   # months
+    'd': 'd',   # days
+}
+
 
 # UID string parsing tools
 
@@ -349,58 +360,45 @@ def parse_date_string(date_str: Any) -> ParsedDate:
 
 
 # Jail string parsing tools
-
-def parse_jail_string(jail_str: Union[str, float]) -> Union[pd.DataFrame, str, None]:
+def parse_jail_string(jail_str: Any) -> JailParseResult:
     """
     Parse a jail sentence string into a dataframe with quantity and unit columns.
-    
-    If the string contains "&", it splits by "&" and parses each component.
-    If the string is "indeterminate", returns the string "indeterminate".
-    If the string is non-empty but unparseable, returns None.
-    
-    Args:
-        jail_str: The jail sentence string to parse (e.g., "1y&6m&3d" or "12m")
-        
-    Returns:
-        A pandas DataFrame with 'quantity' and 'unit' columns, the string
-        "indeterminate", or None if the string is unparseable
+
+    - "1y&6m&3d" -> rows for 1y, 6m, 3d
+    - "indeterminate" -> "indeterminate"
+    - empty/NaN -> empty DataFrame with ['quantity', 'unit']
+    - non-empty but with no valid matches -> None
     """
-    # Handle NaN, None, or empty strings
-    if pd.isna(jail_str) or jail_str == '' or jail_str is None:
-        return pd.DataFrame(columns=['quantity', 'unit'])
-    
-    # Convert to string if not already
-    jail_str = str(jail_str).strip()
-    
-    # Handle special case: "indeterminate"
-    if jail_str.lower() == 'indeterminate':
+    if pd.isna(jail_str):
+        return pd.DataFrame(columns=_JAIL_COLUMNS)
+
+    s = str(jail_str).strip()
+    if not s:
+        return pd.DataFrame(columns=_JAIL_COLUMNS)
+
+    if s.lower() == 'indeterminate':
         return "indeterminate"
-    
-    # Split by "&" if present
-    if '&' in jail_str:
-        parts = jail_str.split('&')
-    else:
-        # If no "&", parse the whole string for all units
-        parts = [jail_str]
-    
-    # Parse each part
+
+    parts = s.split('&') if '&' in s else [s]
+
     data = []
     for part in parts:
-        part = part.strip()
-        # Find all matches of number followed by letter (y, m, or d) in this part
-        matches = re.findall(r'(\d+(?:\.\d+)?)\s*([ymd])', part, re.IGNORECASE)
-        for match in matches:
-            quantity = float(match[0])
-            unit = match[1].lower()
-            data.append({'quantity': quantity, 'unit': unit})
-    
-    # Create dataframe
-    df = pd.DataFrame(data)
+        for q, u in _JAIL_RE.findall(part.strip()):
+            unit = UNIT_MAP.get(u.lower())
+            if unit is None:
+                # Option A: silently skip unknown units
+                continue
 
-    if df.empty:
+                # Option B (stricter): treat the whole string as unparseable
+                # return None
+
+            data.append({'quantity': float(q), 'unit': unit})
+
+    if not data:
         return None
-    
-    return df
+
+    return pd.DataFrame(data, columns=_JAIL_COLUMNS)
+
 
 def calculate_total_days(df: Union[pd.DataFrame, str, None]) -> Optional[int]:
     """
