@@ -12,6 +12,8 @@ CLI for validating and sampling the master.csv file.
 """
 
 import argparse
+import json
+import os
 import re
 import sys
 import logging
@@ -536,190 +538,120 @@ def parse_appeal_string(appeal_str: Any) -> AppealResult:
     }
 
 # Full row processing function
+def _row_to_dict(row_data: RowLike) -> Dict[str, Any]:
+    """
+    Convert a row-like object to a dictionary of column names to values.
+
+    Args:
+        row_data: A pandas Series, dict, tuple, or list
+
+    Returns:
+        A dictionary with column names as keys and values as values
+    """
+
+    if isinstance(row_data, pd.Series):
+        return {col: row_data.get(col, '') for col in COLUMNS}
+    if isinstance(row_data, dict):
+        return {col: row_data.get(col, '') for col in COLUMNS}
+    if isinstance(row_data, (tuple, list)):
+        return {col: (row_data[i] if i < len(row_data) else '') 
+                for i, col in enumerate(COLUMNS)}
+    raise ValueError("row_data must be a pandas Series, dict, tuple, or list")
+
 def process_master_row(
-    row_data: Union[pd.Series, dict, tuple, list],
+    row_data: RowLike,
     offences_file: str = 'data/offence/all-criminal-offences-current.csv',
-    verbose: bool = True,
+    verbose: bool = True,  # kept for backwards compatibility, but unused
 ) -> dict:
     """
     Process a full row from master.csv and parse all fields.
-    
-    Expected column order: uid, offence, date, jail, mode, conditions, fine, appeal
-    
-    Args:
-        row_data: Can be:
-            - pandas Series (row from dataframe)
-            - dict with column names as keys
-            - tuple/list with values in order: (uid, offence, date, jail, mode, conditions, fine, appeal)
-        offences_file: Path to the offences CSV file
-        
-    Returns:
-        A dictionary with all parsed components
     """
-    # Extract values based on input type
-    if isinstance(row_data, pd.Series):
-        uid = row_data.get('uid', '')
-        offence = row_data.get('offence', '')
-        date = row_data.get('date', '')
-        jail = row_data.get('jail', '')
-        mode = row_data.get('mode', '')
-        conditions = row_data.get('conditions', '')
-        fine = row_data.get('fine', '')
-        appeal = row_data.get('appeal', '')
-    elif isinstance(row_data, dict):
-        uid = row_data.get('uid', '')
-        offence = row_data.get('offence', '')
-        date = row_data.get('date', '')
-        jail = row_data.get('jail', '')
-        mode = row_data.get('mode', '')
-        conditions = row_data.get('conditions', '')
-        fine = row_data.get('fine', '')
-        appeal = row_data.get('appeal', '')
-    elif isinstance(row_data, (tuple, list)):
-        # Assume order: uid, offence, date, jail, mode, conditions, fine, appeal
-        uid = row_data[0] if len(row_data) > 0 else ''
-        offence = row_data[1] if len(row_data) > 1 else ''
-        date = row_data[2] if len(row_data) > 2 else ''
-        jail = row_data[3] if len(row_data) > 3 else ''
-        mode = row_data[4] if len(row_data) > 4 else ''
-        conditions = row_data[5] if len(row_data) > 5 else ''
-        fine = row_data[6] if len(row_data) > 6 else ''
-        appeal = row_data[7] if len(row_data) > 7 else ''
-    else:
-        raise ValueError("row_data must be a pandas Series, dict, tuple, or list")
-    
-    # Parse all fields
-    printer = print if verbose else (lambda *args, **kwargs: None)
+    row = _row_to_dict(row_data)
+    uid = row['uid']
+    offence = row['offence']
+    date = row['date']
+    jail = row['jail']
+    mode = row['mode']
+    conditions = row['conditions']
+    fine = row['fine']
+    appeal = row['appeal']
 
-    printer("=" * 80)
-    printer("PROCESSING MASTER CSV ROW")
-    printer("=" * 80)
-    printer()
-    
     # UID
-    printer("UID:")
     uid_parsed = parse_uid_string(uid)
-    printer(f"  Case ID: {uid_parsed['case_id']}")
-    printer(f"  Docket: {uid_parsed['docket']}")
-    printer(f"  Count: {uid_parsed['count']}")
-    printer(f"  Defendant: {uid_parsed['defendant']}")
-    printer()
-    
+
     # Offence
-    printer("OFFENCE:")
     offence_parsed = parse_offence_string(offence, offences_file=offences_file)
-    printer(f"  Offence code: {offence_parsed['offence_code']}")
-    printer(f"  Offence name: {offence_parsed['offence_name']}")
-    printer()
-    
+
     # Date
-    printer("DATE:")
     date_parsed = parse_date_string(date)
-    if date_parsed['offence_date'] is not None:
-        printer(f"  Offence date: {date_parsed['offence_date']}")
-    else:
-        printer(f"  Offence start date: {date_parsed['offence_start_date']}")
-        printer(f"  Offence end date: {date_parsed['offence_end_date']}")
-    printer()
-    
+
     # Jail
-    printer("JAIL:")
     jail_df = parse_jail_string(jail)
     if jail_df is None:
-        printer("  Sentence: unrecognized format")
         jail_total_days = None
-    elif isinstance(jail_df, str) and jail_df == "indeterminate":
-        printer("  Sentence: indeterminate")
+    elif isinstance(jail_df, str) and jail_df.lower() == "indeterminate":
         jail_total_days = None
     else:
-        printer("  Sentence components:")
-        if not jail_df.empty:
-            printer(jail_df.to_string(index=False))
-        else:
-            printer("  (no jail sentence)")
         jail_total_days = calculate_total_days(jail_df)
-        printer(f"  Total days: {jail_total_days}")
-    printer()
-    
+
     # Mode
-    printer("MODE:")
     mode_parsed = parse_mode_string(mode)
-    printer(f"  Jail type: {mode_parsed[0]}")
-    printer(f"  Sentence mode: {mode_parsed[1]}")
-    printer()
-    
+
     # Conditions
-    printer("CONDITIONS:")
     conditions_parsed = parse_conditions_string(conditions)
     time = conditions_parsed['time']
-    unit = conditions_parsed['unit']
+    raw_unit = conditions_parsed['unit']
     cond_type = conditions_parsed['type']
-    
-    # Convert unit to human readable format
-    if unit == 'y':
-        unit = 'year'
-    elif unit == 'm':
-        unit = 'month'
-    elif unit == 'd':
-        unit = 'day'
-    else:
-        unit = 'unknown'
-    
-    # Add pluralization to unit if time is not 1
+
+    # Human-readable unit
+    unit_display = 'unknown'
+    if raw_unit == 'y':
+        unit_display = 'year'
+    elif raw_unit == 'm':
+        unit_display = 'month'
+    elif raw_unit == 'd':
+        unit_display = 'day'
+
     if time is not None and time != 1:
-        unit += 's'
-    
-    # Special case for discharge: 0 length = absolute discharge, otherwise conditional discharge
+        unit_display += 's'
+
+    # Human-readable discharge type
+    type_display = cond_type
     if cond_type == 'discharge':
         if time == 0:
-            cond_type = 'absolute discharge'
-        else:
-            cond_type = 'conditional discharge'
-    
-    if time is not None:
-        printer(f"  Time length: {time} {unit}")
-    else:
-        printer(f"  Time length: None")
-    printer(f"  Type: {cond_type}")
-    printer()
-    
+            type_display = 'absolute discharge'
+        elif time is not None:
+            type_display = 'conditional discharge'
+
     # Fine
-    printer("FINE:")
     fine_formatted = parse_fine_string(fine)
-    printer(f"  Formatted fine: {fine_formatted}")
-    printer()
-    
+
     # Appeal
-    printer("APPEAL:")
     appeal_parsed = parse_appeal_string(appeal)
-    printer(f"  Court: {appeal_parsed['court']}")
-    printer(f"  Result: {appeal_parsed['result']}")
-    printer()
-    
-    printer("=" * 80)
-    
-    # Return all parsed data
+
     return {
         'uid': uid_parsed,
         'offence': offence_parsed,
         'date': date_parsed,
         'jail': {
-            'components': jail_df if not isinstance(jail_df, str) else None,
+            'components': jail_df if isinstance(jail_df, pd.DataFrame) else None,
             'total_days': jail_total_days,
-            'is_indeterminate': isinstance(jail_df, str) and jail_df == "indeterminate",
-            'is_unrecognized': jail_df is None
+            'is_indeterminate': isinstance(jail_df, str) and jail_df.lower() == "indeterminate",
+            'is_unrecognized': jail_df is None,
         },
         'mode': {
             'jail_type': mode_parsed[0],
-            'sentence_mode': mode_parsed[1]
+            'sentence_mode': mode_parsed[1],
         },
         'conditions': {
-            'time': conditions_parsed['time'],
-            'unit': unit,  # Use processed unit (with pluralization)
-            'type': cond_type  # Use processed type (absolute/conditional discharge)
+            'time': time,
+            'unit': raw_unit,
+            'unit_display': unit_display,
+            'type': cond_type,
+            'type_display': type_display,
         },
         'fine': fine_formatted,
-        'appeal': appeal_parsed
+        'appeal': appeal_parsed,
     }
 
 def load_master_csv(master_file: str = 'data/case/master.csv') -> pd.DataFrame:
@@ -788,7 +720,33 @@ def run_cli() -> int:
 
     row_index = max(0, min(args.row_index, len(df) - 1))
     row = df.iloc[row_index]
-    process_master_row(row, offences_file=args.offences, verbose=not args.quiet)
+    parsed = process_master_row(row, offences_file=args.offences, verbose=not args.quiet)
+
+    def _make_json_safe(value: Any) -> Any:
+        if isinstance(value, pd.DataFrame):
+            return value.to_dict(orient="records")
+        if isinstance(value, dict):
+            return {k: _make_json_safe(v) for k, v in value.items()}
+        if isinstance(value, list):
+            return [_make_json_safe(v) for v in value]
+        return value
+
+    uid = parsed.get("uid", {})
+    filename_parts = [
+        uid.get("case_id") or "unknown",
+        uid.get("docket") or "unknown",
+        uid.get("count") or "unknown",
+        uid.get("defendant") or "unknown",
+    ]
+    output_dir = os.path.join(".", "data", "json", "sentencing-data")
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, "_".join(filename_parts) + ".json")
+
+    with open(output_path, "w", encoding="utf-8") as output_file:
+        json.dump(_make_json_safe(parsed), output_file, indent=2)
+
+    if not args.quiet:
+        print(f"Wrote parsed output to {output_path}")
     return 0
 
 
