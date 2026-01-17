@@ -5,8 +5,11 @@ Data processing tools for the sentencing data analysis project.
 import argparse
 import re
 import sys
+import logging
 import pandas as pd
 from typing import Dict, Union, Optional
+
+logger = logging.getLogger(__name__)
 
 EXPECTED_MASTER_COLUMNS = [
     "uid",
@@ -77,28 +80,39 @@ def parse_uid_string(uid_str: Union[str, float]) -> Dict[str, Optional[str]]:
     }
 
 
-def process_uid_string(uid_str: Union[str, float], verbose: bool = True) -> dict:
+def process_uid_string(
+    uid_str: Union[str, float],
+    log: bool = False,
+    log_level: int = logging.INFO,
+    logger_override: Optional[logging.Logger] = None,
+) -> Dict[str, Optional[str]]:
     """
-    Process a UID string, parse it, and print the components to terminal.
-    
+    Process a UID string, parse it, and optionally log the components.
+
     Args:
-        uid_str: The UID string to process
-        
+        uid_str: The UID string (or NaN-like value) to process.
+        log: If True, log parsed components using the module logger.
+        log_level: Logging level to use when log is True.
+        logger_override: Optional logger instance to use instead of module logger.
+
     Returns:
-        A dictionary with the parsed UID components
+        A dictionary with the parsed UID components.
     """
-    # Parse the string
     parsed = parse_uid_string(uid_str)
-    
-    # Print results
-    if verbose:
-        print(f"UID string: {uid_str}")
-        print(f"  Case ID: {parsed['case_id']}")
-        print(f"  Docket: {parsed['docket']}")
-        print(f"  Count: {parsed['count']}")
-        print(f"  Defendant: {parsed['defendant']}")
-        print("=" * 60)
-    
+
+    if log:
+        active_logger = logger_override or logger
+        active_logger.log(
+            log_level,
+            "Parsed UID string %r -> case_id=%r, docket=%r, count=%r, "
+            "defendant=%r",
+            uid_str,
+            parsed["case_id"],
+            parsed["docket"],
+            parsed["count"],
+            parsed["defendant"],
+        )
+
     return parsed
 
 
@@ -966,6 +980,8 @@ def run_cli() -> int:
     )
 
     args = parser.parse_args()
+
+    logging.basicConfig(level=logging.WARNING if args.quiet else logging.INFO)
     df = load_master_csv(args.master)
     schema = validate_master_schema(df)
     if schema["missing"]:
