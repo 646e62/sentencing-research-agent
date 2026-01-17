@@ -11,15 +11,17 @@ from typing import Any, Dict, Union, Optional, List
 
 logger = logging.getLogger(__name__)
 
+# Type aliases
 ParsedDate = Dict[str, Optional[str]]
 JailParseResult = Union[pd.DataFrame, str, None]
 
+# Regular expressions and constants
 _JAIL_RE = re.compile(r'(\d+(?:\.\d+)?)\s*([ymd])', re.IGNORECASE)
 _JAIL_COLUMNS = ['quantity', 'unit']
 _EMPTY_RESULT: ParsedDate = {
-'offence_date': None,
-'offence_start_date': None,
-'offence_end_date': None,
+    'offence_date': None,
+    'offence_start_date': None,
+    'offence_end_date': None,
 }
 
 EXPECTED_MASTER_COLUMNS = [
@@ -299,43 +301,6 @@ def parse_offence_string(offence_str: Union[str, float],
     return {'offence_code': original_code, 'offence_name': None}
 
 
-def process_offence_string(
-    offence_str: Union[str, float],
-    offences_df: Optional[pd.DataFrame] = None,
-    offences_file: str = 'data/offence/all-criminal-offences-current.csv',
-    verbose: bool = True,
-) -> Dict[str, Optional[str]]:
-
-    """
-    Process an offence string: parse it and optionally log the result.
-
-    Args:
-        offence_str: The offence string to process.
-        offences_df: Optional pre-loaded offences DataFrame. Passed through to parser.
-        offences_file: Path to the offences CSV file (used if offences_df is None).
-        verbose: If True, logs details of the parsing/matching.
-
-    Returns:
-        A dictionary with the parsed offence components (same shape as parse_offence_string).
-    """
-
-    parsed = parse_offence_string(
-        offence_str,
-        offences_df=offences_df,
-        offences_file=offences_file,
-    )
-
-    if verbose:
-        logger.info(
-            "Processed offence string",
-            extra={
-                "offence_str": offence_str,
-                "offence_code": parsed.get("offence_code"),
-                "offence_name": parsed.get("offence_name"),
-            },
-        )
-
-
 # Date string parsing tools
 def parse_date_string(date_str: Any) -> ParsedDate:
     """
@@ -415,16 +380,17 @@ def calculate_total_days(
     Calculate total days from a dataframe of jail components.
 
     Rules:
-    - 1 year (y)  = 365 days
-    - 12 months   = 365 days (special case)
-    - 1 month (m) = 30 days (otherwise)
-    - 1 day (d)   = 1 day
+    - 1y = 365 days
+    - 1m = 30 days 
+    - 12m = 365 days
+    - 1d = 1 day
 
     df may be:
     - DataFrame with 'quantity' (float/int) and 'unit' ('y'/'m'/'d')
     - the string "indeterminate"
     - None
     """
+
     if df is None:
         return None
 
@@ -446,36 +412,6 @@ def calculate_total_days(
     total_days = (df['quantity'] * factors).sum()
 
     return int(total_days)
-
-
-def process_jail_string(jail_str: Union[str, float], verbose: bool = True) -> None:
-    """
-    Process a jail string, create a dataframe, calculate total days, and print results.
-    
-    This is the main function for testing purposes.
-    
-    Args:
-        jail_str: The jail sentence string to process
-    """
-    # Parse the string
-    df = parse_jail_string(jail_str)
-    
-    # Calculate total days# Calculate and print total days
-    if df is None:
-        total_days = None
-    elif isinstance(df, str):
-        total_days = "indeterminate sentence"
-    else:
-        total_days = calculate_total_days(df)
-    
-    # Print the dataframe
-    if verbose:
-        if df is None:
-            print(f"{jail_str} -> unrecognized sentence format")
-        else:
-            print(f"{jail_str} -> {total_days} days")
-
-    return total_days
 
 
 # Mode string parsing tools
@@ -505,23 +441,6 @@ def parse_mode_string(mode_str: Union[str, float]) -> tuple:
     else:
         # No hyphen found, return the whole string as part1
         return (mode_str, None)
-
-def process_mode_string(mode_str: Union[str, float]) -> tuple:
-    """
-    Process a mode string, parse it, and return the two parts.
-    
-    Args:
-        mode_str: The mode string to process
-        
-    Returns:
-        A tuple with two parts: (part1, part2)
-    """
-    # Parse the string
-    jail_type, sentence_mode = parse_mode_string(mode_str)
-    
-    # Print results
-    return jail_type, sentence_mode
-
 
 # Conditions string parsing tools
 
@@ -584,46 +503,6 @@ def parse_conditions_string(conditions_str: Union[str, float]) -> dict:
     # If no pattern matches, return None values
     return result
 
-def process_conditions_string(conditions_str: Union[str, float], verbose: bool = True) -> None:
-    """
-    Process a conditions string, parse it, and print the components to terminal.
-    
-    Args:
-        conditions_str: The conditions string to process
-    """
-    # Parse the string
-    parsed = parse_conditions_string(conditions_str)
-    
-    # Format output
-    time = parsed['time']
-    unit = parsed['unit']
-    cond_type = parsed['type']
-
-    # Convert unit to human readable format
-    if unit == 'y':
-        unit = 'year'
-    elif unit == 'm':
-        unit = 'month'
-    elif unit == 'd':
-        unit = 'day'
-    else:
-        unit = 'unknown'
-
-    # Add pluralization to unit if time is not 1
-    if time != 1:
-        unit += 's'
-    
-    # Special case for discharge: 0 length = absolute discharge, otherwise conditional discharge
-    if cond_type == 'discharge':
-        if time == 0:
-            cond_type = 'absolute discharge'
-        else:
-            cond_type = 'conditional discharge'
-    
-    # Return results
-    return time, unit, cond_type
-
-
 # Fine string parsing tools
 
 def parse_fine_string(fine_str: Union[str, float, int]) -> Optional[str]:
@@ -655,28 +534,6 @@ def parse_fine_string(fine_str: Union[str, float, int]) -> Optional[str]:
     except (ValueError, TypeError):
         # If conversion fails, return None
         return None
-
-def process_fine_string(fine_str: Union[str, float, int], verbose: bool = True) -> Optional[str]:
-    """
-    Process a fine string, parse it, format it, and print the result to terminal.
-    
-    Args:
-        fine_str: The fine value to process
-        
-    Returns:
-        A formatted string with dollar sign and two decimal places, or None
-    """
-    # Parse the string
-    formatted_fine = parse_fine_string(fine_str)
-    
-    # Print results
-    if verbose:
-        print(f"Fine string: {fine_str}")
-        print(f"  Formatted fine: {formatted_fine}")
-        print("=" * 60)
-    
-    return formatted_fine
-
 
 # Appeal string parsing tools
 
@@ -716,28 +573,6 @@ def parse_appeal_string(appeal_str: Union[str, float]) -> dict:
             'court': parts[0].strip() if len(parts) > 0 else None,
             'result': None
         }
-
-def process_appeal_string(appeal_str: Union[str, float], verbose: bool = True) -> dict:
-    """
-    Process an appeal string, parse it, and print the components to terminal.
-    
-    Args:
-        appeal_str: The appeal string to process
-        
-    Returns:
-        A dictionary with the parsed appeal components
-    """
-    # Parse the string
-    parsed = parse_appeal_string(appeal_str)
-    
-    # Print results
-    if verbose:
-        print(f"Appeal string: {appeal_str}")
-        print(f"  Court: {parsed['court']}")
-        print(f"  Result: {parsed['result']}")
-        print("=" * 60)
-    
-    return parsed
 
 # Full row processing function
 
