@@ -228,12 +228,13 @@ def parse_offence_string(offence_str: Union[str, float],
         return {'offence_code': None, 'offence_name': None}
 
     offence_code = str(offence_str).strip()
-
     if offence_code == '':
         return {'offence_code': None, 'offence_name': None}
     
-    # Check if the code has a _ycja suffix and remove it if it does
+    # Save the original code for later return if no match is found
     original_code = offence_code
+
+    # Check if the code has a _ycja suffix and remove it if it does
     has_ycja = '_ycja' in offence_code
     normalized_code = offence_code.replace('_ycja', '') if has_ycja else offence_code
     
@@ -252,7 +253,7 @@ def parse_offence_string(offence_str: Union[str, float],
             'offence_name': offence_name
         }
 
-    # Try variations
+    # Next try variations to see if we can find a match from imperfect input
     variations = normalize_offence_code(normalized_code)
     for variation in variations:
         if variation == normalized_code:
@@ -267,35 +268,44 @@ def parse_offence_string(offence_str: Union[str, float],
                 'offence_name': offence_name
             }
 
-    # No match found: return original code but no name
+    # Return the original code and no name if no match is found
     return {'offence_code': original_code, 'offence_name': None}
+
 
 def process_offence_string(
     offence_str: Union[str, float],
+    offences_df: Optional[pd.DataFrame] = None,
     offences_file: str = 'data/offence/all-criminal-offences-current.csv',
     verbose: bool = True,
-) -> dict:
+) -> Dict[str, Optional[str]]:
+
     """
-    Process an offence string, parse it, match against lookup table, and print results.
-    
+    Process an offence string: parse it and optionally log the result.
+
     Args:
-        offence_str: The offence string to process
-        offences_file: Path to the offences CSV file
-        
+        offence_str: The offence string to process.
+        offences_df: Optional pre-loaded offences DataFrame. Passed through to parser.
+        offences_file: Path to the offences CSV file (used if offences_df is None).
+        verbose: If True, logs details of the parsing/matching.
+
     Returns:
-        A dictionary with the parsed offence components
+        A dictionary with the parsed offence components (same shape as parse_offence_string).
     """
-    # Parse the string
-    parsed = parse_offence_string(offence_str, offences_file=offences_file)
-    
-    # Print results
+    parsed = parse_offence_string(
+        offence_str,
+        offences_df=offences_df,
+        offences_file=offences_file,
+    )
+
     if verbose:
-        print(f"Offence string: {offence_str}")
-        print(f"  Offence code: {parsed['offence_code']}")
-        print(f"  Offence name: {parsed['offence_name']}")
-        print("=" * 60)
-    
-    return parsed
+        logger.info(
+            "Processed offence string",
+            extra={
+                "offence_str": offence_str,
+                "offence_code": parsed.get("offence_code"),
+                "offence_name": parsed.get("offence_name"),
+            },
+        )
 
 
 # Date string parsing tools
