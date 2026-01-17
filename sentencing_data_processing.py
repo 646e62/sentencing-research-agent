@@ -40,6 +40,13 @@ UNIT_MAP = {
     'd': 'd',   # days
 }
 
+# Unit → day factor for the "default" conversion
+_UNIT_DAY_FACTORS = {
+    'y': 365,
+    'm': 30,   # overridden for quantity == 12
+    'd': 1,
+}
+
 
 # UID string parsing tools
 
@@ -117,6 +124,7 @@ def process_uid_string(
     Returns:
         A dictionary with the parsed UID components.
     """
+
     parsed = parse_uid_string(uid_str)
 
     if log:
@@ -400,52 +408,45 @@ def parse_jail_string(jail_str: Any) -> JailParseResult:
     return pd.DataFrame(data, columns=_JAIL_COLUMNS)
 
 
-def calculate_total_days(df: Union[pd.DataFrame, str, None]) -> Optional[int]:
+def calculate_total_days(
+    df: Union[pd.DataFrame, str, None]
+) -> Optional[int]:
     """
     Calculate total days from a dataframe of jail components.
-    
-    Conversion rates:
-    - 1 year (y) = 365 days
-    - 12 months (m) = 365 days
-    - 1 month (m) = 30 days
-    - 1 day (d) = 1 day
 
-    The code can be adapted to return a more verbose output that includes the 
-    years, months, and days and their conversions.
-    
-    Args:
-        df: A pandas DataFrame with 'quantity' and 'unit' columns, or 
-        "indeterminate"
-        
-    Returns:
-        Total number of days as an integer, or None if indeterminate
+    Rules:
+    - 1 year (y)  = 365 days
+    - 12 months   = 365 days (special case)
+    - 1 month (m) = 30 days (otherwise)
+    - 1 day (d)   = 1 day
+
+    df may be:
+    - DataFrame with 'quantity' (float/int) and 'unit' ('y'/'m'/'d')
+    - the string "indeterminate"
+    - None
     """
     if df is None:
         return None
 
-    if isinstance(df, str) and df == "indeterminate":
+    if isinstance(df, str) and df.lower() == "indeterminate":
         return None
-    
-    if df.empty:
+
+    if not isinstance(df, pd.DataFrame) or df.empty:
         return 0
-    
-    total_days = 0
-    
-    for _, row in df.iterrows():
-        quantity = row['quantity']
-        unit = row['unit'].lower()
-        
-        if unit == 'y':
-            total_days += int(quantity * 365)
-        # Special case for 12 months = 1 year
-        elif unit == 'm' and quantity == 12:
-            total_days += 365
-        elif unit == 'm':
-            total_days += int(quantity * 30)
-        elif unit == 'd':
-            total_days += int(quantity)
-    
-    return total_days
+
+    units = df['unit'].str.lower()
+
+    # Special-case: 12 months = 365 days
+    is_12_months = (units == 'm') & (df['quantity'] == 12)
+
+    # Compute factors for the usual & 12m cases
+    factors = units.map(_UNIT_DAY_FACTORS).fillna(0)
+    factors = factors.where(~is_12_months, other=365 / df['quantity'])
+
+    total_days = (df['quantity'] * factors).sum()
+
+    return int(total_days)
+
 
 def process_jail_string(jail_str: Union[str, float], verbose: bool = True) -> None:
     """
