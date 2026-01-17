@@ -16,13 +16,14 @@ ParsedDate = Dict[str, Optional[str]]
 JailParseResult = Union[pd.DataFrame, str, None]
 
 # Regular expressions and constants
-_JAIL_RE = re.compile(r'(\d+(?:\.\d+)?)\s*([ymd])', re.IGNORECASE)
-_JAIL_COLUMNS = ['quantity', 'unit']
 _EMPTY_RESULT: ParsedDate = {
     'offence_date': None,
     'offence_start_date': None,
     'offence_end_date': None,
 }
+_JAIL_RE = re.compile(r'(\d+(?:\.\d+)?)\s*([ymd])', re.IGNORECASE)
+_JAIL_COLUMNS = ['quantity', 'unit']
+_EMPTY_MODE: tuple[Optional[str], Optional[str]] = (None, None)
 
 EXPECTED_MASTER_COLUMNS = [
     "uid",
@@ -415,32 +416,28 @@ def calculate_total_days(
 
 
 # Mode string parsing tools
+def parse_mode_string(mode_str: Any) -> tuple[Optional[str], Optional[str]]:
+    """
+    Parse a mode string by splitting at the first hyphen.
 
-def parse_mode_string(mode_str: Union[str, float]) -> tuple:
+    Examples:
+        "jail-consecutive" -> ("jail", "consecutive")
+        "fine"             -> ("fine", None)
+        NaN / None / ""    -> (None, None)
     """
-    Parse a mode string by splitting at the hyphen.
     
-    Args:
-        mode_str: The mode string to parse (e.g., "jail-consecutive")
-        
-    Returns:
-        A tuple with two parts: (part1, part2)
-        Returns (None, None) if string is empty/invalid
-    """
-    # Handle NaN, None, or empty strings
-    if pd.isna(mode_str) or mode_str == '' or mode_str is None:
-        return (None, None)
-    
-    # Convert to string if not already
-    mode_str = str(mode_str).strip()
-    
-    # Split at the first hyphen
-    if '-' in mode_str:
-        parts = mode_str.split('-', 1)  # Split only on first hyphen
-        return (parts[0], parts[1])
-    else:
-        # No hyphen found, return the whole string as part1
-        return (mode_str, None)
+    if pd.isna(mode_str):
+        return _EMPTY_MODE
+
+    s = str(mode_str).strip()
+    if not s:
+        return _EMPTY_MODE
+
+    if '-' in s:
+        left, right = (p.strip() for p in s.split('-', 1))
+        return (left or None, right or None)
+
+    return (s, None)
 
 # Conditions string parsing tools
 
