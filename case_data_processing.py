@@ -14,12 +14,18 @@ from pathlib import Path
 from typing import Dict, Any, Tuple, Optional, List, TypedDict
 
 import html2text
+import pandas as pd
 
 from metadata_processing import (
     CitationMetadata,
     CitingCasesResult,
     get_metadata_from_citation,
     get_citing_cases,
+)
+from sentencing_data_processing import (
+    load_master_csv,
+    parse_uid_string,
+    process_master_row,
 )
 
 logger = logging.getLogger(__name__)
@@ -33,6 +39,38 @@ class ProcessedTextResult(TypedDict):
     decisions_citing: List[Dict[str, Any]]
     sentencing_data: Any
     processing_log: List[str]
+
+def get_sentencing_data_for_case_id(
+    case_id: str,
+    master_file: str = "data/case/master.csv",
+    offences_file: str = "data/offence/all-criminal-offences-current.csv",
+) -> Dict[str, Dict[str, Any]]:
+    """
+    Retrieve sentencing data rows from master.csv that match a case_id.
+
+    Returns a dict keyed by UID string, with parsed row data as values.
+    """
+    if not case_id:
+        return {}
+
+    df = load_master_csv(master_file)
+    if df.empty or "uid" not in df.columns:
+        return {}
+
+    results: Dict[str, Dict[str, Any]] = {}
+    for _, row in df.iterrows():
+        uid_value = row.get("uid", "")
+        parsed_uid = parse_uid_string(uid_value)
+        if parsed_uid.get("case_id") != case_id:
+            continue
+        uid_key = str(uid_value).strip() or f"{case_id}_unknown"
+        results[uid_key] = process_master_row(
+            row,
+            offences_file=offences_file,
+            verbose=False,
+        )
+
+    return results
 
 def html_to_markdown(html_content: str) -> str:
     """Convert HTML to Markdown format."""
@@ -327,6 +365,9 @@ def process_text(text: str, include_header: bool = False) -> ProcessedTextResult
         api_response: CitingCasesResult = get_citing_cases(citation)
         decisions_citing = api_response.get('cases', [])
         logger.info(f"Found {len(decisions_citing)} citing cases")
+
+        case_id = metadata.get("case_id")
+        sentencing_data = get_sentencing_data_for_case_id(case_id) if case_id else {}
         
         result: ProcessedTextResult = {
             "_body": body,  # Internal field
