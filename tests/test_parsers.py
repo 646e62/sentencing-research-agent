@@ -4,7 +4,6 @@ import pandas as pd
 
 from sentencing_data_processing import (
     calculate_total_days,
-    normalize_uid_defendant,
     parse_jail_string,
     parse_offence_string,
     parse_uid_string,
@@ -14,14 +13,6 @@ from sentencing_data_processing import (
 class TestParsers(unittest.TestCase):
     def test_uid_default_defendant(self) -> None:
         parsed = parse_uid_string("2024mbpc96_None_1")
-        self.assertEqual(parsed["defendant"], "a")
-
-    def test_uid_normalize_defendant(self) -> None:
-        self.assertEqual(
-            normalize_uid_defendant("2024mbpc96_None_1_1"),
-            "2024mbpc96_None_1_a",
-        )
-        parsed = parse_uid_string("2024mbpc96_None_1_1")
         self.assertEqual(parsed["defendant"], "a")
 
     def test_offence_preserves_ycja_on_unmatched(self) -> None:

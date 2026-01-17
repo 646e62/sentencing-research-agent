@@ -20,33 +20,6 @@ EXPECTED_MASTER_COLUMNS = [
 ]
 
 # UID string parsing tools
-
-def normalize_uid_defendant(uid_str: Union[str, float], default_defendant: str = 'a') -> Union[str, float]:
-    """
-    Normalize the defendant component in a UID string.
-
-    - Converts a trailing "_1" defendant component to "_a"
-    - Leaves other formats unchanged
-
-    Args:
-        uid_str: The UID string to normalize
-        default_defendant: The normalized default defendant identifier
-
-    Returns:
-        A normalized UID string, or the original value if empty/invalid
-    """
-    if pd.isna(uid_str) or uid_str == '' or uid_str is None:
-        return uid_str
-
-    uid_str = str(uid_str).strip()
-    parts = uid_str.split('_')
-    if len(parts) == 4 and parts[-1] == '1':
-        parts[-1] = default_defendant
-        return '_'.join(parts)
-
-    return uid_str
-
-
 def parse_uid_string(uid_str: Union[str, float]) -> dict:
     """
     Parse a UID string into its components.
@@ -69,7 +42,7 @@ def parse_uid_string(uid_str: Union[str, float]) -> dict:
         return {'case_id': None, 'docket': None, 'count': None, 'defendant': 'a'}
     
     # Convert to string if not already
-    uid_str = normalize_uid_defendant(uid_str, default_defendant='a')
+    uid_str = str(uid_str).strip()
     
     # Split by underscore
     parts = uid_str.split('_')
