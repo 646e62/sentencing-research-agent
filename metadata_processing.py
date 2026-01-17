@@ -5,30 +5,40 @@ This module provides tools for generating and retrieving metadata using local
 rules and the CanLII API.
 """
 
-from bs4 import BeautifulSoup
-import requests
-from pathlib import Path
-from typing import Dict, Any, Tuple
 import logging
+from typing import Dict, Any, Optional
+
+import requests
+
 from config import Config
 import legal_citation_parser
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-
 logger = logging.getLogger(__name__)
+
+def _parse_citation(citation: str) -> Optional[Dict[str, Any]]:
+    """
+    Parse a citation using the legal citation parser.
+
+    Returns the parsed citation dict or None if parsing fails.
+    """
+    try:
+        citation_data = legal_citation_parser.parse_citation(citation, metadata=True)
+    except Exception as exc:
+        logger.error("Error parsing citation %r: %s", citation, exc)
+        return None
+
+    if not citation_data:
+        logger.warning("Could not parse citation: %s", citation)
+        return None
+
+    return citation_data
+
 
 def get_metadata_from_citation(citation: str) -> Dict[str, Any]:
     """Extract all metadata from a citation using the legal citation parser."""
     try:
-        # Parse the citation with metadata flag
-        citation_data = legal_citation_parser.parse_citation(citation, metadata=True)
-        
+        citation_data = _parse_citation(citation)
         if not citation_data:
-            logger.warning(f"Could not parse citation: {citation}")
             return {}
             
         # Map the fields from citation_data to our desired structure
@@ -67,9 +77,7 @@ def get_citing_cases(citation: str) -> Dict:
         if not api_key:
             raise ValueError("CANLII_API_KEY not found in environment variables")
         
-        # Parse the citation with metadata flag
-        citation_data = legal_citation_parser.parse_citation(citation, metadata=True)
-        
+        citation_data = _parse_citation(citation)
         if not citation_data or 'court' not in citation_data or 'uid' not in citation_data:
             raise ValueError(f"Could not parse citation: {citation}")
             

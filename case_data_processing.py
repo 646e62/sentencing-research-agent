@@ -16,12 +16,6 @@ import json
 
 from metadata_processing import get_metadata_from_citation, get_citing_cases
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-
 logger = logging.getLogger(__name__)
 
 def html_to_markdown(html_content: str) -> str:
