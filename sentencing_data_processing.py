@@ -425,7 +425,7 @@ def parse_mode_string(mode_str: Any) -> tuple[Optional[str], Optional[str]]:
         "fine"             -> ("fine", None)
         NaN / None / ""    -> (None, None)
     """
-    
+
     if pd.isna(mode_str):
         return _EMPTY_MODE
 
@@ -445,10 +445,6 @@ def parse_conditions_string(conditions_str: Union[str, float]) -> dict:
     """
     Parse a conditions string into its components: time length, unit, and type.
     
-    Handles formats:
-    - "18m-probation" (time-unit-type)
-    - "ltso-10y" (type-time-unit)
-    - "18m" (time-unit only, no type)
     
     Args:
         conditions_str: The conditions string to parse
@@ -457,6 +453,7 @@ def parse_conditions_string(conditions_str: Union[str, float]) -> dict:
         A dictionary with keys 'time', 'unit', and 'type'
         Returns empty dict or None values if string is empty/invalid
     """
+
     # Handle NaN, None, or empty strings
     if pd.isna(conditions_str) or conditions_str == '' or conditions_str is None:
         return {'time': None, 'unit': None, 'type': None}
@@ -467,34 +464,15 @@ def parse_conditions_string(conditions_str: Union[str, float]) -> dict:
     # Initialize result
     result = {'time': None, 'unit': None, 'type': None}
     
-    # Pattern to match time-unit (e.g., "18m", "2y", "10y")
-    time_unit_pattern = r'(\d+(?:\.\d+)?)\s*([ymd])'
-    
     # Pattern to match type (probation, discharge, ltso, ircs, parole, etc.)
     type_pattern = r'(probation|discharge|ltso|ircs|parole)'
     
     # Try format 1: time-unit-type (e.g., "18m-probation")
-    match1 = re.match(rf'^{time_unit_pattern}-{type_pattern}$', conditions_str, re.IGNORECASE)
-    if match1:
-        result['time'] = float(match1.group(1))
-        result['unit'] = match1.group(2).lower()
-        result['type'] = match1.group(3).lower()
-        return result
-    
-    # Try format 2: type-time-unit (e.g., "ltso-10y")
-    match2 = re.match(rf'^{type_pattern}-{time_unit_pattern}$', conditions_str, re.IGNORECASE)
-    if match2:
-        result['type'] = match2.group(1).lower()
-        result['time'] = float(match2.group(2))
-        result['unit'] = match2.group(3).lower()
-        return result
-    
-    # Try format 3: time-unit only (e.g., "18m")
-    match3 = re.match(rf'^{time_unit_pattern}$', conditions_str, re.IGNORECASE)
-    if match3:
-        result['time'] = float(match3.group(1))
-        result['unit'] = match3.group(2).lower()
-        result['type'] = None
+    match = re.match(rf'^{_JAIL_RE.pattern}-{type_pattern}$', conditions_str, re.IGNORECASE)
+    if match:
+        result['time'] = float(match.group(1))
+        result['unit'] = match.group(2).lower()
+        result['type'] = match.group(3).lower()
         return result
     
     # If no pattern matches, return None values

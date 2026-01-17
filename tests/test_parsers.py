@@ -66,16 +66,6 @@ class TestParsers(unittest.TestCase):
         self.assertEqual(parsed["unit"], "m")
         self.assertEqual(parsed["type"], "probation")
 
-        parsed = parse_conditions_string("ltso-10y")
-        self.assertEqual(parsed["time"], 10.0)
-        self.assertEqual(parsed["unit"], "y")
-        self.assertEqual(parsed["type"], "ltso")
-
-        parsed = parse_conditions_string("18m")
-        self.assertEqual(parsed["time"], 18.0)
-        self.assertEqual(parsed["unit"], "m")
-        self.assertIsNone(parsed["type"])
-
     def test_fine_parsing(self) -> None:
         self.assertEqual(parse_fine_string("$1,000"), "$1000.00")
         self.assertEqual(parse_fine_string(2500), "$2500.00")
