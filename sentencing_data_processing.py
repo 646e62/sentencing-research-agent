@@ -7,13 +7,19 @@ import re
 import sys
 import logging
 import pandas as pd
-from typing import Any, Dict, Union, Optional, List
+from typing import Any, Dict, Union, Optional, List, TypedDict
 
 logger = logging.getLogger(__name__)
+
+
 
 # Type aliases
 ParsedDate = Dict[str, Optional[str]]
 JailParseResult = Union[pd.DataFrame, str, None]
+class ConditionsResult(TypedDict):
+    time: Optional[float]
+    unit: Optional[str]
+    type: Optional[str]
 
 # Regular expressions and constants
 _EMPTY_RESULT: ParsedDate = {
@@ -24,6 +30,15 @@ _EMPTY_RESULT: ParsedDate = {
 _JAIL_RE = re.compile(r'(\d+(?:\.\d+)?)\s*([ymd])', re.IGNORECASE)
 _JAIL_COLUMNS = ['quantity', 'unit']
 _EMPTY_MODE: tuple[Optional[str], Optional[str]] = (None, None)
+_EMPTY_CONDITIONS: ConditionsResult = {
+    'time': None,
+    'unit': None,
+    'type': None,
+}
+_CONDITION_RE = re.compile(
+    r'^\s*(\d+(?:\.\d+)?)\s*([ymd])\s*-(probation|discharge|ltso|ircs|parole)\s*$',
+    re.IGNORECASE,
+)
 
 EXPECTED_MASTER_COLUMNS = [
     "uid",
@@ -36,23 +51,20 @@ EXPECTED_MASTER_COLUMNS = [
     "appeal",
 ]
 
-# Map all accepted unit variants to canonical codes
+# Unit map and conversions
 UNIT_MAP = {
     'y': 'y',   # years
     'm': 'm',   # months
     'd': 'd',   # days
 }
 
-# Unit → day factor for the "default" conversion
 _UNIT_DAY_FACTORS = {
     'y': 365,
     'm': 30,   # overridden for quantity == 12
     'd': 1,
 }
 
-
 # UID string parsing tools
-
 def parse_uid_string(uid_str: Union[str, float]) -> Dict[str, Optional[str]]:
     """
     Parse a UID string into its components.
@@ -108,7 +120,6 @@ def parse_uid_string(uid_str: Union[str, float]) -> Dict[str, Optional[str]]:
         "defendant": defendant,
     }
 
-
 def process_uid_string(
     uid_str: Union[str, float],
     log: bool = False,
@@ -145,7 +156,6 @@ def process_uid_string(
 
     return parsed
 
-
 # Master CSV schema validation
 def validate_master_schema(
     df: pd.DataFrame,
@@ -177,9 +187,7 @@ def validate_master_schema(
 
     return {"missing": missing, "extra": extra, "required": required}
 
-
 # Offence string parsing tools
-
 def load_offences_lookup(offences_file: str = 'data/offence/all-criminal-offences-current.csv') -> pd.DataFrame:
     """
     Load the offences lookup table from CSV.
@@ -236,7 +244,6 @@ def normalize_offence_code(offence_code: str) -> List[str]:
 
     return unique_candidates
     
-
 def parse_offence_string(offence_str: Union[str, float], 
                          offences_df: Optional[pd.DataFrame] = None,
                          offences_file: str = 'data/offence/all-criminal-offences-current.csv') -> dict:
@@ -301,7 +308,6 @@ def parse_offence_string(offence_str: Union[str, float],
     # Return the original code and no name if no match is found
     return {'offence_code': original_code, 'offence_name': None}
 
-
 # Date string parsing tools
 def parse_date_string(date_str: Any) -> ParsedDate:
     """
@@ -331,7 +337,6 @@ def parse_date_string(date_str: Any) -> ParsedDate:
         result['offence_date'] = s
 
     return result
-
 
 # Jail string parsing tools
 def parse_jail_string(jail_str: Any) -> JailParseResult:
@@ -373,7 +378,6 @@ def parse_jail_string(jail_str: Any) -> JailParseResult:
 
     return pd.DataFrame(data, columns=_JAIL_COLUMNS)
 
-
 def calculate_total_days(
     df: Union[pd.DataFrame, str, None]
 ) -> Optional[int]:
@@ -414,7 +418,6 @@ def calculate_total_days(
 
     return int(total_days)
 
-
 # Mode string parsing tools
 def parse_mode_string(mode_str: Any) -> tuple[Optional[str], Optional[str]]:
     """
@@ -440,43 +443,29 @@ def parse_mode_string(mode_str: Any) -> tuple[Optional[str], Optional[str]]:
     return (s, None)
 
 # Conditions string parsing tools
-
-def parse_conditions_string(conditions_str: Union[str, float]) -> dict:
+def parse_conditions_string(conditions_str: Any) -> ConditionsResult:
     """
-    Parse a conditions string into its components: time length, unit, and type.
-    
-    
-    Args:
-        conditions_str: The conditions string to parse
-        
-    Returns:
-        A dictionary with keys 'time', 'unit', and 'type'
-        Returns empty dict or None values if string is empty/invalid
-    """
+    Parse a conditions string into components: time length, unit, and type.
 
-    # Handle NaN, None, or empty strings
-    if pd.isna(conditions_str) or conditions_str == '' or conditions_str is None:
-        return {'time': None, 'unit': None, 'type': None}
-    
-    # Convert to string if not already
-    conditions_str = str(conditions_str).strip()
-    
-    # Initialize result
-    result = {'time': None, 'unit': None, 'type': None}
-    
-    # Pattern to match type (probation, discharge, ltso, ircs, parole, etc.)
-    type_pattern = r'(probation|discharge|ltso|ircs|parole)'
-    
-    # Try format 1: time-unit-type (e.g., "18m-probation")
-    match = re.match(rf'^{_JAIL_RE.pattern}-{type_pattern}$', conditions_str, re.IGNORECASE)
-    if match:
-        result['time'] = float(match.group(1))
-        result['unit'] = match.group(2).lower()
-        result['type'] = match.group(3).lower()
-        return result
-    
-    # If no pattern matches, return None values
-    return result
+    Example accepted format:
+        "18m-probation" -> {'time': 18.0, 'unit': 'm', 'type': 'probation'}
+    """
+    if pd.isna(conditions_str):
+        return _EMPTY_CONDITIONS.copy()
+
+    s = str(conditions_str).strip()
+    if not s:
+        return _EMPTY_CONDITIONS.copy()
+
+    match = _CONDITION_RE.match(s)
+    if not match:
+        return _EMPTY_CONDITIONS.copy()
+
+    time = float(match.group(1))
+    unit = match.group(2).lower().strip()
+    ctype = match.group(3).lower().strip()
+
+    return {'time': time, 'unit': unit, 'type': ctype}
 
 # Fine string parsing tools
 
