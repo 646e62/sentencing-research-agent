@@ -6,7 +6,7 @@ rules and the CanLII API.
 """
 
 import logging
-from typing import Dict, Any, Optional, List, TypedDict
+from typing import Dict, Any, Optional, List, TypedDict, Union
 
 import requests
 
@@ -38,10 +38,17 @@ class CitationMetadata(TypedDict):
     keywords: List[str]
     categories: List[str]
 
-class CitingCasesResult(TypedDict):
+class CitingCasesSuccess(TypedDict):
     cases: List[Dict[str, Any]]
-    error: Optional[str]
+    error: None
     metadata: Optional[Dict[str, Any]]
+
+class CitingCasesError(TypedDict):
+    cases: List[Dict[str, Any]]
+    error: str
+    metadata: None
+
+CitingCasesResult = Union[CitingCasesSuccess, CitingCasesError]
 
 def _parse_citation(citation: str) -> Optional[Dict[str, Any]]:
     """
@@ -62,12 +69,12 @@ def _parse_citation(citation: str) -> Optional[Dict[str, Any]]:
     return citation_data
 
 
-def get_metadata_from_citation(citation: str) -> CitationMetadata:
+def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
     """Extract all metadata from a citation using the legal citation parser."""
     try:
         citation_data = _parse_citation(citation)
         if not citation_data:
-            return {}
+            return None
             
         # Map the fields from citation_data to our desired structure
         metadata: CitationMetadata = {
@@ -96,7 +103,7 @@ def get_metadata_from_citation(citation: str) -> CitationMetadata:
         
     except Exception as e:
         logger.error(f"Error getting metadata from citation: {str(e)}")
-        return {}
+        return None
 
 def get_citing_cases(citation: str, timeout_seconds: int = REQUEST_TIMEOUT_SECONDS) -> CitingCasesResult:
     """Fetch cases that cite this decision from CanLII API."""
