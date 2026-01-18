@@ -5,12 +5,18 @@ Main CLI entrypoint for orchestrating project modules.
 from __future__ import annotations
 
 import json
+import os
 from typing import Optional, Any
 
 import typer
 import pandas as pd
 
-from case_data_processing import process_text
+from case_data_processing import (
+    process_text,
+    html_to_markdown,
+    split_header_and_body,
+    clean_text_section,
+)
 from metadata_processing import get_case_relations, get_metadata_from_citation
 from sentencing_data_processing import process_master_row, load_master_csv
 
@@ -122,6 +128,61 @@ def case_text_cmd(
     typer.echo(f"- Court: {metadata.get('court_name')}")
     typer.echo(f"- Decision date: {metadata.get('decision_date')}")
     typer.echo(f"- Citing cases: {len(result.get('decisions_citing', []))}")
+
+
+@app.command("html-to-md")
+def html_to_md_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
+) -> None:
+    """Convert an HTML file in ./data/html to Markdown and print the result."""
+    file_name = filename.strip()
+    if not file_name.lower().endswith(".html"):
+        file_name = f"{file_name}.html"
+
+    input_path = os.path.join("data", "html", file_name)
+    if not os.path.exists(input_path):
+        typer.echo(f"File not found: {input_path}")
+        raise typer.Exit(code=1)
+
+    with open(input_path, "r", encoding="utf-8") as handle:
+        html = handle.read()
+
+    markdown = html_to_markdown(html)
+    if json_output:
+        typer.echo(json.dumps({"markdown": markdown}, indent=2))
+        return
+
+    typer.echo(markdown)
+
+
+@app.command("split-header")
+def split_header_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
+) -> None:
+    """Extract the header from an HTML file in ./data/html and print it."""
+    file_name = filename.strip()
+    if not file_name.lower().endswith(".html"):
+        file_name = f"{file_name}.html"
+
+    input_path = os.path.join("data", "html", file_name)
+    if not os.path.exists(input_path):
+        typer.echo(f"File not found: {input_path}")
+        raise typer.Exit(code=1)
+
+    with open(input_path, "r", encoding="utf-8") as handle:
+        html = handle.read()
+
+    markdown = html_to_markdown(html)
+    header, _body = split_header_and_body(markdown)
+    header = clean_text_section(header)
+
+    if json_output:
+        typer.echo(json.dumps({"header": header}, indent=2))
+        return
+
+    typer.echo(header)
 
 
 if __name__ == "__main__":

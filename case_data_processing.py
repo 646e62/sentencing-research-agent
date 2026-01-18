@@ -59,22 +59,49 @@ def clean_header(header: str) -> str:
     # Return everything after the marker
     return header[start_pos:].strip()
 
-def split_header_and_body(text: str, target_string: str = "\n__\n") -> Tuple[str, str]:
-    """Split text into header and body at the second occurrence of target_string."""
-    first_occurrence = text.find(target_string)
-    if first_occurrence == -1:
-        return "", text  # No header found
-        
-    second_occurrence = text.find(target_string, first_occurrence + 1)
-    if second_occurrence == -1:
-        return "", text  # No second occurrence found
-        
-    # Get the raw header and clean it
-    raw_header = text[:second_occurrence].strip()
+def split_header_and_body(
+    text: str,
+    target_string: str = "\n\n__\n",
+) -> Tuple[str, str]:
+    """
+    Split text into header and body.
+
+    The text is split into chunks using `target_string` as a marker.
+    - The 4th non-empty chunk (index 3) is used as the header (after cleaning).
+    - Everything after the 4th chunk is joined with blank lines as the body.
+    - If fewer than 4 non-empty chunks exist, header is "" and body is the full text.
+    """
+
+    if not target_string:
+        # No marker: nothing to split reliably
+        return "", text.strip()
+
+    # Split manually to preserve behaviour closest to original function
+    raw_chunks = []
+    start_idx = 0
+
+    while True:
+        marker_idx = text.find(target_string, start_idx)
+        if marker_idx == -1:
+            raw_chunks.append(text[start_idx:])
+            break
+        raw_chunks.append(text[start_idx:marker_idx])
+        start_idx = marker_idx + len(target_string)
+
+    # Remove empty/whitespace-only chunks
+    chunks = [chunk.strip() for chunk in raw_chunks if chunk.strip()]
+
+    # Not enough chunks to have a header; return whole text as body
+    if len(chunks) < 4:
+        return "", text.strip()
+
+    raw_header = chunks[3].strip()
     header = clean_header(raw_header)
-    
-    # Get the body
-    body = text[second_occurrence + len(target_string):].strip()
+
+    # Body is everything after the 4th chunk, joined with blank lines
+    body_chunks = chunks[4:]
+    body = "\n\n".join(body_chunks).strip() if body_chunks else ""
+
     return header, body
 
 def extract_citation(header: str) -> str:
