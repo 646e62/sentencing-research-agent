@@ -45,37 +45,21 @@ def split_header_and_body(
 
     The text is split into chunks using `target_string` as a marker.
     - The 4th non-empty chunk (index 3) is used as the header (after cleaning).
-    - Everything after the 4th chunk is joined with blank lines as the body.
+    - Everything after the 4th chunk is joined with the target string as the body.
     - If fewer than 4 non-empty chunks exist, header is "" and body is the full text.
     """
 
     if not target_string:
-        # No marker: nothing to split reliably
         return "", text.strip()
 
-    # Split manually to preserve behaviour closest to original function
-    raw_chunks = []
-    start_idx = 0
-
-    while True:
-        marker_idx = text.find(target_string, start_idx)
-        if marker_idx == -1:
-            raw_chunks.append(text[start_idx:])
-            break
-        raw_chunks.append(text[start_idx:marker_idx])
-        start_idx = marker_idx + len(target_string)
-
-    # Remove empty/whitespace-only chunks
+    raw_chunks = text.split(target_string)
     chunks = [chunk.strip() for chunk in raw_chunks if chunk.strip()]
 
-    # Not enough chunks to have a header; return whole text as body
     if len(chunks) < 4:
         return "", text.strip()
 
-    raw_header = chunks[3].strip()
-    header = clean_header(raw_header)
+    header = clean_header(chunks[3])
 
-    # Body is everything after the 4th chunk, joined with the marker
     body_chunks = chunks[4:]
     body = target_string.join(body_chunks).strip() if body_chunks else ""
 
@@ -156,18 +140,21 @@ def split_body_into_paragraphs(body: str) -> List[str]:
 # Various text cleaning functions
 def clean_text_section(text: str) -> str:
     """Clean and format a section of text."""
-    # Remove everything from the first "!" to the first "PDF" after it (inclusive)
     bang_idx = text.find("!")
     if bang_idx != -1:
         pdf_idx = text.find("PDF", bang_idx)
         if pdf_idx != -1:
             text = text[:bang_idx] + text[pdf_idx + len("PDF"):]
-    text = replace_newlines(text)
-    text = remove_newline_prefix_space(text)
-    text = re.sub(r"  +", " ", text)  # Remove multiple spaces
-    text = re.sub(r"\n\s*\n", "\n", text)  # Remove multiple newlines
-    # Remove separator runs like "* * * " after whitespace cleanup
-    text = re.sub(r"(?:\*\s+){2,}\*", "", text)
+
+    # Remove whitespace while preserving markdown formatting.
+    text = re.sub(r"(?<!__)\n(?!__)", " ", text)
+
+    # Remove space after newlines.
+    text = re.sub(r"\n\s+", "\n", text)
+    text = re.sub(r"  +", " ", text)            # multiple spaces
+    text = re.sub(r"\n\s*\n", "\n", text)       # multiple newlines
+    text = re.sub(r"(?:\*\s+){2,}\*", "", text) # separator runs
+    
     return text.strip()
 
 def remove_after_string(text: str, target_string: str) -> str:
@@ -176,13 +163,3 @@ def remove_after_string(text: str, target_string: str) -> str:
     if index != -1:
         return text[:index]
     return text
-
-def replace_newlines(text: str) -> str:
-    """Remove whitespace while preserving markdown formatting."""
-    pattern = r"(?<!__)\n(?!__)"
-    return re.sub(pattern, " ", text)
-
-def remove_newline_prefix_space(text: str) -> str:
-    """Remove space after newlines."""
-    pattern = r"\n\s+"
-    return re.sub(pattern, "\n", text)
