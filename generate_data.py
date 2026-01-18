@@ -61,6 +61,18 @@ def _get_body(filename: str) -> str:
     return body
 
 
+def _build_case_text_result(filename: str, include_header: bool) -> dict:
+    header = _get_clean_header(filename)
+    body = _get_body(filename)
+    citation = extract_citation(header)
+    metadata = get_metadata_from_citation(citation) if citation else {}
+    return {
+        "header": header if include_header else None,
+        "body": body,
+        "metadata": metadata,
+    }
+
+
 @app.command("metadata")
 def metadata_cmd(
     citation: str = typer.Argument(..., help="Citation string (e.g., '2024 SKCA 79')"),
@@ -145,7 +157,11 @@ def case_text_cmd(
     with open(input_path, "r", encoding="utf-8") as handle:
         html = handle.read()
 
-    result = process_text(html, include_header=include_header)
+    try:
+        result = _build_case_text_result(input_path, include_header=include_header)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
 
     if json_output:
         typer.echo(json.dumps(_make_json_safe(result), indent=2))
@@ -245,6 +261,50 @@ def body_cmd(
     for idx, paragraph in enumerate(paragraphs, start=1):
         typer.echo(f"\n¶ {idx}")
         typer.echo(paragraph)
+
+
+@app.command("generate-report")
+def generate_report_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+) -> None:
+    """
+    Generate a JSON report from an HTML file and save to ./data/json/test.json.
+    """
+    try:
+        header = _get_clean_header(filename)
+        body = _get_body(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
+
+    citation = extract_citation(header)
+    if not citation:
+        typer.echo("No citation found.")
+        raise typer.Exit(code=1)
+
+    metadata = get_metadata_from_citation(citation)
+    if not metadata:
+        typer.echo("No metadata found.")
+        raise typer.Exit(code=1)
+
+    body = remove_after_string(body, "Back to top")
+    paragraphs = split_body_into_paragraphs(body)
+    paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
+
+    report = {
+        "citation": citation,
+        "metadata": _make_json_safe(metadata),
+        "header": header,
+        "body_paragraphs": paragraphs,
+    }
+
+    output_dir = os.path.join(".", "data", "json")
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, "test.json")
+    with open(output_path, "w", encoding="utf-8") as handle:
+        json.dump(report, handle, indent=2)
+
+    typer.echo(f"Wrote report to {output_path}")
 
 
 if __name__ == "__main__":
