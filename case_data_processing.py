@@ -175,6 +175,12 @@ def remove_newline_prefix_space(text: str) -> str:
 
 def clean_text_section(text: str) -> str:
     """Clean and format a section of text."""
+    # Remove everything from the first "!" to the first "PDF" after it (inclusive)
+    bang_idx = text.find("!")
+    if bang_idx != -1:
+        pdf_idx = text.find("PDF", bang_idx)
+        if pdf_idx != -1:
+            text = text[:bang_idx] + text[pdf_idx + len("PDF"):]
     text = replace_newlines(text)
     text = remove_newline_prefix_space(text)
     text = re.sub(r"  +", " ", text)  # Remove multiple spaces
