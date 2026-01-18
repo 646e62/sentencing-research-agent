@@ -16,6 +16,9 @@ from case_data_processing import (
     html_to_markdown,
     split_header_and_body,
     clean_text_section,
+    extract_citation,
+    remove_after_string,
+    split_body_into_paragraphs,
 )
 from metadata_processing import get_case_relations, get_metadata_from_citation
 from sentencing_data_processing import process_master_row, load_master_csv
@@ -30,6 +33,33 @@ def _make_json_safe(value: Any) -> Any:
     if isinstance(value, list):
         return [_make_json_safe(v) for v in value]
     return value
+
+
+def _load_markdown_from_html(filename: str) -> str:
+    file_name = filename.strip()
+    if not file_name.lower().endswith(".html"):
+        file_name = f"{file_name}.html"
+
+    input_path = os.path.join("data", "html", file_name)
+    if not os.path.exists(input_path):
+        raise FileNotFoundError(f"File not found: {input_path}")
+
+    with open(input_path, "r", encoding="utf-8") as handle:
+        html = handle.read()
+
+    return html_to_markdown(html)
+
+
+def _get_clean_header(filename: str) -> str:
+    markdown = _load_markdown_from_html(filename)
+    header, _body = split_header_and_body(markdown)
+    return clean_text_section(header)
+
+
+def _get_body(filename: str) -> str:
+    markdown = _load_markdown_from_html(filename)
+    _header, body = split_header_and_body(markdown)
+    return body
 
 
 @app.command("metadata")
@@ -136,19 +166,11 @@ def html_to_md_cmd(
     json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
 ) -> None:
     """Convert an HTML file in ./data/html to Markdown and print the result."""
-    file_name = filename.strip()
-    if not file_name.lower().endswith(".html"):
-        file_name = f"{file_name}.html"
-
-    input_path = os.path.join("data", "html", file_name)
-    if not os.path.exists(input_path):
-        typer.echo(f"File not found: {input_path}")
+    try:
+        markdown = _load_markdown_from_html(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
         raise typer.Exit(code=1)
-
-    with open(input_path, "r", encoding="utf-8") as handle:
-        html = handle.read()
-
-    markdown = html_to_markdown(html)
     if json_output:
         typer.echo(json.dumps({"markdown": markdown}, indent=2))
         return
@@ -156,33 +178,71 @@ def html_to_md_cmd(
     typer.echo(markdown)
 
 
-@app.command("split-header")
+@app.command("header")
 def split_header_cmd(
     filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
     json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
 ) -> None:
     """Extract the header from an HTML file in ./data/html and print it."""
-    file_name = filename.strip()
-    if not file_name.lower().endswith(".html"):
-        file_name = f"{file_name}.html"
-
-    input_path = os.path.join("data", "html", file_name)
-    if not os.path.exists(input_path):
-        typer.echo(f"File not found: {input_path}")
+    try:
+        header = _get_clean_header(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
         raise typer.Exit(code=1)
-
-    with open(input_path, "r", encoding="utf-8") as handle:
-        html = handle.read()
-
-    markdown = html_to_markdown(html)
-    header, _body = split_header_and_body(markdown)
-    header = clean_text_section(header)
 
     if json_output:
         typer.echo(json.dumps({"header": header}, indent=2))
         return
 
     typer.echo(header)
+
+
+@app.command("citation")
+def citation_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
+) -> None:
+    """Extract the citation from an HTML file in ./data/html."""
+    try:
+        header = _get_clean_header(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
+
+    citation = extract_citation(header)
+    if json_output:
+        typer.echo(json.dumps({"citation": citation}, indent=2))
+        return
+
+    if not citation:
+        typer.echo("No citation found.")
+        raise typer.Exit(code=1)
+
+    typer.echo(citation)
+
+
+@app.command("body")
+def body_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
+) -> None:
+    """Extract the body from an HTML file in ./data/html."""
+    try:
+        body = _get_body(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
+
+    body = remove_after_string(body, "Back to top")
+    paragraphs = split_body_into_paragraphs(body)
+
+    if json_output:
+        typer.echo(json.dumps({"body": paragraphs}, indent=2))
+        return
+
+    for idx, paragraph in enumerate(paragraphs, start=1):
+        typer.echo(f"--- Paragraph {idx} ---")
+        typer.echo(paragraph)
 
 
 if __name__ == "__main__":
