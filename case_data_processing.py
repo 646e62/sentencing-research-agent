@@ -7,21 +7,19 @@ summaries.
 """
 
 import re
-import os
-import json
 import logging
-from pathlib import Path
 from typing import Dict, Any, Tuple, Optional, List, TypedDict
 
 import html2text
-import pandas as pd
-
-from metadata_processing import (
-    get_metadata_from_citation,
-)
 
 logger = logging.getLogger(__name__)
 
+# Constants
+# Citation markers
+CITATION_START_MARKER = "# "
+CITATION_END_MARKER = " (CanLII) "
+
+# TypedDict for processed text result
 class ProcessedTextResult(TypedDict):
     header: Optional[str]
     body: str
@@ -92,68 +90,66 @@ def clean_header(header: str) -> str:
 
 def extract_citation(header: str) -> str:
     """Extract citation from header text."""
-    try:
-        # Look for the start marker
-        start_marker = "# "
-        start_pos = header.find(start_marker)
-        if start_pos == -1:
-            logger.warning("No citation start marker '# ' found in header")
-            return ""
-            
-        # Start position after the marker
-        start_pos += len(start_marker)
-        
-        # Look for the end marker
-        end_marker = " (CanLII) "
-        end_pos = header.find(end_marker, start_pos)
-        if end_pos == -1:
-            logger.warning("No citation end marker '(CanLII)' found in header")
-            return ""
-            
-        # Extract the citation
-        citation = header[start_pos:end_pos].strip()
-        return citation
-        
-    except Exception as e:
-        logger.error(f"Error extracting citation: {str(e)}")
+    start_pos = header.find(CITATION_START_MARKER)
+    if start_pos == -1:
+        logger.warning("No citation start marker '%s' found in header", CITATION_START_MARKER)
         return ""
+
+    start_pos += len(CITATION_START_MARKER)
+
+    end_pos = header.find(CITATION_END_MARKER, start_pos)
+    if end_pos == -1:
+        logger.warning("No citation end marker '%s' found in header", CITATION_END_MARKER)
+        return ""
+
+    citation = header[start_pos:end_pos].strip()
+    return citation
 
 # Body functions
 def split_body_into_paragraphs(body: str) -> List[str]:
     """Split body into paragraphs using the marker line."""
+
     if not body:
         return []
 
     parts = re.split(r"\n+__\n+", body)
     paragraphs: List[str] = []
+
     for part in parts:
         cleaned = part.strip()
+        if not cleaned:
+            continue
+
+        # Remove hard-coded paragraph numbers
+        prefix = cleaned[:10]
+        marker_idx = prefix.find("] ")
+        if marker_idx != -1:
+            cleaned = cleaned[marker_idx + 2 :].lstrip()
+
         if cleaned:
-            prefix = cleaned[:10]
-            marker_idx = prefix.find("] ")
-            if marker_idx != -1:
-                cleaned = cleaned[marker_idx + 2:].lstrip()
-            if cleaned:
-                paragraphs.append(cleaned)
+            paragraphs.append(cleaned)
+
     return paragraphs
 
 # Various text cleaning functions
 def clean_text_section(text: str) -> str:
     """Clean and format a section of text."""
+
+    # Removes specific superfluous header text
     bang_idx = text.find("!")
     if bang_idx != -1:
         pdf_idx = text.find("PDF", bang_idx)
         if pdf_idx != -1:
             text = text[:bang_idx] + text[pdf_idx + len("PDF"):]
 
-    # Remove whitespace while preserving markdown formatting.
-    text = re.sub(r"(?<!__)\n(?!__)", " ", text)
-
-    # Remove space after newlines.
-    text = re.sub(r"\n\s+", "\n", text)
-    text = re.sub(r"  +", " ", text)            # multiple spaces
-    text = re.sub(r"\n\s*\n", "\n", text)       # multiple newlines
-    text = re.sub(r"(?:\*\s+){2,}\*", "", text) # separator runs
+    # Remove extraneous whitespace
+    text = re.sub(r"(?<!__)\n(?!__)", " ", text)    # Remove whitespace between
+                                                    # paragraphs
+    text = re.sub(r"\n\s+", "\n", text)             # Remove space after 
+                                                    # newlines
+    text = re.sub(r"  +", " ", text)                # Remove multiple spaces
+    text = re.sub(r"\n\s*\n", "\n", text)           # Remove multiple newlines
+    text = re.sub(r"(?:\*\s+){2,}\*", "", text)     # Remove separator runs
     
     return text.strip()
 
