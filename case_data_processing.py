@@ -161,6 +161,8 @@ def clean_text_section(text: str) -> str:
     text = remove_newline_prefix_space(text)
     text = re.sub(r"  +", " ", text)  # Remove multiple spaces
     text = re.sub(r"\n\s*\n", "\n", text)  # Remove multiple newlines
+    # Remove separator runs like "* * * " after whitespace cleanup
+    text = re.sub(r"(?:\*\s+){2,}\*", "", text)
     return text.strip()
 
 def remove_after_string(text: str, target_string: str) -> str:
@@ -179,32 +181,3 @@ def remove_newline_prefix_space(text: str) -> str:
     """Remove space after newlines."""
     pattern = r"\n\s+"
     return re.sub(pattern, "\n", text)
-
-
-def process_text(text: str, include_header: bool = False) -> ProcessedTextResult:
-    """
-    Process HTML content and return structured data.
-    """
-    logger.info("Starting document processing...")
-
-    markdown_text = html_to_markdown(text)
-    header, body = split_header_and_body(markdown_text)
-    header = clean_text_section(header) if include_header else None
-
-    citation = extract_citation(header or "")
-    if not citation:
-        raise ValueError("Could not extract citation from header")
-
-    metadata = get_metadata_from_citation(citation)
-    if not metadata:
-        raise ValueError("Could not extract metadata from citation")
-
-    return {
-        "header": header,
-        "body": body,
-        "metadata": metadata,
-        "processing_log": [
-            "Citation extracted successfully",
-            "Metadata extracted successfully",
-        ],
-    }

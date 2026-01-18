@@ -12,7 +12,6 @@ import typer
 import pandas as pd
 
 from case_data_processing import (
-    process_text,
     html_to_markdown,
     split_header_and_body,
     clean_text_section,
@@ -235,6 +234,9 @@ def body_cmd(
 
     body = remove_after_string(body, "Back to top")
     paragraphs = split_body_into_paragraphs(body)
+
+    # Clean each paragraph
+    paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
 
     if json_output:
         typer.echo(json.dumps({"body": paragraphs}, indent=2))
