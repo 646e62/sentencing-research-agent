@@ -312,12 +312,6 @@ def generate_report_cmd(
         json.dump(report, handle, indent=2)
 
     typer.echo(f"Wrote report to {output_path}")
-    typer.echo("\nHeader preview:")
-    typer.echo(header)
-    typer.echo("\nSection heading:")
-    typer.echo(section_heading or "(none)")
-    typer.echo("\nFirst body paragraph:")
-    typer.echo(paragraphs[0] if paragraphs else "(none)")
 
 
 if __name__ == "__main__":
