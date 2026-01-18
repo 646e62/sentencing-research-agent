@@ -6,6 +6,7 @@ import unittest
 
 import pandas as pd
 
+from cli import run_cli
 from sentencing_data_processing import (
     calculate_total_days,
     parse_appeal_string,
@@ -18,7 +19,6 @@ from sentencing_data_processing import (
     parse_uid_string,
     process_uid_string,
     process_master_row,
-    run_cli,
     validate_master_schema,
 )
 

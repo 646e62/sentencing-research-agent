@@ -1,2 +1,7 @@
 pandas==2.3.3
+beautifulsoup4==4.12.3
+html2text
+requests==2.32.3
+legal-citation-parser
+python-dotenv==1.0.1
 
