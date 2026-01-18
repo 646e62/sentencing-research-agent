@@ -49,16 +49,16 @@ def _load_markdown_from_html(filename: str) -> str:
     return html_to_markdown(html)
 
 
-def _get_clean_header(filename: str) -> str:
+def _get_clean_header(filename: str) -> tuple[str, str]:
     markdown = _load_markdown_from_html(filename)
-    header, _body = split_header_and_body(markdown)
-    return clean_text_section(header)
+    header, _body, section_heading = split_header_and_body(markdown)
+    return clean_text_section(header), section_heading
 
 
-def _get_body(filename: str) -> str:
+def _get_body(filename: str) -> tuple[str, str]:
     markdown = _load_markdown_from_html(filename)
-    _header, body = split_header_and_body(markdown)
-    return body
+    _header, body, section_heading = split_header_and_body(markdown)
+    return body, section_heading
 
 
 def _build_case_text_result(filename: str, include_header: bool) -> dict:
@@ -200,7 +200,7 @@ def split_header_cmd(
 ) -> None:
     """Extract the header from an HTML file in ./data/html and print it."""
     try:
-        header = _get_clean_header(filename)
+        header, _section_heading = _get_clean_header(filename)
     except FileNotFoundError as exc:
         typer.echo(str(exc))
         raise typer.Exit(code=1)
@@ -219,7 +219,7 @@ def citation_cmd(
 ) -> None:
     """Extract the citation from an HTML file in ./data/html."""
     try:
-        header = _get_clean_header(filename)
+        header, _section_heading = _get_clean_header(filename)
     except FileNotFoundError as exc:
         typer.echo(str(exc))
         raise typer.Exit(code=1)
@@ -243,7 +243,7 @@ def body_cmd(
 ) -> None:
     """Extract the body from an HTML file in ./data/html."""
     try:
-        body = _get_body(filename)
+        body, section_heading = _get_body(filename)
     except FileNotFoundError as exc:
         typer.echo(str(exc))
         raise typer.Exit(code=1)
@@ -253,6 +253,9 @@ def body_cmd(
 
     # Clean each paragraph
     paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
+
+    if section_heading and paragraphs:
+        paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
 
     if json_output:
         typer.echo(json.dumps({"body": paragraphs}, indent=2))
@@ -271,8 +274,8 @@ def generate_report_cmd(
     Generate a JSON report from an HTML file and save to ./data/json/test.json.
     """
     try:
-        header = _get_clean_header(filename)
-        body = _get_body(filename)
+        header, section_heading = _get_clean_header(filename)
+        body, _body_section_heading = _get_body(filename)
     except FileNotFoundError as exc:
         typer.echo(str(exc))
         raise typer.Exit(code=1)
@@ -290,11 +293,14 @@ def generate_report_cmd(
     body = remove_after_string(body, "Back to top")
     paragraphs = split_body_into_paragraphs(body)
     paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
+    if section_heading and paragraphs:
+        paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
 
     report = {
         "citation": citation,
         "metadata": _make_json_safe(metadata),
         "header": header,
+        "section_heading": section_heading,
         "body_paragraphs": paragraphs,
     }
 
@@ -306,6 +312,12 @@ def generate_report_cmd(
         json.dump(report, handle, indent=2)
 
     typer.echo(f"Wrote report to {output_path}")
+    typer.echo("\nHeader preview:")
+    typer.echo(header)
+    typer.echo("\nSection heading:")
+    typer.echo(section_heading or "(none)")
+    typer.echo("\nFirst body paragraph:")
+    typer.echo(paragraphs[0] if paragraphs else "(none)")
 
 
 if __name__ == "__main__":

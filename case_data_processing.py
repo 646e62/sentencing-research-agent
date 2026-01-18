@@ -39,32 +39,57 @@ def html_to_markdown(html_content: str) -> str:
 def split_header_and_body(
     text: str,
     target_string: str = "\n\n__\n",
-) -> tuple[str, str]:
+) -> tuple[str, str, str]:
     """
-    Split raw Markdown into header and body using a marker string.
+    Split raw Markdown into header, body, and trailing section heading.
 
     The text is split into chunks using `target_string` as a marker.
     - The 4th non-empty chunk (index 3) is used as the header (after cleaning).
+    - If present, a trailing section heading at the end of the header is
+      removed and returned separately. The section heading is everything after
+      the last instance of the string "**_ _**" in that chunk.
     - Everything after the 4th chunk is joined with `target_string` as the body.
     - If fewer than 4 non-empty chunks exist, the header is "" and the body
-      is the full original text (stripped).
+      is the full original text (stripped), and section_heading is "".
     """
 
     if not target_string:
-        return "", text.strip()
+        return "", text.strip(), ""
 
     raw_chunks = text.split(target_string)
     chunks = [chunk.strip() for chunk in raw_chunks if chunk.strip()]
 
     if len(chunks) < 4:
-        return "", text.strip()
+        return "", text.strip(), ""
 
-    header = clean_header(chunks[3])
+    # Original header chunk (before trailing section heading removal)
+    raw_header_chunk = chunks[3]
+    cleaned_header = clean_header(raw_header_chunk)
 
+    # Extract trailing section heading if present
+    section_heading = ""
+    marker_pattern = re.compile(r"\*\*\s*_\s*_\s*\*\*")
+    matches = list(marker_pattern.finditer(cleaned_header))
+
+    if matches:
+        last_match = matches[-1]
+        after_marker = cleaned_header[last_match.end():].strip()
+        before_marker = cleaned_header[:last_match.start()].rstrip()
+
+        if after_marker:
+            section_heading = after_marker
+            header = before_marker
+        else:
+            header = cleaned_header
+    else:
+        header = cleaned_header
+
+    # Build body from the remaining chunks after the 4th
     body_chunks = chunks[4:]
     body = target_string.join(body_chunks).strip() if body_chunks else ""
 
-    return header, body
+    return header, body, section_heading
+
 
 def clean_header(header: str) -> str:
     """
