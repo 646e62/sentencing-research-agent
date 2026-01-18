@@ -300,7 +300,8 @@ def generate_report_cmd(
 
     output_dir = os.path.join(".", "data", "json")
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, "test.json")
+    case_id = metadata.get("case_id") or "unknown"
+    output_path = os.path.join(output_dir, f"{case_id}-report.json")
     with open(output_path, "w", encoding="utf-8") as handle:
         json.dump(report, handle, indent=2)
 
