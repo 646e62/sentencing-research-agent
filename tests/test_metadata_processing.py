@@ -42,29 +42,29 @@ class TestMetadataProcessing(unittest.TestCase):
 
     def test_get_citing_cases_missing_api_key(self) -> None:
         with patch.object(metadata_processing.Config, "CANLII_API_KEY", ""):
-            result = metadata_processing.get_citing_cases("2024 SKCA 79")
+            result = metadata_processing.get_case_relations("2024 SKCA 79", "citingCases")
         self.assertIsNotNone(result["error"])
-        self.assertEqual(result["cases"], [])
+        self.assertEqual(result["citingCases"], [])
 
     def test_get_citing_cases_rate_limit(self) -> None:
         response = Mock(status_code=429)
         with patch.object(metadata_processing.Config, "CANLII_API_KEY", "key"), \
              patch.object(metadata_processing, "_parse_citation", return_value={"court": "SKCA", "uid": "2024skca79"}), \
              patch.object(metadata_processing.requests, "get", return_value=response):
-            result = metadata_processing.get_citing_cases("2024 SKCA 79")
+            result = metadata_processing.get_case_relations("2024 SKCA 79", "citingCases")
 
         self.assertEqual(result["error"], "Rate limit reached")
-        self.assertEqual(result["cases"], [])
+        self.assertEqual(result["citingCases"], [])
 
     def test_get_citing_cases_non_200(self) -> None:
         response = Mock(status_code=500)
         with patch.object(metadata_processing.Config, "CANLII_API_KEY", "key"), \
              patch.object(metadata_processing, "_parse_citation", return_value={"court": "SKCA", "uid": "2024skca79"}), \
              patch.object(metadata_processing.requests, "get", return_value=response):
-            result = metadata_processing.get_citing_cases("2024 SKCA 79")
+            result = metadata_processing.get_case_relations("2024 SKCA 79", "citingCases")
 
         self.assertEqual(result["error"], "API error: 500")
-        self.assertEqual(result["cases"], [])
+        self.assertEqual(result["citingCases"], [])
 
     def test_get_citing_cases_success(self) -> None:
         response = Mock(status_code=200)
@@ -74,10 +74,10 @@ class TestMetadataProcessing(unittest.TestCase):
         with patch.object(metadata_processing.Config, "CANLII_API_KEY", "key"), \
              patch.object(metadata_processing, "_parse_citation", return_value={"court": "SKCA", "uid": "2024skca79"}), \
              patch.object(metadata_processing.requests, "get", return_value=response):
-            result = metadata_processing.get_citing_cases("2024 SKCA 79")
+            result = metadata_processing.get_case_relations("2024 SKCA 79", "citingCases")
 
         self.assertIsNone(result["error"])
-        self.assertEqual(result["cases"], [{"caseId": "1"}])
+        self.assertEqual(result["citingCases"], [{"caseId": "1"}])
 
 
 if __name__ == "__main__":
