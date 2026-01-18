@@ -214,3 +214,17 @@ def remove_after_string(text: str, target_string: str) -> str:
     if index != -1:
         return text[:index]
     return text
+
+def remove_before_string(text: str, target_string: str) -> str:
+    """
+    Remove everything before and including the first occurrence of `target_string`.
+
+    Returns the substring from the first occurrence of `target_string` to the
+    end of the text. If the target string is not present, returns the original
+    text unchanged.
+    """
+
+    index = text.find(target_string)
+    if index != -1:
+        return text[index + len(target_string):]
+    return text

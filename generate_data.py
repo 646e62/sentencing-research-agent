@@ -4,6 +4,7 @@ Main CLI entrypoint for orchestrating project modules.
 
 from __future__ import annotations
 
+import re
 import json
 import os
 from typing import Optional, Any
@@ -17,6 +18,7 @@ from case_data_processing import (
     clean_text_section,
     extract_citation,
     remove_after_string,
+    remove_before_string,
     split_body_into_paragraphs,
 )
 from metadata_processing import get_case_relations, get_metadata_from_citation
@@ -296,11 +298,17 @@ def generate_report_cmd(
     if section_heading and paragraphs:
         paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
 
+    # Quick formatting for the header
+    # Remove redundant header data and text
+    header = remove_before_string(header, "Most recent unfavourable mention")
+    # Remove all asterisks and other junk characters from the header, except colon characters
+    header = re.sub(r"[^\w\s:]", "", header)
+    
+
     report = {
         "citation": citation,
         "metadata": _make_json_safe(metadata),
         "header": header,
-        "section_heading": section_heading,
         "body_paragraphs": paragraphs,
     }
 
