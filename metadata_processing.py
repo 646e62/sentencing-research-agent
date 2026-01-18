@@ -71,7 +71,10 @@ def _parse_citation(citation: str) -> Optional[Dict[str, Any]]:
 
     return citation_data
 
-def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
+def get_metadata_from_citation(
+    citation: str,
+    include_relations: bool = True,
+) -> Optional[CitationMetadata]:
     """Extract all metadata from a citation using the legal citation parser."""
     try:
         citation_data = _parse_citation(citation)
@@ -92,9 +95,6 @@ def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
             formatted_citation = citation
 
         # Map the fields from citation_data to our desired structure
-        cited_cases_result = get_case_relations(citation, "citedCases")
-        citing_cases_result = get_case_relations(citation, "citingCases")
-
         metadata: CitationMetadata = {
             "citation": formatted_citation,
             "case_id": citation_data.get('uid'),
@@ -115,9 +115,13 @@ def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
             "decision_date": citation_data.get('decision_date'),
             "keywords": citation_data.get('keywords', []),
             "categories": citation_data.get('categories', []),
-            "cited_cases": cited_cases_result.get("citedCases", []),
-            "citing_cases": citing_cases_result.get("citingCases", []),
         }
+
+        if include_relations:
+            cited_cases_result = get_case_relations(citation, "citedCases")
+            citing_cases_result = get_case_relations(citation, "citingCases")
+            metadata["cited_cases"] = cited_cases_result.get("citedCases", [])
+            metadata["citing_cases"] = citing_cases_result.get("citingCases", [])
         
         return metadata
         

@@ -29,10 +29,11 @@ def _make_json_safe(value: Any) -> Any:
 @app.command("metadata")
 def metadata_cmd(
     citation: str = typer.Argument(..., help="Citation string (e.g., '2024 SKCA 79')"),
+    local: bool = typer.Option(False, "--local", help="Skip CanLII API calls"),
     json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
 ) -> None:
     """Get metadata from a citation."""
-    metadata = get_metadata_from_citation(citation)
+    metadata = get_metadata_from_citation(citation, include_relations=not local)
     if json_output:
         typer.echo(json.dumps(_make_json_safe(metadata), indent=2))
         return
