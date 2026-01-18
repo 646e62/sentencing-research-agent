@@ -301,9 +301,13 @@ def generate_report_cmd(
     # Quick formatting for the header
     # Remove redundant header data and text
     header = remove_before_string(header, "Most recent unfavourable mention")
-    # Remove all asterisks and other junk characters from the header, except colon characters
-    header = re.sub(r"[^\w\s:]", "", header)
-    
+
+    # Remove asterisks and underscores
+    header = re.sub(r"\*", "", header)
+    header = re.sub(r"_", "", header)
+
+    # Remove extra whitespace
+    header = re.sub(r"\s+", " ", header)
 
     report = {
         "citation": citation,
