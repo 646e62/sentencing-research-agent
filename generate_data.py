@@ -243,7 +243,7 @@ def body_cmd(
         return
 
     for idx, paragraph in enumerate(paragraphs, start=1):
-        typer.echo(f"--- Paragraph {idx} ---")
+        typer.echo(f"\n¶ {idx}")
         typer.echo(paragraph)
 
 

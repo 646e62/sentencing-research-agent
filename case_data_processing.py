@@ -145,7 +145,12 @@ def split_body_into_paragraphs(body: str) -> List[str]:
     for part in parts:
         cleaned = part.strip()
         if cleaned:
-            paragraphs.append(cleaned)
+            prefix = cleaned[:10]
+            marker_idx = prefix.find("] ")
+            if marker_idx != -1:
+                cleaned = cleaned[marker_idx + 2:].lstrip()
+            if cleaned:
+                paragraphs.append(cleaned)
     return paragraphs
 
 # Various text cleaning functions
