@@ -5,12 +5,20 @@ Main CLI entrypoint for orchestrating project modules.
 from __future__ import annotations
 
 import json
+import os
 from typing import Optional, Any
 
 import typer
 import pandas as pd
 
-from case_data_processing import process_text
+from case_data_processing import (
+    html_to_markdown,
+    split_header_and_body,
+    clean_text_section,
+    extract_citation,
+    remove_after_string,
+    split_body_into_paragraphs,
+)
 from metadata_processing import get_case_relations, get_metadata_from_citation
 from sentencing_data_processing import process_master_row, load_master_csv
 
@@ -24,6 +32,45 @@ def _make_json_safe(value: Any) -> Any:
     if isinstance(value, list):
         return [_make_json_safe(v) for v in value]
     return value
+
+
+def _load_markdown_from_html(filename: str) -> str:
+    file_name = filename.strip()
+    if not file_name.lower().endswith(".html"):
+        file_name = f"{file_name}.html"
+
+    input_path = os.path.join("data", "html", file_name)
+    if not os.path.exists(input_path):
+        raise FileNotFoundError(f"File not found: {input_path}")
+
+    with open(input_path, "r", encoding="utf-8") as handle:
+        html = handle.read()
+
+    return html_to_markdown(html)
+
+
+def _get_clean_header(filename: str) -> str:
+    markdown = _load_markdown_from_html(filename)
+    header, _body = split_header_and_body(markdown)
+    return clean_text_section(header)
+
+
+def _get_body(filename: str) -> str:
+    markdown = _load_markdown_from_html(filename)
+    _header, body = split_header_and_body(markdown)
+    return body
+
+
+def _build_case_text_result(filename: str, include_header: bool) -> dict:
+    header = _get_clean_header(filename)
+    body = _get_body(filename)
+    citation = extract_citation(header)
+    metadata = get_metadata_from_citation(citation) if citation else {}
+    return {
+        "header": header if include_header else None,
+        "body": body,
+        "metadata": metadata,
+    }
 
 
 @app.command("metadata")
@@ -110,7 +157,11 @@ def case_text_cmd(
     with open(input_path, "r", encoding="utf-8") as handle:
         html = handle.read()
 
-    result = process_text(html, include_header=include_header)
+    try:
+        result = _build_case_text_result(input_path, include_header=include_header)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
 
     if json_output:
         typer.echo(json.dumps(_make_json_safe(result), indent=2))
@@ -122,6 +173,139 @@ def case_text_cmd(
     typer.echo(f"- Court: {metadata.get('court_name')}")
     typer.echo(f"- Decision date: {metadata.get('decision_date')}")
     typer.echo(f"- Citing cases: {len(result.get('decisions_citing', []))}")
+
+
+@app.command("html-to-md")
+def html_to_md_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
+) -> None:
+    """Convert an HTML file in ./data/html to Markdown and print the result."""
+    try:
+        markdown = _load_markdown_from_html(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
+    if json_output:
+        typer.echo(json.dumps({"markdown": markdown}, indent=2))
+        return
+
+    typer.echo(markdown)
+
+
+@app.command("header")
+def split_header_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
+) -> None:
+    """Extract the header from an HTML file in ./data/html and print it."""
+    try:
+        header = _get_clean_header(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
+
+    if json_output:
+        typer.echo(json.dumps({"header": header}, indent=2))
+        return
+
+    typer.echo(header)
+
+
+@app.command("citation")
+def citation_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
+) -> None:
+    """Extract the citation from an HTML file in ./data/html."""
+    try:
+        header = _get_clean_header(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
+
+    citation = extract_citation(header)
+    if json_output:
+        typer.echo(json.dumps({"citation": citation}, indent=2))
+        return
+
+    if not citation:
+        typer.echo("No citation found.")
+        raise typer.Exit(code=1)
+
+    typer.echo(citation)
+
+
+@app.command("body")
+def body_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
+) -> None:
+    """Extract the body from an HTML file in ./data/html."""
+    try:
+        body = _get_body(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
+
+    body = remove_after_string(body, "Back to top")
+    paragraphs = split_body_into_paragraphs(body)
+
+    # Clean each paragraph
+    paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
+
+    if json_output:
+        typer.echo(json.dumps({"body": paragraphs}, indent=2))
+        return
+
+    for idx, paragraph in enumerate(paragraphs, start=1):
+        typer.echo(f"\n¶ {idx}")
+        typer.echo(paragraph)
+
+
+@app.command("generate-report")
+def generate_report_cmd(
+    filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+) -> None:
+    """
+    Generate a JSON report from an HTML file and save to ./data/json/test.json.
+    """
+    try:
+        header = _get_clean_header(filename)
+        body = _get_body(filename)
+    except FileNotFoundError as exc:
+        typer.echo(str(exc))
+        raise typer.Exit(code=1)
+
+    citation = extract_citation(header)
+    if not citation:
+        typer.echo("No citation found.")
+        raise typer.Exit(code=1)
+
+    metadata = get_metadata_from_citation(citation)
+    if not metadata:
+        typer.echo("No metadata found.")
+        raise typer.Exit(code=1)
+
+    body = remove_after_string(body, "Back to top")
+    paragraphs = split_body_into_paragraphs(body)
+    paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
+
+    report = {
+        "citation": citation,
+        "metadata": _make_json_safe(metadata),
+        "header": header,
+        "body_paragraphs": paragraphs,
+    }
+
+    output_dir = os.path.join(".", "data", "json")
+    os.makedirs(output_dir, exist_ok=True)
+    case_id = metadata.get("case_id") or "unknown"
+    output_path = os.path.join(output_dir, f"{case_id}-report.json")
+    with open(output_path, "w", encoding="utf-8") as handle:
+        json.dump(report, handle, indent=2)
+
+    typer.echo(f"Wrote report to {output_path}")
 
 
 if __name__ == "__main__":
