@@ -359,12 +359,7 @@ def process_text(text: str, include_header: bool = False) -> ProcessedTextResult
         # Extract CanLII summary but don't include in final output
         logger.info("Extracting CanLII summary...")
         canlii_summary = extract_canlii_summary(header)
-        
-        # Make CanLII API call early to space out the API calls
-        #logger.info("Fetching citing cases from CanLII API...")
-        #api_response: CaseReferenceType = get_citing_cases(citation)
-        #decisions_citing = api_response.get('cases', [])
-        #logger.info(f"Found {len(decisions_citing)} citing cases")
+
 
         case_id = metadata.get("case_id")
         sentencing_data = get_sentencing_data_for_case_id(case_id) if case_id else {}
