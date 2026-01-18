@@ -6,7 +6,7 @@ rules and the CanLII API.
 """
 
 import logging
-from typing import Dict, Any, Optional, List, TypedDict, Union
+from typing import Dict, Any, Optional, List, TypedDict, Union, Literal
 
 import requests
 
@@ -37,6 +37,8 @@ class CitationMetadata(TypedDict):
     decision_date: Optional[str]
     keywords: List[str]
     categories: List[str]
+    cited_cases: List[Dict[str, Any]]
+    citing_cases: List[Dict[str, Any]]
 
 class CitingCasesSuccess(TypedDict):
     cases: List[Dict[str, Any]]
@@ -48,7 +50,8 @@ class CitingCasesError(TypedDict):
     error: str
     metadata: None
 
-CitingCasesResult = Union[CitingCasesSuccess, CitingCasesError]
+#CitingCasesResult = Union[CitingCasesSuccess, CitingCasesError]
+CaseReferenceType = Literal["citedCases", "citingCases", "citedLegislations"]
 
 def _parse_citation(citation: str) -> Optional[Dict[str, Any]]:
     """
@@ -68,7 +71,6 @@ def _parse_citation(citation: str) -> Optional[Dict[str, Any]]:
 
     return citation_data
 
-
 def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
     """Extract all metadata from a citation using the legal citation parser."""
     try:
@@ -81,17 +83,20 @@ def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
 
         # Build the normalized citation string
         if style_of_cause and atomic_citation:
-            formatted_citation = f"{style_of_cause}, {atomic_citation} (CanLII)"
+            formatted_citation = f"{style_of_cause}, {atomic_citation}(CanLII)"
         elif style_of_cause:
             formatted_citation = f"{style_of_cause} (CanLII)"
         elif atomic_citation:
-            formatted_citation = f"{atomic_citation} (CanLII)"
+            formatted_citation = f"{atomic_citation}(CanLII)"
         else:
             formatted_citation = citation
 
         # Map the fields from citation_data to our desired structure
+        cited_cases_result = get_case_relations(citation, "citedCases")
+        citing_cases_result = get_case_relations(citation, "citingCases")
+
         metadata: CitationMetadata = {
-            "citation": formatted_citation,  # Keep the original citation string
+            "citation": formatted_citation,
             "case_id": citation_data.get('uid'),
             "style_of_cause": citation_data.get('style_of_cause'),
             "atomic_citation": citation_data.get('atomic_citation'),
@@ -109,7 +114,9 @@ def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
             "docket_number": citation_data.get('docket_number'),
             "decision_date": citation_data.get('decision_date'),
             "keywords": citation_data.get('keywords', []),
-            "categories": citation_data.get('categories', [])
+            "categories": citation_data.get('categories', []),
+            "cited_cases": cited_cases_result.get("citedCases", []),
+            "citing_cases": citing_cases_result.get("citingCases", []),
         }
         
         return metadata
@@ -118,8 +125,17 @@ def get_metadata_from_citation(citation: str) -> Optional[CitationMetadata]:
         logger.error("Error getting metadata from citation: %s", e)
         return None
 
-def get_citing_cases(citation: str, timeout_seconds: int = REQUEST_TIMEOUT_SECONDS) -> CitingCasesResult:
-    """Fetch cases that cite this decision from CanLII API."""
+def get_case_relations(
+    citation: str,
+    caseref_type: CaseReferenceType = "citingCases",
+    timeout_seconds: int = REQUEST_TIMEOUT_SECONDS,
+) -> Dict[str, Any]:
+    """
+    Fetch related cases/legislation from the CanLII case citator API and
+    add them into the metadata dict under the given caseref_type key.
+
+    caseref_type: "citedCases", "citingCases", or "citedLegislations"
+    """
     try:
         api_key = Config.CANLII_API_KEY
         if not api_key:
@@ -132,31 +148,42 @@ def get_citing_cases(citation: str, timeout_seconds: int = REQUEST_TIMEOUT_SECON
         # Convert court name to lowercase and clean up decision code
         court_name = citation_data['court'].lower()
         decision_code = citation_data['uid'].lower().replace('-', '')
-        
-        url = f"https://api.canlii.org/v1/caseCitator/en/{court_name}/{decision_code}/citingCases?api_key={api_key}"
+
+        # CaseReferenceType is encoded in the URL path per CanLII docs
+        url = (
+            f"https://api.canlii.org/v1/caseCitator/en/"
+            f"{court_name}/{decision_code}/{caseref_type}"
+            f"?api_key={api_key}"
+        )
         logger.info("Making CanLII API request")  # Don't log the URL with API key
-        
+
         response = requests.get(url, timeout=timeout_seconds)
-        
+
         if response.status_code == 429:
             logger.warning("CanLII API rate limit reached")
-            return {"error": "Rate limit reached", "cases": [], "metadata": None}
+            return {
+                "error": "Rate limit reached",
+                caseref_type: [],
+                "metadata": citation_data.get("metadata", {}),
+            }
             
         if response.status_code != 200:
             logger.error(f"CanLII API error: {response.status_code}")
-            return {"error": f"API error: {response.status_code}", "cases": [], "metadata": None}
-            
-        data = response.json()
-        citing_cases = data.get('citingCases', [])
-        
-        # Include the metadata from the citation parser
-        return {
-            "cases": citing_cases,
-            "error": None,
-            "metadata": citation_data.get('metadata', {})
-        }
-        
-    except Exception as e:
-        logger.error("Error fetching citing cases: %s", e)
-        return {"error": str(e), "cases": [], "metadata": None}
+            return {
+                "error": f"API error: {response.status_code}",
+                caseref_type: [],
+                "metadata": citation_data.get("metadata", {}),
+            }
 
+        data = response.json()
+        items = data.get(caseref_type, [])
+
+        return {
+            caseref_type: items,
+            "error": None,
+            "metadata": citation_data.get("metadata", {}) or {},
+        }
+
+    except Exception as e:
+        logger.error("Error fetching case relations: %s", e)
+        return {"error": str(e), "citingCases": [], "citedCases": [], "metadata": None}

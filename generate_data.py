@@ -11,7 +11,7 @@ import typer
 import pandas as pd
 
 from case_data_processing import process_text
-from metadata_processing import get_citing_cases, get_metadata_from_citation
+from metadata_processing import get_case_relations, get_metadata_from_citation
 from sentencing_data_processing import process_master_row, load_master_csv
 
 app = typer.Typer(help="Sentencing research CLI")
@@ -52,7 +52,7 @@ def citing_cases_cmd(
     json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
 ) -> None:
     """Get cases that cite a decision."""
-    result = get_citing_cases(citation)
+    result = get_case_relations(citation)
     if json_output:
         typer.echo(json.dumps(_make_json_safe(result), indent=2))
         return
