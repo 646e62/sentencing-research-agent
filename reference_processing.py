@@ -6,6 +6,7 @@ It includes functions for parsing citations, making API requests, and handling r
 """
 
 import logging
+import re
 from typing import Dict, Any, Literal
 import requests
 from config import Config
@@ -83,35 +84,48 @@ def get_case_relations(
 
 def get_cited_legislation(
     paragraphs: list[str],
-) -> list[tuple[str, str, int]]:
+) -> list[tuple[str, str | None, list[int]]]:
     """
     Find and compile a list of cited legislation from the given paragraphs.
 
-    Returns a list of tuples containing the legislation name, citation, and paragraph number.
+    Returns a list of tuples containing the legislation name, citation, and
+    a list of paragraph numbers where it appears.
     """
 
     _LEGISLATION = {
-        "Criminal Code": "/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html",
+        "/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html": "Criminal Code",
     }
     
     # Create a regex that finds markdown links of the form [text](url)
-    markdown_link_regex = r'\[([^\]]+)\]\(([^)]+)\)'
+    markdown_link_regex = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+    legislation_map: dict[tuple[str, str | None], list[int]] = {}
     
-    for paragraph in paragraphs:
-        if markdown_link_regex.search(paragraph):
-            match = markdown_link_regex.search(paragraph)
-            # Set the paragraph number to the index of the paragraph in the list +1
-            paragraph_number = paragraphs.index(paragraph) + 1
-            text = match.group(1)
-            # Check for a # character in the text
-            if "#" in text:
-                url = text.split("#")[0]
-                section = text.split("#")[1]
+    for index, paragraph in enumerate(paragraphs, start=1):
+        for match in markdown_link_regex.finditer(paragraph):
+            paragraph_number = index
+            url = match.group(2)
+            section = None
 
-            if url in _LEGISLATION and section:
-                legislation_name = _LEGISLATION[url]
-                return (legislation_name, section, paragraph_number)
-            elif section:
-                return (url, section, paragraph_number)
-            else:
-                return (url, None, paragraph_number)
+            # Skip over a url if it doesn't have the string "laws" in it
+            if "laws" not in url:
+                continue
+
+            # Check for a # character in the url
+            if "#" in url:
+                url, section = url.split("#", 1)
+                if "_smooth" in section:
+                    section = section.replace("_smooth", "")
+
+            if url in _LEGISLATION:
+                url = _LEGISLATION[url]
+
+            key = (url, section)
+            if key not in legislation_map:
+                legislation_map[key] = []
+            legislation_map[key].append(paragraph_number)
+
+    return [
+        (name, section, sorted(set(paragraphs)))
+        for (name, section), paragraphs in legislation_map.items()
+    ]
+    

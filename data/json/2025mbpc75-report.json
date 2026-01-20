@@ -26,99 +26,150 @@
     "categories": [
       "Criminal or statutory infractions",
       "Motor vehicles"
-    ],
-    "cited_cases": [
-      {
-        "databaseId": "oncj",
-        "caseId": {
-          "en": "2014oncj773"
-        },
-        "title": "R. v. Addley",
-        "citation": "2014 ONCJ 773 (CanLII)",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "skca",
-        "caseId": {
-          "en": "2009skca137"
-        },
-        "title": "R. v. Akapew",
-        "citation": "2009 SKCA 137 (CanLII)",
-        "aiContentId": {
-          "en": "2009skca137"
-        }
-      },
-      {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "2012scc56"
-        },
-        "title": "R. v. Boudreault",
-        "citation": "2012 SCC 56 (CanLII), [2012] 3 SCR 157",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "2010scc13"
-        },
-        "title": "R. v. Briscoe",
-        "citation": "2010 SCC 13 (CanLII), [2010] 1 SCR 411",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "bcca",
-        "caseId": {
-          "en": "2020bcca253"
-        },
-        "title": "R. v. Edwards",
-        "citation": "2020 BCCA 253 (CanLII)",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "onca",
-        "caseId": {
-          "en": "2011onca190"
-        },
-        "title": "R. v. M.R.",
-        "citation": "2011 ONCA 190 (CanLII)",
-        "aiContentId": {
-          "en": "2011onca190"
-        }
-      },
-      {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "2019scc15"
-        },
-        "title": "R. v. Morrison",
-        "citation": "2019 SCC 15 (CanLII), [2019] 2 SCR 3",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "onca",
-        "caseId": {
-          "en": "1969canlii248"
-        },
-        "title": "Regina v. Slessor",
-        "citation": "1969 CanLII 248 (ON CA)",
-        "aiContentId": {
-          "en": "1969canlii248"
-        }
-      },
-      {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "1985canlii79"
-        },
-        "title": "Sansregret v. The Queen",
-        "citation": "1985 CanLII 79 (SCC), [1985] 1 SCR 570",
-        "aiContentId": {}
-      }
-    ],
-    "citing_cases": []
+    ]
   },
-  "header": " CITATION: _R. v. Barker-Young_ , 2025 MBPC 75 THE PROVINCIAL COURT OF MANITOBA BETWEEN: His Majesty the King ) V. Mitrovik and M. Dueck ) for the Crown ) -and- ) ) ) ) Lyle River Jared ) M. Serbin and D. Buors Lee Barker-Young ) for the Accused ) ) ) ) Reasons for Decision ) Delivered: December 19, 2025 _CARLSON, P.J._",
+  "references": {
+    "cited_cases": {
+      "citedCases": [
+        {
+          "databaseId": "oncj",
+          "caseId": {
+            "en": "2014oncj773"
+          },
+          "title": "R. v. Addley",
+          "citation": "2014 ONCJ 773 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "skca",
+          "caseId": {
+            "en": "2009skca137"
+          },
+          "title": "R. v. Akapew",
+          "citation": "2009 SKCA 137 (CanLII)",
+          "aiContentId": {
+            "en": "2009skca137"
+          }
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2012scc56"
+          },
+          "title": "R. v. Boudreault",
+          "citation": "2012 SCC 56 (CanLII), [2012] 3 SCR 157",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2010scc13"
+          },
+          "title": "R. v. Briscoe",
+          "citation": "2010 SCC 13 (CanLII), [2010] 1 SCR 411",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2020bcca253"
+          },
+          "title": "R. v. Edwards",
+          "citation": "2020 BCCA 253 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "onca",
+          "caseId": {
+            "en": "2011onca190"
+          },
+          "title": "R. v. M.R.",
+          "citation": "2011 ONCA 190 (CanLII)",
+          "aiContentId": {
+            "en": "2011onca190"
+          }
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2019scc15"
+          },
+          "title": "R. v. Morrison",
+          "citation": "2019 SCC 15 (CanLII), [2019] 2 SCR 3",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "onca",
+          "caseId": {
+            "en": "1969canlii248"
+          },
+          "title": "Regina v. Slessor",
+          "citation": "1969 CanLII 248 (ON CA)",
+          "aiContentId": {
+            "en": "1969canlii248"
+          }
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "1985canlii79"
+          },
+          "title": "Sansregret v. The Queen",
+          "citation": "1985 CanLII 79 (SCC), [1985] 1 SCR 570",
+          "aiContentId": {}
+        }
+      ],
+      "error": null,
+      "metadata": {}
+    },
+    "citing_cases": {
+      "citingCases": [],
+      "error": null,
+      "metadata": {}
+    },
+    "cited_legislation": [
+      [
+        "Criminal Code",
+        "sec320.16subsec3",
+        [
+          1,
+          30,
+          68
+        ]
+      ],
+      [
+        "Criminal Code",
+        null,
+        [
+          1,
+          27,
+          30,
+          34,
+          56,
+          68,
+          69,
+          74
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec21subsec1",
+        [
+          27,
+          68,
+          74
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec252",
+        [
+          56
+        ]
+      ]
+    ]
+  },
+  "header": " CITATION: R. v. Barker-Young , 2025 MBPC 75 THE PROVINCIAL COURT OF MANITOBA BETWEEN: His Majesty the King ) V. Mitrovik and M. Dueck ) for the Crown ) -and- ) ) ) ) Lyle River Jared ) M. Serbin and D. Buors Lee Barker-Young ) for the Accused ) ) ) ) Reasons for Decision ) Delivered: December 19, 2025 CARLSON, P.J.",
   "body_paragraphs": [
     "**INTRODUCTION**\n\nThe accused, Lyle Barker-Young is charged with leaving the scene of a traffic accident that resulted in a fatality, on June 6, 2024, in Winnipeg, Manitoba, contrary to [s. 320.16(3)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec320.16subsec3_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ (the _Code_).",
     "Mr. Barker-Young was not driving at the time of the accident. He was the front seat passenger in a vehicle driven by his roommate, Beckham Severight, when that vehicle hit the bicycle that Mr. Robbie Jenner was riding. That impact caused injuries to Mr. Jenner that proved fatal.",

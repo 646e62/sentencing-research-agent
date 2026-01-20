@@ -23,7 +23,7 @@ from case_data_processing import (
 )
 from metadata_processing import get_metadata_from_citation
 from sentencing_data_processing import process_master_row, load_master_csv
-from reference_processing import get_case_relations
+from reference_processing import get_case_relations, get_cited_legislation
 
 app = typer.Typer(help="Sentencing research CLI")
 
@@ -316,6 +316,7 @@ def generate_report_cmd(
         "references": {
             "cited_cases": get_case_relations(citation, "citedCases"),
             "citing_cases": get_case_relations(citation, "citingCases"),
+            "cited_legislation": get_cited_legislation(paragraphs),
         },
         "header": header,
         "body_paragraphs": paragraphs,
@@ -329,6 +330,37 @@ def generate_report_cmd(
         json.dump(report, handle, indent=2)
 
     typer.echo(f"Wrote report to {output_path}")
+
+
+@app.command("legislation")
+def legislation_cmd(
+    json_name: str = typer.Argument(..., help="JSON report filename (e.g., 'case-report.json')"),
+) -> None:
+    """Extract cited legislation from a report's body paragraphs."""
+    file_name = json_name.strip()
+    if not file_name.lower().endswith(".json"):
+        file_name = f"{file_name}.json"
+
+    input_path = os.path.join("data", "json", file_name)
+    if not os.path.exists(input_path):
+        typer.echo(f"File not found: {input_path}")
+        raise typer.Exit(code=1)
+
+    with open(input_path, "r", encoding="utf-8") as handle:
+        data = json.load(handle)
+
+    paragraphs = data.get("body_paragraphs", [])
+    if not isinstance(paragraphs, list):
+        typer.echo("Invalid report format: body_paragraphs is missing or not a list.")
+        raise typer.Exit(code=1)
+
+    cited = get_cited_legislation(paragraphs)
+    if not cited:
+        typer.echo("No cited legislation found.")
+        return
+
+    for item in cited:
+        typer.echo(str(item))
 
 
 if __name__ == "__main__":
