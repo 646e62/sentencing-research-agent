@@ -80,3 +80,38 @@ def get_case_relations(
     except Exception as e:
         logger.error("Error fetching case relations: %s", e)
         return {"error": str(e), "citingCases": [], "citedCases": [], "metadata": None}
+
+def get_cited_legislation(
+    paragraphs: list[str],
+) -> list[tuple[str, str, int]]:
+    """
+    Find and compile a list of cited legislation from the given paragraphs.
+
+    Returns a list of tuples containing the legislation name, citation, and paragraph number.
+    """
+
+    _LEGISLATION = {
+        "Criminal Code": "/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html",
+    }
+    
+    # Create a regex that finds markdown links of the form [text](url)
+    markdown_link_regex = r'\[([^\]]+)\]\(([^)]+)\)'
+    
+    for paragraph in paragraphs:
+        if markdown_link_regex.search(paragraph):
+            match = markdown_link_regex.search(paragraph)
+            # Set the paragraph number to the index of the paragraph in the list +1
+            paragraph_number = paragraphs.index(paragraph) + 1
+            text = match.group(1)
+            # Check for a # character in the text
+            if "#" in text:
+                url = text.split("#")[0]
+                section = text.split("#")[1]
+
+            if url in _LEGISLATION and section:
+                legislation_name = _LEGISLATION[url]
+                return (legislation_name, section, paragraph_number)
+            elif section:
+                return (url, section, paragraph_number)
+            else:
+                return (url, None, paragraph_number)
