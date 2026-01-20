@@ -1,5 +1,8 @@
 """
+Tools for fetching case relations from the CanLII case citator API.
 
+This module provides tools for fetching case relations from the CanLII case citator API.
+It includes functions for parsing citations, making API requests, and handling responses.
 """
 
 import logging
@@ -25,6 +28,7 @@ def get_case_relations(
 
     caseref_type: "citedCases", "citingCases", or "citedLegislations"
     """
+    
     try:
         api_key = Config.CANLII_API_KEY
         if not api_key:
