@@ -39,177 +39,120 @@
       "Criminal or statutory infractions",
       "Motor vehicles",
       "Sentencing"
-    ],
-    "cited_cases": [
-      {
-        "databaseId": "nspc",
-        "caseId": {
-          "en": "2020nspc48"
-        },
-        "title": "R. v. Burns",
-        "citation": "2020 NSPC 48 (CanLII)",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "oncj",
-        "caseId": {
-          "en": "2023oncj374"
-        },
-        "title": "R. v. Cadet",
-        "citation": "2023 ONCJ 374 (CanLII)",
-        "aiContentId": {
-          "en": "2023oncj374"
-        }
-      },
-      {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "1999canlii679"
-        },
-        "title": "R. v. Gladue",
-        "citation": "1999 CanLII 679 (SCC), [1999] 1 SCR 688",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "2012scc13"
-        },
-        "title": "R. v. Ipeelee",
-        "citation": "2012 SCC 13 (CanLII), [2012] 1 SCR 433",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "2015scc64"
-        },
-        "title": "R. v. Lacasse",
-        "citation": "2015 SCC 64 (CanLII), [2015] 3 SCR 1089",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "2000scc7"
-        },
-        "title": "R. v. R.N.S.",
-        "citation": "2000 SCC 7 (CanLII), [2000] 1 SCR 149",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "mbca",
-        "caseId": {
-          "en": "2017mbca31"
-        },
-        "title": "R v Anderson",
-        "citation": "2017 MBCA 31 (CanLII)",
-        "aiContentId": {
-          "en": "2017mbca31"
-        }
-      },
-      {
-        "databaseId": "skpc",
-        "caseId": {
-          "en": "2023skpc55"
-        },
-        "title": "R v McGillis",
-        "citation": "2023 SKPC 55 (CanLII)",
-        "aiContentId": {
-          "en": "2023skpc55"
-        }
-      },
-      {
-        "databaseId": "skqb",
-        "caseId": {
-          "en": "2011skqb378"
-        },
-        "title": "R v Riddell",
-        "citation": "2011 SKQB 378 (CanLII)",
-        "aiContentId": {
-          "en": "2011skqb378"
-        }
-      }
-    ],
-    "citing_cases": [
-      {
-        "databaseId": "qccq",
-        "caseId": {
-          "fr": "2025qccq918"
-        },
-        "title": "R. c. Fran\u00e7ois",
-        "citation": "2025 QCCQ 918 (CanLII)",
-        "aiContentId": {}
-      }
     ]
   },
-  "sections": [
-    {
-      "section_number": "I",
-      "section_name": "INTRODUCTION",
-      "following_paragraph": 1
+  "references": {
+    "cited_cases": {
+      "citedCases": [
+        {
+          "databaseId": "nspc",
+          "caseId": {
+            "en": "2020nspc48"
+          },
+          "title": "R. v. Burns",
+          "citation": "2020 NSPC 48 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "oncj",
+          "caseId": {
+            "en": "2023oncj374"
+          },
+          "title": "R. v. Cadet",
+          "citation": "2023 ONCJ 374 (CanLII)",
+          "aiContentId": {
+            "en": "2023oncj374"
+          }
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "1999canlii679"
+          },
+          "title": "R. v. Gladue",
+          "citation": "1999 CanLII 679 (SCC), [1999] 1 SCR 688",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2012scc13"
+          },
+          "title": "R. v. Ipeelee",
+          "citation": "2012 SCC 13 (CanLII), [2012] 1 SCR 433",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2015scc64"
+          },
+          "title": "R. v. Lacasse",
+          "citation": "2015 SCC 64 (CanLII), [2015] 3 SCR 1089",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2000scc7"
+          },
+          "title": "R. v. R.N.S.",
+          "citation": "2000 SCC 7 (CanLII), [2000] 1 SCR 149",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "mbca",
+          "caseId": {
+            "en": "2017mbca31"
+          },
+          "title": "R v Anderson",
+          "citation": "2017 MBCA 31 (CanLII)",
+          "aiContentId": {
+            "en": "2017mbca31"
+          }
+        },
+        {
+          "databaseId": "skpc",
+          "caseId": {
+            "en": "2023skpc55"
+          },
+          "title": "R v McGillis",
+          "citation": "2023 SKPC 55 (CanLII)",
+          "aiContentId": {
+            "en": "2023skpc55"
+          }
+        },
+        {
+          "databaseId": "skqb",
+          "caseId": {
+            "en": "2011skqb378"
+          },
+          "title": "R v Riddell",
+          "citation": "2011 SKQB 378 (CanLII)",
+          "aiContentId": {
+            "en": "2011skqb378"
+          }
+        }
+      ],
+      "error": null,
+      "metadata": {}
     },
-    {
-      "section_number": "II",
-      "section_name": "ISSUES",
-      "following_paragraph": 2
-    },
-    {
-      "section_number": "III",
-      "section_name": "FACTS",
-      "following_paragraph": 3
-    },
-    {
-      "section_number": "IV",
-      "section_name": "IMPACT ON THE VICTIM",
-      "following_paragraph": 8
-    },
-    {
-      "section_number": "V",
-      "section_name": "CIRCUMSTANCES OF THE OFFENDER",
-      "following_paragraph": 9
-    },
-    {
-      "section_number": "VI",
-      "section_name": "ANALYSIS",
-      "following_paragraph": 13
-    },
-    {
-      "section_number": null,
-      "section_name": "Aggravating and Mitigating Factors",
-      "following_paragraph": 18
-    },
-    {
-      "section_number": null,
-      "section_name": "Position of the Parties",
-      "following_paragraph": 21
-    },
-    {
-      "section_number": null,
-      "section_name": "Availability of a Conditional Sentence",
-      "following_paragraph": 23
-    },
-    {
-      "section_number": null,
-      "section_name": "Parity",
-      "following_paragraph": 25
-    },
-    {
-      "section_number": null,
-      "section_name": "Deterrence and Conditional Sentences",
-      "following_paragraph": 27
-    },
-    {
-      "section_number": null,
-      "section_name": "Gladue Factors",
-      "following_paragraph": 28
-    },
-    {
-      "section_number": "VII",
-      "section_name": "CONCLUSION",
-      "following_paragraph": 31
+    "citing_cases": {
+      "citingCases": [
+        {
+          "databaseId": "qccq",
+          "caseId": {
+            "fr": "2025qccq918"
+          },
+          "title": "R. c. Fran\u00e7ois",
+          "citation": "2025 QCCQ 918 (CanLII)",
+          "aiContentId": {}
+        }
+      ],
+      "error": null,
+      "metadata": {}
     }
-  ],
+  },
   "header": " IN THE PROVINCIAL COURT OF SASKATCHEWAN Citation: 2024 SKPC 11 Date: February 6, 2024 Information: 991226880 Location: Regina Between: His Majesty the King \\- and - Katherine Mills Appearing: Leona Andrews For the Crown Lisa Smart For the Accused SENTENCING DECISION N.P. EVANCHUK, J",
   "body_paragraphs": [
     "**I.          INTRODUCTION**\n\nKatherine Mills pled guilty to a charge of driving with a blood-alcohol level at or above 80 mg% and while doing so caused bodily harm to Shannon Sayer, contrary to [section 320.14(2)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec320.14subsec2_smooth) of the _[Criminal](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ _Code_[_Code_]. The Crown elected to proceed on the charge by way of summary conviction. Sentencing submissions were presented on November 17, 2023. There is no common ground between the parties on sentence. Mills argues that her age, lack of previous driving offences, along with her personal circumstances, including ___Gladue_ _**[1]**_ factors, make a community-based disposition appropriate. Mills asks the Court to impose a 6-month conditional sentence followed by a period of probation. The Crown submits that due to the serious nature of the injuries suffered by the victim and the elevated blood- alcohol readings, the Court ought to impose a carceral sentence of 12 months. **II. ISSUES** ** **",

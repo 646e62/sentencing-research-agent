@@ -7,7 +7,7 @@ from __future__ import annotations
 import re
 import json
 import os
-from typing import Optional, Any
+from typing import Any
 
 import typer
 import pandas as pd
@@ -21,8 +21,9 @@ from case_data_processing import (
     remove_before_string,
     split_body_into_paragraphs,
 )
-from metadata_processing import get_case_relations, get_metadata_from_citation
+from metadata_processing import get_metadata_from_citation
 from sentencing_data_processing import process_master_row, load_master_csv
+from reference_processing import get_case_relations
 
 app = typer.Typer(help="Sentencing research CLI")
 
@@ -312,6 +313,10 @@ def generate_report_cmd(
     report = {
         "citation": citation,
         "metadata": _make_json_safe(metadata),
+        "references": {
+            "cited_cases": get_case_relations(citation, "citedCases"),
+            "citing_cases": get_case_relations(citation, "citingCases"),
+        },
         "header": header,
         "body_paragraphs": paragraphs,
     }
