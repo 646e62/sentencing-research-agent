@@ -7,182 +7,224 @@ summaries.
 """
 
 import re
-import os
-import json
 import logging
-from pathlib import Path
-from typing import Dict, Any, Tuple, Optional, List, TypedDict
+from typing import Any, Optional, TypedDict
 
 import html2text
-import pandas as pd
-
-from metadata_processing import (
-    get_metadata_from_citation,
-)
 
 logger = logging.getLogger(__name__)
 
+# Constants
+# Citation markers
+_CITATION_START_MARKER = "# "
+_CITATION_END_MARKER = " (CanLII) "
+_ENG_MARKER = "Loading paragraph markers __\n"
+_FR_MARKER = "Chargement des marqueurs de paragraphe __\n"
+
+# TypedDict for processed text result
 class ProcessedTextResult(TypedDict):
     header: Optional[str]
     body: str
-    metadata: Dict[str, Any]
-    processing_log: List[str]
+    metadata: dict[str, Any]
+    processing_log: list[str]
 
 def html_to_markdown(html_content: str) -> str:
     """Convert HTML to Markdown format."""
+    
     h = html2text.HTML2Text()
-    h.ignore_links = True
-    markdown = h.handle(html_content)
-    return markdown
+    
+    return h.handle(html_content)
 
 # Header functions
 def split_header_and_body(
     text: str,
     target_string: str = "\n\n__\n",
-) -> Tuple[str, str]:
+) -> tuple[str, str, str]:
     """
-    Split text into header and body.
+    Split raw Markdown into header, body, and trailing section heading.
 
     The text is split into chunks using `target_string` as a marker.
     - The 4th non-empty chunk (index 3) is used as the header (after cleaning).
-    - Everything after the 4th chunk is joined with blank lines as the body.
-    - If fewer than 4 non-empty chunks exist, header is "" and body is the full text.
+    - If present, a trailing section heading at the end of the header is
+      removed and returned separately. The section heading is everything after
+      the last instance of the string "**_ _**" in that chunk.
+    - Everything after the 4th chunk is joined with `target_string` as the body.
+    - If fewer than 4 non-empty chunks exist, the header is "" and the body
+      is the full original text (stripped), and section_heading is "".
     """
 
     if not target_string:
-        # No marker: nothing to split reliably
-        return "", text.strip()
+        return "", text.strip(), ""
 
-    # Split manually to preserve behaviour closest to original function
-    raw_chunks = []
-    start_idx = 0
-
-    while True:
-        marker_idx = text.find(target_string, start_idx)
-        if marker_idx == -1:
-            raw_chunks.append(text[start_idx:])
-            break
-        raw_chunks.append(text[start_idx:marker_idx])
-        start_idx = marker_idx + len(target_string)
-
-    # Remove empty/whitespace-only chunks
+    raw_chunks = text.split(target_string)
     chunks = [chunk.strip() for chunk in raw_chunks if chunk.strip()]
 
-    # Not enough chunks to have a header; return whole text as body
     if len(chunks) < 4:
-        return "", text.strip()
+        return "", text.strip(), ""
 
-    raw_header = chunks[3].strip()
-    header = clean_header(raw_header)
+    # Original header chunk (before trailing section heading removal)
+    raw_header_chunk = chunks[3]
+    cleaned_header = clean_header(raw_header_chunk)
 
-    # Body is everything after the 4th chunk, joined with the marker
+    # Extract trailing section heading if present
+    section_heading = ""
+    marker_pattern = re.compile(r"\*\*\s*_\s*_\s*\*\*")
+    matches = list(marker_pattern.finditer(cleaned_header))
+
+    if matches:
+        last_match = matches[-1]
+        after_marker = cleaned_header[last_match.end():].strip()
+        before_marker = cleaned_header[:last_match.start()].rstrip()
+
+        if after_marker:
+            section_heading = after_marker
+            header = before_marker
+        else:
+            header = cleaned_header
+    else:
+        header = cleaned_header
+
+    # Build body from the remaining chunks after the 4th
     body_chunks = chunks[4:]
     body = target_string.join(body_chunks).strip() if body_chunks else ""
 
-    return header, body
+    return header, body, section_heading
+
 
 def clean_header(header: str) -> str:
-    """Remove loading markers and clean up header text."""
-    # Define loading markers in both languages
-    eng_marker = "Loading paragraph markers __\n"
-    fr_marker = "Chargement des marqueurs de paragraphe __\n"
-    
-    # Find the last occurrence of either marker
-    eng_pos = header.rfind(eng_marker)
-    fr_pos = header.rfind(fr_marker)
-    
-    # Get the position after the last marker found
-    if eng_pos != -1 and fr_pos != -1:
-        # Both markers found, use the later one
-        start_pos = max(eng_pos + len(eng_marker), fr_pos + len(fr_marker))
-    elif eng_pos != -1:
-        start_pos = eng_pos + len(eng_marker)
-    elif fr_pos != -1:
-        start_pos = fr_pos + len(fr_marker)
-    else:
-        # No markers found, return as is
+    """
+    Remove known “loading paragraph markers” from a header and strip whitespace.
+
+    If any known marker lines are present (English or French), everything up to
+    and including the last such marker is removed. Otherwise the header is
+    returned stripped as-is.
+    """
+
+    markers = [
+        _ENG_MARKER,
+        _FR_MARKER,
+    ]
+
+    last_end_pos = -1
+    for marker in markers:
+        pos = header.rfind(marker)
+        if pos != -1:
+            end_pos = pos + len(marker)
+            if end_pos > last_end_pos:
+                last_end_pos = end_pos
+
+    if last_end_pos == -1:
         return header.strip()
-    
-    # Return everything after the marker
-    return header[start_pos:].strip()
+
+    return header[last_end_pos:].strip()
 
 def extract_citation(header: str) -> str:
-    """Extract citation from header text."""
-    try:
-        # Look for the start marker
-        start_marker = "# "
-        start_pos = header.find(start_marker)
-        if start_pos == -1:
-            logger.warning("No citation start marker '# ' found in header")
-            return ""
-            
-        # Start position after the marker
-        start_pos += len(start_marker)
-        
-        # Look for the end marker
-        end_marker = " (CanLII) "
-        end_pos = header.find(end_marker, start_pos)
-        if end_pos == -1:
-            logger.warning("No citation end marker '(CanLII)' found in header")
-            return ""
-            
-        # Extract the citation
-        citation = header[start_pos:end_pos].strip()
-        return citation
-        
-    except Exception as e:
-        logger.error(f"Error extracting citation: {str(e)}")
+    """
+    Extract the case citation from the header text.
+
+    Expects a header starting with '# ' and containing ' (CanLII) '.
+    Returns the substring between these markers, or "" if not found.
+    """
+
+    start_pos = header.find(_CITATION_START_MARKER)
+    if start_pos == -1:
+        logger.warning("No citation start marker '%s' found in header", _CITATION_START_MARKER)
         return ""
 
+    start_pos += len(_CITATION_START_MARKER)
+
+    end_pos = header.find(_CITATION_END_MARKER, start_pos)
+    if end_pos == -1:
+        logger.warning("No citation end marker '%s' found in header", _CITATION_END_MARKER)
+        return ""
+
+    citation = header[start_pos:end_pos].strip()
+    return citation
+
 # Body functions
-def split_body_into_paragraphs(body: str) -> List[str]:
-    """Split body into paragraphs using the marker line."""
+def split_body_into_paragraphs(body: str) -> list[str]:
+    """
+    Split the body into logical paragraphs.
+
+    Paragraphs are separated by lines containing '__' (e.g. '\n__\n').
+    Leading paragraph numbers in the form '[n] ' (e.g. '[12] ') are removed
+    from each paragraph, if present.
+    """
+
     if not body:
         return []
 
     parts = re.split(r"\n+__\n+", body)
-    paragraphs: List[str] = []
+    paragraphs: list[str] = []
+
     for part in parts:
         cleaned = part.strip()
+        if not cleaned:
+            continue
+
+        # Remove hard-coded paragraph numbers
+        prefix = cleaned[:10]
+        marker_idx = prefix.find("] ")
+        if marker_idx != -1:
+            cleaned = cleaned[marker_idx + 2 :].lstrip()
+
         if cleaned:
-            prefix = cleaned[:10]
-            marker_idx = prefix.find("] ")
-            if marker_idx != -1:
-                cleaned = cleaned[marker_idx + 2:].lstrip()
-            if cleaned:
-                paragraphs.append(cleaned)
+            paragraphs.append(cleaned)
+
     return paragraphs
 
 # Various text cleaning functions
 def clean_text_section(text: str) -> str:
-    """Clean and format a section of text."""
-    # Remove everything from the first "!" to the first "PDF" after it (inclusive)
+    """
+    Clean and normalize a section of text from a case document.
+
+    - Removes specific superfluous header text between '!' and the next 'PDF'.
+    - Normalizes whitespace while preserving paragraph markers '__'.
+    - Collapses multiple spaces/newlines and removes decorative separator runs.
+    """
+
+    # Removes specific superfluous header text
     bang_idx = text.find("!")
     if bang_idx != -1:
         pdf_idx = text.find("PDF", bang_idx)
         if pdf_idx != -1:
             text = text[:bang_idx] + text[pdf_idx + len("PDF"):]
-    text = replace_newlines(text)
-    text = remove_newline_prefix_space(text)
-    text = re.sub(r"  +", " ", text)  # Remove multiple spaces
-    text = re.sub(r"\n\s*\n", "\n", text)  # Remove multiple newlines
-    # Remove separator runs like "* * * " after whitespace cleanup
-    text = re.sub(r"(?:\*\s+){2,}\*", "", text)
+
+    # Remove extraneous whitespace
+    text = re.sub(r"(?<!__)\n(?!__)", " ", text)    # Remove whitespace between
+                                                    # paragraphs
+    text = re.sub(r"\n\s+", "\n", text)             # Remove space after 
+                                                    # newlines
+    text = re.sub(r"  +", " ", text)                # Remove multiple spaces
+    text = re.sub(r"\n\s*\n", "\n", text)           # Remove multiple newlines
+    text = re.sub(r"(?:\*\s+){2,}\*", "", text)     # Remove separator runs
+    
     return text.strip()
 
 def remove_after_string(text: str, target_string: str) -> str:
-    """Removes footer text from the Markdown file."""
+    """
+    Truncate text at the first occurrence of `target_string`.
+
+    Returns the substring from the start of `text` up to (but not including)
+    the first occurrence of `target_string`. If the target string is not
+    present, returns the original text unchanged.
+    """
+
     index = text.find(target_string)
     if index != -1:
         return text[:index]
     return text
 
-def replace_newlines(text: str) -> str:
-    """Remove whitespace while preserving markdown formatting."""
-    pattern = r"(?<!__)\n(?!__)"
-    return re.sub(pattern, " ", text)
+def remove_before_string(text: str, target_string: str) -> str:
+    """
+    Remove everything before and including the first occurrence of `target_string`.
 
-def remove_newline_prefix_space(text: str) -> str:
-    """Remove space after newlines."""
-    pattern = r"\n\s+"
-    return re.sub(pattern, "\n", text)
+    Returns the substring from the first occurrence of `target_string` to the
+    end of the text. If the target string is not present, returns the original
+    text unchanged.
+    """
+
+    index = text.find(target_string)
+    if index != -1:
+        return text[index + len(target_string):]
+    return text
