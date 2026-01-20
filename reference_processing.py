@@ -124,8 +124,20 @@ def get_cited_legislation(
                 legislation_map[key] = []
             legislation_map[key].append(paragraph_number)
 
+    # Remove redundant paragraph numbers from null-section entries
+    with_section: dict[str, set[int]] = {}
+    for (name, section), paragraphs in legislation_map.items():
+        if section:
+            with_section.setdefault(name, set()).update(paragraphs)
+
+    for (name, section), paragraphs in list(legislation_map.items()):
+        if section is None and name in with_section:
+            filtered = [p for p in paragraphs if p not in with_section[name]]
+            legislation_map[(name, section)] = filtered
+
     return [
         (name, section, sorted(set(paragraphs)))
         for (name, section), paragraphs in legislation_map.items()
+        if paragraphs
     ]
     
