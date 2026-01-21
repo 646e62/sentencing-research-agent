@@ -278,6 +278,11 @@ def generate_report_cmd(
         "--metadata-delay",
         help="Delay in seconds between related-case metadata calls",
     ),
+    verbose: bool = typer.Option(
+        False,
+        "--verbose",
+        help="Print progress while generating the report",
+    ),
 ) -> None:
     """
     Generate a JSON report from an HTML file and save to ./data/json/test.json.
@@ -329,12 +334,14 @@ def generate_report_cmd(
                 return value.strip()
         return None
 
-    def _collect_case_metadata(cases: list[dict], delay: float) -> list[dict]:
+    def _collect_case_metadata(cases: list[dict], delay: float, label: str) -> list[dict]:
         collected: list[dict] = []
         for idx, case_item in enumerate(cases):
             citation_value = _extract_case_citation(case_item)
             if not citation_value:
                 continue
+            if verbose:
+                typer.echo(f"Fetching {label} metadata {idx + 1}/{len(cases)}: {citation_value}")
             metadata = get_metadata_from_citation(citation_value)
             if metadata:
                 collected.append({
@@ -345,18 +352,22 @@ def generate_report_cmd(
                 time.sleep(delay)
         return collected
 
+    if verbose:
+        typer.echo("Fetching cited/citing cases...")
     cited_cases = get_case_relations(citation, "citedCases")
     citing_cases = get_case_relations(citation, "citingCases")
 
     cited_case_items = cited_cases.get("citedCases", [])
     citing_case_items = citing_cases.get("citingCases", [])
 
+    if verbose:
+        typer.echo("Fetching metadata for related cases...")
     report = {
         "citation": citation,
         "metadata": _make_json_safe(metadata),
         "references": {
-            "cited_cases_metadata": _collect_case_metadata(cited_case_items, metadata_delay),
-            "citing_cases_metadata": _collect_case_metadata(citing_case_items, metadata_delay),
+            "cited_cases_metadata": _collect_case_metadata(cited_case_items, metadata_delay, "cited"),
+            "citing_cases_metadata": _collect_case_metadata(citing_case_items, metadata_delay, "citing"),
             "cited_legislation": get_cited_legislation(paragraphs),
         },
         "header": header,
