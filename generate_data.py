@@ -83,7 +83,7 @@ def metadata_cmd(
     json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
 ) -> None:
     """Get metadata from a citation."""
-    metadata = get_metadata_from_citation(citation, include_relations=not local)
+    metadata = get_metadata_from_citation(citation)
     if json_output:
         typer.echo(json.dumps(_make_json_safe(metadata), indent=2))
         return

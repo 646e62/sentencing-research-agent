@@ -94,10 +94,16 @@ def get_cited_legislation(
 
     _LEGISLATION = {
         "/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html": "Criminal Code",
+        "/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html": "Controlled Drugs and Substances Act",
+        "/en/ca/laws/stat/schedule-b-to-the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada-act-1982-uk-1982-c-11.html": "Charter",
+        "/en/ca/laws/stat/rsc-1985-c-c-47/latest/rsc-1985-c-c-47.html": "Criminal Records Act",
+        "/en/ca/laws/stat/sc-2001-c-27/latest/sc-2001-c-27.html": "Immigration and Refugee Protection Act",
     }
     
     # Create a regex that finds markdown links of the form [text](url)
     markdown_link_regex = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+
+    # Map of legislation name to a list of paragraph numbers where it appears
     legislation_map: dict[tuple[str, str | None], list[int]] = {}
     
     for index, paragraph in enumerate(paragraphs, start=1):
@@ -105,6 +111,9 @@ def get_cited_legislation(
             paragraph_number = index
             url = match.group(2)
             section = None
+    
+            # Remove whitespace from the url
+            url = url.replace(" ", "")
 
             # Skip over a url if it doesn't have the string "laws" in it
             if "laws" not in url:
