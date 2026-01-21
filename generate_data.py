@@ -7,6 +7,7 @@ from __future__ import annotations
 import re
 import json
 import os
+import time
 from typing import Any
 
 import typer
@@ -272,6 +273,11 @@ def body_cmd(
 @app.command("generate-report")
 def generate_report_cmd(
     filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    metadata_delay: float = typer.Option(
+        0.5,
+        "--metadata-delay",
+        help="Delay in seconds between related-case metadata calls",
+    ),
 ) -> None:
     """
     Generate a JSON report from an HTML file and save to ./data/json/test.json.
@@ -310,12 +316,47 @@ def generate_report_cmd(
     # Remove extra whitespace
     header = re.sub(r"\s+", " ", header)
 
+    def _extract_case_citation(case_item: dict) -> str | None:
+        title = case_item.get("title")
+        citation_value = case_item.get("citation")
+        if isinstance(title, str) and title.strip() and isinstance(citation_value, str) and citation_value.strip():
+            return f"{title.strip()}, {citation_value.strip()}"
+
+        # Fallbacks if the expected fields are missing
+        for key in ("citation", "caseId", "case_id", "title"):
+            value = case_item.get(key)
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+        return None
+
+    def _collect_case_metadata(cases: list[dict], delay: float) -> list[dict]:
+        collected: list[dict] = []
+        for idx, case_item in enumerate(cases):
+            citation_value = _extract_case_citation(case_item)
+            if not citation_value:
+                continue
+            metadata = get_metadata_from_citation(citation_value)
+            if metadata:
+                collected.append({
+                    "citation": citation_value,
+                    "metadata": _make_json_safe(metadata),
+                })
+            if idx < len(cases) - 1 and delay > 0:
+                time.sleep(delay)
+        return collected
+
+    cited_cases = get_case_relations(citation, "citedCases")
+    citing_cases = get_case_relations(citation, "citingCases")
+
+    cited_case_items = cited_cases.get("citedCases", [])
+    citing_case_items = citing_cases.get("citingCases", [])
+
     report = {
         "citation": citation,
         "metadata": _make_json_safe(metadata),
         "references": {
-            "cited_cases": get_case_relations(citation, "citedCases"),
-            "citing_cases": get_case_relations(citation, "citingCases"),
+            "cited_cases_metadata": _collect_case_metadata(cited_case_items, metadata_delay),
+            "citing_cases_metadata": _collect_case_metadata(citing_case_items, metadata_delay),
             "cited_legislation": get_cited_legislation(paragraphs),
         },
         "header": header,

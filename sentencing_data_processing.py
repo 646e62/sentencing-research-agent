@@ -117,7 +117,7 @@ COLUMNS = ['uid', 'offence', 'date', 'jail', 'mode', 'conditions', 'fine', 'appe
 def parse_uid_string(uid_str: Union[str, float]) -> UidParts:
     """
     Parse a UID string into its components.
-
+    
     The UID may have between 3 and 4 components:
     - First: case ID
     - Second: docket identifier
@@ -126,11 +126,11 @@ def parse_uid_string(uid_str: Union[str, float]) -> UidParts:
 
     If more than four underscore-separated parts are present, only the first
     four are used and the rest are ignored.
-
+    
     Args:
         uid_str: The UID string to parse (e.g., "2024abcj264_230980468P1_1"
             or "2024mbpc96_None_1_a").
-
+        
     Returns:
         A dictionary with keys: 'case_id', 'docket', 'count', 'defendant'.
         Returns None values if the string is empty/invalid.
@@ -144,7 +144,7 @@ def parse_uid_string(uid_str: Union[str, float]) -> UidParts:
             "count": None,
             "defendant": "a",
         }
-
+    
     uid_str = str(uid_str).strip()
     if uid_str == "":
         return {
@@ -153,7 +153,7 @@ def parse_uid_string(uid_str: Union[str, float]) -> UidParts:
             "count": None,
             "defendant": "a",
         }
-
+    
     # Split the string by underscores and extract the components
     parts = uid_str.split("_")
 
@@ -177,19 +177,19 @@ def process_uid_string(
 ) -> UidParts:
     """
     Process a UID string, parse it, and optionally log the components.
-
+    
     Args:
         uid_str: The UID string (or NaN-like value) to process.
         log: If True, log parsed components using the module logger.
         log_level: Logging level to use when log is True.
         logger_override: Optional logger instance to use instead of module logger.
-
+        
     Returns:
         A dictionary with the parsed UID components.
     """
 
     parsed = parse_uid_string(uid_str)
-
+    
     if log:
         active_logger = logger_override or logger
         active_logger.log(
@@ -202,7 +202,7 @@ def process_uid_string(
             parsed["count"],
             parsed["defendant"],
         )
-
+    
     return parsed
 
 # Master CSV schema validation
@@ -252,13 +252,13 @@ def load_offences_lookup(offences_file: str = 'data/offence/all-criminal-offence
 def normalize_offence_code(offence_code: str) -> List[str]:
     """
     Generate possible variations of an offence code for matching.
-
+    
     Handles variations like:
     - "cc_101"      -> ["cc_101", "cc101"]
     - "cc101"       -> ["cc101", "cc_101"]
     - "101"         -> ["101", "cc_101"]
     - "cc344(1)(b)" -> ["cc344(1)(b)", "cc_344(1)(b)"]
-
+    
     The input string is always the first element in the returned list.
     Variants are ordered from most to least similar and are deduplicated.
     """
@@ -272,17 +272,17 @@ def normalize_offence_code(offence_code: str) -> List[str]:
     # 1. If it doesn't start with "cc" at all, add "cc_" + code
     if not code.startswith('cc'):
         candidates.append('cc_' + code)
-
+    
     # 2. If it starts with "cc" but not with "cc_", add a version with underscore
     elif code.startswith('cc') and not code.startswith('cc_'):
         # "cc344(1)(b)" -> "cc_344(1)(b)"
         candidates.append('cc_' + code[2:])
-
+    
     # 3. If it starts with "cc_", also try without underscore
     elif code.startswith('cc_'):
         # "cc_344(1)(b)" -> "cc344(1)(b)"
         candidates.append('cc' + code[3:])
-
+    
     # 4. Deduplicate while preserving order
     seen = set()
     unique_candidates: List[str] = []
@@ -292,7 +292,7 @@ def normalize_offence_code(offence_code: str) -> List[str]:
             unique_candidates.append(c)
 
     return unique_candidates
-    
+
 def parse_offence_string(offence_str: Union[str, float], 
                          offences_df: Optional[pd.DataFrame] = None,
                          offences_file: str = 'data/offence/all-criminal-offences-current.csv') -> OffenceResult:
@@ -312,7 +312,7 @@ def parse_offence_string(offence_str: Union[str, float],
     # Handle NaN, None, or empty strings
     if offence_str is None or (isinstance(offence_str, float) and pd.isna(offence_str)):
         return {'offence_code': None, 'offence_name': None}
-
+    
     offence_code = str(offence_str).strip()
     if offence_code == '':
         return {'offence_code': None, 'offence_name': None}
@@ -327,7 +327,7 @@ def parse_offence_string(offence_str: Union[str, float],
     # Load offences lookup if not provided
     if offences_df is None:
         offences_df = load_offences_lookup(offences_file)
-
+    
     # First try exact (normalized) match
     match = offences_df.loc[offences_df['section'] == normalized_code]
     if not match.empty:
@@ -338,7 +338,7 @@ def parse_offence_string(offence_str: Union[str, float],
             'offence_code': normalized_code,
             'offence_name': offence_name
         }
-
+    
     # Next try variations to see if we can find a match from imperfect input
     variations = normalize_offence_code(normalized_code)
     for variation in variations:
@@ -349,11 +349,11 @@ def parse_offence_string(offence_str: Union[str, float],
             offence_name = match['offence_name'].iat[0]
             if has_ycja and offence_name:
                 offence_name += ' (YCJA)'
-            return {
+                return {
                 'offence_code': variation,
-                'offence_name': offence_name
-            }
-
+                    'offence_name': offence_name
+                }
+    
     # Return the original code and no name if no match is found
     return {'offence_code': original_code, 'offence_name': None}
 
@@ -361,7 +361,7 @@ def parse_offence_string(offence_str: Union[str, float],
 def parse_date_string(date_str: Any) -> ParsedDate:
     """
     Parse a date string into its components.
-
+    
     - If no '&', returns "offence_date".
     - If '&' present, returns "offence_start_date" and "offence_end_date".
     - Returns None values if input is empty/invalid-like.
@@ -369,7 +369,7 @@ def parse_date_string(date_str: Any) -> ParsedDate:
 
     if pd.isna(date_str) or date_str is None:
         return _EMPTY_RESULT.copy()
-
+    
     # Normalize to string
     s = str(date_str).strip()
     if not s:
@@ -384,14 +384,14 @@ def parse_date_string(date_str: Any) -> ParsedDate:
         result['offence_end_date'] = end or None
     else:
         result['offence_date'] = s
-
+    
     return result
 
 # Jail string parsing tools
 def parse_jail_string(jail_str: Any) -> JailParseResult:
     """
     Parse a jail sentence string into a dataframe with quantity and unit columns.
-
+    
     - "1y&6m&3d" -> rows for 1y, 6m, 3d
     - "indeterminate" -> "indeterminate"
     - empty/NaN -> empty DataFrame with ['quantity', 'unit']
@@ -399,16 +399,16 @@ def parse_jail_string(jail_str: Any) -> JailParseResult:
     """
     if pd.isna(jail_str):
         return pd.DataFrame(columns=_JAIL_COLUMNS)
-
+    
     s = str(jail_str).strip()
     if not s:
         return pd.DataFrame(columns=_JAIL_COLUMNS)
 
     if s.lower() == 'indeterminate':
         return "indeterminate"
-
+    
     parts = s.split('&') if '&' in s else [s]
-
+    
     data = []
     for part in parts:
         for q, u in _JAIL_RE.findall(part.strip()):
@@ -432,7 +432,7 @@ def calculate_total_days(
 ) -> Optional[int]:
     """
     Calculate total days from a dataframe of jail components.
-
+    
     Rules:
     - 1y = 365 days
     - 1m = 30 days 
@@ -450,10 +450,10 @@ def calculate_total_days(
 
     if isinstance(df, str) and df.lower() == "indeterminate":
         return None
-
+    
     if not isinstance(df, pd.DataFrame) or df.empty:
         return 0
-
+    
     units = df['unit'].str.lower()
 
     # Special-case: 12 months = 365 days
@@ -495,7 +495,7 @@ def parse_mode_string(mode_str: Any) -> ModeResult:
 def parse_conditions_string(conditions_str: Any) -> ConditionsResult:
     """
     Parse a conditions string into components: time length, unit, and type.
-
+    
     Example accepted format:
         "18m-probation" -> {'time': 18.0, 'unit': 'm', 'type': 'probation'}
     """
@@ -520,7 +520,7 @@ def parse_conditions_string(conditions_str: Any) -> ConditionsResult:
 def parse_fine_string(fine_str: Any) -> FineResult:
     """
     Parse a fine string and format it as currency with two decimal places.
-
+    
     Examples:
         "1000"      -> "$1000.00"
         "$1,234.5"  -> "$1234.50"
@@ -529,14 +529,14 @@ def parse_fine_string(fine_str: Any) -> FineResult:
 
     if pd.isna(fine_str):
         return None
-
+    
     s = str(fine_str).strip()
     if not s:
         return None
-
+    
     # Remove common formatting characters
     s = s.replace('$', '').replace(',', '').strip()
-
+    
     try:
         value = float(s)
     except (ValueError, TypeError):
@@ -548,7 +548,7 @@ def parse_fine_string(fine_str: Any) -> FineResult:
 def parse_appeal_string(appeal_str: Any) -> AppealResult:
     """
     Parse an appeal string into: court appealed to and result.
-
+    
     Examples:
         "2024skca79_upheld" -> {'court': '2024skca79', 'result': 'upheld'}
         "2024skca79"        -> {'court': '2024skca79', 'result': None}
@@ -576,10 +576,10 @@ def parse_appeal_string(appeal_str: Any) -> AppealResult:
 def _row_to_dict(row_data: RowLike) -> Dict[str, Any]:
     """
     Convert a row-like object to a dictionary of column names to values.
-
+    
     Args:
         row_data: A pandas Series, dict, tuple, or list
-
+        
     Returns:
         A dictionary with column names as keys and values as values
     """
@@ -614,13 +614,13 @@ def process_master_row(
 
     # UID
     uid_parsed = parse_uid_string(uid)
-
+    
     # Offence
     offence_parsed = parse_offence_string(offence, offences_file=offences_file)
-
+    
     # Date
     date_parsed = parse_date_string(date)
-
+    
     # Jail
     jail_df = parse_jail_string(jail)
     if jail_df is None:
@@ -629,16 +629,16 @@ def process_master_row(
         jail_total_days = None
     else:
         jail_total_days = calculate_total_days(jail_df)
-
+    
     # Mode
     mode_parsed = parse_mode_string(mode)
-
+    
     # Conditions
     conditions_parsed = parse_conditions_string(conditions)
     time = conditions_parsed['time']
     raw_unit = conditions_parsed['unit']
     cond_type = conditions_parsed['type']
-
+    
     # Human-readable unit
     unit_display = 'unknown'
     if raw_unit == 'y':
@@ -650,7 +650,7 @@ def process_master_row(
 
     if time is not None and time != 1:
         unit_display += 's'
-
+    
     # Human-readable discharge type
     type_display = cond_type
     if cond_type == 'discharge':
@@ -658,13 +658,13 @@ def process_master_row(
             type_display = 'absolute discharge'
         elif time is not None:
             type_display = 'conditional discharge'
-
+    
     # Fine
     fine_formatted = parse_fine_string(fine)
-
+    
     # Appeal
     appeal_parsed = parse_appeal_string(appeal)
-
+    
     return {
         'uid': uid_parsed,
         'offence': offence_parsed,

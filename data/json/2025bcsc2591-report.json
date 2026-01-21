@@ -1,0 +1,943 @@
+{
+  "citation": "R. v Losch, 2025 BCSC 2591",
+  "metadata": {
+    "citation": "R v Losch, 2025 BCSC 2591 (CanLII)",
+    "case_id": "2025bcsc2591",
+    "style_of_cause": "R v Losch",
+    "atomic_citation": "2025 BCSC 2591",
+    "citation_type": "neutral",
+    "official_reporter_citation": null,
+    "year": "2025",
+    "court": "bcsc",
+    "decision_number": "2591",
+    "jurisdiction": "bc",
+    "court_name": "Supreme Court of British Columbia",
+    "court_level": "superior",
+    "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2025/2025bcsc2591/2025bcsc2591.html",
+    "short_url": "https://canlii.ca/t/khcvm",
+    "language": "en",
+    "docket_number": "95517-2",
+    "decision_date": "2025-12-18",
+    "keywords": [
+      "Criminal law",
+      "Murder",
+      "Manslaughter",
+      "Disorderly or immoral conduct"
+    ],
+    "categories": [
+      "Criminal or statutory infractions",
+      "Indigenous peoples",
+      "Sentencing"
+    ]
+  },
+  "references": {
+    "cited_cases": {
+      "citedCases": [
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2020bcca297"
+          },
+          "title": "R. v. Anderson",
+          "citation": "2020 BCCA 297 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2016bcca182"
+          },
+          "title": "R. v. Engebretsen",
+          "citation": "2016 BCCA 182 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2025bcsc1823"
+          },
+          "title": "R. v. Kim",
+          "citation": "2025 BCSC 1823 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2017bcsc145"
+          },
+          "title": "R. v. McCormick",
+          "citation": "2017 BCSC 145 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2016bcsc1440"
+          },
+          "title": "R. v. Newton",
+          "citation": "2016 BCSC 1440 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2015bcca423"
+          },
+          "title": "R. v. Plowman",
+          "citation": "2015 BCCA 423 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2016bcsc2184"
+          },
+          "title": "R. v. Quigley",
+          "citation": "2016 BCSC 2184 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2025bcsc394"
+          },
+          "title": "R. v Bell",
+          "citation": "2025 BCSC 394 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2022bcsc1835"
+          },
+          "title": "R. v Deo",
+          "citation": "2022 BCSC 1835 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2024bcsc2463"
+          },
+          "title": "R. v Keyler",
+          "citation": "2024 BCSC 2463 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2025bcsc1665"
+          },
+          "title": "R. v Losch",
+          "citation": "2025 BCSC 1665 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2018bcsc1942"
+          },
+          "title": "R. v McGenn",
+          "citation": "2018 BCSC 1942 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2020bcsc2101"
+          },
+          "title": "R. v Milne",
+          "citation": "2020 BCSC 2101 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2025bcsc992"
+          },
+          "title": "R. v Ognibene-Hebbourn",
+          "citation": "2025 BCSC 992 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2024bcsc1288"
+          },
+          "title": "R. v Regis",
+          "citation": "2024 BCSC 1288 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2023bcsc1956"
+          },
+          "title": "R. v Sanford",
+          "citation": "2023 BCSC 1956 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2018bcsc2344"
+          },
+          "title": "R. v Smith",
+          "citation": "2018 BCSC 2344 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2018bcsc296"
+          },
+          "title": "R. v Taniskishayinew",
+          "citation": "2018 BCSC 296 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2020bcsc1552"
+          },
+          "title": "R. v Zhao",
+          "citation": "2020 BCSC 1552 (CanLII)",
+          "aiContentId": {}
+        }
+      ],
+      "error": null,
+      "metadata": {}
+    },
+    "citing_cases": {
+      "citingCases": [],
+      "error": null,
+      "metadata": {}
+    },
+    "cited_legislation": [
+      [
+        "Criminal Code",
+        "sec235subsec1",
+        [
+          2
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec182",
+        [
+          2
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718",
+        [
+          21
+        ]
+      ]
+    ],
+    "cited_cases_metadata": [
+      {
+        "citation": "R. v. Anderson, 2020 BCCA 297 (CanLII)",
+        "metadata": {
+          "citation": "R v Anderson, 2020 BCCA 297 (CanLII)",
+          "case_id": "2020bcca297",
+          "style_of_cause": "R v Anderson",
+          "atomic_citation": "2020 BCCA 297",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2020",
+          "court": "bcca",
+          "decision_number": "297",
+          "jurisdiction": "bc",
+          "court_name": "Court of Appeal for British Columbia",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/bc/bcca/doc/2020/2020bcca297/2020bcca297.html",
+          "short_url": "https://canlii.ca/t/jb8k2",
+          "language": "en",
+          "docket_number": "CA46857",
+          "decision_date": "2020-10-28",
+          "keywords": [
+            "Criminal law",
+            "Sentencing",
+            "Principles",
+            "Appeals",
+            "Totality"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Engebretsen, 2016 BCCA 182 (CanLII)",
+        "metadata": {
+          "citation": "R v Engebretsen, 2016 BCCA 182 (CanLII)",
+          "case_id": "2016bcca182",
+          "style_of_cause": "R v Engebretsen",
+          "atomic_citation": "2016 BCCA 182",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2016",
+          "court": "bcca",
+          "decision_number": "182",
+          "jurisdiction": "bc",
+          "court_name": "Court of Appeal for British Columbia",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/bc/bcca/doc/2016/2016bcca182/2016bcca182.html",
+          "short_url": "https://canlii.ca/t/grv32",
+          "language": "en",
+          "docket_number": "602; CA43106",
+          "decision_date": "2016-04-18",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Kim, 2025 BCSC 1823 (CanLII)",
+        "metadata": {
+          "citation": "R v Kim, 2025 BCSC 1823 (CanLII)",
+          "case_id": "2025bcsc1823",
+          "style_of_cause": "R v Kim",
+          "atomic_citation": "2025 BCSC 1823",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2025",
+          "court": "bcsc",
+          "decision_number": "1823",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2025/2025bcsc1823/2025bcsc1823.html",
+          "short_url": "https://canlii.ca/t/kfgcx",
+          "language": "en",
+          "docket_number": "34392-4",
+          "decision_date": "2025-06-16",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter",
+            "Sentencing",
+            "Considerations"
+          ],
+          "categories": [
+            "Contracts",
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. McCormick, 2017 BCSC 145 (CanLII)",
+        "metadata": {
+          "citation": "R v McCormick, 2017 BCSC 145 (CanLII)",
+          "case_id": "2017bcsc145",
+          "style_of_cause": "R v McCormick",
+          "atomic_citation": "2017 BCSC 145",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2017",
+          "court": "bcsc",
+          "decision_number": "145",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2017/2017bcsc145/2017bcsc145.html",
+          "short_url": "https://canlii.ca/t/gx5q3",
+          "language": "en",
+          "docket_number": "166481-2",
+          "decision_date": "2017-01-09",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Newton, 2016 BCSC 1440 (CanLII)",
+        "metadata": {
+          "citation": "R v Newton, 2016 BCSC 1440 (CanLII)",
+          "case_id": "2016bcsc1440",
+          "style_of_cause": "R v Newton",
+          "atomic_citation": "2016 BCSC 1440",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2016",
+          "court": "bcsc",
+          "decision_number": "1440",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2016/2016bcsc1440/2016bcsc1440.html",
+          "short_url": "https://canlii.ca/t/gsssv",
+          "language": "en",
+          "docket_number": "81429",
+          "decision_date": "2016-06-24",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Plowman, 2015 BCCA 423 (CanLII)",
+        "metadata": {
+          "citation": "R v Plowman, 2015 BCCA 423 (CanLII)",
+          "case_id": "2015bcca423",
+          "style_of_cause": "R v Plowman",
+          "atomic_citation": "2015 BCCA 423",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2015",
+          "court": "bcca",
+          "decision_number": "423",
+          "jurisdiction": "bc",
+          "court_name": "Court of Appeal for British Columbia",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/bc/bcca/doc/2015/2015bcca423/2015bcca423.html",
+          "short_url": "https://canlii.ca/t/glhd2",
+          "language": "en",
+          "docket_number": "CA40575; CA40538",
+          "decision_date": "2015-10-07",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Quigley, 2016 BCSC 2184 (CanLII)",
+        "metadata": {
+          "citation": "R v Quigley, 2016 BCSC 2184 (CanLII)",
+          "case_id": "2016bcsc2184",
+          "style_of_cause": "R v Quigley",
+          "atomic_citation": "2016 BCSC 2184",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2016",
+          "court": "bcsc",
+          "decision_number": "2184",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2016/2016bcsc2184/2016bcsc2184.html",
+          "short_url": "https://canlii.ca/t/gvrk3",
+          "language": "en",
+          "docket_number": "80556",
+          "decision_date": "2016-10-21",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter",
+            "Sentencing",
+            "Considerations"
+          ],
+          "categories": [
+            "Criminal or statutory infractions"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Bell, 2025 BCSC 394 (CanLII)",
+        "metadata": {
+          "citation": "R v Bell, 2025 BCSC 394 (CanLII)",
+          "case_id": "2025bcsc394",
+          "style_of_cause": "R v Bell",
+          "atomic_citation": "2025 BCSC 394",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2025",
+          "court": "bcsc",
+          "decision_number": "394",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2025/2025bcsc394/2025bcsc394.html",
+          "short_url": "https://canlii.ca/t/k9xd0",
+          "language": "en",
+          "docket_number": "90402-2",
+          "decision_date": "2025-02-19",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Practice and procedure"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Deo, 2022 BCSC 1835 (CanLII)",
+        "metadata": {
+          "citation": "R v Deo, 2022 BCSC 1835 (CanLII)",
+          "case_id": "2022bcsc1835",
+          "style_of_cause": "R v Deo",
+          "atomic_citation": "2022 BCSC 1835",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2022",
+          "court": "bcsc",
+          "decision_number": "1835",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2022/2022bcsc1835/2022bcsc1835.html",
+          "short_url": "https://canlii.ca/t/jsgxd",
+          "language": "en",
+          "docket_number": "X081462",
+          "decision_date": "2022-10-18",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter",
+            "Disorderly or immoral conduct"
+          ],
+          "categories": [
+            "Criminal or statutory infractions"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Keyler, 2024 BCSC 2463 (CanLII)",
+        "metadata": {
+          "citation": "R v Keyler, 2024 BCSC 2463 (CanLII)",
+          "case_id": "2024bcsc2463",
+          "style_of_cause": "R v Keyler",
+          "atomic_citation": "2024 BCSC 2463",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2024",
+          "court": "bcsc",
+          "decision_number": "2463",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2024/2024bcsc2463/2024bcsc2463.html",
+          "short_url": "https://canlii.ca/t/k92dw",
+          "language": "en",
+          "docket_number": "36638-2",
+          "decision_date": "2024-12-12",
+          "keywords": [
+            "Criminal law",
+            "Sentencing",
+            "Considerations",
+            "Joint submissions",
+            "Murder"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Losch, 2025 BCSC 1665 (CanLII)",
+        "metadata": {
+          "citation": "R v Losch, 2025 BCSC 1665 (CanLII)",
+          "case_id": "2025bcsc1665",
+          "style_of_cause": "R v Losch",
+          "atomic_citation": "2025 BCSC 1665",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2025",
+          "court": "bcsc",
+          "decision_number": "1665",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2025/2025bcsc1665/2025bcsc1665.html",
+          "short_url": "https://canlii.ca/t/kf1jt",
+          "language": "en",
+          "docket_number": "95517-2",
+          "decision_date": "2025-07-22",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Second degree murder",
+            "Evidence",
+            "Circumstantial evidence"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Evidence"
+          ]
+        }
+      },
+      {
+        "citation": "R. v McGenn, 2018 BCSC 1942 (CanLII)",
+        "metadata": {
+          "citation": "R v McGenn, 2018 BCSC 1942 (CanLII)",
+          "case_id": "2018bcsc1942",
+          "style_of_cause": "R v McGenn",
+          "atomic_citation": "2018 BCSC 1942",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2018",
+          "court": "bcsc",
+          "decision_number": "1942",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2018/2018bcsc1942/2018bcsc1942.html",
+          "short_url": "https://canlii.ca/t/hw2sd",
+          "language": "en",
+          "docket_number": "66276",
+          "decision_date": "2018-11-13",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Milne, 2020 BCSC 2101 (CanLII)",
+        "metadata": {
+          "citation": "R v Milne, 2020 BCSC 2101 (CanLII)",
+          "case_id": "2020bcsc2101",
+          "style_of_cause": "R v Milne",
+          "atomic_citation": "2020 BCSC 2101",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2020",
+          "court": "bcsc",
+          "decision_number": "2101",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2020/2020bcsc2101/2020bcsc2101.html",
+          "short_url": "https://canlii.ca/t/jccrx",
+          "language": "en",
+          "docket_number": "27834-1",
+          "decision_date": "2020-12-03",
+          "keywords": [
+            "Criminal law",
+            "Sexual offences",
+            "Sexual assault",
+            "Distribution of child pornography",
+            "Sentencing"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Ognibene-Hebbourn, 2025 BCSC 992 (CanLII)",
+        "metadata": {
+          "citation": "R v Ognibene-Hebbourn, 2025 BCSC 992 (CanLII)",
+          "case_id": "2025bcsc992",
+          "style_of_cause": "R v Ognibene-Hebbourn",
+          "atomic_citation": "2025 BCSC 992",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2025",
+          "court": "bcsc",
+          "decision_number": "992",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2025/2025bcsc992/2025bcsc992.html",
+          "short_url": "https://canlii.ca/t/kcc9g",
+          "language": "en",
+          "docket_number": "97222",
+          "decision_date": "2025-05-14",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Regis, 2024 BCSC 1288 (CanLII)",
+        "metadata": {
+          "citation": "R v Regis, 2024 BCSC 1288 (CanLII)",
+          "case_id": "2024bcsc1288",
+          "style_of_cause": "R v Regis",
+          "atomic_citation": "2024 BCSC 1288",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2024",
+          "court": "bcsc",
+          "decision_number": "1288",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2024/2024bcsc1288/2024bcsc1288.html",
+          "short_url": "https://canlii.ca/t/k5sx1",
+          "language": "en",
+          "docket_number": "X084327",
+          "decision_date": "2024-07-16",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter",
+            "Disorderly or immoral conduct"
+          ],
+          "categories": [
+            "Criminal or statutory infractions"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Sanford, 2023 BCSC 1956 (CanLII)",
+        "metadata": {
+          "citation": "R v Sanford, 2023 BCSC 1956 (CanLII)",
+          "case_id": "2023bcsc1956",
+          "style_of_cause": "R v Sanford",
+          "atomic_citation": "2023 BCSC 1956",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2023",
+          "court": "bcsc",
+          "decision_number": "1956",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2023/2023bcsc1956/2023bcsc1956.html",
+          "short_url": "https://canlii.ca/t/k111k",
+          "language": "en",
+          "docket_number": "110090-03",
+          "decision_date": "2023-11-07",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Smith, 2018 BCSC 2344 (CanLII)",
+        "metadata": {
+          "citation": "R v Smith, 2018 BCSC 2344 (CanLII)",
+          "case_id": "2018bcsc2344",
+          "style_of_cause": "R v Smith",
+          "atomic_citation": "2018 BCSC 2344",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2018",
+          "court": "bcsc",
+          "decision_number": "2344",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2018/2018bcsc2344/2018bcsc2344.html",
+          "short_url": "https://canlii.ca/t/hwvkd",
+          "language": "en",
+          "docket_number": "32805-3",
+          "decision_date": "2018-12-14",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter",
+            "Disorderly or immoral conduct"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Taniskishayinew, 2018 BCSC 296 (CanLII)",
+        "metadata": {
+          "citation": "R v Taniskishayinew, 2018 BCSC 296 (CanLII)",
+          "case_id": "2018bcsc296",
+          "style_of_cause": "R v Taniskishayinew",
+          "atomic_citation": "2018 BCSC 296",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2018",
+          "court": "bcsc",
+          "decision_number": "296",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2018/2018bcsc296/2018bcsc296.html",
+          "short_url": "https://canlii.ca/t/hqp5v",
+          "language": "en",
+          "docket_number": "26952-3",
+          "decision_date": "2018-02-27",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter",
+            "Sentencing",
+            "Considerations"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Indigenous peoples",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v Zhao, 2020 BCSC 1552 (CanLII)",
+        "metadata": {
+          "citation": "R v Zhao, 2020 BCSC 1552 (CanLII)",
+          "case_id": "2020bcsc1552",
+          "style_of_cause": "R v Zhao",
+          "atomic_citation": "2020 BCSC 1552",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2020",
+          "court": "bcsc",
+          "decision_number": "1552",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2020/2020bcsc1552/2020bcsc1552.html",
+          "short_url": "https://canlii.ca/t/jb60n",
+          "language": "en",
+          "docket_number": "26799",
+          "decision_date": "2020-10-05",
+          "keywords": [
+            "Criminal law",
+            "Murder",
+            "Manslaughter",
+            "Disorderly or immoral conduct"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      }
+    ],
+    "citing_cases_metadata": []
+  },
+  "header": " IN THE SUPREME COURT OF BRITISH COLUMBIA Citation: | R. v. Losch , ---|--- | 2025 BCSC 2591 Date: 20251218 Docket: 95517-2 Registry: Abbotsford Rex v. Gary Donald Losch Before: The Honourable Justice Dley Oral Reasons for Sentence Counsel for the Crown: | M.A. MacDonald, K.C. K.R.D. Gillespie S. Daniels, Articled Student ---|--- Counsel for the Accused: | J.A. Cochrane S.E. Leamon (appearing via videoconference) Place and Dates of Hearing: | Abbotsford, B.C. December 2-3, 8 & 18, 2025 Place and Date of Judgment: | Abbotsford, B.C. December 18, 2025",
+  "body_paragraphs": [
+    "**THE COURT:** I shall reserve the right to edit and format the written reasons if a request is made for the transcript of this decision. In those written reasons, any reference to the parties other than Mr. Losch or Ms. Gauthier shall be anonymized so as to protect their privacy. # Introduction",
+    "Mr. Losch was charged with second degree murder of Chelsey Gauthier and interfering with her remains contrary to [ss. 235(1)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec235subsec1_smooth) and [182](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec182_smooth)(b) of the _[Criminal Code of Canada](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ ,__\nR.S.C. 1985, c. C-46 [_Criminal Code_]. He was found guilty of manslaughter and interfering with human remains. The findings of fact and reasons for conviction were delivered on July 22, 2025, and indexed at [2025 BCSC 1665](/en/bc/bcsc/doc/2025/2025bcsc1665/2025bcsc1665.html).",
+    "The Crown seeks a jail sentence of 12 years on the manslaughter conviction and two years consecutive for interfering with human remains.",
+    "The defence says that the proper sentence should be six to eight years for manslaughter and two years consecutive for interfering with human remains.",
+    "The maximum sentence for manslaughter is life imprisonment. The maximum sentence for interfering with human remains is five years' imprisonment. # Chelsea Gauthier",
+    "Ms. Gauthier was an Indigenous 22-year-old mother of two young children. She was indigent and without stable housing. She relied on the generosity of friends and family.",
+    "Ms. Gauthier used her cellphone for communications. However, she had no cellphone plan and was restricted to using publicly accessible Wi-Fi networks for electronic communications. Ms. Gauthier was a prolific user of electronic communications and, when she had not been heard from for several days in late July 2017, police were contacted and a missing person investigation was commenced.",
+    "Ms. Gauthier was last seen with Mr. Losch on July 27, 2017, when the pair were dropped off in a rural area of Mission, British Columbia. Ms. Gauthier had gone with Mr. Losch to assist him in tending to his marihuana grow, which was in a rugged, remote, and a difficult-to-access forested area. Ms. Gauthier was acquainted with Mr. Losch and had in the past assisted him in maintaining his marihuana grow. Ms. Gauthier received small sums of money or marihuana as remuneration for her work. Ms. Gauthier had no means of communicating from the grow site because there was no access to a Wi-Fi network.",
+    "On August 16, 2017, Ms. Gauthier's body was found in a shallow grave located near Mr. Losch's tent in the grow area. Ms. Gauthier had been buried and partially wrapped in a sheet. She was naked from the waist down. She had been killed by a single stab wound through the back of her chest. Considerable force was required to inflict the injury causing death. # Victim Impact Statements",
+    "Ms. Gauthier's death has had a profound impact within the community. The court heard from family and friends as to the devastating consequences and harm they and Ms. Gauthier's children have suffered as a result of her death. The lasting tragedy of Ms. Gauthier's death was most poignantly summarized in the comments of W.S.: Chelsey was a young Indigenous woman whose life was taken far too soon, and the depth of this loss cannot be measured. Her passing did not only take from her the people who loved her, it tore through a family, a community, a culture, and a future that she should have had the chance to live. Chelsey leaves behind two daughters who now must grow up without the mother who should have been there to guide them, teach them, comfort them, and celebrate their milestones. A mother' love is irreplaceable and no matter how much they are surrounded by support, the absence of her arms, her voice, and her presence will be a wound they will carry throughout their lives. They lost the chance to know her stories, her laughter, her teaching, and her strength. Her father lost his daughter, a pain that goes against the natural order of life. A parent is not meant to bury their child. The grief of a father losing his daughter is a sorrow that settles deep into the bones, changing everything about the way the world feels. There are no words strong enough to describe that level of heartbreak. Her siblings lost not just a sister, but a part of their identity. A sister is a companion through childhood, a witness to your growing years, someone who holds memories no one else does. Her siblings must now navigate life with a piece of their heart missing, carrying memories that bring both comfort and pain. The dreams they imagined together, the futures they expected to share, have been shattered. \u2026 The impact of Chelsey's loss will be felt forever in her children, her parents, her siblings, her cousins, her community, and all those who witnessed the devastation her absence has caused. Her life was precious, and the world is quieter without her.",
+    "Mr. and Ms. L. have taken on the enormous responsibility of raising Ms. Gauthier's children. They have sacrificed immensely in their determination to ensure that the children have the best upbringing in the absence of their mother. # Mr. Losch",
+    "Mr. Losch was 62 years of age at the time of the offence; he is now 70. Mr. Losch has had a difficult life. His mother was a harsh disciplinarian, and he was subjected to physical abuse. Mr. Losch's sister has passed away, and he does not maintain contact with his brother. He is essentially alone.",
+    "From the age of 15, Mr. Losch had led a transient lifestyle. He did not do well in school, and he functions at a grade six problem-solving capacity and at a grade nine level for spelling.",
+    "Mr. Losch has suffered from head injuries arising out of a car accident and a home invasion.",
+    "Mr. Losch has had some general labour jobs over the years, but for the most part his income has been derived from selling marihuana and receiving social assistance.",
+    "Mr. Losch has a criminal record that started in 1975 at the age of 19. There have been brief interludes, but for the most part there has been a regularity with which offences have been committed. Other than the present offences, Mr. Losch was last convicted in 2018. The criminal history includes: a) 16 property-related offences; b) eight administration-of-justice convictions, including offences for failing to appear, obstructing a peace officer, breach of probation, and being unlawfully at large; c) nine drug-related offences; d) five crimes of violence, including convictions for criminal harassment, uttering threats, assault, and arson with disregard for life; and e) dangerous driving.",
+    "Almost 20% of Mr. Losch's adult life has been subject to incarceration. He has also spent almost the same amount of his adult life governed by various probation orders. The longest period of incarceration was for the arson conviction in 2007 when he received an effective sentence of four-and-a-half years. In that case, Mr. Losch set fire to a multiunit residence as revenge on a man who had slept with his girlfriend. The sentencing judge commented that, but for the lower range sought by the parties, the jail sentence could have been greater because of Mr. Losch's \"blatant disregard for life\". The victim was fortunate to have escaped from the burning residence.",
+    "In 2015, Mr. Losch was sentenced for possessing marihuana for the purpose of trafficking. He received a 12-month Conditional Sentence Order (\"CSO\") including a provision that he not possess marihuana. Mr. Losch told the sentencing judge that he would abide by whatever conditions were imposed. It was apparent from the evidence at this trial that Mr. Losch continued to possess and sell marihuana during the duration of the CSO.",
+    "The pre-sentence reports and psychiatric opinion provide additional information about Mr. Losch. Mr. Losch has not caused any issues while on remand. He has complied with his bail conditions. Mr. Losch's risk to reoffend was in the moderate range. His risk to commit serious harm or violence was in the low range.",
+    "Mr. Losch has not taken much interest in accessing programming that has been available to him. He has a general distrust of authority and government. He has considered himself to be free from authority as a Freeman on the Land. Although his trial concluded in June, Mr. Losch says that he has been unable to access community resources because of court attendances. # Sentencing Principles",
+    "The principles and objectives of sentencing are set out in [s. 718](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec718_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ , and they require the court: (a) to denounce unlawful conduct \u2026 (b) to deter the offender and other persons from committing offences; (c) to separate offenders from society, where necessary; (d) to assist in rehabilitating offenders; (e) to provide reparations for harm done to victims or to the community; and (f) to promote a sense of responsibility in offenders, and acknowledgment of the harm done to victims or to the community.",
+    "Section 718.04 directs the court to give primary consideration to the objectives of denunciation and to deterrence where the offence: \u2026 involved the abuse of a person who is vulnerable because of personal circumstances - including because the person is Aboriginal and female ... This sentencing principle applies even though this section was brought into force after these offences occurred: _R. v. Milne_ , [2020 BCSC 2101](/en/bc/bcsc/doc/2020/2020bcsc2101/2020bcsc2101.html) at paras. [104-106](/en/bc/bcsc/doc/2020/2020bcsc2101/2020bcsc2101.html#par104).",
+    "Section 718.1 requires that: A sentence must be proportionate to the gravity of the offence and the degree of the responsibility of the offender.",
+    "Section 718.2 requires that a court imposing a sentence shall also take into account the following principles: \u2026 a sentence should be increased or reduced to account for any relevant aggravating or mitigating circumstances relating to the offence or the offender, and, without limiting the generality of the foregoing, \u2026 \u2026 evidence that the offender, in committing the offence, abused a position of trust or authority in relation to the victim, \u2026 evidence that the offence had a significant impact on the victim, considering their age and other personal circumstances, including their health and financial situation \u2026 shall be deemed to be aggravating circumstances \u2026 \u2026 a sentence should be similar to sentences imposed on similar offenders for similar offences committed in similar circumstances \u2026 \u2026 \u2026 an offender should not be deprived of liberty, if less restrictive sanctions may be appropriate in the circumstances; and \u2026 all available sanctions, other than imprisonment, that are reasonable in the circumstances and consistent with the harm done to victims or to the community should be considered for all offenders, with particular attention to the circumstances of Aboriginal offenders.",
+    "The circumstances of this offence require that denunciation and deterrence be emphasized. At the same time, the court must always exercise restraint in sentencing and keep rehabilitation in mind.",
+    "Sentencing is an individualized process. Each offender must be sentenced in the particular circumstances of the offence committed and the particular circumstances of the offender.",
+    "Other cases are of assistance to ensure that there is parity in sentencing, but the range of sentences must not be so rigidly applied so as to eliminate the individualized nature of sentencing.",
+    "In determining the appropriate sentence, the offender's degree of moral blameworthiness is critical to the analysis: _R. v. Plowman_ , [2015 BCCA 423](/en/bc/bcca/doc/2015/2015bcca423/2015bcca423.html) at para. [39](/en/bc/bcca/doc/2015/2015bcca423/2015bcca423.html#par39). # Gladue Considerations",
+    "Mr. Losch says that he has an Indigenous ancestry which is not contested, and the court accepts his claim. A _Gladue_ report was requested but no record of Indigeneity was established.",
+    "In December 2022, the initial request for _Gladue_ services was submitted to the BC First Nations Justice Council. Mr. Losch had advised that he was told of his Indigenous ancestry by his father shortly before his father passed away. The Council completed a full review and found ancestry of German descent and no evidence of Indigenous ancestry. The file was subsequently declined. In September 2025, there was a further request to the Justice Council and Mr. Losch advised that the connection to his Indigenous ancestry came from his paternal grandmother's lineage. Again, there were no indications of Indigenous ancestry.",
+    "In a report dated December 5, 2025, the BC First Nations Justice Council provided the following comments: Despite multiple reviews spanning 2022 and 2025, no genealogical documentary or collateral information supports Mr. Losch's claim to Indigenous ancestry. At this time, we are unable to prepare a Gladue Report for Mr. Losch because we are unsure, as is Mr. G. Losch, about their Indigenous ancestry, and even if their Indigenous ancestry could be confirmed or corroborated, we cannot address how being Indigenous has affected their life. The purpose of a Gladue Report is to provide insight and information about how the individual before the Court has been affected by colonial interference in their family history and their lives.",
+    "_Gladue_ considerations are an important part of an individual's circumstances that the court must consider. Even though the _Gladue_ considerations have little impact on Mr. Losch's moral culpability, the court must consider all relevant factors as they relate to Mr. Losch's personal circumstances. Where offenders have experienced a chaotic or disadvantaged upbringing, that must be considered regardless of their heritage.",
+    "It is not contested that Mr. Losch was deprived of knowledge of his Indigenous ancestry until he was an adult. The unique history and culture of Indigenous people can provide insight into what can be Mr. Losch's Indigenous- focused healing. # Consecutive or Concurrent Sentences",
+    "The offences of manslaughter and interfering with a dead body protect different societal interests and ordinarily would require consecutive sentences.",
+    "The issue of whether the sentences are to be served concurrently or consecutively depends on the totality principle. If the total of the sentences exceeds the overall culpability of the offender, then they must be adjusted to ensure that the aggregate sentence is proportionate: _R. v. Anderson_ , [2020 BCCA 297](/en/bc/bcca/doc/2020/2020bcca297/2020bcca297.html) at para. [90](/en/bc/bcca/doc/2020/2020bcca297/2020bcca297.html#par90). # Interfering With a Dead Body",
+    "The Crown and defence concur that the sentence for interfering with a dead body should be a two-year jail term.",
+    "While Mr. Losch's culpability for interfering with a dead body is high, a sentence at the upper end of the range and closer to the maximum of five years is generally reserved for those cases where the offender has committed extreme acts such as dismemberment or incineration of the body.",
+    "I agree with counsel that two years in jail is the appropriate sentence regarding the conviction for interfering with a dead body. The jail term reflects Mr. Losch's high level of moral blameworthiness. The sentence takes into account the aggravating and mitigating factors, many of which are also applicable with respect to the manslaughter sentence. # Manslaughter",
+    "Mr. Losch's culpability for manslaughter is on the upper side of the midpoint range between accident and near murder. The facts establish that it is much closer to near murder.",
+    "Based on Mr. Losch's high blameworthiness, the Crown argues that the range of sentences for manslaughter is eight to 14 years in jail. The defence says the range is six to eight years.",
+    "The defence has emphasized the following manslaughter cases where the court imposed jail sentences ranging from four to seven-and-a-half years: a) _R. v. Engebretsen_ , [2016 BCCA 182](/en/bc/bcca/doc/2016/2016bcca182/2016bcca182.html); b) _R. v. Sanford_ , [2023 BCSC 1956](/en/bc/bcsc/doc/2023/2023bcsc1956/2023bcsc1956.html); c) _R. v. Taniskishayinew_ , [2018 BCSC 296](/en/bc/bcsc/doc/2018/2018bcsc296/2018bcsc296.html); d) _R. v. Deo_ , [2022 BCSC 1835](/en/bc/bcsc/doc/2022/2022bcsc1835/2022bcsc1835.html); e) _R. v. Smith_ , [2018 BCSC 2344](/en/bc/bcsc/doc/2018/2018bcsc2344/2018bcsc2344.html); and f) _R. v. Zhao,_[2020 BCSC 1552](/en/bc/bcsc/doc/2020/2020bcsc1552/2020bcsc1552.html).",
+    "The Crown emphasized the following cases where the sentences ranged from seven to fifteen years: a) _R. v. Keyler_ , [2024 BCSC 2463](/en/bc/bcsc/doc/2024/2024bcsc2463/2024bcsc2463.html) b) _R. v. McGenn_ , [2018 BCSC 1942](/en/bc/bcsc/doc/2018/2018bcsc1942/2018bcsc1942.html); c) _R. v. McCormick_ , [2017 BCSC 145](/en/bc/bcsc/doc/2017/2017bcsc145/2017bcsc145.html); d) _R. v. Regis_ , [2024 BCSC 1288](/en/bc/bcsc/doc/2024/2024bcsc1288/2024bcsc1288.html); e) _R. v. Bell_ , [2025 BCSC 394](/en/bc/bcsc/doc/2025/2025bcsc394/2025bcsc394.html); f) _R. v. Newton_ , [2016 BCSC 1440](/en/bc/bcsc/doc/2016/2016bcsc1440/2016bcsc1440.html); g) _R. v. Kim_ , [2025 BCSC 1823](/en/bc/bcsc/doc/2025/2025bcsc1823/2025bcsc1823.html); and h) _R. v. Ognibene-Hebbourn_ , [2025 BCSC 992](/en/bc/bcsc/doc/2025/2025bcsc992/2025bcsc992.html).",
+    "I have reviewed all the authorities provided by counsel. They are helpful in setting out the broad range of sentences and address the issues of parity. I do not intend to comment on each case, as each one is decided on its own particular facts and circumstances. The cases support the positions advanced by each proponent but do not necessarily address the specific circumstances of Mr. Losch. Some of the authorities proffered by the defence refer to offenders who were in fear of the victim or where the offender was treated as a first-time offender. Conversely, some of the Crown authorities refer to more egregious facts or where joint submissions were accepted.",
+    "The facts of this case make this offence closer to murder or aggravating manslaughter rather than near accident. A single deadly stab wound in the back of the chest applied with considerable force states the obvious. In these circumstances, the range is eight to 12 years in prison: _R. v. Quigley_ , [2016 BCSC 2184](/en/bc/bcsc/doc/2016/2016bcsc2184/2016bcsc2184.html) at para. [24](/en/bc/bcsc/doc/2016/2016bcsc2184/2016bcsc2184.html#par24).",
+    "Before embarking on an assessment of the aggravating and mitigating circumstances, I must comment on Mr. Losch's expression of remorse in the context of the entirety of these proceedings.",
+    "Mr. Losch had not taken any responsibility for Ms. Gauthier's death. He told the writer of the pre-sentence report that he was innocent of these charges and intended to appeal the decision. Any litigant intending to appeal a conviction cannot be expected to accept responsibility for the purposes of a sentencing hearing. Absence of remorse is not an aggravating factor.",
+    "It was apparent that the victim impact statements had an immense effect on Mr. Losch as he appeared to understand and appreciate the gravity of his offences. He was increasingly emotional as the statements were presented. During Ms. L.'s remarks, Mr. Losch became particularly distraught. He wept as he listened to Ms. L. describe the impact and consequences arising out of Ms. Gauthier's death. Mr. Losch was heard to say, \"I'm sorry\".",
+    "Mr. Losch addressed the court and stated that this was a horrible accident and that he has had to live with the consequences every day since. He said that he was truly sorry for what occurred.",
+    "This is in stark contrast to the comments he had previously made to the writer of the pre-sentence report when he had maintained his innocence and expressed his intention to appeal the conviction. His admissions now likely bring closure to these proceedings.",
+    "Mr. Losch's acceptance of responsibility for what he has done and recognition of the harm that he has done is an important feature of this hearing. Genuine remorse is a mitigating factor. # Aggravating Factors",
+    "I must consider aggravating factors. The onus is on the Crown to prove beyond a reasonable doubt any fact that it relies upon to show an aggravating factor. Reference may be made to those findings arising from the trial judgment, but a sentencing hearing is not to be used to re-litigate matters that have already been decided.",
+    "The Crown urges the court to draw inferences associated with the fact that Ms. Gauthier was partially naked when buried. Those were matters that arose at trial and inferences as urged by the Crown were not then accepted. To engage in further debate on the same issue is improper. At best, the Crown's argument rests on speculation without proof. Speculation has no place in this hearing.",
+    "The aggravating factors that I must consider are as follows: a) Mr. Losch was in a position of trust and authority. Although the relationship between Mr. Losch and Ms. Gauthier was not one of a traditional employer-employee manner, she was completely dependent on him for transportation and communications at the grow site. b) The site of the offence was remote and difficult to access. Without Mr. Losch's cooperation, Ms. Gauthier was isolated. There was no reasonable access for Ms. Gauthier to secure help. Mr. Losch made no effort to contact anyone to provide medical help for Ms. Gauthier. c) Mr. Losch used a knife or knife-like instrument to kill Ms. Gauthier. Significant force was used in administering the violence. d) Ms. Gauthier was Aboriginal and female. She was vulnerable. e) Ms. Gauthier has lost her life. Her loss has had an enormous impact on her friends and family. f) Mr. Losch attempted to cover up his involvement by telling investigators that Ms. Gauthier had gone off with Aaron Dalton. Mr. Losch tried to incriminate an innocent person who had died by the time Mr. Losch provided his name to the police. g) Mr. Losch has a lengthy criminal record, including entries for violent offences. He engaged in drug trafficking and had recruited Ms. Gauthier to assist him in his illegal endeavours. # Mitigating Factors",
+    "The mitigating factors that I must consider are as follows: a) Mr. Losch has shown genuine remorse even though his understanding as to the enormity of the crime he committed may not have crystallized until he heard the victim impact statements. Mr. Losch's acknowledgment of the harm he has done and his acceptance of responsibility may bring closure to these proceedings. b) Mr. Losch created no issues while in pre-trial detention and he has been compliant with his bail conditions. c) Mr. Losch has had a difficult upbringing. He has limited education. He was left to cope on his own while still a teenager. He was deprived of the guidance and affection that parents would ordinarily provide.",
+    "Mr. Losch has been failed by the lack of parental guidance and the kind of opportunities that most people growing up are afforded. It is one's upbringing that often shapes a person's life. Mr. Losch's unstable upbringing is a mitigating factor that reduces what otherwise would have been a sentence closer to the ranges urged by the Crown.",
+    "Mr. Losch is going to spend many years in prison at an age when years become more precious.",
+    "There is no reliable evidence to indicate that Mr. Losch's age and health are factors to influence a reduction in what would otherwise be a fit and just sentence.",
+    "Rehabilitation must be considered, even though it is very much a secondary consideration in comparison to the primary principles of denunciation and deterrence. Mr. Losch has indicated that he is prepared to take advantage of programming. However, he has had opportunities in the past and has not taken advantage of them. Positive results from programming depend in large measure on the motivation or commitment of the offender. To date, other than paying lip service to accessing resources, Mr. Losch has shown little inclination to take advantage of the opportunities that may have presented themselves.",
+    "With respect to dangerousness, Mr. Losch is at a moderate risk to reoffend and at a low risk for violent offences.",
+    "Mr. Losch has lived a life of crime. Some of his convictions might be described as petty crimes - others are much more serious. He has shown little inclination to rehabilitate himself. This sentence is not to punish him for past crimes or for illegal activities that he has not been charged with. This sentence is only with respect to these convictions and the sentence must be fit and just.",
+    "Based on Mr. Losch's high level of moral blameworthiness and emphasizing the principles of denunciation and deterrence, it is clear that a significant penitentiary sentence is warranted in these circumstances.",
+    "Killing Ms. Gauthier was a senseless act, robbing life from a young person who had much to live for. Her loss is an emptiness that cannot be filled by anything the Court can say or do. No sentence can restore Ms. Gauthier's life or return her to her family and friends.",
+    "Sentencing an offender is not predicated upon revenge. The objective in crafting an appropriate sentence is to promote respect for the law and the maintenance of a just, peaceful, and safe society. Vengeance plays no part.",
+    "While Mr. Losch's personal circumstances and genuine remorse provide mitigating factors, they do not overtake the significant aggravating facts. Thus, I must place emphasis on denunciation, deterrence, and protection of the public.",
+    "Mr. Losch shall be sentenced to 10 years in prison for manslaughter. He shall serve a further two years in jail consecutive for interfering with a dead body. A total of 12 years is proportionate to the gravity of the offences and Mr. Losch's moral culpability.",
+    "In addition, there will be ancillary orders pursuant to s. 109\\. There will be a lifetime firearm prohibition.",
+    "Manslaughter is a primary designated offence and a sample of DNA must be provided within 30 days for registration in the national databank.",
+    "I will waive the victim fine surcharge. There is no realistic expectation that Mr. Losch will be in a position to pay the fine.",
+    "Now, with respect to the days that Mr. Losch has already served, do we have a calculation on those?",
+    "CNSL A. MACDONALD: Yes, Justice, I included that with the Crown submission and I think my friend's submission agreed. I don't think I brought that submission with me.",
+    "CNSL A. COCHRANE: I'm sorry, I don't have it either.",
+    "CNSL A. MACDONALD: If I could just have a moment? I will try and pull it up here.",
+    "CNSL K. GILLESPIE: I'll get it. I've got the document here.",
+    "CNSL A. MACDONALD: It's right at the end.",
+    "CNSL K. GILLESPIE: I know, I just include that for the time served. Mr. Justice, just at paragraph 243 of the Crown submissions and I think this is what defence also agrees, Mr. Losch was arrested September 9th, 2022, remained in custody until January 9th, 2025. The total time would be 852 days in custody and, at the one-to-1.5 ratio, by our calculation, that would be 1,278 days.",
+    "THE COURT: That is up until today?",
+    "CNSL K. GILLESPIE: Up until today.",
+    "CNSL A. MACDONALD: Today - today would be [indiscernible]",
+    "CNSL K. GILLESPIE: I guess today would be one more day in the total, so -",
+    "THE COURT: 1,279?",
+    "CNSL K. GILLESPIE: - 1,279 and a half, so perhaps two days.",
+    "THE COURT: 1,280.",
+    "CNSL K. GILLESPIE: Yes.",
+    "CNSL A. COCHRANE: Yes.",
+    "THE COURT: Does that sound right, Mr. Cochrane?",
+    "CNSL A. COCHRANE: It does, yes.",
+    "THE COURT: All right. Credit will be given for 1,280 days. That will then be deducted from the total of 12 years that I have provided as a sentence.",
+    "Anything further?",
+    "CNSL A. MACDONALD: Nothing from the Crown. Thank you, Justice.",
+    "CNSL A. COCHRANE: No, thank you very much.",
+    "THE COURT: All right, thank you.",
+    "CNSL K. GILLESPIE: Thank you, Justice.",
+    "THE COURT: We will stand down.",
+    "THE CLERK: Order in court. \"Dley J.\""
+  ]
+}
