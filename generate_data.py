@@ -290,6 +290,7 @@ def generate_report_cmd(
     """
     try:
         header, section_heading = _get_clean_header(filename)
+        typer.echo("Processing file...")
         body, _body_section_heading = _get_body(filename)
     except FileNotFoundError as exc:
         typer.echo(str(exc))
@@ -299,6 +300,8 @@ def generate_report_cmd(
     if not citation:
         typer.echo("No citation found.")
         raise typer.Exit(code=1)
+    else:
+        typer.echo(f"Citation: {citation}")
 
     metadata = get_metadata_from_citation(citation)
     if not metadata:
@@ -311,11 +314,12 @@ def generate_report_cmd(
     if section_heading and paragraphs:
         paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
 
-    typer.echo("Running GenAI body_headings...")
+    if verbose:
+        typer.echo("Analyzing document structure...")
     headings = body_headings(paragraphs)
-    for heading in headings:
-        typer.echo(heading.model_dump())
-
+    document_structure = [heading.model_dump() for heading in headings]
+    if verbose:
+        typer.echo(f"\tDone.")
     if verbose:
         typer.echo("Cleaning header text...")
     # Quick formatting for the header
@@ -349,7 +353,7 @@ def generate_report_cmd(
             if not citation_value:
                 continue
             if verbose:
-                typer.echo(f"Fetching {label} metadata {idx + 1}/{len(cases)}: {citation_value}")
+                typer.echo(f"Fetching {label} metadata {idx + 1}/{len(cases)}")
             metadata = get_metadata_from_citation(citation_value)
             if metadata:
                 collected.append({
@@ -380,6 +384,7 @@ def generate_report_cmd(
             "citing_cases_metadata": _collect_case_metadata(citing_case_items, metadata_delay, "citing"),
             "cited_legislation": get_cited_legislation(paragraphs),
         },
+        "document_structure": document_structure,
         "header": header,
         "body_paragraphs": paragraphs,
     }

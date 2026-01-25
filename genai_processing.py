@@ -12,8 +12,8 @@ from pydantic import BaseModel
 logger = logging.getLogger(__name__)
 
 class DocumentStructure(BaseModel):
-    headings: str
-    heading_number: str
+    heading: str
+    heading_id: str
     paragraph_index: int
 
 client = genai.Client()
