@@ -25,6 +25,7 @@ from case_data_processing import (
 from metadata_processing import get_metadata_from_citation
 from sentencing_data_processing import process_master_row, load_master_csv
 from reference_processing import get_case_relations, get_cited_legislation
+from genai_processing import body_headings
 
 app = typer.Typer(help="Sentencing research CLI")
 
@@ -309,6 +310,11 @@ def generate_report_cmd(
     paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
     if section_heading and paragraphs:
         paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
+
+    typer.echo("Running GenAI body_headings...")
+    headings = body_headings(paragraphs)
+    for heading in headings:
+        typer.echo(heading.model_dump())
 
     if verbose:
         typer.echo("Cleaning header text...")
