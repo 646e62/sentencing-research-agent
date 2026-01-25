@@ -1,0 +1,470 @@
+{
+  "citation": "R. v Kipp, 2025 BCSC 2616",
+  "metadata": {
+    "citation": "R v Kipp, 2025 BCSC 2616 (CanLII)",
+    "case_id": "2025bcsc2616",
+    "style_of_cause": "R v Kipp",
+    "atomic_citation": "2025 BCSC 2616",
+    "citation_type": "neutral",
+    "official_reporter_citation": null,
+    "year": "2025",
+    "court": "bcsc",
+    "decision_number": "2616",
+    "jurisdiction": "bc",
+    "court_name": "Supreme Court of British Columbia",
+    "court_level": "superior",
+    "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2025/2025bcsc2616/2025bcsc2616.html",
+    "short_url": "https://canlii.ca/t/khltn",
+    "language": "en",
+    "docket_number": "91321-2",
+    "decision_date": "2025-12-18",
+    "keywords": [
+      "Criminal law",
+      "Weapons",
+      "Firearms",
+      "Possession while prohibited",
+      "Sentencing"
+    ],
+    "categories": [
+      "Criminal or statutory infractions",
+      "Indigenous peoples",
+      "Sentencing"
+    ]
+  },
+  "references": {
+    "cited_cases": {
+      "citedCases": [
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2014bcca120"
+          },
+          "title": "R. v. Ball",
+          "citation": "2014 BCCA 120 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2019bcca191"
+          },
+          "title": "R. v. Do",
+          "citation": "2019 BCCA 191 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "1999canlii679"
+          },
+          "title": "R. v. Gladue",
+          "citation": "1999 CanLII 679 (SCC), [1999] 1 SCR 688",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2012bcca423"
+          },
+          "title": "R. v. Guha",
+          "citation": "2012 BCCA 423 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2015bcca302"
+          },
+          "title": "R. v. Holt",
+          "citation": "2015 BCCA 302 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2012scc13"
+          },
+          "title": "R. v. Ipeelee",
+          "citation": "2012 SCC 13 (CanLII), [2012] 1 SCR 433",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2017bcca292"
+          },
+          "title": "R. v. Kachuol",
+          "citation": "2017 BCCA 292 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2023bcca2"
+          },
+          "title": "R. v. Kehoe",
+          "citation": "2023 BCCA 2 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2019bcca390"
+          },
+          "title": "R. v. Melnick",
+          "citation": "2019 BCCA 390 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2021bcca86"
+          },
+          "title": "R. v. Mills",
+          "citation": "2021 BCCA 86 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2010scc6"
+          },
+          "title": "R. v. Nasogaluak",
+          "citation": "2010 SCC 6 (CanLII), [2010] 1 SCR 206",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2015scc15"
+          },
+          "title": "R. v. Nur",
+          "citation": "2015 SCC 15 (CanLII), [2015] 1 SCR 773",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2019bcca351"
+          },
+          "title": "R. v. Padda",
+          "citation": "2019 BCCA 351 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2016bcca275"
+          },
+          "title": "R. v. Racette",
+          "citation": "2016 BCCA 275 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcca",
+          "caseId": {
+            "en": "2018bcca195"
+          },
+          "title": "R. v. Sellars",
+          "citation": "2018 BCCA 195 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2010scc35"
+          },
+          "title": "R. v. Sinclair",
+          "citation": "2010 SCC 35 (CanLII), [2010] 2 SCR 310",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcpc",
+          "caseId": {
+            "en": "2021bcpc325"
+          },
+          "title": "R. v. Taylor",
+          "citation": "2021 BCPC 325 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcpc",
+          "caseId": {
+            "en": "2020bcpc249"
+          },
+          "title": "R. v. Theroux",
+          "citation": "2020 BCPC 249 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2000scc10"
+          },
+          "title": "R. v. Wells",
+          "citation": "2000 SCC 10 (CanLII), [2000] 1 SCR 207",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2019bcsc1038"
+          },
+          "title": "R. v Friesen",
+          "citation": "2019 BCSC 1038 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2021bcsc2199"
+          },
+          "title": "R. v Lambert",
+          "citation": "2021 BCSC 2199 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "bcsc",
+          "caseId": {
+            "en": "2025bcsc1480"
+          },
+          "title": "R. v Reinders",
+          "citation": "2025 BCSC 1480 (CanLII)",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "abqb",
+          "caseId": {
+            "en": "2020abqb40"
+          },
+          "title": "Ubah v Canadian Natural Resources Limited",
+          "citation": "2020 ABQB 40 (CanLII)",
+          "aiContentId": {
+            "en": "2020abqb40"
+          }
+        }
+      ],
+      "error": null,
+      "metadata": {}
+    },
+    "citing_cases": {
+      "citingCases": [],
+      "error": null,
+      "metadata": {}
+    },
+    "cited_legislation": [
+      [
+        "Criminal Code",
+        "sec95subsec1",
+        [
+          1
+        ]
+      ],
+      [
+        "Criminal Code",
+        null,
+        [
+          62,
+          67,
+          113
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec117.01subsec1",
+        [
+          1
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718",
+        [
+          49,
+          53
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718.2",
+        [
+          49,
+          53
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec742.1",
+        [
+          53,
+          54
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718.1",
+        [
+          88
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec742.3subsec1",
+        [
+          112
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec109",
+        [
+          114
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec737subsec2.1",
+        [
+          114
+        ]
+      ]
+    ]
+  },
+  "header": " IN THE SUPREME COURT OF BRITISH COLUMBIA Citation: | R. v. Kipp , ---|--- | 2025 BCSC 2616 Date: 20251218 Docket: 91321-2 Registry: Nanaimo Rex v. Daniel Nicholas Darryl Kipp Before: The Honourable Justice L. Hamilton Oral Reasons for Sentence Counsel for the Crown: | K.A. Grant ---|--- Counsel for the Accused: | S.J. Roy Place and Date of Trial/Hearing: | Nanaimo, B.C. December 9 and 12, 2025 Place and Date of Judgment: | Nanaimo, B.C. December 18, 2025",
+  "body_paragraphs": [
+    "**THE COURT:** The offender, Daniel Kipp, previously entered a guilty plea to the following offences: a) Count 1, possession of a restricted firearm, contrary to [s. 95(1)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec95subsec1_smooth) of the _[Criminal Code,](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ R.S.C., 1985, c. C-46; b) Count 2, possession of a restricted firearm, contrary to [s. 95(1)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec95subsec1_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ ; and c) Count 3, possession of a firearm while prohibited from doing so, contrary to [s. 117.01(1)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec117.01subsec1_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_.",
+    "The Crown seeks a global sentence of 5.5 years as a fit and proportionate sentence.",
+    "Mr. Kipp acknowledges the seriousness of the offences and his prior record. However, he asks the court to consider his extraordinary personal circumstances and impose a global conditional sentence of two years less a day followed by three years of probation. # Circumstances of the Offence",
+    "During the evening of May 22, 2023, a resident of Georgia Avenue in Nanaimo, British Columbia, saw two men who appeared to be stealing a boat trailer from his neighbour's yard. The resident took a picture of the men, called 911, and gave a description to the police. He saw the men unhook the trailer and walk down the road.",
+    "Constable Howells arrived on the street and recognized one of the men as Colin Crisp, but did not know the other man, who was later identified as Daniel Kipp. Constable Howells arrested both men for theft, but Mr. Kipp continued to walk away. Constable Howells tackled Mr. Kipp to the ground and handcuffed him.",
+    "Constable Howells searched Mr. Kipp and his backpack incidental to arrest and he found a knife in Mr. Kipp's right front pants pocket and a fixed\u2011blade knife in his waistband. Constable Howells found two restricted firearms in Mr. Kipp's backpack and two magazines full of ammunition for the firearms. Constable Howells also found illicit drugs, but no indicia of trafficking.",
+    "At no point did Mr. Kipp attempt to use the weapons or threaten anyone with them. Mr. Kipp admits that his plan was to sell the firearms to feed his severe opioid addiction at the time.",
+    "Mr. Kipp was subject to various previous orders prohibiting him from possession of firearms at the time of his arrest. He has a significant criminal record, including convictions for possession for the purpose of trafficking in drugs (PPT), possession of restricted weapons, assault, aggravated assault, and an attempted murder conviction in 2007 for which he served an 11\u2011year sentence.",
+    "Mr. Kipp was addicted to drugs since his early teens and all of his convictions are in some way drug\u2011related. **_Circumstances of the Offender_**",
+    "The court had the benefit of a thorough and detailed Pre-Sentence Report (PSR) and Gladue Report. The following details of Mr. Kipp's background have been taken from the PSR, the _Gladue_ Report, and submissions from counsel.",
+    "Mr. Kipp is a 38\u2011year\u2011old man. He is Nllaka'pamux and a member of the Boothroyd Band which is located south of Lytton, British Columbia. Mr. Kipp's mother is also a member of the Boothroyd Band. Several of Mr. Kipp's maternal relatives attended residential school, including at least one of his maternal grandparents.",
+    "Mr. Kipp's mother was the youngest of 16 children. Her mother had passed away when she was just a toddler. Mr. Kipp's mother was then raised by family members who abused her and locked her in a basement. Mr. Kipp's mother turned to use substances to cope. She became addicted to substances, including crack cocaine. Despite her addiction, Mr. Kipp's mother raised Mr. Kipp until he was eight years old.",
+    "Mr. Kipp's childhood was chaotic and full of trauma, neglect, and abuse. By the time Mr. Kipp was eight years old, he had moved 16 times, both on and off reserve, and had attended six different schools. Mr. Kipp was certainly not sheltered from his mother's drug use. He watched his mother smoke crack cocaine in the home. From a very young age, Mr. Kipp also witnessed his other relatives' addictions to drugs and alcohol.",
+    "Mr. Kipp believes that he first used alcohol himself as a toddler when he was left unattended at parties. Both Mr. Kipp and his younger sister, Caprisha, were neglected. As a toddler, Mr. Kipp was often left to care for his sister. Mr. Kipp recalls an occasion when he caused a house fire while he was trying to start a fire in the fireplace to keep him and his sister warm.",
+    "When Mr. Kipp was four years old and his sister was only two, his sister drowned in a backyard pond while in the care of a babysitter. Sadly, no one told Mr. Kipp that his sister had died, so he kept looking for his sister until he finally saw her body in a casket at her funeral.",
+    "The tragic loss of his sister was devastating for Mr. Kipp. Unfortunately, he received no professional or other support to help him process his trauma.",
+    "Mr. Kipp had five stepsiblings, all of whom had different fathers. As a child, Mr. Kipp witnessed his mother being beaten by multiple romantic partners. When Mr. Kipp turned eight years old, the Ministry of Children and Families removed him from his mother's care. Mr. Kipp lost any meaningful contact with his mother, who he believes to live in the Downtown Eastside of Vancouver. When he was apprehended by the Ministry, he also lost contact with his stepsiblings.",
+    "At age eight, Mr. Kipp was placed in foster care with a non\u2011Indigenous couple in Chilliwack. He had a positive relationship with his foster mother, who he still calls \"Grandma\". However, his foster mother worked three jobs, so she was not home a lot. Mr. Kipp's foster father was unemployed and an alcoholic. Instead of providing care, Mr. Kipp's foster father forced Mr. Kipp to do chores for neighbours and then took his chore money to buy alcohol. If Mr. Kipp did not hand over the money, his foster father beat him.",
+    "Mr. Kipp was nine years old when he met his biological father, who was non\u2011Indigenous. Sadly, Mr. Kipp's father's extended family were ashamed of Mr. Kipp's indigeneity. Unfortunately, just as Mr. Kipp was getting to know his biological father, his father died by suicide. Mr. Kipp's father had been battling a brain tumour and AIDS. Mr. Kipp was deeply traumatized by his biological father's death. Once again, however, Mr. Kipp received no counselling or other support.",
+    "Mr. Kipp started experimenting with hard drugs at age 12 or 13. His drug use increased when he was 14, after his foster father died of liver failure.",
+    "Mr. Kipp struggled in school. His foster mother repeatedly requested that the school test him for ADHD, but they did not. Mr. Kipp found out much later as an adult that he had ADHD and required medication to help him process information.",
+    "Mr. Kipp experienced racism in middle school, which caused him to skip classes. As a result, he failed Grade 7. By Grade 9, he was using drugs heavily to cope. By Grade 10, Mr. Kipp stopped attending school because of his addiction, coupled with a complete lack of support from his family, community, peers, or professionals. Naturally, Mr. Kipp's peers became others who had dropped out of school, were addicted to drugs, and lived a life of crime to feed their addictions. Mr. Kipp was disconnected from any positive social supports and developed a negative lifestyle. He was severely addicted to drugs, including crack cocaine and, without resources, he resorted to breaking the law to feed his addiction. Mr. Kipp's criminal record grew.",
+    "In 2007, he was convicted for attempted murder and aggravated assault. He was running a crack house in Surrey and shot someone. He received an 11\u2011year sentence. During his time in federal prison, Mr. Kipp showed some prospect of rehabilitation. He attempted to quit drugs. He obtained his GED. He was released to a halfway house run by the John Howard Society in Victoria and, while there, he obtained his C\u2011ticket in welding. He graduated at the top of his class and he obtained some work as a welder.",
+    "However, Mr. Kipp then suffered two significant setbacks in his road to rehabilitation. First, he broke up with his girlfriend, who then attempted suicide in his home. Mr. Kipp found her in time and called 911. However, Mr. Kipp was extremely traumatized by this incident, especially since he had not received proper professional support to process his childhood trauma, which included the deaths of his sister and his biological father.",
+    "Secondly, after his girlfriend's suicide attempt, Mr. Kipp was riding in a taxi which was struck by a drunk driver. Mr. Kipp was seriously injured, requiring hospitalization. In the hospital, he was prescribed opioids for pain. Mr. Kipp had previously been addicted to cocaine, but not opioids.",
+    "Unfortunately, after his hospitalization, Mr. Kipp became severely addicted to opioids, including fentanyl. This led him back into a lifestyle of crime to feed his addiction. Mr. Kipp was heavily addicted to fentanyl and other drugs at the time of his arrest. He had almost died by overdose many times. Mr. Kipp told the court about one occasion when he was released from jail, he used drugs, overdosed, and it took nine rounds of Narcan to revive him. Despite coming so close to dying, Mr. Kipp's addiction was so strong that he used again almost immediately after being revived.",
+    "At the time of his arrest, Mr. Kipp's addiction was so strong that he did not think he would be able to stop using. He did not think he could turn his life around. He had no idea how.",
+    "Overall, the PSR and the _Gladue_ Report describe a man who has been significantly impacted by the history of Indigenous peoples in Canada and the intergenerational impact of the residential school system and assimilationist policies. Several of Mr. Kipp's family members attended residential school, including at least one of his maternal grandparents. This then had profound impacts on the next generation, including Mr. Kipp's mother who suffered from addiction and was not able to properly parent Mr. Kipp.",
+    "Overall, Mr. Kipp's housing situation as a child was unstable--he was constantly moving. Mr. Kipp witnessed his mother's and his other relatives' addiction issues first-hand. Mr. Kipp witnessed his mother's romantic partners physically abusing her. Mr. Kipp's childhood was punctuated by neglect, physical and emotional abuse, the trauma of his sister's death, and his biological father's death.",
+    "Mr. Kipp was completely disconnected from any proper familial, community, or professional supports. He suffered racism. His PTSD and ADHD went undiagnosed. He had no supports in place to prevent his own substance use.",
+    "Nearly all of the factors outlined in _R._ v. _Gladue_ [1999 CanLII 679 (SCC)](/en/ca/scc/doc/1999/1999canlii679/1999canlii679.html), [1999] 1 S.C.R. 688 (_Gladue_) are present in Mr. Kipp's case. It is hard to imagine a child having a more difficult start to his life. # Current Circumstances",
+    "Mr. Kipp was in custody at the Vancouver Island Regional Corrections Centre (VIRCC) from May 22, 2023, to April 16, 2024, some 331 days, the equivalent of 497 days under normal presentence credit of one to 1.5 days.",
+    "On April 16, 2024, Justice Baird granted a Release Order giving Mr. Kipp a chance to attend New Roads Therapeutic Recovery Centre (TRC) while on house arrest on very strict conditions. Mr. Kipp has been there for nearly 20 months. Mr. Kipp's compliance with the terms of his release order has been flawless.",
+    "Many individuals have witnessed Mr. Kipp's rehabilitative efforts at both VIRCC and TRC. Mr. Kipp has provided numerous letters and documents attesting to his positive qualities and extraordinary efforts at recovery and his rehabilitation.",
+    "It is clear from the evidence that, since Mr. Kipp's arrest, he has turned his entire life around. Mr. Kipp has achieved and maintained sobriety for two and a half years since his arrest. He has taken every course that has been offered to him at VIRCC and TRC. He has accepted all available counselling, including regularly seeing a psychiatrist for PTSD from childhood trauma, ADHD for which he is now successfully medicated, and his substance use disorders which are now in remission.",
+    "Mr. Kipp's psychiatrist wrote a letter in support of Mr. Kipp, confirming Mr. Kipp's deep engagement and long\u2011term commitment to his treatment. Mr. Kipp attends AA meetings, NA meetings, and Cocaine Anonymous meetings multiple times per week and has become an inspirational leader amongst his peers, even helping start a group called FORGE that assists tradespeople who suffer addiction to attain sobriety.",
+    "Mr. Kipp is deeply focused on his sobriety. Mr. Kipp has built positive relationships with staff and other residents at TRC. He no longer associates with negative peer influences. He understands that his struggles with anger and addiction are part of a larger pattern of intergenerational trauma. He has connected with the Native Friendship Centre in Victoria to set up culturally\u2011informed counselling, in addition to the other counselling he is receiving.",
+    "Mr. Kipp's bail supervisor wrote a letter and attended court to show her strong support for Mr. Kipp. The bail supervisor says Mr. Kipp has been \"steady as a rock\" while on supervision. She confirms that he has been working tirelessly on his goals for the future. She describes him as a delight to work with. She says, \"I truly believe that the work he is doing, the courses he is taking, and the goals he is working towards give him the best chance to truly walk away from the life he lived prior to entering New Roads TRC.\"",
+    "Ms. Pettinger, a social worker and TRC's continuing care coordinator, also wrote a letter and attended court to support Mr. Kipp. She says that throughout his time at New Roads, Mr. Kipp has displayed a level of dedication and engagement that stands out among the residents that she has worked with over the years. His progress is not only consistent, but exemplary. Ms. Pettinger confirms that Mr. Kipp attends multiple recovery meetings weekly, participating fully. She explains that these meetings are not mandatory at this stage of the program. Rather, Mr. Kipp's involvement stems from a genuine desire to maintain accountability and reinforce the recovery mindset. She goes on to say that she regularly relies on Mr. Kipp when another resident is struggling or requires peer support, because Mr. Kipp is a true leader. Mr. Kipp approaches these situations calmly, thoughtfully, and with a non\u2011judgmental, empathetic presence that is highly stabilizing for others. His ability to regulate himself while helping others regulate is a strong indicator of emotional maturity and internalized skill development.",
+    "Ms. Pettinger describes Mr. Kipp's own work in counselling as profound, consistent, and deeply engaged. She confirms that Mr. Kipp has developed an impressive level of self\u2011awareness and demonstrates deep insight and an authentic desire to heal. Ms. Pettinger concludes her letter with this statement: In my professional experience, working with mandated clients in addiction treatment can . . . be challenging. However, working with [Mr. Kipp] has been one of the most meaningful and rewarding experiences of my career as a counsellor. . . . . . . [Mr. Kipp] has shown exceptional dedication to change and has made substantial progress that clearly positions him for ongoing success.",
+    "It is clear from all the letters, including Mr. Kipp's own letter to the Court, that Mr. Kipp is not the same man who was arrested on May 22, 2023. The man before me is one hundred percent committed to his sobriety and his goal of reintegration into the community as a stable, responsible individual. He is deeply dedicated to re\u2011establishing his relationship with his seven\u2011year\u2011old who is in the care of the maternal grandmother.",
+    "Mr. Kipp has been able to spend some time with his son on day passes while at TRC for which he is very grateful. Mr. Kipp wishes a better life for his son. He knows this requires maintaining his sobriety.",
+    "The maternal grandmother also wrote a letter expressing her support for Mr. Kipp. She is clearly impressed with his focus on sobriety and becoming a better person and a role model for his son.",
+    "Overall, Mr. Kipp's efforts at rehabilitation since his arrest have been nothing short of exemplary. Mr. Kipp's time in the TRC program has allowed him to develop positive practical goals for his future.",
+    "Mr. Kipp would like to serve his sentence in the community and remain at the TRC before transitioning to TRC's Jaymac House, which is a sober second\u2011stage treatment home in Saanich, British Columbia. He is able to live on a curfew and/or house arrest at both New Roads and Jaymac. Both are structured environments with strict house rules and curfews.",
+    "Mr. Kipp's goals include continuing with programming and treatment with the recovery community, attending AA, NA, and Cocaine Anonymous meetings. He plans to continue to see his psychiatrist to address his underlying trauma that motivated his substance use. He expects to access counselling with the Native Friendship Centre and through the Men's Trauma Centre in Victoria.",
+    "Mr. Kipp also hopes to continue his rehabilitative work, while working as a peer support worker for the FORGE, which, as mentioned, is the organization that Mr. Kipp helped establish to assist tradespeople who struggle with addiction.",
+    "He would ultimately like to work as a welder again and take further education to attain his Red Seal in welding. He has been accepted in the welding program at Camosun College which starts in August 2026. # Relevant Sentencing Principles",
+    "[Sections 718](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec718_smooth) to [718.2](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec718.2_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ set out the purpose and principles of sentencing. Those sections provide, in part, as follows: **718** The fundamental purpose of sentencing is to protect society and to contribute, along with crime prevention initiatives, to respect for the law and the maintenance of a just, peaceful and safe society by imposing just sanctions that have one or more of the following objectives: **(a)** to denounce unlawful conduct and the harm done to victims or to the community that is caused by unlawful conduct; **(b)** to deter the offender and other persons from committing offences; **(c)** to separate offenders from society, where necessary; **(d)** to assist in rehabilitating offenders; **(e)** to provide reparations for harm done to victims or to the community; and **(f)** to promote a sense of responsibility in offenders, and acknowledgment of the harm done to victims or to the community. . . . **718.1** A sentence must be proportionate to the gravity of the offence and the degree of responsibility of the offender. **718.2** A court that imposes a sentence shall also take into consideration the following principles: **(a)** a sentence should be increased or reduced to account for any relevant aggravating or mitigating circumstances relating to the offence or the offender. . . **(b)** a sentence should be similar to sentences imposed on similar offenders for similar offences committed in similar circumstances; **(c)** where consecutive sentences are imposed, the combined sentence [would] not be unduly long or harsh; **(d)** an offender should not be deprived of liberty, if less restrictive sanctions may be appropriate in the circumstances; and **(e)** all available sanctions, other than imprisonment, that are reasonable in the circumstances and consistent with the harm done to victims or to the community should be considered for all offenders, with particular attention to the circumstances of Aboriginal offenders.",
+    "Proportionality is the fundamental and overarching principle of sentencing. The other sentencing principles set out in s. 718.2 must be taken into account and blended in a manner which produces a sentence that is proportionate to the gravity of the offence and the degree of responsibility of the offender.",
+    "Blending the various objectives of sentencing is the essence of the sentencing process. There is seldom one and only one fit sentence. So long as the sentence imposed complies with the proportionality requirement in s. 718.1, sentencing judges are given considerable discretion to decide how best to blend the various legitimate objectives of sentencing.",
+    "If sentencing judges operate within that band of discretion, the different weight assigned to different objectives may produce different but nonetheless equally\u2011fit sentences.",
+    "[Section 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ lists the four criteria that a court must consider before deciding to impose a conditional sentence: 1) the offender must be convicted of an offence that is not punishable by a minimum term of imprisonment; 2) the court must impose a term of imprisonment of less than two years; 3) the safety of the community would not be in danger by the offender serving the sentence in the community; and 4) a conditional sentence would be consistent with the fundamental purposes and principles of sentences as set out in [ss. 718](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec718_smooth) to [718.2](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec718.2_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_.",
+    "In _R. v. Proulx,_[2001] S.C.R. 61 at page 2, the Supreme Court of Canada makes it clear that the judge is not required to first impose a sentence of imprisonment of a fixed duration before considering whether that sentence can be served in the community, despite that that approach seems to be suggested by the wording in [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(a) of the _[Criminal](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ _Code_.",
+    "Rather, the Supreme Court recommends that s. 742.1(a) be interpreted purposively. In a preliminary determination, the sentencing judge should first reject a penitentiary term and probationary measures as inappropriate. Then, having determined that the appropriate duration is a term of imprisonment of less than two years, the judge should consider whether it is appropriate for the offender to serve his or her sentence in the community: _Proulx_ at page 2.",
+    "Section 742.1 (b) requires the judge to be satisfied that the safety of the community would not be endangered by the offender serving his sentence in the community. This is a condition precedent to imposing a conditional sentence.",
+    "In making this determination, the judge should consider the risk posed by the specific offender, not the broader risk of whether the imposition of a conditional sentence would endanger the safety of the community by providing insufficient general deterrence or undermining general respect for the law.",
+    "The judge should consider two factors in assessing this risk: 1) the risk of the offender reoffending; and 2) the gravity of the damage that would ensue in the event of a reoffence.",
+    "The judge's assessment of the risk posed by the offender should include the risk of any criminal activity and not be limited solely to the risk of physical or psychological harm to individuals. _Proulx_ at page 2. # Principles of Sentence Deserving of Greatest Emphasis",
+    "The caselaw establishes that denunciation and deterrence are the primary sentencing principles in cases involving offences such as these. A fit sentence must reinforce the message that those who choose to possess these dangerous weapons, even when there is no intention to harm or kill, will be subject to significant penal consequences.",
+    "While deterrence and denunciation are of paramount importance, I must also consider the principle of rehabilitation. The prospect of rehabilitation cannot be overlooked when crafting an appropriate sentence, but it is important that it must be carefully calibrated. As Justice Ker noted in _R. v. Friesen,_[2019 BCSC 1038](/en/bc/bcsc/doc/2019/2019bcsc1038/2019bcsc1038.html): . . . the importance of rehabilitation will vary from case to case, depending on the degree of willingness of the offender to turn things around and the degree of confidence that the court has in the durability of the offender's recovery.",
+    "In addition to an analysis of deterrence, denunciation, and the other purposes and principles of sentencing in the _[Criminal](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ _Code_ that apply to every offender, I must bear in mind s. 718.2(e), given Mr. Kipp's Indigenous status. That section requires me to consider all available sanctions other than imprisonment that are reasonable in the circumstances. Those circumstances are described in the _Gladue_ __ Report and other materials before me, and they bear on Mr. Kipp's moral culpability.",
+    "In _R. v. Ipeelee_ , [2012 SCC 13](/en/ca/scc/doc/2012/2012scc13/2012scc13.html), the Supreme Court of Canada revisited and reinforced the application of _Gladue_ principles and said this: [73] First, systemic and background factors may bear on the culpability of the offender, to the extent that they shed light on his or her level of moral blameworthiness. This is perhaps more evident in _Wells_ where Iacobucci J. described these circumstances as \"the unique systemic or background factors _that are mitigating in nature_ in that they may have played a part in the aboriginal offender's conduct\" (para. 38 (emphasis added in original)). Canadian criminal law is based on the premise that criminal liability only follows from voluntary conduct. Many Aboriginal offenders find themselves in situations of social and economic deprivation with a lack of opportunities and limited options for positive development. While this rarely -- if ever -- attains a level where one could properly say that their actions were not _voluntary_ and therefore not deserving of criminal sanction, the reality is that their constrained circumstances may diminish their moral culpability. As Greckol J. of the Alberta Court of Queen's Bench stated. . . [in] _R. v. Skani . . . _after describing the background factors that lead to Mr. Skani coming before the court, \"[f]ew mortals could withstand such a childhood and youth without becoming seriously troubled.\" Failing to take these circumstances into account would violate the fundamental principle of sentencing -- that the sentence must be proportionate to the gravity of the offence _and the degree of responsibility of the offender_. . . . [Emphasis in original.] # The Applicable Range Positions of the parties ## The Crown",
+    "As mentioned above, the Crown seeks a global sentence of five and a half years' federal imprisonment. This is broken down as 4.5 years served concurrently on each of the two restricted firearms counts, and one year served consecutively for possessing the firearms while prohibited. The Crown states that the case law establishes the following guidelines apply absent extraordinary circumstances: 1) two and a half to three years' imprisonment represents the low end of the range of appropriate sentences for a s. 95 possession of a restricted firearm in a non\u2011regulatory true\u2011crime context; 2) the mid\u2011range would normally be applicable where there are aggravating factors such as here where the offender has a significant prior record; 3) the normal range of sentence for a s. 117.01 offence for possessing a firearm while prohibited is six months to one year, served consecutively to the s. 95 offences; and 4) normally if an offender has been previously prohibited from possessing firearms, like Mr. Kipp who has six prior prohibitions, the six months is usually considered too low.",
+    "The Crown took me through the following cases: _R. v. Holt_ , [2015 BCCA 302](/en/bc/bcca/doc/2015/2015bcca302/2015bcca302.html); R. v. Nur, [2015 SCC 15](/en/ca/scc/doc/2015/2015scc15/2015scc15.html); R. v. Guha, [2012 BCCA 423](/en/bc/bcca/doc/2012/2012bcca423/2012bcca423.html); _R. v. Racette_ , [2016 BCCA 275](/en/bc/bcca/doc/2016/2016bcca275/2016bcca275.html); _R. v. Mills_ , [2021 BCCA 86](/en/bc/bcca/doc/2021/2021bcca86/2021bcca86.html); _R. v. Do_ , [2019 BCCA 191](/en/bc/bcca/doc/2019/2019bcca191/2019bcca191.html); _R. v. Kachuol_ , [2017 BCCA 292](/en/bc/bcca/doc/2017/2017bcca292/2017bcca292.html); _R. v. Padda_ , [2019 BCCA 351](/en/bc/bcca/doc/2019/2019bcca351/2019bcca351.html); _R. v. Theroux_ , [2020 BCPC 249](/en/bc/bcpc/doc/2020/2020bcpc249/2020bcpc249.html); _R. v. Ball_ , [2014 BCCA 120](/en/bc/bcca/doc/2014/2014bcca120/2014bcca120.html); _R. v. Melnick_ , [2019 BCCA 390](/en/bc/bcca/doc/2019/2019bcca390/2019bcca390.html); _R. v. Lambert_ , [2021 BCSC 2199](/en/bc/bcsc/doc/2021/2021bcsc2199/2021bcsc2199.html); _R. v. Taylor_ , [2021 BCPC 325](/en/bc/bcpc/doc/2021/2021bcpc325/2021bcpc325.html); _R. v. Toenders_ , Victoria Registry No. 184541-2C (BCPC); _R. v. Bacon_ , [2010 SCC 35](/en/ca/scc/doc/2010/2010scc35/2010scc35.html). ## The Defence's Position",
+    "Mr. Roy, counsel for Mr. Kipp, agrees that the Crown has accurately stated the normal range for sentences for the offences. However, Mr. Roy submits that a global sentence of two years less one day followed by three years' probation is a fit and appropriate sentence in this case. He submits that the sentence ought to be served in the community as a conditional sentence order.",
+    "Mr. Roy emphasizes Mr. Kipp's extraordinary personal circumstances. Mr. Roy notes that the _[Criminal](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ _Code_ requires that I consider Mr. Kipp's Indigenous status and that in Mr. Kipp's case nearly all of the factors discussed in _Gladue_ are present. Mr. Roy submits that Mr. Kipp's tragic and chaotic upbringing, which led to his cycle of crime and addictions, relates to the intergenerational trauma experienced by his Indigenous family and community.",
+    "At a young age, Mr. Kipp turned to drugs to cope and that is what he saw and learned since he was a toddler. As a result, Mr. Roy says that it is no surprise that he then turned to crime. He did not have prosocial supports in his life. As a child, he did not learn to even regulate his emotions. He became disconnected from his family and his Indigenous community. Mr. Roy says that Mr. Kipp's moral culpability for the offences in these circumstances is significantly reduced.",
+    "Mr. Roy also highlights the extraordinary progress that Mr. Kipp has made towards rehabilitation since his arrest, as well as the amount of time he has already spent in custody at VIRCC and then at TRC under house arrest.",
+    "With respect to whether a CSO is appropriate, Mr. Roy says that Mr. Kipp has shown, through his flawless record of following his strict release conditions and the rules at TRC, that he is able to follow rules and that he is no danger to the public.",
+    "Mr. Roy has provided a number of specific cases regarding sentences imposed on Indigenous and non\u2011Indigenous offenders, three of which are addressed in detail below. # Relevant Case Authorities",
+    "As mentioned, I have a number of authorities before me dealing with sentences for possession of restricted firearms and possessing firearms while prohibited. Counsel took me through these cases in detail, noting similarities and differences when compared to the case at bar. While I have considered all of these authorities, I will not discuss each of them, as the ranges of sentences set out therein are simply guidelines.",
+    "Of the cases cited by counsel, I find the decisions of _R. v._ _Sellars_ , [2018 BCCA 195](/en/bc/bcca/doc/2018/2018bcca195/2018bcca195.html); _R. v._ _Reinders_ , [2025 BCSC 1480](/en/bc/bcsc/doc/2025/2025bcsc1480/2025bcsc1480.html); and _R. v._ _Buffalo_ , [2020 ABQB 40](/en/ab/abqb/doc/2020/2020abqb40/2020abqb40.html) to be the most similar and of most assistance.",
+    "In _Sellars_ , the Court of Appeal was dealing with a Crown appeal of the sentencing judge's imposition of a suspended sentence and three years' probation in similar circumstances to the case at bar. The Crown on appeal sought a three\u2011to four\u2011year sentence. The offender was arrested with a loaded restricted firearm in that case. The offender was Indigenous and the circumstances of his upbringing were tragic. At the time of the sentencing, he was 26 years' old and he had been a member of a gang. Like Mr. Kipp, he had made extraordinary efforts to rehabilitate himself since his arrest.",
+    "The Court of Appeal carefully considered the seriousness of the offence, as well as _Gladue_ factors present, and Mr. Sellars' extraordinary efforts to rehabilitate himself, and found that a conditional sentence order of two years less one day was fit and appropriate. I should say globally.",
+    "In _Buffalo_ , an Indigenous offender was arrested for the possession of restricted firearms. He was found with six firearms and ammunition. Mr. Buffalo had a prior conviction for manslaughter using a firearm. Like Mr. Kipp, Mr. Buffalo provided the court with numerous letters of support regarding his extraordinary rehabilitation efforts. The Crown in _Buffalo_ sought a three\u2011year sentence. Mr. Buffalo sought a sentence of less than two years to be served pursuant to a conditional sentence order. At paragraph 69 of _Buffalo_ , Mr. Justice Mah of the Alberta Court of Queen's Bench addresses how deterrence and denunciation can be properly served by a conditional sentence, stating: It is somewhat trite to say that a sentence being served in the community is still a term of imprisonment. The offender is not behind bars. He or she is free to interact with society. Even though a conditional sentence has a restorative objective, there must be a punitive aspect as well. . . .",
+    "And the Court imposed conditions as part of the CSO that restricted Mr. Buffalo's liberty, finding it proper to do so as an articulation of society's disapprobation for what he has done.",
+    "At paragraph 70, Mr. Justice Mah addresses the concept of restorative justice where an individual Indigenous offender has committed a serious crime. He quotes from _R. v. Wells_ , [2000 SCC 10](/en/ca/scc/doc/2000/2000scc10/2000scc10.html) and says as follows: I would like to add at this point that the reasons in **_Gladue_**** _ _** do not foreclose the possibility that in the appropriate circumstances, the sentencing judge may accord the greatest weight to the concept of restorative justice, notwithstanding that an aboriginal offender has committed a serious crime. As was concluded in **_Gladue_** at paragraph [81](/en/ca/scc/doc/1999/1999canlii679/1999canlii679.html#par81), the remedial purpose of section 718.2 . . . directs the sentencing judge not only to take into account the unique circumstances of aboriginal offenders, but also to appreciate relevant cultural differences in terms of the objectives of the sentencing process.",
+    "In _R. v. Reinders_ , the offender was charged with possession for the purpose of trafficking in heroin, methamphetamine, and cocaine. In a separate incident, he was also charged with possessing three restricted firearms, two of which were loaded with ammunition when he was arrested. The offender had a lengthy criminal record. He had served approximately 31 months in custody for the offences for which he was being sentenced, which counsel agreed was the equivalent dead time of 46 months.",
+    "The Crown sought an eight\u2011year sentence in that case. The defence sought a suspended sentence. At paragraph 16 of her reasons, Madam Justice Murray states: [16] What makes this sentencing different than most is that since his release in 2022, Mr. Reinders has turned his life around. I have a book filled with letters from people that are aware of this sentencing and of the crimes that Mr. Reinders has committed. They are supportive and probably the most positive letters that I have ever read in my career, and I have had a long career in the criminal courts. In addition to these letters, three people have travelled from Merritt to support Mr. Reinders and they have addressed the court. At paragraph 17 of that case, Madam Justice Murray notes: [17] Mr. Reinders has completed drug and alcohol counselling. He lived in a recovery house. He has been sober since he successfully completed the [in that case it was a six\u2011month] recovery program.",
+    "At paragraphs 31 through 35, Madam Justice Murray states: [31] I go back to the principles of sentence. Looking at all of the circumstances, Mr. Reinders has spent an equivalent of almost four years in custody. He has worked hard to turn his life around. He has made tremendous progress. He accepts full responsibility for his actions. He sees the harm that he has caused. He is working in the community to try to make amends. He realizes that he cannot erase his past, but he can make a difference going forward, and he has shown his commitment to doing that. It is unusual to see the amount of support that Mr. Reinders has. . . . [32] So what is the appropriate sentence? Crown counsel wants me to send Mr. Reinders back to jail for four years. I do not see how that is in anybody's best interests- not Mr. Reinders', not the community's. It does not fit with the principles of sentencing, nor does it contribute to any of the principles of sentencing including the maintenance of a just, peaceful, and safe society. She goes on to say: [33] I fear if I sent Mr. Reinders back to jail, it would undo all of the good work that he has done and he is about to do. He has got years ahead of him to make a difference and help people. [34] I do not see how sending him back to jail is consistent with any of the principles of sentencing. She goes on further to state: [35] Crown counsel clearly thinks that because of the gravity of the offence, that the time served, 46 months, is not enough. In my view, in this particular case with these particular circumstances and the exceptional work that Mr. Reinders has done on himself and he is doing in the community, it is enough. To send him back would be contrary to everything that this justice system stands for.",
+    "I find that each of the _Sellars_ , _Buffalo_ , and _Reinders_ cases are similar to the case at bar. # Analysis",
+    "I will begin with a consideration of the mitigating and aggravating factors. ## Aggravating Factors",
+    "In terms of significant aggravating factors, I must consider: 1) Mr. Kipp has a relatively lengthy and unenviable criminal record and was subject to multiple orders prohibiting possession of firearms; and 2) Mr. Kipp was found with firearms, as well as ammunition, in a residential neighbourhood in Nanaimo. ## Mitigating Factors",
+    "In terms of mitigating factors, I find the following mitigating factors ought to be considered: 1) Mr. Kipp has pleaded guilty to the offences and spared witnesses from testifying at a trial. 2) Mr. Kipp addressed the court and expressed deep remorse for the offences. 3) Mr. Kipp has had an exceptionally tragic and chaotic childhood, due in large part to the intergenerational trauma experienced by Indigenous peoples, which is the legacy of Canada's residential school system and the assimilationist policies of the government at the time. As set out below in more detail, I find that Mr. Kipp has significantly reduced moral culpability for the offences. 4) The exceptional efforts and progress Mr. Kipp has made towards rehabilitation. He is sober and not the same man he was the day he was arrested. 5) Mr. Kipp has already spent the equivalent of 497 days in custody at VIRCC and has been under house arrest subsequently since April 2024.",
+    "Of all the aggravating and mitigating factors, what stands out the most in this case are: 1) the _Gladue_ factors that apply in Mr. Kipp's case; and 2) Mr. Kipp's already exceptional efforts to rehabilitate himself.",
+    "I will therefore address these factors in greater detail. ### Proportionality and Moral Blameworthiness",
+    "The fundamental principle of sentencing is that a sentence must be proportionate to the gravity of the offence and the degree of responsibility of the offender. _[Criminal](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec718.1_smooth)_ _Code_ , s. 718.1; see also _R. v. Nasogaluak_ , [2010 SCC 6](/en/ca/scc/doc/2010/2010scc6/2010scc6.html) at paras. [41-42](/en/ca/scc/doc/2010/2010scc6/2010scc6.html#par41).",
+    "Determining the degree of a particular offender's responsibility or moral blameworthiness must include a consideration of the offender's personal circumstances, mental capacity, or motive for committing the crime: _Lacasse_. ### Moral Culpability of Mr. Kipp",
+    "To complete the moral blameworthiness picture and to ensure an offender is properly situated in terms of sentencing _vis- a-vis_ others convicted of the same offence, the court must have regard to those personal characteristics of the offender that would mitigate or aggravate culpability.",
+    "It will be apparent that numerous permutations and combinations of these relevant factors will be possible. In an individual case, all must be balanced and blended as part of the court's assessment of the offender's degree of moral culpability for the crimes committed.",
+    "I find that Mr. Kipp has a significantly reduced level of moral blameworthiness when one considers the long list of applicable factors described in his _Gladue_ Report. Mr. Kipp has been directly affected by the intergenerational trauma that plagues Indigenous peoples in Canada. Neglect, physical and mental abuse, witnessing his mother being physically abused, disconnection from family, cultural, and positive social structures, poverty, family disruption, early exposure to substance use, and racism are all features of Mr. Kipp's childhood and upbringing.",
+    "As observed by Marchand J., as he then was, in _R. v. Kehoe,_[2023 BCCA 2](/en/bc/bcca/doc/2023/2023bcca2/2023bcca2.html), disconnection is a common consequence of Canada's assimilationist policies and one that features prominently for Mr. Kipp. As stated at paragraph 55 of _Kehoe_ : [55] As a consequence of Canada's colonial history and assimilationist policies, many Indigenous people have become disconnected from their ancestral communities, cultures, and associated positive social structures. This disconnection has contributed to the social and economic marginalization of Indigenous people in Canada, including their disproportionate interactions with the criminal justice system. [56] Disconnection is one of the very harms associated with Canada's colonial history and assimilationist policies that _Gladue_ and _Ipeelee_ seek to address. . . .",
+    "In applying a robust _Gladue_ /_Ipeelee_ analysis to the facts and circumstances of the appellant in _Kehoe_ , the Court found the following: [69] In this case, I do not find it difficult to infer that Canada's colonial history and assimilationist policies played a role in bringing Mr. Kehoe before the court. That is because I do not consider it simply a coincidence that Mr. Kehoe's mother (1)** ** became disconnected from her Metis community and culture and (2) fell victim to the all too common plight of similarly situated Indigenous women across Canada. In the absence of policies specifically designed to disconnect Indigenous people from their communities, cultures and supports, Mr. Kehoe's mother stood a much better chance of raising him in a stable and functional environment where his heritage was celebrated and where he would develop pro-social and community- oriented values. [70] On a proper application of _Gladue_ principles, I consider Mr. Kehoe to have a significantly reduced level of moral blameworthiness. As I see it, systemic and background factors contributed to Mr. Kehoe being raised in a dysfunctional environment which in turn contributed to his substance use disorder and criminal offending.",
+    "These words apply with equal force to Mr. Kipp. Mr. Kipp's mother neglected him from an early age. She and other relatives all struggled with addiction. Mr. Kipp lost his sister and his biological father to sudden, unexpected deaths, yet Mr. Kipp received no counselling or support. His PTSD and ADHD went undiagnosed.",
+    "When he was removed from his mother's care at age eight, he was disconnected with his five half\u2011siblings or stepsiblings and from his Indigenous community. He was placed in foster care with a non\u2011Indigenous couple and then, instead of providing him care and support, Mr. Kipp's foster father beat him and stole his money.",
+    "Mr. Kipp suffered racism, first by his biological father's family who were ashamed of his indigeneity, and then at middle school when his Indigenous heritage was shunned instead of being celebrated.",
+    "It is no surprise that, without prosocial supports, Mr. Kipp found himself using drugs to cope and, by age 13, he was using hard drugs. He was disconnected from his family and his community. He had no prosocial role models available. He was disconnected from his culture. It is not surprising that he then became an addict and that led him to a lifestyle of crime to feed his addiction.",
+    "He had not completed Grade 10. He did not have any employment or educational prospects and, despite an increasingly serious criminal record, Mr. Kipp tried, while serving a federal sentence, to get sober and become a welder. Unfortunately, he suffered two other major setbacks in his life, as described earlier. This resulted in a severe opioid addiction.",
+    "Despite all of these challenges, Mr. Kipp has somehow been able to achieve sobriety and maintain sobriety for two and a half years, and turn his life around as described in the letters before me. I can only imagine what might have been possible for Mr. Kipp if his parents had been able to raise him in a stable and functional environment where his heritage was celebrated and where he would develop prosocial and community\u2011oriented values.",
+    "Mr. Kipp's personal circumstances are a crucial consideration in crafting a fit and proportionate sentence. ## Rehabilitation",
+    "As I stated earlier, deterrence and denunciation are paramount in cases involving firearms. However, I must consider the principle of rehabilitation as well. I find Mr. Kipp has demonstrated that he has excellent prospects for rehabilitation. While on bail, Mr. Kipp has demonstrated that he is capable of complying with restrictive conditions. His compliance, as indicated, has been flawless. I have taken this into consideration when determining his sentence.",
+    "Further, the letters from Mr. Kipp's bail supervisor, psychiatrist, and TRC's continuing care coordinator all speak to Mr. Kipp's extraordinary efforts and commitment to rehabilitation and his exemplary progress to date. I have no hesitation in accepting that Mr. Kipp's efforts at recovery are sincere and long\u2011term.",
+    "I wish to indicate to you, Mr. Kipp, that I am extremely impressed with the efforts that you have made to turn your life around and to leave the world of addiction and offending behind.",
+    "You are also actively trying to stop the impact of intergenerational trauma. That is no easy feat, but it is certainly something that I want to support as a sentencing judge. This benefits not only you and your son, but your Indigenous community and society generally. In determining an appropriate sentence in this case, I have considered all that you have done to transform your life around since your arrest. I must also account for the seriousness of the offences you committed and the nature of the impact of these types of offences in the community. You yourself acknowledged the seriousness of these offences and the effects on the community in your letter to the court.",
+    "I appreciate that the sentence I impose on you today will have an impact on you. I have remained mindful to craft a sentence today that does not interfere with your efforts to continue moving forward in your rehabilitative journey. I wish you the best in these efforts. **Disposition**",
+    "Mr. Kipp, please stand.",
+    "Crafting the appropriate sentence in any case is a difficult exercise. It involves a careful examination of the circumstances of the offence and the nature and severity of the offender's conduct, together with his personal aspects.",
+    "Balancing all of the relevant factors and considering the significant time that you have already spent at VIRCC, and then on house arrest at TRC, I sentence you to a global sentence of two years less one day imprisonment, to be served in the community on house arrest, subject to conditions which I will specify.",
+    "I would like you to spend your time pursuant to a CSO at New Roads TRC or Jaymac.",
+    "You may sit down while I read the conditions.",
+    "The conditional sentence order shall include all compulsory statutory conditions set out in [s. 742.3(1)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.3subsec1_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ and the following additional conditions: 1) Mr. Kipp will be under house arrest for the entire term of the conditional sentence. you must obey house arrest by being inside your residence at New Roads TRC or Jaymac or in its lot for all hours of the day; 2) Mr. Kipp may be away from his residence during the house arrest with the written permission of his conditional sentence supervisor. Such permission is to be given only for compelling reasons including the exceptions listed below and Mr. Kipp must carry the permission with him when he is outside your residence. 3) There will be exceptions to the house arrest so that Mr. Kipp may attend educational courses, including the welding program, and for employment purposes. Also, there will be exceptions to permit Mr. Kipp attend medical, dental and counselling appointments. There will also be exceptions for Mr. Kipp to do his work with FORGE or other volunteer work. There will be exceptions for Mr. Kipp to attend recovery meetings, and to see his son, attend any assessments or for any other reasons specified by the probation officer or supervisor. 4) Mr. Kipp will report to a CSO supervisor and/or probation officer. 5) Mr. Kipp must present himself immediately at the door of his residence or answer the phone when any peace officer or conditional sentence supervisor attends or calls to check on him during the house arrest. 6) Mr. Kipp will abstain from any non\u2011prescribed drugs and alcohol. 7) Mr. Kipp will attend treatment and counselling as required. 8) Mr. Kipp must not possess, directly or indirectly, any weapon as defined in the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_.",
+    "The conditional sentence order will be followed by a three\u2011year probation period with the mandatory terms in addition to the following terms: 1) Regular reporting to a probation officer as directed; 2) No contact with Colin Crisp; 3) No contact with Cassiano Porto; 4) Not attend the 600 block of Georgia Avenue, Nanaimo; 5) Not possess, directly or indirectly, any weapon as defined in the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_. 6) Attend counselling as directed; and 7) Abstain from non\u2011prescribed drugs and alcohol. # Ancillary Orders",
+    "In addition, there will be the following ancillary orders: a) pursuant to [s. 109](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec109_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ , Mr. Kipp is prohibited from possessing any firearm, cross-bow, restricted weapon, ammunition, or explosive substance for life, on all three counts; b) pursuant to [s. 737(2.1)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec737subsec2.1_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ , I decline to order the payment of a victim fine surcharge because Mr. Kipp is currently not employed and I want him to be able to fully concentrate on his recovery and rehabilitation, treatment, volunteer work as a peer counsellor, and education initially. c) As requested by the Crown, the items that were seized from Mr. Kipp on arrest will be forfeited, and I will sign the forfeiture order.",
+    "Counsel, have I neglected anything?",
+    "CNSL K. GRANT: And did Justice feel that a no\u2011knives condition would also be appropriate, considering he was found with two knives when he was arrested? I'm in the court's hands.",
+    "CNSL S. ROY: I submit that it's been two and a half years since the incident and there is no evidence he used those knives, Justice. In my respectful submission, it would be unnecessary at this point in time. Certainly, if he had a knife and was using or intending to use it as a weapon, already the weapons prohibition would cover that.",
+    "THE COURT: Well, I also read in some detail the house rules at TRC and at Jaymac, which themselves seem to be strict along those lines, so I am satisfied that I do not have to make that additional order in addition to all the others he will be complying with.",
+    "CNSL K. GRANT: Yes, Justice.",
+    "CNSL S. ROY: The only other thing, Justice, could he report by 3:00 p.m. tomorrow and at the Quadra Street address in Victoria? I have the address for you, Justice, I believe that's where he has been reporting and Ms. van Schaik, who dropped off a few minutes ago, I believe that's the address of the office that she's operating out of, and then if Community Corrections wants to transfer him somewhere else afterwards, they can do that.",
+    "THE COURT: Right, please add that.",
+    "THE CLERK: Yes, Justice.",
+    "CNSL S. ROY: Yes, I have the address, it's Suite 200, 3965 Quadra Street in Victoria, British Columbia. I think often there's a phone number in there, which is 250\u2011952\u20114183, 4\u20111\u20118\u20113\\.",
+    "THE COURT: I have signed the forfeiture order, so I will pass that back to the Crown.",
+    "CNSL K. GRANT: If that could be filed, please, with the registry.",
+    "THE CLERK: And a copy can be provided in the Crown's box.",
+    "CNSL K. GRANT: I think that was everything from the Crown in terms of [indiscernible/overlapping speakers] \u00ad\u00ad",
+    "THE CLERK: Thank you. And Madam Justice, I would just have clarity, is Mr. Kipp required to sign the orders once they are produced?",
+    "THE COURT: I will waive his signature and get Ms. Pettinger and Mr. Kipp back on the road back to Victoria.",
+    "THE CLERK: Thank you.",
+    "THE COURT: Thank you. And thank you both, counsel, for very capable submissions and for attending, Ms. Pettinger, and all the best to you, Mr. Kipp.",
+    "THE ACCUSED: Thank you.",
+    "CNSL S. ROY: Thank you very much, Justice. Happy holidays.",
+    "THE COURT: You too. \"Hamilton J.\""
+  ]
+}

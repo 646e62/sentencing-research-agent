@@ -42,116 +42,453 @@
     ]
   },
   "references": {
-    "cited_cases": {
-      "citedCases": [
-        {
-          "databaseId": "nspc",
-          "caseId": {
-            "en": "2020nspc48"
-          },
-          "title": "R. v. Burns",
-          "citation": "2020 NSPC 48 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "oncj",
-          "caseId": {
-            "en": "2023oncj374"
-          },
-          "title": "R. v. Cadet",
-          "citation": "2023 ONCJ 374 (CanLII)",
-          "aiContentId": {
-            "en": "2023oncj374"
-          }
-        },
-        {
-          "databaseId": "csc-scc",
-          "caseId": {
-            "en": "1999canlii679"
-          },
-          "title": "R. v. Gladue",
-          "citation": "1999 CanLII 679 (SCC), [1999] 1 SCR 688",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "csc-scc",
-          "caseId": {
-            "en": "2012scc13"
-          },
-          "title": "R. v. Ipeelee",
-          "citation": "2012 SCC 13 (CanLII), [2012] 1 SCR 433",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "csc-scc",
-          "caseId": {
-            "en": "2015scc64"
-          },
-          "title": "R. v. Lacasse",
-          "citation": "2015 SCC 64 (CanLII), [2015] 3 SCR 1089",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "csc-scc",
-          "caseId": {
-            "en": "2000scc7"
-          },
-          "title": "R. v. R.N.S.",
-          "citation": "2000 SCC 7 (CanLII), [2000] 1 SCR 149",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "mbca",
-          "caseId": {
-            "en": "2017mbca31"
-          },
-          "title": "R v Anderson",
-          "citation": "2017 MBCA 31 (CanLII)",
-          "aiContentId": {
-            "en": "2017mbca31"
-          }
-        },
-        {
-          "databaseId": "skpc",
-          "caseId": {
-            "en": "2023skpc55"
-          },
-          "title": "R v McGillis",
-          "citation": "2023 SKPC 55 (CanLII)",
-          "aiContentId": {
-            "en": "2023skpc55"
-          }
-        },
-        {
-          "databaseId": "skqb",
-          "caseId": {
-            "en": "2011skqb378"
-          },
-          "title": "R v Riddell",
-          "citation": "2011 SKQB 378 (CanLII)",
-          "aiContentId": {
-            "en": "2011skqb378"
-          }
+    "cited_cases_metadata": [
+      {
+        "citation": "R. v. Burns, 2020 NSPC 48 (CanLII)",
+        "metadata": {
+          "citation": "R v Burns, 2020 NSPC 48 (CanLII)",
+          "case_id": "2020nspc48",
+          "style_of_cause": "R v Burns",
+          "atomic_citation": "2020 NSPC 48",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2020",
+          "court": "nspc",
+          "decision_number": "48",
+          "jurisdiction": "ns",
+          "court_name": "Provincial Court of Nova Scotia",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/ns/nspc/doc/2020/2020nspc48/2020nspc48.html",
+          "short_url": "https://canlii.ca/t/jbv7l",
+          "language": "en",
+          "docket_number": "8404361",
+          "decision_date": "2020-11-24",
+          "keywords": [
+            "Criminal law",
+            "Sentencing"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Motor vehicles",
+            "Sentencing"
+          ]
         }
-      ],
-      "error": null,
-      "metadata": {}
-    },
-    "citing_cases": {
-      "citingCases": [
-        {
-          "databaseId": "qccq",
-          "caseId": {
-            "fr": "2025qccq918"
-          },
-          "title": "R. c. Fran\u00e7ois",
-          "citation": "2025 QCCQ 918 (CanLII)",
-          "aiContentId": {}
+      },
+      {
+        "citation": "R. v. Cadet, 2023 ONCJ 374 (CanLII)",
+        "metadata": {
+          "citation": "R v Cadet, 2023 ONCJ 374 (CanLII)",
+          "case_id": "2023oncj374",
+          "style_of_cause": "R v Cadet",
+          "atomic_citation": "2023 ONCJ 374",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2023",
+          "court": "oncj",
+          "decision_number": "374",
+          "jurisdiction": "on",
+          "court_name": "Ontario Court of Justice",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/on/oncj/doc/2023/2023oncj374/2023oncj374.html",
+          "short_url": "https://canlii.ca/t/jzzkc",
+          "language": "en",
+          "docket_number": "",
+          "decision_date": "2023-08-28",
+          "keywords": [
+            "Criminal infractions",
+            "Sentencing",
+            "Driving with blood-drug concentration exceeding legal limit",
+            "Offender caused bodily harm to multiple victims, including a child",
+            "Aggravating factors included speeding and presence of a minor in the vehicle",
+            "Whether a punitive but proportionate sentence can balance denunciation, deterrence, and rehabilitation",
+            "Principles of proportionality and restraint applied",
+            "Criminal Code, ss. 320.14(1)(c), 718, 718.1, 718.2 | Transportation",
+            "Sentencing",
+            "Driving under the influence of cannabis",
+            "Offender caused bodily harm while exceeding legal THC limit",
+            "Aggravating factors included speeding and endangering a child",
+            "Whether mitigating factors such as lack of prior record, remorse, and significant injuries justify a conditional sentence",
+            "Balancing denunciation, deterrence, and rehabilitation",
+            "Criminal Code, ss. 320.22, 742.1 | Criminal procedure",
+            "Driving prohibition",
+            "Pretrial driving prohibition period",
+            "Whether pretrial prohibition period must be deducted from the total driving prohibition order",
+            "Balancing statutory maximums and proportionality",
+            "Supreme Court guidance in R. v. Basque and R. v. Lacasse applied",
+            "Criminal Code, ss. 320.24, 718.2 | Family",
+            "Restorative justice",
+            "Conditional sentence incorporating restorative justice principles",
+            "Offender ordered to perform community service focused on supporting injured child victim",
+            "Whether restorative justice can address rehabilitation and victim support",
+            "Criminal Code, ss. 742.3(2)(d), 742.3(2)(f)"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Motor vehicles",
+            "Sentencing"
+          ]
         }
+      },
+      {
+        "citation": "R. v. Gladue, 1999 CanLII 679 (SCC), [1999] 1 SCR 688",
+        "metadata": {
+          "citation": "R v Gladue, 1999 CanLII 679 (SCC) (CanLII)",
+          "case_id": "1999canlii679",
+          "style_of_cause": "R v Gladue",
+          "atomic_citation": "1999 CanLII 679 (SCC)",
+          "citation_type": "canlii",
+          "official_reporter_citation": "[1999] 1 SCR 688",
+          "year": "1999",
+          "court": "csc-scc",
+          "decision_number": "679",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/1999/1999canlii679/1999canlii679.html",
+          "short_url": "https://canlii.ca/t/1fqp2",
+          "language": "en",
+          "docket_number": "26300",
+          "decision_date": "1999-04-23",
+          "keywords": [
+            "Criminal law",
+            "Sentencing",
+            "Aboriginal offenders",
+            "Criminal Code, R.S.C., 1985, c. C\u201046, s. 718.2(e)."
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Indigenous peoples",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Ipeelee, 2012 SCC 13 (CanLII), [2012] 1 SCR 433",
+        "metadata": {
+          "citation": "R v Ipeelee, 2012 SCC 13 (CanLII)",
+          "case_id": "2012scc13",
+          "style_of_cause": "R v Ipeelee",
+          "atomic_citation": "2012 SCC 13",
+          "citation_type": "neutral",
+          "official_reporter_citation": "[2012] 1 SCR 433",
+          "year": "2012",
+          "court": "csc-scc",
+          "decision_number": "13",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/2012/2012scc13/2012scc13.html",
+          "short_url": "https://canlii.ca/t/fqq00",
+          "language": "en",
+          "docket_number": "34245; 33650",
+          "decision_date": "2012-03-23",
+          "keywords": [
+            "Criminal law",
+            "Sentencing",
+            "Aboriginal offenders",
+            "Criminal Code, R.S.C. 1985, c. C\u201046, s. 718.2(e)."
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Indigenous peoples",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Lacasse, 2015 SCC 64 (CanLII), [2015] 3 SCR 1089",
+        "metadata": {
+          "citation": "R v Lacasse, 2015 SCC 64 (CanLII)",
+          "case_id": "2015scc64",
+          "style_of_cause": "R v Lacasse",
+          "atomic_citation": "2015 SCC 64",
+          "citation_type": "neutral",
+          "official_reporter_citation": "[2015] 3 SCR 1089",
+          "year": "2015",
+          "court": "csc-scc",
+          "decision_number": "64",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/2015/2015scc64/2015scc64.html",
+          "short_url": "https://canlii.ca/t/gml9v",
+          "language": "en",
+          "docket_number": "36001",
+          "decision_date": "2015-12-17",
+          "keywords": [
+            "Criminal law",
+            "Impaired driving causing death",
+            "Sentencing"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. R.N.S., 2000 SCC 7 (CanLII), [2000] 1 SCR 149",
+        "metadata": {
+          "citation": "R v RNS, 2000 SCC 7 (CanLII)",
+          "case_id": "2000scc7",
+          "style_of_cause": "R v RNS",
+          "atomic_citation": "2000 SCC 7",
+          "citation_type": "neutral",
+          "official_reporter_citation": "[2000] 1 SCR 149",
+          "year": "2000",
+          "court": "csc-scc",
+          "decision_number": "7",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/2000/2000scc7/2000scc7.html",
+          "short_url": "https://canlii.ca/t/527g",
+          "language": "en",
+          "docket_number": "26462",
+          "decision_date": "2000-01-31",
+          "keywords": [
+            "Criminal law",
+            "Sentencing",
+            "Conditional sentence",
+            "Criminal Code, R.S.C., 1985, c. C-46, s. 742.1."
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R v Anderson, 2017 MBCA 31 (CanLII)",
+        "metadata": {
+          "citation": "R v Anderson, 2017 MBCA 31 (CanLII)",
+          "case_id": "2017mbca31",
+          "style_of_cause": "R v Anderson",
+          "atomic_citation": "2017 MBCA 31",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2017",
+          "court": "mbca",
+          "decision_number": "31",
+          "jurisdiction": "mb",
+          "court_name": "Court of Appeal of Manitoba",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/mb/mbca/doc/2017/2017mbca31/2017mbca31.html",
+          "short_url": "https://canlii.ca/t/h1swm",
+          "language": "en",
+          "docket_number": "AR16-30-08604",
+          "decision_date": "2017-03-09",
+          "keywords": [
+            "Criminal law",
+            "Motor vehicle offences",
+            "Driving with blood alcohol exceeding",
+            "Sentencing",
+            "Aboriginal offenders"
+          ],
+          "categories": [
+            "Appeal",
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R v McGillis, 2023 SKPC 55 (CanLII)",
+        "metadata": {
+          "citation": "R v McGillis, 2023 SKPC 55 (CanLII)",
+          "case_id": "2023skpc55",
+          "style_of_cause": "R v McGillis",
+          "atomic_citation": "2023 SKPC 55",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2023",
+          "court": "skpc",
+          "decision_number": "55",
+          "jurisdiction": "sk",
+          "court_name": "Provincial Court of Saskatchewan",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/sk/skpc/doc/2023/2023skpc55/2023skpc55.html",
+          "short_url": "https://canlii.ca/t/k1htc",
+          "language": "en",
+          "docket_number": "991204819",
+          "decision_date": "2023-11-29",
+          "keywords": [
+            "Criminal infractions",
+            "Sentencing",
+            "Sexual assault",
+            "Breach of undertaking",
+            "Principles of denunciation, deterrence, and rehabilitation",
+            "Offender convicted of sexual assault and breach of a no-contact order",
+            "What is the appropriate sentence for the accused, considering the gravity of the offence and mitigating factors?",
+            "Sentencing principles under ss. 718\u2013718.2 of the Criminal Code applied | Indigenous peoples",
+            "Sentencing",
+            "Gladue factors",
+            "Conditional sentence orders",
+            "Offender is an Indigenous person with significant Gladue factors, including family breakdown, addiction, and poverty",
+            "Should a conditional sentence order (CSO) be imposed instead of incarceration?",
+            "Gladue and Ipeelee principles applied",
+            "Recent amendments to s. 742.1 of the Criminal Code considered | Criminal procedure",
+            "Ancillary orders",
+            "DNA orders",
+            "SOIRA orders",
+            "Firearms prohibitions",
+            "Offender convicted of sexual assault and breach of undertaking",
+            "What ancillary orders are appropriate in this case?",
+            "DNA order, 20-year SOIRA order, and lifetime firearms prohibition imposed under the Criminal Code"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R v Riddell, 2011 SKQB 378 (CanLII)",
+        "metadata": {
+          "citation": "R v Riddell, 2011 SKQB 378 (CanLII)",
+          "case_id": "2011skqb378",
+          "style_of_cause": "R v Riddell",
+          "atomic_citation": "2011 SKQB 378",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2011",
+          "court": "skqb",
+          "decision_number": "378",
+          "jurisdiction": "sk",
+          "court_name": "Court of King's Bench for Saskatchewan",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/sk/skqb/doc/2011/2011skqb378/2011skqb378.html",
+          "short_url": null,
+          "language": "en",
+          "docket_number": null,
+          "decision_date": null,
+          "keywords": [],
+          "categories": []
+        }
+      }
+    ],
+    "citing_cases_metadata": [
+      {
+        "citation": "R. c. Fran\u00e7ois, 2025 QCCQ 918 (CanLII)",
+        "metadata": {
+          "citation": "R c Fran\u00e7ois, 2025 QCCQ 918 (CanLII)",
+          "case_id": "2025qccq918",
+          "style_of_cause": "R c Fran\u00e7ois",
+          "atomic_citation": "2025 QCCQ 918",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2025",
+          "court": "qccq",
+          "decision_number": "918",
+          "jurisdiction": "qc",
+          "court_name": "Cour du Qu\u00e9bec",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/fr/qc/qccq/doc/2025/2025qccq918/2025qccq918.html",
+          "short_url": "https://canlii.ca/t/kb6f1",
+          "language": "fr",
+          "docket_number": "500-01-237702-227",
+          "decision_date": "2025-02-14",
+          "keywords": [
+            "Infractions criminelles et r\u00e9glementaires",
+            "D\u00e9termination de la peine",
+            "Conduite avec alcool\u00e9mie causant des l\u00e9sions",
+            "Application des art. 718 \u00e0 718.2, 742.1 C.cr.",
+            "L\u2019emprisonnement avec sursis est-il disponible et appropri\u00e9 pour cette infraction?",
+            "Proulx, Ipeelee, Nasogaluak appliqu\u00e9s",
+            "Gravit\u00e9, proportionnalit\u00e9 et parit\u00e9 pond\u00e9r\u00e9es",
+            "Facteurs aggravants de l\u2019art. 320.22 consid\u00e9r\u00e9s",
+            "Conditions strictes, travaux communautaires et assignation \u00e0 domicile",
+            "Emprisonnement avec sursis ordonn\u00e9 | Citoyennet\u00e9 et immigration",
+            "Cons\u00e9quences indirectes",
+            "Mesure de renvoi",
+            "Les effets en mati\u00e8re d\u2019immigration peuvent-ils influer sur la peine?",
+            "Pham appliqu\u00e9, LIPR art. 36(1)a), 64, Tran",
+            "Possibilit\u00e9 d\u2019appel pr\u00e9serv\u00e9e si peine inf\u00e9rieure \u00e0 six mois ou sursis",
+            "R\u00e9f\u00e9rence \u00e0 Moses sur l\u2019appel d\u2019une mesure de renvoi",
+            "Consid\u00e9ration att\u00e9nuante non d\u00e9terminante, int\u00e9gr\u00e9e \u00e0 l\u2019individualisation",
+            "Peine ajust\u00e9e sans rompre la proportionnalit\u00e9 | Infractions criminelles et r\u00e9glementaires",
+            "Sanctions accessoires",
+            "Interdiction de conduire",
+            "Comment comptabiliser la p\u00e9riode d\u00e9j\u00e0 \u00e9coul\u00e9e?",
+            "Calcul effectu\u00e9 selon Basque",
+            "Facteur aggravant li\u00e9 \u00e0 la conduite r\u00e9mun\u00e9r\u00e9e \u00e9valu\u00e9 selon l\u2019art. 320.22 d)",
+            "Dur\u00e9e totale fix\u00e9e pour refl\u00e9ter la gravit\u00e9 objective et subjective",
+            "Harmonisation avec la peine dans la collectivit\u00e9",
+            "Interdiction de conduire prolong\u00e9e | Infractions criminelles et r\u00e9glementaires",
+            "Parit\u00e9 des peines",
+            "Harmonisation",
+            "La modification de 2022 \u00e0 l\u2019art. 742.1 change-t-elle la r\u00e9f\u00e9rence jurisprudentielle?",
+            "Lemieux et Parranto sur les fourchettes non imp\u00e9ratives",
+            "Jurisprudence ant\u00e9rieure pond\u00e9r\u00e9e \u00e0 la lumi\u00e8re du r\u00e9tablissement du sursis",
+            "Gravit\u00e9, culpabilit\u00e9 morale et objectifs de d\u00e9nonciation et dissuasion \u00e9quilibr\u00e9s",
+            "Peines comparables examin\u00e9es",
+            "Peine individualis\u00e9e confirm\u00e9e"
+          ],
+          "categories": []
+        }
+      }
+    ],
+    "cited_legislation": [
+      [
+        "Criminal Code",
+        "sec320.14subsec2",
+        [
+          1
+        ]
       ],
-      "error": null,
-      "metadata": {}
-    }
+      [
+        "Criminal Code",
+        null,
+        [
+          26
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718",
+        [
+          13
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718.1",
+        [
+          15
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718.2",
+        [
+          15,
+          27,
+          28,
+          29
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec320.2",
+        [
+          16
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec742.1",
+        [
+          23
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718subsec2",
+        [
+          25
+        ]
+      ]
+    ]
   },
   "header": " IN THE PROVINCIAL COURT OF SASKATCHEWAN Citation: 2024 SKPC 11 Date: February 6, 2024 Information: 991226880 Location: Regina Between: His Majesty the King \\- and - Katherine Mills Appearing: Leona Andrews For the Crown Lisa Smart For the Accused SENTENCING DECISION N.P. EVANCHUK, J",
   "body_paragraphs": [

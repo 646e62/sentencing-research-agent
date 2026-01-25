@@ -63,7 +63,14 @@ def split_header_and_body(
         return "", text.strip(), ""
 
     # Original header chunk (before trailing section heading removal)
-    raw_header_chunk = chunks[3]
+    # Find the chunk that contains the string "Loading paragraph markers"
+    # and use the following chunk as the header
+    for chunk in chunks:
+        if "Loading paragraph markers" in chunk:
+            raw_header_chunk = chunk
+            break
+
+    #raw_header_chunk = chunks[3]
     cleaned_header = clean_header(raw_header_chunk)
 
     # Extract trailing section heading if present

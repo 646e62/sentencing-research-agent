@@ -7,6 +7,7 @@ from __future__ import annotations
 import re
 import json
 import os
+import time
 from typing import Any
 
 import typer
@@ -23,7 +24,7 @@ from case_data_processing import (
 )
 from metadata_processing import get_metadata_from_citation
 from sentencing_data_processing import process_master_row, load_master_csv
-from reference_processing import get_case_relations
+from reference_processing import get_case_relations, get_cited_legislation
 
 app = typer.Typer(help="Sentencing research CLI")
 
@@ -83,7 +84,7 @@ def metadata_cmd(
     json_output: bool = typer.Option(False, "--json", help="Emit JSON output"),
 ) -> None:
     """Get metadata from a citation."""
-    metadata = get_metadata_from_citation(citation, include_relations=not local)
+    metadata = get_metadata_from_citation(citation)
     if json_output:
         typer.echo(json.dumps(_make_json_safe(metadata), indent=2))
         return
@@ -272,6 +273,16 @@ def body_cmd(
 @app.command("generate-report")
 def generate_report_cmd(
     filename: str = typer.Argument(..., help="HTML filename (e.g., 'case.html' or 'case')"),
+    metadata_delay: float = typer.Option(
+        0.5,
+        "--metadata-delay",
+        help="Delay in seconds between related-case metadata calls",
+    ),
+    verbose: bool = typer.Option(
+        False,
+        "--verbose",
+        help="Print progress while generating the report",
+    ),
 ) -> None:
     """
     Generate a JSON report from an HTML file and save to ./data/json/test.json.
@@ -299,6 +310,8 @@ def generate_report_cmd(
     if section_heading and paragraphs:
         paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
 
+    if verbose:
+        typer.echo("Cleaning header text...")
     # Quick formatting for the header
     # Remove redundant header data and text
     header = remove_before_string(header, "Most recent unfavourable mention")
@@ -310,17 +323,63 @@ def generate_report_cmd(
     # Remove extra whitespace
     header = re.sub(r"\s+", " ", header)
 
+    def _extract_case_citation(case_item: dict) -> str | None:
+        title = case_item.get("title")
+        citation_value = case_item.get("citation")
+        if isinstance(title, str) and title.strip() and isinstance(citation_value, str) and citation_value.strip():
+            return f"{title.strip()}, {citation_value.strip()}"
+
+        # Fallbacks if the expected fields are missing
+        for key in ("citation", "caseId", "case_id", "title"):
+            value = case_item.get(key)
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+        return None
+
+    def _collect_case_metadata(cases: list[dict], delay: float, label: str) -> list[dict]:
+        collected: list[dict] = []
+        for idx, case_item in enumerate(cases):
+            citation_value = _extract_case_citation(case_item)
+            if not citation_value:
+                continue
+            if verbose:
+                typer.echo(f"Fetching {label} metadata {idx + 1}/{len(cases)}: {citation_value}")
+            metadata = get_metadata_from_citation(citation_value)
+            if metadata:
+                collected.append({
+                    "citation": citation_value,
+                    "metadata": _make_json_safe(metadata),
+                })
+            if idx < len(cases) - 1 and delay > 0:
+                time.sleep(delay)
+        return collected
+
+    if verbose:
+        typer.echo("Fetching cited/citing cases...")
+    cited_cases = get_case_relations(citation, "citedCases")
+    citing_cases = get_case_relations(citation, "citingCases")
+
+    cited_case_items = cited_cases.get("citedCases", [])
+    citing_case_items = citing_cases.get("citingCases", [])
+
+    if verbose:
+        typer.echo("Fetching metadata for related cases...")
+    if verbose:
+        typer.echo("Collecting cited legislation...")
     report = {
         "citation": citation,
         "metadata": _make_json_safe(metadata),
         "references": {
-            "cited_cases": get_case_relations(citation, "citedCases"),
-            "citing_cases": get_case_relations(citation, "citingCases"),
+            "cited_cases_metadata": _collect_case_metadata(cited_case_items, metadata_delay, "cited"),
+            "citing_cases_metadata": _collect_case_metadata(citing_case_items, metadata_delay, "citing"),
+            "cited_legislation": get_cited_legislation(paragraphs),
         },
         "header": header,
         "body_paragraphs": paragraphs,
     }
 
+    if verbose:
+        typer.echo("Writing report JSON...")
     output_dir = os.path.join(".", "data", "json")
     os.makedirs(output_dir, exist_ok=True)
     case_id = metadata.get("case_id") or "unknown"
@@ -329,6 +388,37 @@ def generate_report_cmd(
         json.dump(report, handle, indent=2)
 
     typer.echo(f"Wrote report to {output_path}")
+
+
+@app.command("legislation")
+def legislation_cmd(
+    json_name: str = typer.Argument(..., help="JSON report filename (e.g., 'case-report.json')"),
+) -> None:
+    """Extract cited legislation from a report's body paragraphs."""
+    file_name = json_name.strip()
+    if not file_name.lower().endswith(".json"):
+        file_name = f"{file_name}.json"
+
+    input_path = os.path.join("data", "json", file_name)
+    if not os.path.exists(input_path):
+        typer.echo(f"File not found: {input_path}")
+        raise typer.Exit(code=1)
+
+    with open(input_path, "r", encoding="utf-8") as handle:
+        data = json.load(handle)
+
+    paragraphs = data.get("body_paragraphs", [])
+    if not isinstance(paragraphs, list):
+        typer.echo("Invalid report format: body_paragraphs is missing or not a list.")
+        raise typer.Exit(code=1)
+
+    cited = get_cited_legislation(paragraphs)
+    if not cited:
+        typer.echo("No cited legislation found.")
+        return
+
+    for item in cited:
+        typer.echo(str(item))
 
 
 if __name__ == "__main__":

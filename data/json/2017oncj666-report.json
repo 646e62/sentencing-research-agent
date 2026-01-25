@@ -1,0 +1,531 @@
+{
+  "citation": "R. v. Williams, 2017 ONCJ 666",
+  "metadata": {
+    "citation": "R v Williams, 2017 ONCJ 666 (CanLII)",
+    "case_id": "2017oncj666",
+    "style_of_cause": "R v Williams",
+    "atomic_citation": "2017 ONCJ 666",
+    "citation_type": "neutral",
+    "official_reporter_citation": null,
+    "year": "2017",
+    "court": "oncj",
+    "decision_number": "666",
+    "jurisdiction": "on",
+    "court_name": "Ontario Court of Justice",
+    "court_level": "provincial",
+    "long_url": "https://www.canlii.org/en/on/oncj/doc/2017/2017oncj666/2017oncj666.html",
+    "short_url": "https://canlii.ca/t/h6hd8",
+    "language": "en",
+    "docket_number": "3111 998 15 9385",
+    "decision_date": "2017-09-29",
+    "keywords": [
+      "Constitution",
+      "Charter of Rights",
+      "Section 7",
+      "Overbreadth and arbitrariness",
+      "Section 6(3)(a) of the CDSA imposes a maximum life sentence for importing Schedule II substances",
+      "Does this provision violate section 7 of the Charter due to overbreadth or arbitrariness?",
+      "If so, is the violation justified under section 1?",
+      "Section 6(3)(a) found overbroad and not saved by section 1 | Rights and freedoms",
+      "Charter of Rights",
+      "Section 12",
+      "Cruel and unusual punishment",
+      "Section 6(3)(a) of the CDSA imposes a maximum life sentence for importing Schedule II substances",
+      "Does this provision impose cruel and unusual punishment contrary to section 12 of the Charter?",
+      "Provision does not meet the high threshold for gross disproportionality under section 12 | Criminal procedure",
+      "Sentencing",
+      "Conditional sentences",
+      "Section 742.1(c) of the Criminal Code precludes conditional sentences for offences punishable by 14 years or life imprisonment",
+      "Does this provision violate section 7 of the Charter due to arbitrariness or overbreadth?",
+      "Provision found not arbitrary or overbroad | Criminal procedure",
+      "Combined operation of sentencing provisions",
+      "Section 6(3)(a) of the CDSA and section 742.1(c) of the Criminal Code",
+      "Combined effect precludes conditional sentences for importing Schedule II substances",
+      "Does the combined operation of these provisions violate section 7 of the Charter?",
+      "Combined operation found overbroad and not justified under section 1"
+    ],
+    "categories": [
+      "Constitution",
+      "Criminal or statutory infractions",
+      "Practice and procedure",
+      "Rights and freedoms",
+      "Sentencing"
+    ]
+  },
+  "references": {
+    "cited_cases": {
+      "citedCases": [
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2013scc72"
+          },
+          "title": "Canada (Attorney General) v. Bedford",
+          "citation": "2013 SCC 72 (CanLII), [2013] 3 SCR 1101",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2011scc44"
+          },
+          "title": "Canada (Attorney General) v. PHS Community Services Society",
+          "citation": "2011 SCC 44 (CanLII), [2011] 3 SCR 134",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "1984canlii33"
+          },
+          "title": "Hunter et al. v. Southam Inc.",
+          "citation": "1984 CanLII 33 (SCC), [1984] 2 SCR 145",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2015scc59"
+          },
+          "title": "R. v. Appulonappa",
+          "citation": "2015 SCC 59 (CanLII), [2015] 3 SCR 754",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "onca",
+          "caseId": {
+            "en": "2012onca576"
+          },
+          "title": "R. v. Ashley",
+          "citation": "2012 ONCA 576 (CanLII)",
+          "aiContentId": {
+            "en": "2012onca576"
+          }
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2016scc13"
+          },
+          "title": "R. v. Lloyd",
+          "citation": "2016 SCC 13 (CanLII), [2016] 1 SCR 130",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2003scc74"
+          },
+          "title": "R. v. Malmo-Levine; R. v. Caine",
+          "citation": "2003 SCC 74 (CanLII), [2003] 3 SCR 571",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2015scc55"
+          },
+          "title": "R. v. Moriarity",
+          "citation": "2015 SCC 55 (CanLII), [2015] 3 SCR 485",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "onca",
+          "caseId": {
+            "en": "2002canlii7751"
+          },
+          "title": "R. v. N.H.(C.)",
+          "citation": "2002 CanLII 7751 (ON CA)",
+          "aiContentId": {
+            "en": "2002canlii7751"
+          }
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2015scc15"
+          },
+          "title": "R. v. Nur",
+          "citation": "2015 SCC 15 (CanLII), [2015] 1 SCR 773",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "1986canlii46"
+          },
+          "title": "R. v. Oakes",
+          "citation": "1986 CanLII 46 (SCC), [1986] 1 SCR 103",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2016scc14"
+          },
+          "title": "R. v. Safarzadeh\u2011Markhali",
+          "citation": "2016 SCC 14 (CanLII), [2016] 1 SCR 180",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "2015scc34"
+          },
+          "title": "R. v. Smith",
+          "citation": "2015 SCC 34 (CanLII), [2015] 2 SCR 602",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "1987canlii64"
+          },
+          "title": "R. v. Smith (Edward Dewey)",
+          "citation": "1987 CanLII 64 (SCC), [1987] 1 SCR 1045",
+          "aiContentId": {}
+        },
+        {
+          "databaseId": "onca",
+          "caseId": {
+            "en": "1999canlii3054"
+          },
+          "title": "R. v. Wellington",
+          "citation": "1999 CanLII 3054 (ON CA)",
+          "aiContentId": {
+            "en": "1999canlii3054"
+          }
+        },
+        {
+          "databaseId": "csc-scc",
+          "caseId": {
+            "en": "1985canlii81"
+          },
+          "title": "Re B.C. Motor Vehicle Act",
+          "citation": "1985 CanLII 81 (SCC), [1985] 2 SCR 486",
+          "aiContentId": {}
+        }
+      ],
+      "error": null,
+      "metadata": {}
+    },
+    "citing_cases": {
+      "citingCases": [
+        {
+          "databaseId": "onsc",
+          "caseId": {
+            "en": "2018onsc1657"
+          },
+          "title": "R. v. Plange",
+          "citation": "2018 ONSC 1657 (CanLII)",
+          "aiContentId": {
+            "en": "2018onsc1657"
+          }
+        },
+        {
+          "databaseId": "qccq",
+          "caseId": {
+            "en": "2021qccq3624"
+          },
+          "title": "R. c. Salem",
+          "citation": "2021 QCCQ 3624 (CanLII)",
+          "aiContentId": {
+            "en": "2021qccq3624"
+          }
+        },
+        {
+          "databaseId": "onsc",
+          "caseId": {
+            "en": "2018onsc4750"
+          },
+          "title": "R v. Peralta",
+          "citation": "2018 ONSC 4750 (CanLII)",
+          "aiContentId": {
+            "en": "2018onsc4750"
+          }
+        }
+      ],
+      "error": null,
+      "metadata": {}
+    },
+    "cited_legislation": [
+      [
+        "Criminal Code",
+        "sec742.1",
+        [
+          1,
+          4,
+          5,
+          29,
+          66,
+          67,
+          70,
+          72,
+          74,
+          75,
+          76,
+          77,
+          78,
+          87,
+          88
+        ]
+      ],
+      [
+        "Controlled Drugs and Substances Act",
+        null,
+        [
+          11,
+          16,
+          35,
+          41,
+          67,
+          74,
+          82
+        ]
+      ],
+      [
+        "Controlled Drugs and Substances Act",
+        "sec6subsec3",
+        [
+          5,
+          7,
+          14,
+          17,
+          21,
+          25,
+          27,
+          29,
+          30,
+          34,
+          37,
+          39,
+          40,
+          42,
+          43,
+          46,
+          50,
+          53,
+          62,
+          63,
+          65,
+          83,
+          85,
+          86,
+          88
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec6subsec3",
+        [
+          29
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec104",
+        [
+          31
+        ]
+      ],
+      [
+        "Controlled Drugs and Substances Act",
+        "sec7subsec2",
+        [
+          33,
+          61
+        ]
+      ],
+      [
+        "Controlled Drugs and Substances Act",
+        "sec7",
+        [
+          33,
+          61
+        ]
+      ],
+      [
+        "Controlled Drugs and Substances Act",
+        "sec6",
+        [
+          36,
+          88
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec730",
+        [
+          42
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718.1",
+        [
+          48
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718",
+        [
+          49
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718.2",
+        [
+          49
+        ]
+      ],
+      [
+        "Charter",
+        null,
+        [
+          54
+        ]
+      ],
+      [
+        "Charter",
+        "sec1",
+        [
+          55,
+          65,
+          66,
+          82,
+          83,
+          85,
+          86,
+          87
+        ]
+      ],
+      [
+        "Charter",
+        "sec7",
+        [
+          63,
+          78,
+          86,
+          87,
+          88
+        ]
+      ],
+      [
+        "Charter",
+        "sec12",
+        [
+          64,
+          65,
+          88
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/sc-2001-c-27/latest/sc-2001-c-27.html",
+        null,
+        [
+          67
+        ]
+      ],
+      [
+        "Criminal Records Act",
+        null,
+        [
+          88
+        ]
+      ]
+    ]
+  },
+  "header": " ONTARIO COURT OF JUSTICE CITATION: R. v. Williams , 2017 ONCJ 666 DATE: 2017 09 29 COURT FILE No.: Brampton 3111 998 15 9385 BETWEEN: HER MAJESTY THE QUEEN -- AND -- PATRICK WILLIAMS Before Justice G.P. Renwick Heard on 15, 16 August 2017 Reasons for Judgment released on 29 September 2017 S. Thompson....................................................................................... counsel for the Crown D.C. Santoro.................................................. counsel for the defendant, Patrick Williams Application for Judicial Exception RENWICK J.: 1\\. INTRODUCTION",
+  "body_paragraphs": [
+    "At the start of his sentencing hearing, the Applicant sought relief from the operation of two sentencing provisions which preclude him from possibly receiving a conditional sentence of imprisonment: s. 6(3)(a) of the _CDSA_ and the conditional sentence delimitations within [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of _the[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_[, R.S.C. 1985, c. C-46](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html) (\"_[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ \").[3]",
+    "The Applicant challenges these two provisions on the basis that they are arbitrary and overbroad, and therefore contrary to s. 7 of the _Charter_.[4] Further, and in the alternative, it is alleged that the life maximum sentence for this importation offence is arbitrary, overbroad, and grossly disproportionate, and consequently in violation of both sections 7 and 12 of the _Charter_ , respectively.",
+    "The Respondent submits that the prohibitions against the imposition of a conditional sentence do not attract constitutional scrutiny because although a sentencing option has been removed from consideration, an appropriate and fit sentence can still be imposed. The effect of these legislative provisions, argues the prosecutor, is neither arbitrary nor overbroad because each is tied to the purpose of deterring people from importing controlled substances and protecting the health and safety of Canadians. Lastly, it is contended that the possibility of life imprisonment for importing a Schedule II substance does not meet the high threshold for gross disproportionality under s. 12 of the _Charter_ to warrant a remedy.",
+    "My analysis will consider each of the impugned legislative provisions, how ss. 7 and 12 of the _Charter_ are engaged, and if these sentencing laws are unconstitutional. Of necessity there will be some overlap in the discussion because I will consider s. 6(3)(a) of the _CDSA_ and [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html) _separately, as well as their operation together. **2\\. ISSUES**",
+    "There are a number of issues and sub-issues to be considered in the disposition of this Application. They are: A. Does s. 6(3)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ contravene the _Charter_ ; i. Is s. 6(3)(a) arbitrary; ii. Is s. 6(3)(a) overbroad; iii. Is s. 6(3)(a) grossly disproportionate; and iv. If s. 6(3)(a) violates the _Charter_ , is it saved by s. 1; B. Does s. 742.1(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ contravene the _Charter_ ; i. Is s. 742.1(c) arbitrary; ii. Is s. 742.1(c) overbroad; and iii. If s. 742.1(c) violates the _Charter_ , is it saved by s.1; and C. Does the combined operation of s. 6(3)(a) of the _CDSA_ and [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html) _contravene the _Charter_ : i. Is the combined effect of these provisions arbitrary, overbroad, or grossly disproportionate; and ii. If the combined effect of these provisions violates the _Charter_ , are these sentencing provisions saved by s. 1. For the reasons that follow, I conclude that the possibility of a maximum life imprisonment sentence in [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ is overbroad, contrary to s. 7 of the _Charter_ , and this provision cannot be saved by s. 1. With respect to the Applicant's secondary position, I do not find that the law is discordant with s. 12 of the _Charter,_ and this alternative argument is dismissed. As well, I do not find that [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html),_ in isolation, violates s. 7 of the _Charter_ , however, I conclude that the combined operation of s. 6(3)(a) of the _CDSA_ and s. 742.1(c) impermissibly infringes s. 7 of the _Charter_ in a manner that is not demonstrably justified in a free and democratic society. **3\\. DISCUSSION** _Preliminary Matters_",
+    "To state the obvious, s. 7 of the _Charter_ is engaged in this case because Mr. Williams faces a sentence of life imprisonment for the importation of a schedule II substance. To be clear, there is no suggestion that the prosecutor is seeking a life sentence for Mr. Williams. In fact, the prosecutor has indicated its intention to seek a penitentiary sentence of imprisonment. In response, the Applicant would like to argue that his crime merits a conditional sentence. In light of his guilty plea and the admitted facts, the Applicant's liberty interests are clearly at stake.",
+    "It was clear throughout this hearing that the Applicant attempts to draw a distinction between Schedule I drugs and Schedule II substances. Implicit in the Applicant's argument is that the legislated equivalence of cannabis with opium, heroin, and cocaine reflected by [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ is arbitrary. Mr. Williams lead no evidence on this Application that there is a significant difference between Schedule I and Schedule II drugs and substances in terms of their psychotropic qualities, the duration of their effects, their harm to health, or their addictive qualities. However, there is much appellate authority for the proposition that cannabis is a \"soft\" drug and Schedule I substances are \"hard\" drugs and this distinction is significant in determining the moral blameworthiness which attaches to the importation of various drugs.[5] I accept this distinction. _Generally Courts Must Defer to the Will of Parliament_",
+    "By way of general observation, I recognize that our constitutional democracy is predicated upon a healthy respect for the distinct roles of each of the Executive, Legislative, and Judicial branches of government by each of the other branches. Our society functions best when each branch of government operates independently of the other branches. It is a given that the Legislative branch is entrusted to enact laws to protect our society and our way of life, while upholding the supreme law, our constitution.",
+    "Generally, courts must defer to the will of Parliament unless there is an apparent encroachment on protected rights, at which point courts are required to measure the content of legislation against the guarantees of the constitution.[6] As the Supreme Court of Canada reminds us: Members of Parliament are elected to make these sorts of decisions, and have access to a broader range of information, more points of view, and a more flexible investigative process than courts do. A \"serious and substantial\" standard of review would involve the courts in micromanagement of Parliament's agenda. The relevant constitutional control is not micromanagement but the general principle that the parliamentary response must not be grossly disproportionate to the state interest sought to be protected\u2026[7] As part of the judiciary I am keenly mindful of my limited role in considering legislation presumed to conform to our _Charter_ and the deference owed to Parliament to determine the content of our laws.[8] ** **_Section 7 of the Charter is the Appropriate Starting Point_",
+    "In its written and oral submissions, the Respondent suggested that this Application is most appropriately considered under s. 12 of the _Charter_.[9] The Respondent clarified in oral submissions that s. 7 provided a residual tool for the analysis, but only in response to the Applicant's allegations that the laws were arbitrary and overbroad.",
+    "Respectfully, I reject the proposition that s. 12 of the _Charter_ should be the starting point for this analysis. Firstly, the Application is substantially premised on the s. 7 argument as the preferred lens to fully expose the challenged legislation. It also seems to me that s. 7 of the _Charter_ is a natural starting point because both of the impugned provisions are said to impinge upon the Applicant's s. 7 rights, whereas s. 12 is only alleged to be engaged by the possible life imprisonment penalty under the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_.",
+    "As well, I accept that arbitrariness, overbreadth, and gross disproportionality are doctrinally distinct constitutional constructs.[10] Despite recognition that there is overlap between them, arbitrariness and overbreadth considerations do not generally fall within the gross disproportionality framework. If anything, the cases suggest that gross disproportionality may be considered within the s. 7 analysis, but as a stand- alone analytical instrument, s. 12 of the _Charter_ does not encompass those unique s. 7 concepts.[11] For these reasons, I will begin the analysis with s. 7 of the _Charter_.",
+    "For the most part, this Application asks whether these sentencing provisions violate s. 7 of the _Charter_ : Everyone has the right to life, liberty and security of the person and the right not to be deprived thereof except in accordance with the principles of fundamental justice.",
+    "The Supreme Court has confirmed that s. 7 of the _Charter_ is concerned with assessing potentially bad laws.[12] Or, put another way, this section of the _Charter_ permits legislation to limit life, liberty and security of the person, \"provided it does so in a way that is not contrary to the principles of fundamental justice.\"[13] _A. __(i) [Section 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the [CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html) is Not Arbitrary_",
+    "Arbitrariness describes a situation where there is no connection between the object of a law and its effect.[14] For this reason I must consider the goal of the legislative provision, its effect, and whether there is a connection between them.",
+    "The objectives of the _[ CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ (formerly the _Narcotic Control Act_ , R.S.C. 1986, c. N-1; \"NCA\") were identified as \"health and public safety\" by the Supreme Court in _Malmo-Levine_ _, supra_ , and then confirmed by the court in _PHS Community Services Society_.[15]",
+    "The Applicant argues that the object of [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ , \"\u2026is to denote that the offence of importing drugs is one of the utmost seriousness.\"[16] The Respondent contends that \"a more accurate articulation of the purpose of the legislation would be to denote that the offence of importing drugs is serious and to recognize that it can, in some circumstances, be of the utmost seriousness.\"[17] I prefer and accept the Respondent's formulation as the object of this provision.",
+    "By giving this offence of importation the highest possible sanction in criminal law, Parliament has expressed its view that some drug importation can be committed in circumstances of the utmost seriousness. The maximum sentence is not mandatory, it is simply one possible sentence reserved for specific importation offences committed in the worst circumstances by the worst offender.",
+    "The Applicant has argued that the possible life maximum sentence for Schedule II drug importation is arbitrary because, \"[w]hile such a sentence might be faintly conceivable for a repeat offender importing vast quantities of heroin, a life sentence could not in good conscience be imposed for importing any amount of marijuana, even for the worst offender.\"[18] Respectfully, I do not have to decide whether the maximum sentence would ever be appropriate for importing cannabis. I have to determine if the effects of this law are commensurate with the law's purpose, either in the Applicant's circumstance or those of the reasonable hypothetical offender.",
+    "What is the effect of this provision? I accept the Respondent's submission that the effect of this law is to declare Parliament's abhorrence to _some_ types of drug importation into Canada.[19] I agree that drugs are pernicious, border security is important, and Parliament is entitled to treat some types of drug importation more seriously than others.",
+    "Having accepted that cannabis is a \"soft\" drug and its importation is less morally blameworthy than the importation of Schedule I drugs, I have to consider under a purposive analysis whether there is a rational connection between Parliament's objectives and [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html). _I accept that large scale, commercial drug importers of Schedule II substances should know that in some circumstances a life sentence of imprisonment can be imposed for this level of criminality. I specifically reject the Applicant's argument that a life sentence of imprisonment could never be imposed for marihuana importation.[20] On this basis, I conclude that this provision is not entirely arbitrary, subject to the analysis below. _A. __(ii) [Section 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the [CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html) is Overbroad_",
+    "In _Bedford_ , our Supreme Court explained overbreadth at paras. 112 and 117: Overbreadth deals with a law that is so broad in scope that it includes some conduct that bears no relation to its purpose. In this sense, the law is _arbitrary in part._ At its core, overbreadth addresses the situation where there is no rational connection between the purposes of the law and some, but not all, of its impacts. \u2026 Overbreadth simply allows the court to recognize that the lack of connection arises in a law that goes too far by sweeping conduct into its ambit that bears no relation to its objective. [The underlining is mine.]",
+    "Again, it is important to consider the purpose of the law, its effect, and the connection between the two in order to determine whether or not the law overshoots its mark. As the unanimous Supreme Court reminds us in _Moriarity_ : The overbreadth analysis turns on the relationship between the objective of the law and the effects flowing from the means which the law adopts to achieve it - in other words the relationship between the law's purpose and what it actually does. \u2026 \u2026courts should be cautious to articulate the legislative objective in a way that is firmly anchored in the legislative text, considered in its full context, and to avoid statements of purpose that effectively predetermine the outcome of the overbreadth analysis without actually engaging in it.[21]",
+    "What are the effects of s. 6(3)(a): are there aspects of its operation that are overbroad? The Respondent submits that the law merely provides a possible sentence, it does not require any particular sentence. The possibility that the maximum sentence could be imposed does not make the law unconstitutional, it makes any inappropriate application of the maximum sentence possibly unconstitutional and subject to reversal upon appeal.[22] On its face, I am attracted to this argument.",
+    "Constitutional jurisprudence seeks to consider both declarative and practical effects. By carrying the possibility of the harshest of penal sanctions, [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ declares Parliament's intention that courts will treat specific types of drug importation extremely seriously. Again, that seems appropriate given the dangers of drug addiction and the ancillary damage to civil society caused by illicit drug importation and trafficking. This is a legitimate legislative goal, and in terms of sending a message, the possibility of a maximum life sentence meets this declarative aim in a rational way.",
+    "However, in practical terms, the law seems to equalize serious criminal behaviour with offences that are _de minimis_. And unfortunately, the equalization of cannabis importation with other more harmful drugs contained in Schedule I seems largely the product of historical consequence rather than legislative intention.[23]",
+    "There appears to be no rational connection between Schedule I and Schedule II drug importation despite their inclusion together in [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_. Contrary to this legislated linkage, courts continue to recognize that drug offences involving Schedule II substances are less morally blameworthy than those committed in relation to Schedule I drugs.[24] Legal literature also suggests that drawing a distinction between Schedule I and II drugs is appropriate based upon different levels of culpability: \u2026the available penalties for offences under the _[Controlled Drugs and Substances Act](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ vary depending on the substance involved. Under the _Act_ , controlled substances are organized under a number of Schedules. The available penalty for a given offence differs depending on the Schedule in which the substance is listed, with _Schedule I carrying the highest penalties and listing the most dangerous and addictive substances_. In the past, perhaps because substances like marijuana were included in the same Schedule as drugs like heroin and cocaine, courts often distinguished between so-called \"soft\" and \"hard\" drugs, for the purpose of sentencing. [The underlining is mine.][25] So, despite judicial and academic recognition that Schedule I and II substances and the offenders who import or traffic them are not the same, s. 6(3)(a) imposes an arbitrary equivalence between these drugs and substances.",
+    "I accept that the effect of the law is properly characterized by the Applicant: The offence of importing a Schedule I or II substance is a straight indictable offence punishable by a maximum sentence of life imprisonment. There is no distinction between heroin, cocaine, or marijuana. There is no required minimum quantity to trigger the maximum available sentence, and there need be no intent to traffic for a conviction. Therefore, a person who imports marihuana for personal use is liable to a maximum sentence of life imprisonment, and a conditional sentence is thereby unavailable for that offender.[26]",
+    "Granted the Applicant's statement above conflates the effect of [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ with the combined effect of both [s. ](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec6subsec3_smooth)[6(3)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec6subsec3_smooth)(a) and [s. ](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)[742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ when operating together, there is a sense that s. 6(3)(a) is overbroad (\"_arbitrary in part \"_) given that there are no distinctions made between various \"hard\" and \"soft\" drugs, or quantities imported, or whether the drugs are imported for personal use or the purpose of trafficking. These distinctions appear throughout the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ , but for this offence, all importation is treated the same. In terms of the maximum sentence, importation of a marihuana cigarette is the same as importation of one tonne of heroin. In this sense, the effect of the law is heavy-handed.[27]",
+    "What one also notices when considering [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ is that Parliament has gone some lengths to distinguish between the importation of substances in Schedules III, IV, V, and VI, and has created hybrid offences with maximum sentences ranging from one year to 10 years depending on which schedule applies. However, for some unknown reason, the differentiation of appropriate penalties for importation of Schedule I and II drugs has not occurred. Given the widespread recognition that there is a difference between crimes committed in relation to \"soft\" and \"hard\" drugs, this foreshadows constitutional concerns.",
+    "There are several reasonable hypotheticals that reveal the potential of this law to overshoot its mark. Firstly, if a Canadian asks her cousin in Florida to send her two \"joints of pot\" she is subject to a possible life maximum sentence under this law. If the same person asks her cousin to send her a prohibited firearm with the two joints, her importation under [s. 104](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec104_smooth) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ (importation of firearms) could result in either a summary conviction or a maximum 5 year jail sentence, if prosecuted by indictment.[28]",
+    "The Respondent argued in oral submissions that this reasonable hypothetical is improper because importation of drugs and firearms are distinct offences under different statutes, addressing different concerns. How different are the offences of the importation of drugs and firearms? Both offences concern public safety, the integrity of our borders, and national security interests. That said, I am not deaf to the Respondent's submission. Perhaps this hypothetical attempts to equate incomparables. Also, I acknowledge that the jurisprudence appears to take an isolated view of the possible effects of a piece of legislation without attempts to measure those effects when compared with other offences within the same or different statutes.",
+    "Perhaps a second hypothetical is more reasonable. If a person produces 100 cannabis plants in Canada rather than seeking a couple of marihuana cigarettes from her American relative, she is only liable to a maximum prison sentence of 14 years under [s. 7(2)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec7subsec2_smooth)(b) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_. The variations on this hypothetical are endless. The production laws vary widely under [s. 7](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec7_smooth) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_. Consider that [s. 7(2)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec7subsec2_smooth)(c)(ii) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ permits a summary conviction and a maximum sentence of 18 months for production of a Schedule III substance, such as Lysergic Acid Diethylamide (\"LSD\") or Psilocybin (\"mushrooms\"), **regardless of the amount**. Again, for some reason, production of a much greater amount of marihuana, or other potentially more addictive or dangerous drugs, is subject to a different (less restrictive) maximum possible sentence than importation, and includes the possibility of summary prosecution. This signals Parliament's intention to distinguish importation as more serious than cultivation offences. One could readily accept that rationale if drug importation laws carried harsher maximum sentences than production laws in a uniform manner.",
+    "The lack of symmetry within the importation sections of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ is equally puzzling. [Section 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(c) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ particularizes the importation of barbiturates and benzodiazepines under Schedule IV and provides for a maximum sentence of three years, _or_ a summary conviction with a one year maximum prison sentence, **regardless of the amount, or the purpose of the importation**. The effect of the distinctions between Schedules II and IV of the _CDSA_ is to suggest that the large-scale commercial importer of Lorazepam (a Schedule IV drug) is less morally blameworthy than someone who crosses the border from Maine (where possession is legal)[29] into Quebec with a \"joint of grass\" in her backpack for her personal use.[30]",
+    "The fact that Parliament has differentiated the maximum sentences for importing substances in Schedules III, IV, V, and VI but has failed to distinguish between cannabis and Schedule I drugs (opium, heroin, or cocaine) suggests an _arbitrariness in part_ within the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_. _There is No Way to Read s. 6(3)(a) that is Less Arbitrary in Part_",
+    "[Section 6](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6_smooth) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ reads: _Importing and exporting_ 6 (1) Except as authorized under the regulations, no person shall import into Canada or export from Canada a substance included in Schedule I, II, III, IV, V or VI. _Possession for the purpose of exporting_ (2) Except as authorized under the regulations, no person shall possess a substance included in Schedule I, II, III, IV, V or VI for the purpose of exporting it from Canada. _Punishment_ (3) Every person who contravenes subsection (1) or (2) (a) if the subject matter of the offence is a substance included in Schedule I in an amount that is not more than one kilogram, or in Schedule II, is guilty of an indictable offence and liable to imprisonment for life** _,_**[31] and to a minimum punishment of imprisonment for a term of one year if (i) the offence is committed for the purposes of trafficking, (ii) the person, while committing the offence, abused a position of trust or authority, or (iii) the person had access to an area that is restricted to authorized persons and used that access to commit the offence; (a.1) if the subject matter of the offence is a substance included in Schedule I in an amount that is more than one kilogram, is guilty of an indictable offence and liable to imprisonment for life and to a minimum punishment of imprisonment for a term of two years; (b) if the subject matter of the offence is a substance included in Schedule III, V or VI, (i) is guilty of an indictable offence and liable to imprisonment for a term not exceeding ten years, or (ii) is guilty of an offence punishable on summary conviction and liable to imprisonment for a term not exceeding eighteen months; and (c) if the subject matter of the offence is a substance included in Schedule IV, (i) is guilty of an indictable offence and liable to imprisonment for a term not exceeding three years, or (ii) is guilty of an offence punishable on summary conviction and liable to imprisonment for a term not exceeding one year. _[S.C. 1996, c. 19, s. 6](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6_smooth); S.C. 2012, c. 1, s. 40; S.C. 2017, c. 7, s. 4.**[32]**_",
+    "Prior to the recent successful constitutional challenge to the mandatory minimum term of imprisonment for importing a Schedule II substance,[33] part of s. 6(3)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ required that the importation was proven to be for the purpose of trafficking. In oral submissions the Applicant acknowledged that a similar requirement for the imposition of a life sentence would render [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ less arbitrary in part, or overbroad.",
+    "It is helpful to recall the words of the Supreme Court from the seminal search and seizure case, _Canada (Combines Investigation Acts, Director of Investigation and Research)_ v. _Southam Inc._ (\"_Hunter_ \"): While the courts are guardians of the Constitution and of individuals' rights under it, it is the legislature's responsibility to enact legislation that embodies appropriate safeguards to comply with the Constitution's requirements. It should not fall to the courts to fill in the details that will render legislative lacunae constitutional.[34]",
+    "Query whether the words within s. 6(3)(a)(i) (\"the offence is committed for the purpose of trafficking\") remain in full force and effect after _Duffus_ and if this would render s. 6(3)(a) less overbroad. Stated differently, if the _ratio decidendi_ of _Duffus_ is simply to remove the words \"and to a minimum punishment of imprisonment for a term of one year,\" do the words \"if the offence is committed for the purpose of trafficking\" attenuate the effect of s. 6(3)(a) to reduce possible overbreadth. And if the effect of _Duffus_ is to remove this precondition in addition to the former minimum sentence, can these words still be read in to remove the overbreadth of [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html),_ as the Applicant has conceded?",
+    "I find that the condition within s. 6(3)(a)(i) (\"the offence is committed for the purpose of trafficking\") is tied to the mandatory minimum sentence rather than the punishment as a whole and I cannot read s. 6(3)(a) to include these words for two reasons. In _Duffus_ , the Applicant sought and the court granted the declaration of invalidity with respect to [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a)**(i)** of the [CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html), not merely the mandatory minimum within s. 6(3)(a). Also, grammatically, there appears to be a clear break in the provision between the imposition of a life sentence and a minimum sentence, demarcated by the comma after the words \"liable to imprisonment for life**,** \" and before the words \"and to a minimum punishment of imprisonment.\" This suggests that the subsections (i), (ii), and (iii) of s. 6(3)(a) act only as conditions precedent for the imposition of the mandatory minimum sentence rather than the sentencing provision as a whole. Consequently, I am not prepared to fill the legislative gap to tie a specific intent to the importation to render the law less overbroad.",
+    "I find that there is a level of overbreadth in this importation provision of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html) _in light of the failure to include distinctions between the importation of \"hard drugs\" found in Schedule I and \"soft drugs,\" like cannabis, found in Schedule II, and the failure to consider the quantities imported, and whether the importation is committed for the purpose of trafficking. In respect of Schedule II substances, Parliament has cast the largest penal net at the risk of catching the smallest offending fish (the reasonable hypothetical offender).",
+    "I find that the practical effect of [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ for those charged with importation of a Schedule II substance is that the Crown has no option to proceed summarily and a maximum life sentence of imprisonment is available. As a result, a discharge under [s. 730](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec730_smooth) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ is not a possible sentence for the importation of even a negligible amount of marihuana, unlike any other similarly situated offender importing a much greater amount of a Schedule III, IV, V, or VI drug. This too creates an additional burden on the hypothetical Schedule II importer because a prosecution by indictment affects the time period which must elapse before the offender may apply for a record suspension in respect of the conviction.[35]",
+    "In light of Parliament's significant efforts to distinguish the penalties for importing the various substances in Schedules III, IV, V, and VI, and the significantly harsher penalty regime for Schedule I and II drugs, there is simply no rational explanation for treating Schedule I and II substances the same. For these reasons, in respect of the hypothetical offender, I find that [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ is overbroad and contrary to s. 7 of the _Charter_.",
+    "Though I could begin the s. 1 _Charter_ analysis at this point, I choose to consider the Applicant's alternative argument (s. 6(3)(a) infringes s. 12 of the _Charter_) before turning to whether the legislation imposes reasonable limits that are demonstrably justified in a free and democratic society. _A. __(iii) Section 6(3)(a) of the CDSA Does Not Contravene s. 12 of the Charter_",
+    "Section 12 of the _Charter_ states: 12. Everyone has the right not to be subjected to any cruel and unusual treatment or punishment.",
+    "The Supreme Court considered the scope of this protection with respect to the predecessor to [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ , s. 5(2) of the _NCA,_ in _Smith [1987]_. That case demonstrates the complexity of s. 12 of the _Charter_. There were no less than five judgments written of the six-member court who decided the appeal.[36] Justice Lamer (as he then was) described this constitutional right: In my view, the protection afforded by s. 12 governs the quality of the punishment and is concerned with the effect that the punishment may have on the person on whom it is imposed. I would agree with Laskin C.J. in _Miller and Cockriell, supra_ , where he defined the phrase \"cruel and unusual\" as a \"compendious expression of a norm\". The criterion which must be applied in order to determine whether a punishment is cruel and unusual within the meaning of s. 12 of the _Charter_ is, to use the words of Laskin C.J. in _Miller and Cockriell, supra_ , at p. 688, \"whether the punishment prescribed is so excessive as to outrage standards of decency\". In other words, though the state may impose punishment, the effect of that punishment must not be grossly disproportionate to what would have been appropriate.[37] In the result, the court found that the _certainty_ of a seven year jail sentence was grossly disproportionate for a \"small offender\" and struck down s. 5(2) of the _NCA.**[38]**_",
+    "Chief Justice McLachlin specifically endorsed the approach in _Smith [1987]_ , recently in _R_. v. _Nur_ : This Court has set a high bar for what constitutes \"cruel and unusual ... punishment\" under s. 12 of the Charter. A sentence attacked on this ground must be grossly disproportionate to the punishment that is appropriate, having regard to the nature of the offence and the circumstances of the offender: R. v. Smith, [1987 CanLII 64 (SCC)](/en/ca/scc/doc/1987/1987canlii64/1987canlii64.html), [1987] 1 S.C.R. 1045, at p. 1073. Lamer J. (as he then was) explained at p. 1072 that the test of gross disproportionality \"is aimed at punishments that are more than merely excessive\". He added, \"[w]e should be careful not to stigmatize every disproportionate or excessive sentence as being a constitutional violation\". A prescribed sentence may be grossly disproportionate as applied to the offender before the court or because it would have a grossly disproportionate impact on others, rendering the law unconstitutional.[39]",
+    "In _Lloyd_ , our Chief Justice further recognized \"the tension between Parliament's right to choose the appropriate range of sentences for an offence, and the constitutional right to be free from cruel and unusual punishment.\"[40] It would appear that Parliament is well aware of this tension and it has given statutory recognition to the import of s. 12 of the _Charter_ in [s. 718.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec718.1_smooth) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ : Fundamental Principle 718.1** **A sentence must be __proportionate__ to the gravity of the offence and the degree of responsibility of the offender.[41] [The underlining is mine.]",
+    "The analysis to determine whether a sentencing provision contravenes s. 12 of the _Charter_ has two steps. The court must first consider what constitutes a fit and proportionate sentence having regard to the principles found in [ss. 718](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec718_smooth) to [718.2](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec718.2_smooth) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_. Then the court must determine whether the law requires the imposition of a sentence which is grossly disproportionate to the circumstances of the offence and the particular offender. If the law requires a grossly disproportionate sentence for that defendant or others in reasonably foreseeable circumstances, it will violate s. 12 of the _Charter_.[42]",
+    "The parties agreed to litigate this constitutional challenge before completing their sentencing submissions. Accordingly, it is premature to determine a fit and proportionate sentence for the Applicant. There is an aspect of [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ that is disproportionate for the hypothetical small offender who imports two marihuana cigarettes through the mail: the prosecution, no matter how well intentioned, can never proceed summarily. Nonetheless, for at least two reasons, this does not inexorably lead to a finding that [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ offends s. 12 of the _Charter_.",
+    "Firstly, other than the ancillary consequences of the appeal route and record suspension requirements, prosecution by indictment does not in and of itself require a grossly disproportionate sentence. As the Respondent has noted, every possible penological goal can be achieved by s. 6(3)(a) of the _CDSA_ and most sentencing tools are available to the sentencing judge (except a conditional sentence and a discharge) for the hypothetical small offender. The remaining sentencing options could easily avoid a sentence that would qualify as cruel or unusual punishment. Even a disproportionate sentence in a given case does not a grossly disproportionate law make.",
+    "Secondly, the mechanism of prosecution (indictment) is not a punishment. Nor has it been suggested by the Applicant that there exists a right to a particular mode of trial which is protected by s. 12 of the _Charter_. The bald fact that our hypothetical offender must be prosecuted by indictment does not in and of itself implicate s. 12 _Charter_ opprobrium.",
+    "For a sentence to be grossly disproportionate it must be \"abhorrent or intolerable to society.\"[43] A sentence which is \"merely excessive\" is not enough. Although I can easily envisage discharging the hypothetical offender in appropriate circumstances, I cannot conclude that a small fine or a suspended sentence and probation is \"so excessive as to outrage standards of decency.\" Accordingly, I conclude that [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ does not require the imposition of a sentence which is grossly disproportionate for the hypothetical offender, and on this basis I dismiss the Applicant's alternative argument. _A. __ (iv) [Section 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the [CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html) is Not Saved by s. 1 of the Charter_",
+    "Section 1 of the _Charter_ reads: The _[Canadian Charter of Rights and Freedoms](/en/ca/laws/stat/schedule-b-to- the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ guarantees the rights and freedoms set out in it subject only to such reasonable limits prescribed by law as can be demonstrably justified in a free and democratic society.",
+    "The test to measure whether the infringement of a constitutionally protected right is justified under [s. 1](/en/ca/laws/stat/schedule-b-to-the- canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec1_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ was established in _Oakes_.[44] The first step of the s. 1 analysis considers whether the legislation is demonstrated to respond to a pressing and substantial objective.[45] It would appear that the Applicant does not take issue that the law punishing drug importation readily meets this threshold.[46]",
+    "The second step of the _Oakes_ analysis considers whether the legislative objective is rationally connected to the limitation upon a constitutionally protected right.[47]",
+    "In _Appulonappa_ , the Supreme Court concluded that there were some aspects of the impugned legislation which were rationally connected to Parliament's aim while others were not, but even so, that sufficed to meet this part of the test: \"A rational _connection_ , not a complete rational _correspondence_ , is all this branch of _Oakes_ requires.\"[48] [Emphasis in the original.]",
+    "With respect to this branch, _Oakes_ reminds us that: \u2026the measures adopted must be carefully designed to achieve the objective in question. They must not be arbitrary, unfair or based on irrational considerations. In short, they must be rationally connected to the objective.[49]",
+    "I am satisfied that there is a rational connection between the legislative aim (to denote some drug importation offences as the most serious criminal offences) and the means employed, the potential upon conviction for life imprisonment.",
+    "Do the means employed by the legislation minimally impair the freedom at issue? This is the next step of the _Oakes_ analysis.[50]",
+    "When I consider other parts of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html),_ I am not satisfied that the provision at issue minimally impairs the s. 7 liberty interest. For example, [s. 7](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec7_smooth) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ contains a complete regime to appropriately punish those who cultivate, manufacture, or otherwise produce drugs in Canada. Like s. 6 of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ , parts of s. 7 include life imprisonment as a possible sanction.[51] In respect of marihuana, [s. 7(2)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec7subsec2_smooth)(b) of the _[ CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ imposes a maximum sentence of 14 years imprisonment. And other subsections include maximum sentences ranging from one year to 10 years of imprisonment, depending on the drug.[52] Again, it seems somewhat irrational that the production and importation laws respecting marihuana are so significantly inconsistent.[53]",
+    "A summary conviction procedure under [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ would substantially minimize the law's impact on the liberty interests of would-be small amount marihuana importers.[54] Moreover, if Parliament had tied to the law a provision regarding the amount of cannabis imported, or the intention to import cannabis for the purpose of trafficking, or the prerequisite of a prior conviction for the same offence, there would be no minimal impairment concerns because life sentences would be restricted to the most serious circumstances of cannabis importation.[55]",
+    "The final analysis under _Oakes_ requires an examination of the \"proportionality between the effects of the measures which are responsible for limiting the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ right or freedom, and the objective which has been identified as of \"sufficient importance.\"\"[56] In order to justify the [s. 7](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec7_smooth) _[Charter](/en/ca/laws/stat/schedule- b-to-the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ infringement and uphold the applicability of the impugned legislation in this case, overall proportionality of [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ must be demonstrated by the Respondent.",
+    "The Applicant submits, \"if the court finds that the provisions are grossly disproportionate, then there can be no finding of proportionality.\"[57] Nonetheless, in the absence of a finding of a [s. 12](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec12_smooth) _[Charter](/en/ca/laws/stat/schedule- b-to-the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ violation, disproportionality is still possible. It seems self-evident that disproportionality can exist in situations where gross disproportionality does not.",
+    "There may be cases where minimal impairment of a _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ right is wanting and overall proportionality under [s. 1](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec1_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ can be demonstrated, but this is not one of those cases. There is nothing in the legislative provision to create proportionality. Although they were made in the context of a [s. 12](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec12_smooth) _[Charter](/en/ca/laws/stat/schedule- b-to-the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ challenge to the mandatory minimum seven year sentence which existed in the predecessor of [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ , I am reminded of Justice LeDain's concerns in _Smith [1987]_ : The issue, as I perceive it, and which I confess has given me considerable difficulty, is whether the mandatory minimum sentence of seven years' imprisonment in s. 5(2) of the _Narcotic Control Act_ is to be tested, in the light of [s. 12](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec12_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ , against the general seriousness of the offence created by s. 5(1) or against the relative seriousness of the whole range of the conduct to which the offence could conceivably apply. I have considerable misgivings about determining the issue of the constitutional validity, on its face, of the mandatory minimum sentence in s. 5(2) on the basis of hypothesis. It is conceded that seven years' imprisonment would not be cruel and unusual punishment for many, if not most, conceivable cases of unauthorized importing or exporting of a narcotic. I have considered whether that should not be sufficient to sustain the validity, on its face, of the mandatory minimum sentence of seven years' imprisonment, subject to the power of a court in a particular case to find that the mandatory minimum sentence is constitutionally inapplicable because it would in all the circumstances of the case be cruel and unusual punishment. Although I have found the flexibility of this approach attractive I have come to the conclusion that it would not be a sound approach to the validity and application of a mandatory minimum sentence provision which applies to a wide range of conduct, if only because of the uncertainty it would create and the prejudicial effects which the assumed validity or application of the provision might have in particular cases. In coming to this conclusion, however, I make no assumption as to whether the mandatory minimum sentence provision in s. 5(2) might be restructured in such a manner, with distinctions as to nature of narcotic, quantities, purpose and possibly prior conviction, as to survive further challenge and still be a feasible and workable legislative alternative with respect to the suppression of a complex and multi-faceted phenomenon.[58]",
+    "As indicated above, there are no distinctions made in this specific importation law for the drug involved, or the amount imported, the purpose of the importation, or whether or not the importer has a prior criminal record for this offence. Moreover, the lack of a summary conviction procedure creates a disconnect between the moral culpability of the reasonable hypothetical offender and the sole mechanism (trial by indictment) available to prosecute the defendant.[59] The entire prospect of a jury trial, a maximum life sentence, and the unavailability of a discharge for the offence of importing a couple of cannabis cigarettes is out of proportion to the harm this conduct causes to Canadian society, and consequently, the legislation is not demonstrably justified under [s. 1](/en/ca/laws/stat/schedule-b-to-the- canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec1_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_.[60] B. _(i) [Section 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the [Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html) is Not Arbitrary_",
+    "Part of the Applicant's materials include a record of the House of Commons Debates for the second reading of Bill C-10, _An Act to enact the Justice for Victims of Terrorism Act and to amend the State Immunity Act, the[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html), the [Controlled Drugs and Substances Act](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html), the Corrections and Conditional Release Act, the Youth Criminal Justice Act, the [Immigration and Refugee Protection Act](/en/ca/laws/stat/sc-2001-c-27/latest/sc-2001-c-27.html) and other acts_ (\"_Hansard_ \").[61] This material informs the reader of the purpose of the amendment to [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_.[62] I specifically rely upon the legislative evidence which has been placed before me to determine the rationale and purpose of s. 742.1(c).[63]",
+    "On behalf of the government of the day, the Parliamentary Secretary to the Minister of Finance, Mrs. Shelly Glover, introduced Part 2 of the bill, the purpose of which was described as follows: To restrict the availability of conditional sentences in the same manner as was advanced in former Bill C-16, which had received second reading and had been referred to the Standing Committee on Justice and Human Rights but had not yet been studied when it died on the order paper at the dissolution of the 40th Parliament. \u2026 This government wants to clearly indicate the offences for which a conditional sentence is never an option. This is what the relevant amendments contained in the bill before us address. Rather than leaving it to individual courts to determine whether a particular offence qualifies as a serious personal injury offence, it clearly identifies all offences which should never be eligible for a conditional sentence. It removes all of that uncertainty.[64]",
+    "A secondary goal of the legislation was to avoid the under- inclusivity of certain offences from the ineligibility of conditional sentencing and to remove the \"serious personal injury offence\" pre-condition altogether: Specifically, the reforms would eliminate the reference to serious personal injury offences in section 742.1 and would make all offences punishable by 14 years or life ineligible for a conditional sentence. This would, for instance, make the offences of fraud, robbery and many other crimes clearly ineligible for a conditional sentence. It would also make offences prosecuted on indictment and punishable by a maximum term of imprisonment of 10 years ineligible for a conditional sentence if they: result in bodily harm; involve the import or export, trafficking and production of drugs, or involve the use of a weapon. It is the opinion of the government that where these circumstances are present, there is a need to emphasize the sentencing objectives of denunciation and deterrence and therefore eliminate the possibility of a conditional sentence.[65]",
+    "The explicit aims of the amendments to [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ were to reduce sentencing inconsistency by limiting judicial discretion and to emphasize the primacy of denunciation and deterrence by the removal of conditional sentencing for specified offences.",
+    "The removal of a sentencing option is not in itself constitutionally suspect unless it would require the imposition of an unfit sentence. As our Supreme Court has said: \"Parliament can limit a sentencing judge's ability to impose a fit sentence, but it cannot require a sentencing judge to impose grossly disproportionate punishment.\"[66]",
+    "The effect of [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ is to prevent the imposition of conditional sentences for serious offences, and specifically offences punishable by 14 years or life imprisonment. There is nothing irrational or disconnected in the operation of s. 742.1(c) from the stated goals of the law. One might question whether the line precluding conditional sentences ought to have been drawn at life maximum offences alone, but that is a policy decision Parliament is better suited to determine and I am not prepared to find that there is no connection between the legislation and its effect. _B. __(ii) [Section 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the [Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html) is Not Overbroad_",
+    "Of particular significance to this Application is the legislative intent expressed in paragraph 1315 of page 1357 of the 22 September 2011 _Hansard_ : In addition, the current prerequisites to the availability of a conditional sentence do not exclude drug offences, such as the production, importation and trafficking of _heroin_ , unless they are committed as part of a criminal organization and provided that they are punishable by a maximum term of imprisonment of 10 years or more and prosecuted by indictment. [The underlining is mine.]",
+    "The specific mention of heroin (a Schedule I drug) and the absence of mention of cannabis or other drugs is interesting. It is clear from this evidence that Parliament intended to preclude domiciliary detention for the importation of Schedule I drugs. What about Schedule II substances? As alluded to above, Parliament has drawn a distinction between drug importation among the Schedules to the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_. Parliament has not chosen to preclude Schedule IV substances from the conditional sentencing regime. By operation of s. 6(3)(c) of the _CDSA_ and [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ , Schedule IV substances remain eligible for conditional sentences to the present day.",
+    "If it was Parliament's intention to remove the possibility of conditional sentences for all drug importation offences, it has failed. If it was Parliament's intention to signify that drug importation may be among the most serious offences, and thus, deserving of the strong message of denunciation and deterrence that the ineligibility of conditional sentencing represents, than the message, however conflicted it may appear, is communicated by the amendments to [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_.",
+    "Again, I am doubtful that the inclusion of Schedule IV substances and the omission of Schedule II substances from the conditional sentencing regime was intentional. Rather, it is more likely the case that these inconsistencies within the _Act_ are the result of historical happenstance as various substances have moved between schedules and various statutory amendments have taken place since the legislation came into force on 14 May 1997.[67] Regardless, I am not prepared to find that [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ is overbroad.",
+    "In this case, I find that Parliament has met an appropriate balance in [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ , because that provision standing alone does not overshoot its intent. Parliament has restricted the availability of an alternative to custodial imprisonment for the most serious offences. It is only in situations where the heavy hand of s. 742.1(c) is forced by the maximum penal designation of the substantive offence that constitutional imbalances may occur.",
+    "When considered in the context of the entire commentary of the government in support of the legislative amendments, the addition of the penultimate and maximum sentences as a barrier to conditional sentencing is not arbitrary in part (overbroad). I agree with the Respondent that \"the effect of the law is commensurate with its object.\"[68] As a result, I do not find that [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ infringes [s. 7](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec7_smooth) _[Charter](/en/ca/laws/stat/schedule- b-to-the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ protected interests. _C. __(i) Together Sections 6(3)(a) of the CDSA and 742.1(c) of the Code Contravene s. 7 of the [Charter](/en/ca/laws/stat/schedule-b- to-the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_",
+    "As alluded to in previous sections, the combined effect of these laws is not _prima facie_ arbitrary. Parliament has appropriately decided to include a life imprisonment maximum sentence for the most serious drug importation offences. As well, the Legislature cannot be faulted for removing certain offences from eligibility for conditional sentences of imprisonment. It should be no surprise to commercial drug importers that the sentences they receive must reflect Canadian society's intolerance of destructive drug trafficking by their ineligibility for conditional sentences.[69] Parliament's desire to remove conditional sentences from consideration in cases of serious criminality is well articulated, rational, and appropriate.",
+    "The potential for these laws to intersect with constitutionally protected values exists in the small offender situations where Schedule II substances are imported. In these cases, Parliament has unreasonably removed another possible sentencing tool, community rather than institutional incarceration, in an overbroad way. The combined effect of these provisions is _arbitrary in part_ because, rather than focussing on the aggravating features of the offence, the removal of judicial discretion is tied to the maximum possible sentence, which may bear no relationship to the level of criminality, the moral blameworthiness of the crime, or the circumstances of the particular offender before the court.",
+    "Parliament has sought to eliminate conditional sentencing for the most serious of importation offences, but it has not said that all drug importation is so serious that conditional sentences should never be imposed for importing drugs into Canada. As mentioned above, conditional sentencing is not prohibited by the combined effect of these laws for Schedule IV importers.[70] Small amount cannabis importation is not the most serious of importation offences and the hypothetical offender is not the most serious of importation offenders. By removing conditional sentences for Schedule II importers without distinguishing between importation for personal use or trafficking, Parliament has made a policy choice which appears irrational or arbitrary in some cases, especially when compared with Schedule IV importation offenders.",
+    "As well, arbitrariness exists because cannabis was historically linked to Schedule I drugs and unique to the importation provisions of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ (i.e., unlike the provisions respecting possession, production, and trafficking) Parliament has failed to distinguish between these two schedules. C. _(ii) The Combined Operation of Sections 6(3)(a) of the CDSA and 742.1(c) of the Code Are Not Saved by [Section 1](/en/ca/laws/stat/schedule-b- to-the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec1_smooth) of the [Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_",
+    "For reasons similar to those expressed in the s. 6(3)(a) _Oakes_ analysis above, the combined effect of these sentencing provisions is not saved by [s. 1](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec1_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_. Minimal impairment of the constitutionally protected s. 7 right is missing, so the laws are less salvageable by [s.1](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec1_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ in tandem than [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[ CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html) _was in isolation.",
+    "Again, it does not appear that the Applicant takes issue with the pressing and substantial aspect of the _Oakes_ analysis with respect to the combined effect of these laws. One could argue that the mention of drug importation during the debates of what became the _Safe Streets and Communities Act**[71]**_ is evidence of the pressing and substantial objective. As well, there is some correspondence between the legislative aims and the impugned legislation to satisfy the rational connection branch of the _Oakes_ test. By removing specified drug importation offences from conditional sentencing Parliament has clearly and rationally designated specific crimes as very serious and deserving of sentences which signify these concerns.",
+    "I am not satisfied that the vehicle to obtain these aims, the inclusion of Schedule I substances within [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ , or the lack of distinctions in the section for the amount of the substance imported, the purpose of the importation, or whether or not the offender has a prior record for this offence, minimally impairs the constitutional right to be free from laws that are overbroad. Moreover, overall proportionality of these provisions, as required by the third branch of _Oakes_ , is lacking. The combined effect of these laws is that both the bottom and top ends of the sentencing spectrum (discharges and institutional incarceration) have been significantly affected for cannabis importation, without regard to the level of criminality or the culpability of the offender. For these reasons, the combined effect of these sentencing laws are not demonstrably justified under [s. 1](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec1_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_. **4\\. CONCLUSION**",
+    "I have found that [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ is overbroad, contrary to [s. 7](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec7_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_. The law does not minimally impair a defendant's liberty interests, nor does it achieve overall proportionality, as required, to save the provision under [s. 1](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec1_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_.",
+    "I have also found that the combined effect of s. 6(3)(a) of the _CDSA_ and [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ infringes [s. 7](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec7_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ in the same way: these laws act in concert in an overbroad way. Lastly, I do not find that the combined operation of these provisions is saved pursuant to the _Oakes_ analysis under [s. 1](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec1_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_.",
+    "For these reasons, I grant the Applicant a judicial exception from the stand-alone and combined applicability of s. 6(3)(a) of the _CDSA_ and [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_. Mr. Williams is not precluded from seeking a conditional sentence of imprisonment upon the resumption of his sentencing hearing. Released: 29 September 2017 ** ** ** ** ** ** ** ** Justice G. Paul Renwick  [1] Throughout these reasons I sometimes refer to marihuana rather than hashish (the actual substance imported), because that is the term used exclusively by the Applicant in its factum and oral submissions. Both marihuana and hashish are derivatives of cannabis which are included in Schedule II of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)._ The latter is extracted as a resin, which may be processed as a liquid or compressed into a solid, or brick form, while the former is comprised of the leafy parts of the cannabis plant. Both derivatives of cannabis may be processed into cigarettes or \"joints.\" See Exhibit #2, Expert Report of RCMP Staff Sergeant Francis Martin, which was admitted into evidence on consent. [2] The Applicant conceded the admissibility of the expert report which opined that given the amount of the drug involved, the importation was committed for the purpose of trafficking. However, in light of the recent decision of Mr. Justice Andre in _R._ v _. Duffus_ , [2017] O.J .No. 155 (S.C.J.), [section 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a)(i) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ is no longer in effect to require a minimum mandatory jail sentence upon proof that the offence was committed for the purpose of trafficking. [3] This Application alleges infringement of [sections 7](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec7_smooth) and[ 12](/en/ca/laws/stat/schedule-b- to-the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec12_smooth) of the _[Canadian Charter of Rights and Freedoms](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ , Being Part I of the _[Constitution Act, 1982](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ , Enacted as [Schedule B to the ](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_[Canada Act 1982](/en/ca/laws/stat/schedule-b-to- the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_[ (U.K.), 1982, c. 11](/en/ca/laws/stat/schedule- b-to-the-canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html) (\"_[Charter](/en/ca/laws/stat/schedule-b-to-the- canada-act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ \"). A \"judicial exception\" is my characterization of the Application given that the Supreme Court of Canada has endorsed my authority to refuse to apply an unconstitutional law (see _R_. v _. Lloyd_ , [2016 SCC 13 (CanLII)](/en/ca/scc/doc/2016/2016scc13/2016scc13.html), [2016] S.C.J. No. 13 at para. [19](/en/ca/scc/doc/2016/2016scc13/2016scc13.html#par19)). [4] During argument, the Respondent noted that the Applicant had not sought to challenge the applicability of [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(e)(ii) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ , which prohibits the use of conditional sentences for offences involving the importation of drugs prosecuted by indictment where the maximum term of imprisonment is 10 years. However, I am satisfied that s. 742.1(e)(ii) would not apply to prohibit the Applicant from seeking a conditional sentence given that the section does not state its applicability for maximum prison terms in excess of 10 years and [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ clearly indicates a possible maximum sentence of life imprisonment. [5] See _R._ v _. Tuck_ , [2007] O.J. No. 2626 (C.A.) at para. 2, _R._ v _. Wellingto_ n (1999), [1999 CanLII 3054 (ON CA)](/en/on/onca/doc/1999/1999canlii3054/1999canlii3054.html), 132 C.C.C. (3d) 470 (Ont.C.A.) at 476, and _R._ v _. C.N.H_., [2002 CanLII 7751 (ON CA)](/en/on/onca/doc/2002/2002canlii7751/2002canlii7751.html), [2002] O.J. No. 4918 at paras. [23 and 47-51](/en/on/onca/doc/2002/2002canlii7751/2002canlii7751.html#par23). [6] _R._ v. _Smith,_[1987 CanLII 64 (SCC)](/en/ca/scc/doc/1987/1987canlii64/1987canlii64.html), [1987] S.C.J. No. 36 at para. [48](/en/ca/scc/doc/1987/1987canlii64/1987canlii64.html#par48). See paragraphs 10-21 of _Reference Re Motor Vehicle Act (British Columbia) S. 94(2),_[1985 CanLII 81 (SCC)](/en/ca/scc/doc/1985/1985canlii81/1985canlii81.html), [1985] S.C.J. No. 73 for the scope of legislative review by the courts. [7] _R._ v._Malmo-Levine_ _,_[2003 SCC 74 (CanLII)](/en/ca/scc/doc/2003/2003scc74/2003scc74.html), [2003] S.C.J. No. 79 at para. [133](/en/ca/scc/doc/2003/2003scc74/2003scc74.html#par133). To be clear, the passage quoted refers to \"serious and substantial\" because it was suggested in that case that Parliament could not prohibit certain conduct without meeting this test. The court rejected that contention, but the quote remains apt to describe the court's oversight role, which should not devolve into the micromanagement of Parliamentary prerogative. [8] My role is limited to determining whether a law's reach unconstitutionally exceeds its aim, and when it does I may decline to apply the offending provision; see _Lloyd_ _, supra_ , at paras. [16-20, 27, and 45](/en/ca/scc/doc/2016/2016scc13/2016scc13.html#par16). [9] See the Respondent's Factum at paras. 26-30. [10] _Canada (Attorney General)_ v _. Bedford_ , [2013 SCC 72 (CanLII)](/en/ca/scc/doc/2013/2013scc72/2013scc72.html), [2013] S.C.J. No. 72 at para. [107](/en/ca/scc/doc/2013/2013scc72/2013scc72.html#par107). [11] _Bedford_ _, supra_ , at para. [105](/en/ca/scc/doc/2013/2013scc72/2013scc72.html#par105). See also the discussion of gross disproportionality in relation to s. 7 in _R._ v _. Safarzadeh-Markhali_ _,_ [2016 SCC 14 (CanLII)](/en/ca/scc/doc/2016/2016scc14/2016scc14.html), [2016] S.C.J. No. 14 at paras. [67-71](/en/ca/scc/doc/2016/2016scc14/2016scc14.html#par67). [12] _Bedford_ _, supra_ , at para. [96](/en/ca/scc/doc/2013/2013scc72/2013scc72.html#par96). [13] _R._ v _. Smith_ , [2015 SCC 34 (CanLII)](/en/ca/scc/doc/2015/2015scc34/2015scc34.html), [2015] S.C.J. No. 34 at para. [15](/en/ca/scc/doc/2015/2015scc34/2015scc34.html#par15). [14] _Bedford_ _, supra_ , at paras. [98-100](/en/ca/scc/doc/2013/2013scc72/2013scc72.html#par98), _Smith [2015], supra_ , at para. 23. [15] _Canada (Attorney General)_ v. _PHS Community Services Society_ , [2011 SCC 44 (CanLII)](/en/ca/scc/doc/2011/2011scc44/2011scc44.html), [2011] S.C.J. No. 44 at para. [129](/en/ca/scc/doc/2011/2011scc44/2011scc44.html#par129). [16] Applicant's Factum at para. 32. [17] Respondent's Factum at para. 59. [18] Applicant's Factum at para. 44. [19] The Respondent submits that _all_ drug importation is serious (Respondent's Factum at paras. 20-25), and although I take no issue with this statement in the sense that _all_ crime is serious, I have modified its characterization (by adding \"some\") given the marked distinctions in the penalties for importation offences across various scheduled drugs and substances: see [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a)-(c) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_. [20] Applicant's Factum at para. 44. [21] _R._ v _. Moriarity_ , [2015 SCC 55 (CanLII)](/en/ca/scc/doc/2015/2015scc55/2015scc55.html), [2015] S.C.J. No. 55 at paras. [27 and 32](/en/ca/scc/doc/2015/2015scc55/2015scc55.html#par27). [22] See the Respondent's Factum at para. 79, _Smith_ [1987], _supra_ , at para. 66, and _Malmo-Levine_ _, supra_ , at para. [167](/en/ca/scc/doc/2003/2003scc74/2003scc74.html#par167). [23] For a history of the development of the importation law see the \"background\" discussion of the aim of the provision in McIntyre J.'s dissenting reasons in _Smith [1987], supra_ , at para. 97. [24] _Duffus, supra_ , at paras. 19-23. [25] S. Armstrong, A. Sabbadini, A. Boni, and S. Coroza, _Sentencing Drug Offenders_(Aurora, Ontario: Canada Law Book, 2016) at 1:400.190. [26] Applicant's Factum at para. 34. [27] In _Smith [1987], supra,_ the Supreme Court came to a similar conclusion respecting the mandatory minimum penalty of seven years imprisonment for importing one marihuana cigarette under the rubric of [s. 12](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html#sec12_smooth) of the _[Charter](/en/ca/laws/stat/schedule-b-to-the-canada- act-1982-uk-1982-c-11/latest/schedule-b-to-the-canada- act-1982-uk-1982-c-11.html)_ , at paras. 15 and 112. [28] Parenthetically, due to the operation of [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ , I also note that this hypothetical offender could receive a conditional sentence for her firearm importation but not in respect of her importation of two marihuana cigarettes. [29] See Maine Revised Statutes, Section 2452, Title 7: Agriculture and Animals, Part 5: Plant Industry, Chapter 417: Marijuana Legalization Act, 2015: http://www.mainelegislature.org/legis/statutes/7/title7sec2452.html. [30] This reasonable hypothetical is adapted from _Smith [1987], supra_ , at para. 2, and _Duffus, supra_ , at paras. 58-60. [31] The significance of this comma, which I have purposefully emphasized, is explained below. [32] I note that since the Applicant was charged, Schedule V substances have moved from [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(c) to [s. 6](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6_smooth)(b) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_. This amendment has no effect upon my decision. [33] See _Duffus, supra_. [34] _Canada (Combines Investigation Acts, Director of Investigation and Research_) v. _Southam Inc_.,****[1984 CanLII 33 (SCC)](/en/ca/scc/doc/1984/1984canlii33/1984canlii33.html), [1984] 2 S.C.R. 145, at 169. [35] A pardon is now known as a record suspension. See the _[Criminal Records Act](/en/ca/laws/stat/rsc-1985-c-c-47/latest/rsc-1985-c-c-47.html)_[, R.S.C. 1985, c. C-47](/en/ca/laws/stat/rsc-1985-c-c-47/latest/rsc-1985-c-c-47.html). A record suspension that would have been available after one year for someone absolutely discharged, or three years following a conditional discharge, is not available until five years after the sentence is completed for an indictable offence. [36] See the judgments of Lamer J. (as he then was), who also wrote on behalf of C.J. Dickson, Wilson J., Le Dain J., La Forest J., and McIntyre J. (dissenting in the result); Chouinard J. took no part in the judgment. [37] _Smith [1987], supra,_ at para. 53\\. [38] _Smith [1987], supra,_ at paras. 66 and 74. [39] _R._ v _. Nur_ , [2015 SCC 15 (CanLII)](/en/ca/scc/doc/2015/2015scc15/2015scc15.html), [2015] S.C.J. No. 15 at para. [39](/en/ca/scc/doc/2015/2015scc15/2015scc15.html#par39). [40] _Lloyd_ _, supra_ , at para. [3](/en/ca/scc/doc/2016/2016scc13/2016scc13.html#par3). [41] S.C. 1995, c. 22, s. 6. [42] _R._ v _. Sawh_ , [2016] O.J. No. 6768 (S.C.J.) at para. 23, citing _Lloyd_ _, supra_ , at para. [23](/en/ca/scc/doc/2016/2016scc13/2016scc13.html#par23). [43] _Nur_ _, supra_ , at para. [170](/en/ca/scc/doc/2015/2015scc15/2015scc15.html#par170). [44] _R._ v _. Oakes_ , [1986 CanLII 46 (SCC)](/en/ca/scc/doc/1986/1986canlii46/1986canlii46.html), [1986] S.C.J. No. 7. [45] _Oakes_ , _supra,_ at para. [69](/en/ca/scc/doc/1986/1986canlii46/1986canlii46.html#par69). [46] See paragraph 50 of the Applicant's Factum, which is silent on this point. I accept that the burden to justify limitations upon constitutionally guaranteed rights falls upon the Respondent (see _Oakes_ _, supra,_ at para. [66](/en/ca/scc/doc/1986/1986canlii46/1986canlii46.html#par66)), and I am not attempting to shift the burden to the Applicant by this finding. Rather, I am suggesting that in the absence of any submissions on the point, it appears to be conceded that the Respondent could satisfy the \"pressing and substantial\" test. [47] _Oakes_ _, supra_ , at para. [70](/en/ca/scc/doc/1986/1986canlii46/1986canlii46.html#par70) and _R._ v _. Appulonappa_ , [2015 SCC 59 (CanLII)](/en/ca/scc/doc/2015/2015scc59/2015scc59.html), [2015] S.C.J. No. 59 at para. [80](/en/ca/scc/doc/2015/2015scc59/2015scc59.html#par80). [48] _Appulonappa_ _, supra,_ at para. [80](/en/ca/scc/doc/2015/2015scc59/2015scc59.html#par80). [49] _Oakes_ _, supra_ , at para. [70](/en/ca/scc/doc/1986/1986canlii46/1986canlii46.html#par70). [50]___Ibid_. [51] See ss. 7(2)(a) and 7(2)(a.1) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_. [52] See ss. 7(2)(d) and 7(2)(c) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_. [53] The Supreme Court recognized a similar concern in _Smith [1987], supra_ , at para. 15. [54] As already noted, [ss. ](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)[6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(b) and [6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(c) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ create hybrid offences in respect of Schedules III, IV, V, and VI substances, but importation of Schedule I or II substances remains solely an indictable offence. [55] I note that the Ontario Court of Appeal has acknowledged the seriousness of this offence in relation to commercial marihuana importation, and the primacy of denunciation and deterrence \"in terms of protecting the integrity of the Canadian border from serious criminality;\" _R._ v _. Ashley_ , [2012 ONCA 576 (CanLII)](/en/on/onca/doc/2012/2012onca576/2012onca576.html), [2012] O.J. No. 4141, at para. [15](/en/on/onca/doc/2012/2012onca576/2012onca576.html#par15). [56] _Oakes_ _, supra,_ at para. [70](/en/ca/scc/doc/1986/1986canlii46/1986canlii46.html#par70). [57] Applicant's Factum at para. 51. [58] _Smith [1987], supra_ , at para. 120. [59] In the brief reasons of the majority in _Lloyd_ _, supra_ , moral blameworthiness, which can vary significantly for this offence, appears to be the tipping point for the result: see para. 27. [60] I have not included the fact that a conditional sentence is also unavailable because that consideration only applies when [s. 6(3)](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html#sec6subsec3_smooth)(a) of the _[CDSA](/en/ca/laws/stat/sc-1996-c-19/latest/sc-1996-c-19.html)_ operates alongside [s. 742.1](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec742.1_smooth)(c) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ , which is discussed below. [61] Volume 146, Number 018, 1st Session, 41st Parliament, 22 September 2011, pp. 1356-1359. [62] _Appulonappa_ _, supra,_ at para. [64](/en/ca/scc/doc/2015/2015scc59/2015scc59.html#par64). [63] See _Bedford_ _, supra_ , at para. [49](/en/ca/scc/doc/2013/2013scc72/2013scc72.html#par49). [64] _Hansard, supra_ , at pp. 1356 and 1357, respectively. [65] _Hansard, supra_ , at p. 1358. [66] _Safarzadeh-Markhali_ _, supra_ , at para. [71](/en/ca/scc/doc/2016/2016scc14/2016scc14.html#par71). [67] SI/97-47, _Canada Gazette_ , _Part II_. [68] Respondent's Factum at para. 64. [69] These reasons should not be read to suggest that a conditional sentence is always appropriate for Schedule II importation offences. It should be abundantly clear that I have not begun to consider what would be an appropriate sentence for the Applicant. [70] Even s. 742.1(e)(ii) of the _[Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ (which was not challenged by this Application) would not prohibit the imposition of a conditional sentence for the importation of any amount of a Schedule IV substance. [71] S.C. 2012, c. 1, ss. 39-46."
+  ]
+}

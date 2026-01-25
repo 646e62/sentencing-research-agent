@@ -26,99 +26,398 @@
     "categories": [
       "Criminal or statutory infractions",
       "Motor vehicles"
-    ],
-    "cited_cases": [
+    ]
+  },
+  "references": {
+    "cited_cases_metadata": [
       {
-        "databaseId": "oncj",
-        "caseId": {
-          "en": "2014oncj773"
-        },
-        "title": "R. v. Addley",
-        "citation": "2014 ONCJ 773 (CanLII)",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "skca",
-        "caseId": {
-          "en": "2009skca137"
-        },
-        "title": "R. v. Akapew",
-        "citation": "2009 SKCA 137 (CanLII)",
-        "aiContentId": {
-          "en": "2009skca137"
+        "citation": "R. v. Addley, 2014 ONCJ 773 (CanLII)",
+        "metadata": {
+          "citation": "R v Addley, 2014 ONCJ 773 (CanLII)",
+          "case_id": "2014oncj773",
+          "style_of_cause": "R v Addley",
+          "atomic_citation": "2014 ONCJ 773",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2014",
+          "court": "oncj",
+          "decision_number": "773",
+          "jurisdiction": "on",
+          "court_name": "Ontario Court of Justice",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/on/oncj/doc/2014/2014oncj773/2014oncj773.html",
+          "short_url": "https://canlii.ca/t/glmvn",
+          "language": "en",
+          "docket_number": "",
+          "decision_date": "2014-11-20",
+          "keywords": [
+            "Charter of Rights",
+            "Section 10(a), (b) breach serious."
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Rights and freedoms"
+          ]
         }
       },
       {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "2012scc56"
-        },
-        "title": "R. v. Boudreault",
-        "citation": "2012 SCC 56 (CanLII), [2012] 3 SCR 157",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "2010scc13"
-        },
-        "title": "R. v. Briscoe",
-        "citation": "2010 SCC 13 (CanLII), [2010] 1 SCR 411",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "bcca",
-        "caseId": {
-          "en": "2020bcca253"
-        },
-        "title": "R. v. Edwards",
-        "citation": "2020 BCCA 253 (CanLII)",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "onca",
-        "caseId": {
-          "en": "2011onca190"
-        },
-        "title": "R. v. M.R.",
-        "citation": "2011 ONCA 190 (CanLII)",
-        "aiContentId": {
-          "en": "2011onca190"
+        "citation": "R. v. Akapew, 2009 SKCA 137 (CanLII)",
+        "metadata": {
+          "citation": "R v Akapew, 2009 SKCA 137 (CanLII)",
+          "case_id": "2009skca137",
+          "style_of_cause": "R v Akapew",
+          "atomic_citation": "2009 SKCA 137",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2009",
+          "court": "skca",
+          "decision_number": "137",
+          "jurisdiction": "sk",
+          "court_name": "Court of Appeal for Saskatchewan",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/sk/skca/doc/2009/2009skca137/2009skca137.html",
+          "short_url": "https://canlii.ca/t/27364",
+          "language": "en",
+          "docket_number": "1557",
+          "decision_date": "2009-12-16",
+          "keywords": [
+            "Criminal procedure",
+            "Sentencing",
+            "Proportionality, parity, and totality",
+            "Offender convicted of multiple offences, including flight from police causing bodily harm and death",
+            "Trial judge imposed a global sentence of six and one-half years, reduced to four and one-half years after pre-trial custody credit",
+            "Did the trial judge err in applying sentencing principles?",
+            "Sentencing principles under sections 718 to 718.3 of the Criminal Code | Criminal infractions",
+            "Flight from police",
+            "Sentencing",
+            "Offender convicted of flight from police causing bodily harm and death under section 249.1(3) of the Criminal Code",
+            "Crown sought maximum sentence of life imprisonment or 15\u201316 years",
+            "Should the offender\u2019s sentence be increased to reflect the gravity of the offences and the offender\u2019s criminal record?",
+            "Maximum penalties under section 249.1(4) of the Criminal Code | Indigenous peoples",
+            "Sentencing considerations",
+            "Gladue principles",
+            "Offender identified as a member of the Little Black Bear First Nation with a history of substance abuse",
+            "Trial judge considered Gladue factors as mitigating circumstances",
+            "Does the offender\u2019s Indigenous background affect the degree of culpability and appropriate sentence?",
+            "Application of Gladue principles under section 718.2(e) of the Criminal Code | Criminal procedure",
+            "Driving prohibition",
+            "Offender prohibited from driving for ten years following release",
+            "Offender\u2019s extensive history of driving-related offences, including prior convictions for flight from police",
+            "Should the driving prohibition be upheld?",
+            "Section 259 of the Criminal Code governing driving prohibitions"
+          ],
+          "categories": [
+            "Appeal",
+            "Criminal or statutory infractions",
+            "Motor vehicles",
+            "Negligence",
+            "Sentencing"
+          ]
         }
       },
       {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "2019scc15"
-        },
-        "title": "R. v. Morrison",
-        "citation": "2019 SCC 15 (CanLII), [2019] 2 SCR 3",
-        "aiContentId": {}
-      },
-      {
-        "databaseId": "onca",
-        "caseId": {
-          "en": "1969canlii248"
-        },
-        "title": "Regina v. Slessor",
-        "citation": "1969 CanLII 248 (ON CA)",
-        "aiContentId": {
-          "en": "1969canlii248"
+        "citation": "R. v. Boudreault, 2012 SCC 56 (CanLII), [2012] 3 SCR 157",
+        "metadata": {
+          "citation": "R v Boudreault, 2012 SCC 56 (CanLII)",
+          "case_id": "2012scc56",
+          "style_of_cause": "R v Boudreault",
+          "atomic_citation": "2012 SCC 56",
+          "citation_type": "neutral",
+          "official_reporter_citation": "[2012] 3 SCR 157",
+          "year": "2012",
+          "court": "csc-scc",
+          "decision_number": "56",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/2012/2012scc56/2012scc56.html",
+          "short_url": "https://canlii.ca/t/ftf2v",
+          "language": "en",
+          "docket_number": "34582",
+          "decision_date": "2012-10-26",
+          "keywords": [
+            "Criminal law",
+            "Criminal Code, R.S.C. 1985, c. C\u201046, s. 253(1)."
+          ],
+          "categories": [
+            "Criminal or statutory infractions"
+          ]
         }
       },
       {
-        "databaseId": "csc-scc",
-        "caseId": {
-          "en": "1985canlii79"
-        },
-        "title": "Sansregret v. The Queen",
-        "citation": "1985 CanLII 79 (SCC), [1985] 1 SCR 570",
-        "aiContentId": {}
+        "citation": "R. v. Briscoe, 2010 SCC 13 (CanLII), [2010] 1 SCR 411",
+        "metadata": {
+          "citation": "R v Briscoe, 2010 SCC 13 (CanLII)",
+          "case_id": "2010scc13",
+          "style_of_cause": "R v Briscoe",
+          "atomic_citation": "2010 SCC 13",
+          "citation_type": "neutral",
+          "official_reporter_citation": "[2010] 1 SCR 411",
+          "year": "2010",
+          "court": "csc-scc",
+          "decision_number": "13",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/2010/2010scc13/2010scc13.html",
+          "short_url": "https://canlii.ca/t/29280",
+          "language": "en",
+          "docket_number": "32912",
+          "decision_date": "2010-04-08",
+          "keywords": [
+            "Criminal law",
+            "Offences",
+            "Intent",
+            "Wilful blindness",
+            "Parties to offences",
+            "Criminal Code, R.S.C. 1985, c. C\u201046, s. 21(1)(b)."
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Practice and procedure"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Edwards, 2020 BCCA 253 (CanLII)",
+        "metadata": {
+          "citation": "R v Edwards, 2020 BCCA 253 (CanLII)",
+          "case_id": "2020bcca253",
+          "style_of_cause": "R v Edwards",
+          "atomic_citation": "2020 BCCA 253",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2020",
+          "court": "bcca",
+          "decision_number": "253",
+          "jurisdiction": "bc",
+          "court_name": "Court of Appeal for British Columbia",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/bc/bcca/doc/2020/2020bcca253/2020bcca253.html",
+          "short_url": "https://canlii.ca/t/j9nm5",
+          "language": "en",
+          "docket_number": "CA46423",
+          "decision_date": "2020-09-17",
+          "keywords": [
+            "Criminal law",
+            "Motor vehicle offences",
+            "Failure to remain at scene of accident"
+          ],
+          "categories": [
+            "Criminal or statutory infractions"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. M.R., 2011 ONCA 190 (CanLII)",
+        "metadata": {
+          "citation": "R v MR, 2011 ONCA 190 (CanLII)",
+          "case_id": "2011onca190",
+          "style_of_cause": "R v MR",
+          "atomic_citation": "2011 ONCA 190",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2011",
+          "court": "onca",
+          "decision_number": "190",
+          "jurisdiction": "on",
+          "court_name": "Court of Appeal for Ontario",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/on/onca/doc/2011/2011onca190/2011onca190.html",
+          "short_url": "https://canlii.ca/t/fkg6l",
+          "language": "en",
+          "docket_number": "C51830",
+          "decision_date": "2011-03-10",
+          "keywords": [
+            "Criminal infractions",
+            "Criminal negligence causing death",
+            "Street racing",
+            "Aiding and abetting",
+            "Section 21(1)(b) of the Criminal Code",
+            "Respondent acted as a \"flag man\" to start a street race",
+            "Did the respondent\u2019s actions constitute aiding criminal negligence causing death?",
+            "Application of the \"marked and substantial departure\" standard",
+            "Criminal Code, R.S.C. 1985, c. C-46, ss. 21(1)(b), 249.2, 219(1) | Evidence",
+            "Directed verdict",
+            "Sufficiency of evidence",
+            "Trial judge failed to consider aiding and abetting under section 21(1)(b) of the Criminal Code",
+            "Whether evidence of the respondent\u2019s intent and actions was sufficient to support a conviction",
+            "Test for directed verdicts",
+            "Criminal Code, R.S.C. 1985, c. C-46, s. 21(1)(b) | Criminal procedure",
+            "Appeals",
+            "Directed verdict of acquittal",
+            "Trial judge\u2019s error in law",
+            "Appropriate disposition on appeal",
+            "Whether a new trial should be ordered when a trial judge fails to properly apply the law",
+            "Standard for appellate intervention in directed verdicts",
+            "Criminal Code, R.S.C. 1985, c. C-46, s. 21(1)(b)"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Practice and procedure"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Morrison, 2019 SCC 15 (CanLII), [2019] 2 SCR 3",
+        "metadata": {
+          "citation": "R v Morrison, 2019 SCC 15 (CanLII)",
+          "case_id": "2019scc15",
+          "style_of_cause": "R v Morrison",
+          "atomic_citation": "2019 SCC 15",
+          "citation_type": "neutral",
+          "official_reporter_citation": "[2019] 2 SCR 3",
+          "year": "2019",
+          "court": "csc-scc",
+          "decision_number": "15",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/2019/2019scc15/2019scc15.html",
+          "short_url": "https://canlii.ca/t/hz3jd",
+          "language": "en",
+          "docket_number": "37687",
+          "decision_date": "2019-03-15",
+          "keywords": [
+            "Constitutional law",
+            "Charter of Rights",
+            "Fundamental justice",
+            "Presumption of innocence",
+            "Child luring",
+            "Criminal Code, R.S.C. 1985, c. C-46, s. 172.1(2)(a), (3), (4). | Criminal law",
+            "Child luring",
+            "Presumption of innocence",
+            "Reverse onus provision",
+            "Criminal Code, R.S.C. 1985, c. C-46, s. 172.1(4). | Criminal law",
+            "Child luring",
+            "Proof of offence",
+            "Criminal Code, R.S.C. 1985, c. C-46, s. 172.1(2)(a), (3), (4)."
+          ],
+          "categories": [
+            "Constitution",
+            "Criminal or statutory infractions",
+            "Rights and freedoms"
+          ]
+        }
+      },
+      {
+        "citation": "Regina v. Slessor, 1969 CanLII 248 (ON CA)",
+        "metadata": {
+          "citation": "Regina v Slessor, 1969 CanLII 248 (ON CA) (CanLII)",
+          "case_id": "1969canlii248",
+          "style_of_cause": "Regina v Slessor",
+          "atomic_citation": "1969 CanLII 248 (ON CA)",
+          "citation_type": "canlii",
+          "official_reporter_citation": null,
+          "year": "1969",
+          "court": "onca",
+          "decision_number": "248",
+          "jurisdiction": "on",
+          "court_name": "Court of Appeal for Ontario",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/on/onca/doc/1969/1969canlii248/1969canlii248.html",
+          "short_url": "https://canlii.ca/t/g16np",
+          "language": "en",
+          "docket_number": "",
+          "decision_date": "1969-07-02",
+          "keywords": [
+            "Transportation",
+            "Motor vehicles",
+            "Care, charge, or control",
+            "Passenger liability",
+            "Accused was a passenger and owner of a vehicle involved in an accident",
+            "Whether the accused, as a passenger, had \"care, charge or control\" of the vehicle at the time of the accident",
+            "Criminal Code, R.S.C. 1985, c. C-46, s. 221(2) | Criminal infractions",
+            "Knowledge of accident",
+            "Awareness as an element of offence",
+            "Whether the accused's knowledge or awareness of the accident is a necessary element of the offence under section 221(2) of the Criminal Code",
+            "Crown's burden to prove contemporaneous knowledge of the accident | Criminal infractions",
+            "Obligation to return to the scene",
+            "Post-accident awareness",
+            "Whether the accused, upon becoming aware of the accident after the fact, was under a legal obligation to return to the scene",
+            "Comparison with Highway Traffic Act, R.S.O. 1960, c. 172, s. 143a | Criminal infractions",
+            "Presumption of intent",
+            "Rebuttal of statutory presumption",
+            "Whether the statutory presumption of intent to escape liability under section 221(3) of the Criminal Code was rebutted by evidence of the accused's lack of contemporaneous knowledge of the accident"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Motor vehicles"
+          ]
+        }
+      },
+      {
+        "citation": "Sansregret v. The Queen, 1985 CanLII 79 (SCC), [1985] 1 SCR 570",
+        "metadata": {
+          "citation": "Sansregret v The Queen, 1985 CanLII 79 (SCC) (CanLII)",
+          "case_id": "1985canlii79",
+          "style_of_cause": "Sansregret v The Queen",
+          "atomic_citation": "1985 CanLII 79 (SCC)",
+          "citation_type": "canlii",
+          "official_reporter_citation": "[1985] 1 SCR 570",
+          "year": "1985",
+          "court": "csc-scc",
+          "decision_number": "79",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/1985/1985canlii79/1985canlii79.html",
+          "short_url": "https://canlii.ca/t/1fv0t",
+          "language": "en",
+          "docket_number": "18186",
+          "decision_date": "1985-05-09",
+          "keywords": [
+            "Criminal law",
+            "Rape",
+            "Consent",
+            "Defence of mistake of fact not available",
+            "Wilful blindness",
+            "Criminal Code, s. 143(b)(i)."
+          ],
+          "categories": [
+            "Criminal or statutory infractions"
+          ]
+        }
       }
     ],
-    "citing_cases": []
+    "citing_cases_metadata": [],
+    "cited_legislation": [
+      [
+        "Criminal Code",
+        "sec320.16subsec3",
+        [
+          1,
+          30,
+          68
+        ]
+      ],
+      [
+        "Criminal Code",
+        null,
+        [
+          34,
+          69
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec21subsec1",
+        [
+          27,
+          68,
+          74
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec252",
+        [
+          56
+        ]
+      ]
+    ]
   },
-  "header": " CITATION: _R. v. Barker-Young_ , 2025 MBPC 75 THE PROVINCIAL COURT OF MANITOBA BETWEEN: His Majesty the King ) V. Mitrovik and M. Dueck ) for the Crown ) -and- ) ) ) ) Lyle River Jared ) M. Serbin and D. Buors Lee Barker-Young ) for the Accused ) ) ) ) Reasons for Decision ) Delivered: December 19, 2025 _CARLSON, P.J._",
+  "header": " CITATION: R. v. Barker-Young , 2025 MBPC 75 THE PROVINCIAL COURT OF MANITOBA BETWEEN: His Majesty the King ) V. Mitrovik and M. Dueck ) for the Crown ) -and- ) ) ) ) Lyle River Jared ) M. Serbin and D. Buors Lee Barker-Young ) for the Accused ) ) ) ) Reasons for Decision ) Delivered: December 19, 2025 CARLSON, P.J.",
   "body_paragraphs": [
     "**INTRODUCTION**\n\nThe accused, Lyle Barker-Young is charged with leaving the scene of a traffic accident that resulted in a fatality, on June 6, 2024, in Winnipeg, Manitoba, contrary to [s. 320.16(3)](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html#sec320.16subsec3_smooth) of the _[Criminal Code](/en/ca/laws/stat/rsc-1985-c-c-46/latest/rsc-1985-c-c-46.html)_ (the _Code_).",
     "Mr. Barker-Young was not driving at the time of the accident. He was the front seat passenger in a vehicle driven by his roommate, Beckham Severight, when that vehicle hit the bicycle that Mr. Robbie Jenner was riding. That impact caused injuries to Mr. Jenner that proved fatal.",
