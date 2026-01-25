@@ -1,0 +1,746 @@
+{
+  "citation": "R. v J.C.P.-B, 2025 BCSC 732",
+  "metadata": {
+    "citation": "R v JCP-B, 2025 BCSC 732 (CanLII)",
+    "case_id": "2025bcsc732",
+    "style_of_cause": "R v JCP-B",
+    "atomic_citation": "2025 BCSC 732",
+    "citation_type": "neutral",
+    "official_reporter_citation": null,
+    "year": "2025",
+    "court": "bcsc",
+    "decision_number": "732",
+    "jurisdiction": "bc",
+    "court_name": "Supreme Court of British Columbia",
+    "court_level": "superior",
+    "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2025/2025bcsc732/2025bcsc732.html",
+    "short_url": "https://canlii.ca/t/kblv6",
+    "language": "en",
+    "docket_number": "X084150-2",
+    "decision_date": "2025-01-06",
+    "keywords": [
+      "Criminal law",
+      "Young offenders",
+      "Manslaughter",
+      "Sentencing",
+      "Considerations"
+    ],
+    "categories": [
+      "Criminal or statutory infractions",
+      "Sentencing",
+      "Young offenders"
+    ]
+  },
+  "references": {
+    "cited_cases_metadata": [
+      {
+        "citation": "J.C. (Re), 2017 NSPC 14 (CanLII)",
+        "metadata": {
+          "citation": "JC (Re), 2017 NSPC 14 (CanLII)",
+          "case_id": "2017nspc14",
+          "style_of_cause": "JC (Re)",
+          "atomic_citation": "2017 NSPC 14",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2017",
+          "court": "nspc",
+          "decision_number": "14",
+          "jurisdiction": "ns",
+          "court_name": "Provincial Court of Nova Scotia",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/ns/nspc/doc/2017/2017nspc14/2017nspc14.html",
+          "short_url": "https://canlii.ca/t/h36c7",
+          "language": "en",
+          "docket_number": "2947826; 2947827; 2862931; 2947824; 2947846; 2862930; 2947836; 2947828; 2947829; 2862929; 2862928; 2862926; 2947833; 2947832",
+          "decision_date": "2017-03-24",
+          "keywords": [
+            "Conditional sentencing",
+            "Youth Criminal Justice Act"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. A.A.Z., 2013 MBCA 33 (CanLII)",
+        "metadata": {
+          "citation": "R v AAZ, 2013 MBCA 33 (CanLII)",
+          "case_id": "2013mbca33",
+          "style_of_cause": "R v AAZ",
+          "atomic_citation": "2013 MBCA 33",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2013",
+          "court": "mbca",
+          "decision_number": "33",
+          "jurisdiction": "mb",
+          "court_name": "Court of Appeal of Manitoba",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/mb/mbca/doc/2013/2013mbca33/2013mbca33.html",
+          "short_url": "https://canlii.ca/t/fx8rf",
+          "language": "en",
+          "docket_number": "AY 11-30-07655",
+          "decision_date": "2013-04-26",
+          "keywords": [
+            "Criminal law",
+            "Young offenders",
+            "Sentencing"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. A.C., 2005 BCPC 450 (CanLII)",
+        "metadata": {
+          "citation": "R v AC, 2005 BCPC 450 (CanLII)",
+          "case_id": "2005bcpc450",
+          "style_of_cause": "R v AC",
+          "atomic_citation": "2005 BCPC 450",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2005",
+          "court": "bcpc",
+          "decision_number": "450",
+          "jurisdiction": "bc",
+          "court_name": "Provincial Court of British Columbia",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/bc/bcpc/doc/2005/2005bcpc450/2005bcpc450.html",
+          "short_url": "https://canlii.ca/t/1lts7",
+          "language": "en",
+          "docket_number": "18639-2",
+          "decision_date": "2005-09-09",
+          "keywords": [
+            "Criminal law",
+            "Young offenders",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. D.F., 2017 ONCJ 495 (CanLII)",
+        "metadata": {
+          "citation": "R v DF, 2017 ONCJ 495 (CanLII)",
+          "case_id": "2017oncj495",
+          "style_of_cause": "R v DF",
+          "atomic_citation": "2017 ONCJ 495",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2017",
+          "court": "oncj",
+          "decision_number": "495",
+          "jurisdiction": "on",
+          "court_name": "Ontario Court of Justice",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/on/oncj/doc/2017/2017oncj495/2017oncj495.html",
+          "short_url": "https://canlii.ca/t/h51n9",
+          "language": "en",
+          "docket_number": "Lindsay Y120159",
+          "decision_date": "2017-07-20",
+          "keywords": [
+            "Criminal procedure",
+            "Youth sentencing",
+            "Sentence review",
+            "Conditional supervision",
+            "Offender convicted of second-degree murder at age 16",
+            "Review of custodial sentence under s. 94 of the Youth Criminal Justice Act",
+            "Balancing societal interests and offender\u2019s rehabilitation",
+            "Whether release on conditional supervision is appropriate",
+            "Youth Criminal Justice Act, S.C. 2002, c. 1, ss. 38, 94, 105 | Statutory interpretation",
+            "Youth Criminal Justice Act",
+            "Sentence review provisions",
+            "Grounds for optional review under s. 94(6)",
+            "Progress in rehabilitation and greater opportunities in the community",
+            "Whether statutory framework supports release of youth offender",
+            "Interpretation of s. 94(19) and related provisions",
+            "Youth Criminal Justice Act, S.C. 2002, c. 1 | Evidence",
+            "Rehabilitation progress",
+            "Lack of rehabilitative programming in adult facilities",
+            "Testimony from case managers and offender",
+            "Institutional misconducts and their relevance",
+            "Whether evidence supports release under conditional supervision",
+            "Balancing offender\u2019s progress with societal protection",
+            "Youth Criminal Justice Act, S.C. 2002, c. 1, ss. 38, 94"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. D.H., 2008 ONCJ 78 (CanLII)",
+        "metadata": {
+          "citation": "R v DH, 2008 ONCJ 78 (CanLII)",
+          "case_id": "2008oncj78",
+          "style_of_cause": "R v DH",
+          "atomic_citation": "2008 ONCJ 78",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2008",
+          "court": "oncj",
+          "decision_number": "78",
+          "jurisdiction": "on",
+          "court_name": "Ontario Court of Justice",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/on/oncj/doc/2008/2008oncj78/2008oncj78.html",
+          "short_url": "https://canlii.ca/t/1vx4k",
+          "language": "en",
+          "docket_number": "",
+          "decision_date": "2008-02-28",
+          "keywords": [
+            "Criminal procedure",
+            "Youth Criminal Justice Act",
+            "Mandatory and optional reviews",
+            "Balancing societal interests and youth needs",
+            "Application for mandatory review of youth sentence under section 94(1) of the Y.C.J.A.",
+            "Whether the youth sentence should be varied to conditional supervision in the community",
+            "Test under section 94(19) requiring consideration of societal interests and youth needs",
+            "Youth sentence confirmed due to insufficient exceptional progress | Social welfare",
+            "Rehabilitation and reintegration",
+            "Youth sentencing",
+            "Application for conditional supervision",
+            "Whether the applicant demonstrated sufficient progress to justify a change in the youth sentence",
+            "Evidence of progress in therapy, education, and family support",
+            "Disruptions caused by transfer to adult facilities",
+            "Insufficient evidence of exceptional circumstances to warrant release",
+            "Youth sentence confirmed | Rights and freedoms",
+            "Balancing interests",
+            "Youth sentencing reviews",
+            "Whether the original youth sentence remains appropriate",
+            "Seriousness of the offence and societal protection weighed against rehabilitation progress",
+            "Test under section 94(19) of the Y.C.J.A.",
+            "Original sentence deemed fit and proper | Evidence",
+            "Burden of proof",
+            "Youth sentencing reviews",
+            "Onus on the applicant to demonstrate sufficient progress or exceptional circumstances",
+            "Evidentiary and persuasive burden approximating a balance of probabilities",
+            "No exceptional progress demonstrated to justify varying the youth sentence",
+            "Youth sentence confirmed | Social welfare",
+            "Optional review",
+            "Leave granted for optional review under section 94(6) of the Y.C.J.A.",
+            "Concerns regarding continued access to appropriate treatment, therapy, and education in adult facilities",
+            "Optional review scheduled to assess progress and ensure compliance with youth sentencing principles"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. D.P., 2018 NSPC 31 (CanLII)",
+        "metadata": {
+          "citation": "R v DP, 2018 NSPC 31 (CanLII)",
+          "case_id": "2018nspc31",
+          "style_of_cause": "R v DP",
+          "atomic_citation": "2018 NSPC 31",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2018",
+          "court": "nspc",
+          "decision_number": "31",
+          "jurisdiction": "ns",
+          "court_name": "Provincial Court of Nova Scotia",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/ns/nspc/doc/2018/2018nspc31/2018nspc31.html",
+          "short_url": "https://canlii.ca/t/hvl3r",
+          "language": "en",
+          "docket_number": "8015660",
+          "decision_date": "2018-02-14",
+          "keywords": [
+            "Conditional supervision",
+            "Youth Criminal Justice Act"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. K.(C.), 2008 ONCJ 236 (CanLII)",
+        "metadata": {
+          "citation": "R v K(C), 2008 ONCJ 236 (CanLII)",
+          "case_id": "2008oncj236",
+          "style_of_cause": "R v K(C)",
+          "atomic_citation": "2008 ONCJ 236",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2008",
+          "court": "oncj",
+          "decision_number": "236",
+          "jurisdiction": "on",
+          "court_name": "Ontario Court of Justice",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/on/oncj/doc/2008/2008oncj236/2008oncj236.html",
+          "short_url": "https://canlii.ca/t/1wz5n",
+          "language": "en",
+          "docket_number": "",
+          "decision_date": "2008-05-06",
+          "keywords": [
+            "Criminal procedure",
+            "Youth sentencing",
+            "Annual reviews",
+            "Application under section 94(1) of the YCJA for review of a youth sentence exceeding one year",
+            "Does the YCJA apply to offenders serving youth sentences in adult facilities?",
+            "Whether transferred youth are entitled to annual reviews under the YCJA",
+            "Statutory interpretation of section 94(1)",
+            "Balancing the needs of the young person and the interests of society | Rights and freedoms",
+            "Youth offenders",
+            "Application of YCJA principles",
+            "Offender serving youth sentence in adult facility",
+            "Does the YCJA continue to apply to transferred youth?",
+            "Ambiguity in legislative framework",
+            "Principles of youth criminal justice, including rehabilitation and accountability, must apply to transferred youth",
+            "Ambiguity resolved in favour of youth | Social welfare",
+            "Rehabilitation and reintegration",
+            "Youth sentence review",
+            "Whether the defendant\u2019s progress and rehabilitation justify release from custody",
+            "Proposal for conditional supervision in the community",
+            "Balancing rehabilitation with accountability",
+            "Timing and extent of release must align with public interest and youth justice principles | Evidence",
+            "Institutional reports and psychological assessments",
+            "Evidence presented at review hearing",
+            "Reports from Grand Valley Institution, including psychological risk assessment and correctional plan",
+            "Testimony of defendant and witnesses",
+            "Whether evidence supports finding that youth\u2019s needs are unmet in adult custody",
+            "Rehabilitation programs and educational opportunities in adult facilities"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. L.M., 2008 SCC 31 (CanLII), [2008] 2 SCR 163",
+        "metadata": {
+          "citation": "R v LM, 2008 SCC 31 (CanLII)",
+          "case_id": "2008scc31",
+          "style_of_cause": "R v LM",
+          "atomic_citation": "2008 SCC 31",
+          "citation_type": "neutral",
+          "official_reporter_citation": "[2008] 2 SCR 163",
+          "year": "2008",
+          "court": "csc-scc",
+          "decision_number": "31",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/2008/2008scc31/2008scc31.html",
+          "short_url": "https://canlii.ca/t/1x21j",
+          "language": "en",
+          "docket_number": "31577",
+          "decision_date": "2008-05-29",
+          "keywords": [
+            "Criminal law",
+            "Sentencing",
+            "Maximum sentence",
+            "Criminal Code, R.S.C. 1985, c. C\u201046, ss. 718, 718.1, 718.2, 718.3."
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Practice and procedure",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. M.\u00a0(J.J.), 1993 CanLII 91 (SCC), [1993] 2 SCR 421",
+        "metadata": {
+          "citation": "R v M\u00a0(JJ), 1993 CanLII 91 (SCC) (CanLII)",
+          "case_id": "1993canlii91",
+          "style_of_cause": "R v M\u00a0(JJ)",
+          "atomic_citation": "1993 CanLII 91 (SCC)",
+          "citation_type": "canlii",
+          "official_reporter_citation": "[1993] 2 SCR 421",
+          "year": "1993",
+          "court": "csc-scc",
+          "decision_number": "91",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/1993/1993canlii91/1993canlii91.html",
+          "short_url": "https://canlii.ca/t/1fs2r",
+          "language": "en",
+          "docket_number": "22790",
+          "decision_date": "1993-05-19",
+          "keywords": [
+            "Criminal law",
+            "Young offenders",
+            "Sentencing",
+            "Young Offenders Act, R.S.C., 1985, c. Y\u20101, ss. 3(1), (2), 20, 23(2)(f), 24(1), 24.1(1), 28(1), (3)."
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. R.K.M., 2009 SKQB 51 (CanLII)",
+        "metadata": {
+          "citation": "R v RKM, 2009 SKQB 51 (CanLII)",
+          "case_id": "2009skqb51",
+          "style_of_cause": "R v RKM",
+          "atomic_citation": "2009 SKQB 51",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2009",
+          "court": "skqb",
+          "decision_number": "51",
+          "jurisdiction": "sk",
+          "court_name": "Court of King's Bench for Saskatchewan",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/sk/skqb/doc/2009/2009skqb51/2009skqb51.html",
+          "short_url": null,
+          "language": "en",
+          "docket_number": null,
+          "decision_date": null,
+          "keywords": [],
+          "categories": []
+        }
+      },
+      {
+        "citation": "R. v. S.N.J.S., 2013 BCCA 379 (CanLII)",
+        "metadata": {
+          "citation": "R v SNJS, 2013 BCCA 379 (CanLII)",
+          "case_id": "2013bcca379",
+          "style_of_cause": "R v SNJS",
+          "atomic_citation": "2013 BCCA 379",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2013",
+          "court": "bcca",
+          "decision_number": "379",
+          "jurisdiction": "bc",
+          "court_name": "Court of Appeal for British Columbia",
+          "court_level": "provincial appellate",
+          "long_url": "https://www.canlii.org/en/bc/bcca/doc/2013/2013bcca379/2013bcca379.html",
+          "short_url": "https://canlii.ca/t/g07bl",
+          "language": "en",
+          "docket_number": "CA040903",
+          "decision_date": "2013-08-27",
+          "keywords": [
+            "Criminal law",
+            "Young offenders",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. S.N.J.S., 2013 BCSC 2065 (CanLII)",
+        "metadata": {
+          "citation": "R v SNJS, 2013 BCSC 2065 (CanLII)",
+          "case_id": "2013bcsc2065",
+          "style_of_cause": "R v SNJS",
+          "atomic_citation": "2013 BCSC 2065",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2013",
+          "court": "bcsc",
+          "decision_number": "2065",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2013/2013bcsc2065/2013bcsc2065.html",
+          "short_url": "https://canlii.ca/t/g1vk4",
+          "language": "en",
+          "docket_number": "8094",
+          "decision_date": "2013-11-14",
+          "keywords": [
+            "Criminal law",
+            "Young offenders",
+            "Sentencing"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing"
+          ]
+        }
+      },
+      {
+        "citation": "R. v A.S.D, 2020 BCSC 535 (CanLII)",
+        "metadata": {
+          "citation": "R v ASD, 2020 BCSC 535 (CanLII)",
+          "case_id": "2020bcsc535",
+          "style_of_cause": "R v ASD",
+          "atomic_citation": "2020 BCSC 535",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2020",
+          "court": "bcsc",
+          "decision_number": "535",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2020/2020bcsc535/2020bcsc535.html",
+          "short_url": "https://canlii.ca/t/j6c1r",
+          "language": "en",
+          "docket_number": "26829",
+          "decision_date": "2020-04-06",
+          "keywords": [
+            "Criminal law",
+            "Young offenders",
+            "Custody and supervision orders"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R. v J.C.P.-B, 2023 BCSC 2307 (CanLII)",
+        "metadata": {
+          "citation": "R v JCP-B, 2023 BCSC 2307 (CanLII)",
+          "case_id": "2023bcsc2307",
+          "style_of_cause": "R v JCP-B",
+          "atomic_citation": "2023 BCSC 2307",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2023",
+          "court": "bcsc",
+          "decision_number": "2307",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2023/2023bcsc2307/2023bcsc2307.html",
+          "short_url": "https://canlii.ca/t/k239b",
+          "language": "en",
+          "docket_number": "X084150-2",
+          "decision_date": "2023-10-26",
+          "keywords": [
+            "Criminal law",
+            "Young offenders",
+            "Manslaughter"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R. v R.K., 2017 BCSC 1510 (CanLII)",
+        "metadata": {
+          "citation": "R v RK, 2017 BCSC 1510 (CanLII)",
+          "case_id": "2017bcsc1510",
+          "style_of_cause": "R v RK",
+          "atomic_citation": "2017 BCSC 1510",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2017",
+          "court": "bcsc",
+          "decision_number": "1510",
+          "jurisdiction": "bc",
+          "court_name": "Supreme Court of British Columbia",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/bc/bcsc/doc/2017/2017bcsc1510/2017bcsc1510.html",
+          "short_url": "https://canlii.ca/t/h5mcf",
+          "language": "en",
+          "docket_number": "1853-22",
+          "decision_date": "2017-05-31",
+          "keywords": [
+            "Criminal law",
+            "Young offenders",
+            "Sentencing",
+            "Murder",
+            "First degree murder"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      },
+      {
+        "citation": "R v TP, 2017 ABPC 253 (CanLII)",
+        "metadata": {
+          "citation": "R v TP, 2017 ABPC 253 (CanLII)",
+          "case_id": "2017abpc253",
+          "style_of_cause": "R v TP",
+          "atomic_citation": "2017 ABPC 253",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2017",
+          "court": "abpc",
+          "decision_number": "253",
+          "jurisdiction": "ab",
+          "court_name": "Alberta Court of Justice",
+          "court_level": "provincial",
+          "long_url": "https://www.canlii.org/en/ab/abpc/doc/2017/2017abpc253/2017abpc253.html",
+          "short_url": "https://canlii.ca/t/h6m6f",
+          "language": "en",
+          "docket_number": "150060929Y1",
+          "decision_date": "2017-10-12",
+          "keywords": [
+            "Criminal law",
+            "Young offenders",
+            "Sentencing",
+            "Evidence",
+            "Identification"
+          ],
+          "categories": [
+            "Criminal or statutory infractions",
+            "Sentencing",
+            "Young offenders"
+          ]
+        }
+      }
+    ],
+    "citing_cases_metadata": [],
+    "cited_legislation": [
+      [
+        "/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html",
+        "sec42subsec2",
+        [
+          1,
+          11
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html",
+        null,
+        [
+          36,
+          37,
+          45
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html",
+        "sec94subsec1",
+        [
+          2
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html",
+        "sec105",
+        [
+          11
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html",
+        "sec94subsec6",
+        [
+          27
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html",
+        "sec94",
+        [
+          30,
+          32,
+          35
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html",
+        "sec28subsec1",
+        [
+          33
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html",
+        "sec28subsec3",
+        [
+          33
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html",
+        null,
+        [
+          35,
+          36
+        ]
+      ],
+      [
+        "/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html",
+        "sec38",
+        [
+          33
+        ]
+      ]
+    ]
+  },
+  "header": " IN THE SUPREME COURT OF BRITISH COLUMBIA Citation: | R. v. J.C.P.-B., ---|--- | 2025 BCSC 732 Date: 20250106 Docket: X084150-2 Registry: New Westminster Rex v. J. C. P.-B. Restriction on Publication: A publication ban has been automatically imposed under [s. 110(1)](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec110subsec1smooth) of the [Youth Criminal Justice Act](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html) restricting the publication of information that would identify a young person referred to in this judgment by the initials J.C.P.-B. This publication ban applies indefinitely, unless the information is published by that young person who is protected by this ban or the court has ordered publication. Restriction on Publication: A publication ban has been automatically imposed under [s. 111(1)](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec111subsec1smooth) of the [Youth Criminal Justice Act](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html) restricting the publication of information that would identify a young person, referred to in this judgment by the initials J.C.P.-B., as having been a victim or witness. This publication ban applies indefinitely, unless the information is published by that young person who is protected by this ban or the court has ordered publication. Before: The Honourable Madam Justice Ker Oral Reasons for Judgment - [Section 94(1)](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec94subsec1smooth) [YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html) Review Counsel for the Crown: | M.J.H. Stacey J. Baharustani ---|--- Counsel for the Offender: | M. Beckett Place and Date of Review Hearing: | New Westminster, B.C. December 4, 2024 Place and Date of Judgment: | New Westminster, B.C. January 6, 2025 Table of Contents Introduction.. 3 Background.. 3 Offence. 3 Offender 4 The Sentence Imposed. 7 Current Situation.. 8 Performance in Custody. 8 Positions of the Parties.. 11 Crown Position.. 11 Defence Position.. 12 Discussion.. 13 Governing Principles. 13 Application of the Principles.. 18 # Introduction",
+  "body_paragraphs": [
+    "On October 26, 2023, I sentenced J.C.P.-B. for the offence of manslaughter. He committed the offence when he was 17 years old and was sentenced as a youth. I imposed a three-year custody and supervision order pursuant to [s. 42(2)](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec42subsec2_smooth)(o) of the _[Youth Criminal Justice Act,](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ S.C. 2002, c 1 [_YCJA_]. The sentence imposed had two components: a continuous period of custody of 18 months followed by a period of conditional supervision in the community for the same duration. My reasons are indexed at neutral citation [2023 BCSC 2307](/en/bc/bcsc/doc/2023/2023bcsc2307/2023bcsc2307.html).",
+    "More than a year has elapsed since the sentence was imposed. By virtue of [s. 94(1)](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec94subsec1_smooth) of _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ the Provincial Director is required to bring J.C.P.-B. before the court for a review of his sentence. The Provincial Director filed the application for review of custodial youth sentence on October 10, 2024, and the review hearing was conducted on December 4, 2024. A further letter from the probation officer and further written submissions from the Crown were filed on December 9, 2024, and have just been marked. J.C.P.-B. seeks to have the remainder of the custodial portion of his sentence converted to release on conditional supervision. The Crown contends that the custodial portion of the sentence should continue for the full 18 months that was originally imposed. # Background ## Offence",
+    "J.C.P.-B. pled guilty to the offence of manslaughter on May 8, 2023, weeks before his trial was scheduled to commence.",
+    "The circumstances of the offence were that on two occasions on the afternoon of August 7, 2019, J.C.P.-B. sold MDMA to 14-year-old Carson Crimeni. Carson died later that evening. The cause of his death was acute MDMA intoxication. J.C.P.-B., who was 17 years old and a known drug dealer at the time of the offence, overserved Carson. The deceased thought he was purchasing a total of about three caps or 0.3 grams of MDMA from J.C.P.-B. In actual fact, Carson ended up purchasing and consuming the equivalent of approximately ten caps or one gram of MDMA. The details of the offence are found in my reasons for sentence at paras. 3-8, and as I noted: [9] While J.C.P.-B. may not have intended to kill Carson, his conduct in overserving Carson with a prodigious amount of MDMA was criminally reckless. J.C.P.-B. is responsible for Carson's death. He will have to live with this fact for the rest of his life. [10] Carson's family will spend the rest of their days deprived of the love and strong bond they had with Carson. [11] This case is truly heartbreaking and tragic, no matter the perspective from which it is viewed. ## Offender",
+    "J.C.P.-B. committed this offence approximately four-and-a-half months before his 18th birthday. He was 21 years old when he was sentenced and just recently turned 23. When he was sentenced, he had no prior youth record or adult criminal record.",
+    "J.C.P.-B.'s history and personal circumstances at the time of his sentencing were covered in four comprehensive reports prepared for his sentencing as outlined at paras. 32 and 47 of my Reasons for Sentence.",
+    "J.C.P.-B.'s personal circumstances were also exhaustively covered in the submissions of counsel and the eight letters of support filed on his behalf, and as I noted: [34] By all accounts, J.C.P.-B. grew up in a relatively stable and supportive home, free of any sort of abuse. He was diagnosed with ADHD at a young age. His academic performance in elementary and high school was not stellar, but he was good in math and art. Insofar as the manifestation of ADHD symptomology is concerned, it would be fair to say that he started to exhibit behavioural issues in grade one, being inattentive and disruptive. By grade four, he was demonstrating oppositional features. He struggled in some subjects and, as noted, excelled in math and art through grades eight to ten. However, he withdrew from high school in grade ten. He transferred to an alternate school in grade 11, but eventually stopped attending. [35] While in high school, J.C.P.-B. was very actively involved in roller hockey and was well liked by his peers. Unfortunately, in early January 2017, shortly after he turned 15 years old, J.C.P.-B. was the victim of a vicious physical assault. He was out drinking alcohol with a large group of friends. He left the group with two acquaintances, who then attacked him, beating and kicking him in the head, and leaving him alone unconscious in the snow. Friends found him later and he was taken to hospital. [36] As a result of this attack, J.C.P.-B. sustained a closed\u2011head injury and possibly a concussion. The attack was a significant turning point in his life. He experienced, and others, especially his mother, noticed significant challenges with inattention, impulsivity, outbursts of anger, poor memory and comprehension. J.C.P.-B.'s ability to understand and process verbal and visual information deteriorated significantly. After the assault, he also experienced recurring nightmares and sleep deprivation. [37] J.C.P.-B.'s follow\u2011up treatment and diagnosis as to whether he actually sustained a traumatic brain injury or concussion were complicated by a reticence to engage in treatment, as well as his pre\u2011existing ADHD, his developed substance use disorder, the trauma of the attack, and other factors. [38] The attack was extremely traumatic for J.C.P.-B. He experienced significant anxiety, flashbacks, and panic attacks following the assault. To cope, he self\u2011medicated with psychedelics, marihuana, and LSD as they helped manage his anxiety. [39] Although J.C.P.-B. consumed alcohol in his pre and early teen years, his drug consumption did not really start until after his head injury. To that end, it would be fair to characterize the attack on J.C.P.-B. as a life\u2011altering event that contributed to a significant change in behaviour and lifestyle. J.C.P.-B.'s substance use history is well\u2011documented in the four reports that were filed (Exhibit #2). In summary, he started drinking when he was young. He first began using marihuana at 13 years of age. He may have been experimenting with hallucinogenic drugs before his head injury, but following his head injury in January 2017, his consumption of illicit drugs, both in variety and volume, increased significantly. In addition to marihuana, J.C.P.-B. experimented with nitrous oxide, cocaine, crack, benzodiazepine, codeine, and Oxycontin. [40] He began using psilocybin mushrooms after the January 2017 assault, and that progressed to heavy daily use by the age of 17. He also started to use LSD or acid quite heavily when he was 17 and MDMA when he was 16 years old. Needless to say, the import of this consumption appears to be that J.C.P.-B. was engaged in a dangerous self\u2011medication regime, trying to cope with the trauma of the attack on him. [41] Given his ADHD, a diagnosis of oppositional defiant disorder, a largely untreated head injury, and residual psychological trauma from the assault, it can be said that this toxic mix was a recipe for disaster. Indeed, after the assault upon him, J.C.P.-B. slid into the role of dealing drugs between 15 and 17 years of age. It is within this context that the offence was committed. This is not an excuse, but certainly provides considerable context and an explanation to the events of August 7, 2019. [42] Following this offence, J.C.P.-B. quit dealing drugs and stopped taking illicit drugs \"cold turkey\". [43] In addition to stopping his drug dealing and illicit substance consumption after this offence, J.C.P.-B. also moved out of province to be with his father and grandparents. While there, he upgraded his education and is about three credits away from receiving his GED. He was also employed at a local restaurant in his father's community and, according to his uncle, was well liked by his coworkers and former employer. [44] Since March 2021, J.C.P.-B. has been employed full\u2011time by a landscaping company in his community. A letter from his employer confirms this and describes J.C.P.-B. as the hardest and most reliable employee he has at the company. The employer, who is aware of this offence and J.C.P.-B.'s circumstances, has provided an extremely positive letter of support that, in my view, assists in establishing that J.C.P.-B. has managed to turn his life around and is striving to be prosocial, helping his community, especially the more elderly members, through various volunteer initiatives he engages in with his employer. [45] There are eight other letters of support.[4] Seven are from J.C.P.-B.'s family members. The eighth is from a family friend who works in the correctional system, as does J.C.P.-B.'s mother. All the letters of support acknowledge that what J.C.P.-B. did in terms of this offence is tragic and heartbreaking. They uniformly note the change in J.C.P.-B.'s behaviour pre and post the assault committed upon him in January 2017 and the shift back to being a more prosocial, contributing, and engaged member of the community since the commission of this offence. The support of family, friends and significantly his current employer is an extremely positive development. [46] To be sure, J.C.P.-B. has difficulties expressing himself, but that may be due to a variety of factors, including the previous diagnosis of ADHD, oppositional defiant disorder, depression, and the overlay of some sort of residual effects from the brain injury sustained in the attack of January 2017.",
+    "I observed in my reasons for sentence that the overall clinical assessment, as outlined in the various reports, was guarded in terms of future risk assessment and negative with respect to J.C.P.-B.'s level of insight into this offence (see paras. 47\u201157).",
+    "J.C.P.-B. provided a letter to the Court and the Crimeni family that he read out at the sentence hearing. I found that J.C.P.-B. unequivocally accepted responsibility for his acts and unreservedly expressed profound remorse for this offence.",
+    "I concluded my observations about J.C.P.-B. in my reasons for sentence this way: [60] To sum up, on the characteristics of the offender, J.C.P.-B. had a supportive upbringing, but had his own difficulties with ADHD and some oppositional behaviour. However, there was nothing really out of the ordinary for a teenage boy, until he was attacked in January 2017, just after he turned 15. That was a life\u2011altering event that set J.C.P.-B. on a far darker trajectory that led him into significant drug use and drug dealing and brought him to the commission of this offence with its heart\u2011breaking and tragic consequences. [61] J.C.P.-B.'s realization and acceptance that he is responsible for Carson Crimeni's death has been another watershed moment in his young life. By all accounts, he has turned his life around. He has walked away from dealing and using drugs. He is employed full\u2011time and has an employer who considers him to be an invaluable and trusted member of his business. [62] J.C.P.-B. certainly has worked very hard to make these changes and he has more work to do in terms of fully understanding the gravity of his intentional risk taking. I have no doubt he will get there, as he continues to mature and develop. ## The Sentence Imposed",
+    "After considering the circumstances of the offence, the impact of the offence on the victims, the circumstances of the offender, and the governing legal principles of sentencing under the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ , I concluded in my Reasons for Sentence as follows: [99] Much like the observations by Justice Garson in _S.N.J.S._ , there is a conundrum in this case. In light of the seriousness of this offence and J.C.P.-B.'s high degree of responsibility for it, these factors militate in favour of a longer custodial disposition. On the other hand, such a sentence is not necessary to meet J.C.P.-B.'s rehabilitation goals. Moreover, I am concerned about the potential negative impact serving a custodial sentence with adults in the provincial correctional system might well have on J.C.P.-B. and his positive steps undertaken over the last four years while on bail. [100] The question that remains then is the length of the sentence and the extent to which it is served in custody or in the community. [101] Bearing in mind all the principles enumerated in the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ that must be considered in imposing sentence and the totality of the circumstances of this case, the appropriate sentence is the maximum sentence of three years' custody and supervision. [102] The question then moves to what part of that three\u2011year period under the custody and supervision order should be served in custody. Further incarceration is necessary to achieve accountability. However, I am mindful of the negative impacts that a prolonged custodial sentence could have on J.C.P.-B.'s rehabilitation that he has worked so assiduously towards. Indeed, the prospect of a long custodial period may well have little rehabilitative consequence in the circumstances. [103] J.C.P.-B. has demonstrated over the past four years that he can perform well in the community. He has complied with his release order and has been gainfully employed. This militates in favour of a shorter custodial period. [104] To put it another way, the length of the custodial portion of the sentence must be calibrated to be the least restrictive to provide meaningful consequences, and the most likely one to achieve rehabilitation and reintegration. Thus, a longer period of community supervision is essential to support J.C.P.-B.'s already\u2011demonstrated strong rehabilitation prospects. [106] Bearing in mind the purpose, principles, and objectives of sentencing under the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ , and having considered the evidence adduced, the authorities provided, and the submissions of counsel, pursuant to [s. 42(2)](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec42subsec2_smooth)(o) of the _YCJA_ , I impose on you a custody and supervision order for three years, consisting of a continuous period of custody of 18 months followed by a period of conditional supervision of 18 months pursuant to [s. 105](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec105_smooth) of the _YCJA_. # Current Situation ## Performance in Custody",
+    "Given J.C.P.-B.'s age when the sentence was imposed, he has been required to serve it in an adult facility. He was placed at Xaws Scho:lha Correctional Centre, previously known as Ford Mountain Correctional Centre. This correctional centre is unique in the B.C. Corrections suite of custodial facilities. As the Probation Officer/Integrated Transitional Release Coordinator, Ms. Roth, noted in her December 4, 2024, update to her progress reports on J.C.P.-B.: Xaws Scho:lha Correctional Centre is described to be a medium to open custody centre, with dorm-like setting surrounded by nature, for those wanting to break away from the jailhouse mentality and be in the company of like-minded people who desire to learn and grow. Residents agree to abide by the \"Right Living Community\" beliefs and guidelines. Xaws Scho:lha's natural surroundings provide residents with the opportunity to work on themselves mentally, physically and spiritually. The Philosophy of the Right Living Community is \"We have come to a place to heal ourselves from behaviors, thoughts, and moods that interrupted our daily living. We chose to rebuild the potential of our lives. We will practice respect in attitude and behaviours and community. We will succeed through personal commitment, challengem, and change.\"",
+    "To put it simply, Xaws Scho:lha is a correctional centre that many inmates would hope to be classified to, although few enjoy that privilege. J.C.P.-B. was classified to that facility, however, and has been there for the duration of his sentence.",
+    "Ms. Roth authored all three progress reports on J.C.P.-B. In her initial report of November 8, 2024, she observed: \u2026Overall, he has utilized his time well in custody through programs, work, and active participation in the Right Living Community. He is currently a hut representative, which involves being a liaison between all the residents in their hut and the staff, he helps mediate conflicts within the hut and speaks on behalf of the residents of the hut in the Right Living Unit council meetings. Some of the programs he has completed are Living Without Violence, Substance Abuse Management, basic electrical and carpentry. BC Corrections records indicate he has a good work ethic. He participates in the Indigenous Brotherhood activities on a regular basis.",
+    "In this initial progress report, Ms. Roth also noted that J.C.P.-B.'s behaviour had been acceptable and he had continuously earned remission since his incarceration. J.C.P.-B. received good feedback from supervisors of the work program he was in, and, as a result of his performance, earned himself the lead hand position on the \"dry side\" of the fire crew. This correctional centre has a contract with B.C. Wildfire Services.",
+    "J.C.P.-B. worked on the fire crew throughout the 2024 fire season, which ran from July to October. This post included being classified to open custody, which permitted him to work on the grounds of the correctional centre outside its gates while being supervised. Ms. Roth, in her second supplemental progress report of December 4, 2024, explained that working in this program is a unique position that requires a high level of trust due to the fact that there are vast areas not covered by surveillance cameras. Members of these crews are expected to work independently with minimal supervision. However, residents and staff also work together as a team to accomplish tasks. Therefore, trust is an integral component to the functioning of the team.",
+    "In addition to working and earning a lead hand position with the fire crew, J.C.P.-B. participated in several programs, eventually obtaining the following: (i) his Dogwood diploma, graduating in January 2024; (ii) another certificate of achievement in February 22, 2024, for CLC 12, with an 86 percent average; (iii) a certificate of completion for the Living Without Violence Program from March 2024; (iv) a certificate of completion from the University of Fraser Valley's 90-hour course in Basic Carpentry from March 2024; (v) a certificate of completion of the University of the Fraser Valley's 90-hour course in Basic Electrical from June 2024; (vi) three certificates of completion from Pacific Rim Safety Training in Introduction to Fall Protection, Forklift Safe Operator, and WHMIS; (vii) a certificate of qualification for Level 1 Occupational First Aid; (viii) a certificate of completion in the Substance Abuse Management core program; and (ix) a certificate of completion in the Medicine Wheel Program from August 2024.",
+    "The above are all positive indicia that J.C.P.-B. is continuing on his path of rehabilitation and transformation away from who he was at the time of the offence. This type of progress is what I expected to see when I sentenced him in October 2023. Indeed, all who are concerned with J.C.P.-B's case expected for him to do well in a structured environment and work towards improving himself to become a productive member of society. And for the most part, J.C.P.-B. has met those expectations, though he has not exceeded them.",
+    "More recently, however, there has been a regression in his behaviour. Even in the first progress report, there were observations that J.C.P.-B. has had minor behavioural issues and that his attitude has been dismissive at times. He occasionally displays immature behaviour and gravitates to residents who are not pro-social. This latter point is hardly surprising given the fact that he is in a custodial facility.",
+    "Although he has not accumulated any institutional charges, an incident over foraging for mushrooms contrary to the centre's policies caught the attention of the correctional centre's staff. More significantly, however, is the report that J.C.P.-B and another resident constructed a makeshift cardboard hockey court in his work area together. He was directed by the correctional instructor to remove it as the structure was deemed inappropriate. The instructor was then away for days off. On his return, he learned that J.C.P.-B. and the other resident had re-established the hockey court in the same area and used it all week while the instructor was away. As a result of this, J.C.P.-B. was reassigned to another position outside of the forestry work program. This incident occurred in November 2024. J.C.P.-B. can earn his way back into the program should he choose to correct his behaviour and attitude.",
+    "I am mindful that J.C.P.-B. has been diagnosed with ADHD and oppositional defiant disorder and likely has continuing lingering trauma from the injury sustained when he was viciously attacked in January 2017 as I outlined in paras. 37-41 and 46 of the Reasons for Sentence. This background may provide context for some of the recent regression that J.C.P.-B. has exhibited in his behaviour, as Ms. Roth outlined in her three progress reports. This recent behaviour can perhaps best be described as containing an element of self-sabotage. It is hard to understand in light of the commendable progress J.C.P.-B. made up until the end of the fire season.",
+    "J.C.P.-B.'s plan, once released from custody, is to return to living with his mother and to the employment he had at the time he was sentenced. His employer, who was effusive in his observations about J.C.P.-B. in a letter to the Court at sentencing (see para. 44 of the Reasons for Sentence), is waiting for J.C.P.-B.'s release and intends to rehire him when that occurs. That is a promising outcome for J.C.P.-B. and society more generally.",
+    "Finally, at the review hearing, J.C.P.-B. again expressed remorse for this offence. I accept, as I did at the original sentencing, that his remorse is genuine. # Positions of the Parties ## Crown Position",
+    "The Crown argues there is no evidence that J.C.P.-B.'s needs require a release from custody earlier than the originally sentenced 18 months. The Crown contends there is no evidence that an early release would offer any benefit in relation to J.C.P.-B.'s rehabilitation and that, in fact, his time in custody appears to have offered significant opportunities, programming, and education. Conversely, the Crown urges that a reduction in sentence would have a detrimental effect on the public's confidence in the administration of justice. J.C.P.-B. committed a terrible act that killed Carson Crimeni. The offence shocked the community.",
+    "The Crown contends that when the original sentence was imposed, it required the weighing and balancing of a myriad of interests. According to Crown counsel, the court's reasons reflect a careful calibration accounting for J.C.P.-B.'s rehabilitative performance and potential while also providing for meaningful consequences and accountability.",
+    "The Crown argues there is no compelling reason for J.C.P.-B. to be discharged early from custody. The Crown also contends that if the custodial portion of the sentence were to be truncated, it would undermine the public confidence in the administration of justice, something antithetical to the interests of society. ## Defence Position",
+    "The defence contends that, having regard to J.C.P.-B.'s needs and society's interests, J.C.P.-B. has made progress sufficient enough to justify releasing him from custody; the opportunities for rehabilitation are now greater in the community; and he should therefore be placed under conditional supervision for the remainder of his youth sentence. The defence relies on [s. 94(6)](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec94subsec6_smooth) (a) and (d) of the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ as the bases to support the termination of the custodial portion of the sentence and the conversion of the terminated portion to be rolled into the conditional supervision portion of the sentence.",
+    "I pause to note that if the Court accedes to the defence contention that the custodial portion of the sentence should be terminated and that J.C.P.-B. should be placed under conditional supervision for the remainder of his youth sentence, it would mean that the sentence is recalibrated to approximately 14 months and 11 days' custody and 21 months and 19 days' conditional supervision. If the custodial sentence is not terminated, J.C.P.-B. has approximately three months and 19 days or 109 days left on the custodial portion of his sentence. # Discussion ## Governing Principles",
+    "The governing legal principles are not in dispute. Rather, the issue here is the application of the principles to the particular circumstances of J.C.P.-B.'s case and the result that ensues from the application thereof.",
+    "[Section 94](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec94_smooth) of the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ contains the framework for reviewing a youth sentence. The grounds to be considered in determining whether to review a youth sentence are enumerated in s. 94(6). That subsection provides: (6) A youth sentence imposed in respect of a young person may be reviewed under subsection (5) (a) on the ground that the young person has made sufficient progress to justify a change in the youth sentence; (b) on the ground that the circumstances that led to the youth sentence have changed materially; (c) on the ground that new services or programs are available that were not available at the time of the youth sentence; (d) on the ground that the opportunities for rehabilitation are now greater in the community; or (e) on any other ground that the youth justice court considers appropriate.",
+    "The options available on this review and the basis upon which the Court is to select from among those options are set out in s. 94(19). It provides in part as follows: **Decision of the youth justice court after review** (19) When a youth justice court reviews under this section a youth sentence imposed in respect of a young person, _it may \u2026 having regard to the needs of the young person and the interests of society_, (a) confirm the youth sentence; (b) release the young person from custody and place the young person under conditional supervision in accordance with the procedure set out in section 105, with any modifications that the circumstances require, for a period not exceeding the remainder of the youth sentence that the young person is then serving; or\u2026 (Emphasis added.)",
+    "Counsel has carefully and thoughtfully reviewed the leading authorities dealing with the review process in their comprehensive written and oral submissions. The authorities include _R. v. A.S.D._ , [2020 BCSC 535](/en/bc/bcsc/doc/2020/2020bcsc535/2020bcsc535.html); _R. v. R.K._ , [2017 BCSC 1510](/en/bc/bcsc/doc/2017/2017bcsc1510/2017bcsc1510.html); _R. v. S.N.J.S._ , [2013 BCSC 2065](/en/bc/bcsc/doc/2013/2013bcsc2065/2013bcsc2065.html); _R. v. D.A.P._ , [2018 NSPC 31](/en/ns/nspc/doc/2018/2018nspc31/2018nspc31.html); _R. v. R.K.__M._ , [2009 SKQB 51](/en/sk/skqb/doc/2009/2009skqb51/2009skqb51.html); and _R. v. K.(C.)_ , [2008 ONCJ 236](/en/on/oncj/doc/2008/2008oncj236/2008oncj236.html). I have considered the submissions and the authorities. I do not propose to review each case as the review process is largely focused on this particular offender's progress considered within the analytical framework set out by [s. 94](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec94_smooth) of the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ and the jurisprudence interpreting it.",
+    "Nevertheless, I adopt Justice Schultes' observations in his thoughtful review decision in _A.S.D._ where he noted: [52] When reviewing those decisions I ultimately found that the most comprehensive, helpful, yet concise statement of the applicable principles was in _R. v. D.A.P.__,_ [2018 NSPC 31](/en/ns/nspc/doc/2018/2018nspc31/2018nspc31.html). Its relevant paragraphs are: 5 As observed in J.C. (Re), [2017 NSPC 14](/en/ns/nspc/doc/2017/2017nspc14/2017nspc14.html) at para. [26](/en/ns/nspc/doc/2017/2017nspc14/2017nspc14.html#par26): The judicial exercise of discretion under section 94(19), that is, a judge's determination of which option -- confirmation of the sentence or release into the community \\-- must be structured by the considerations, found in section 94(6), that ground the sentence review. \u2026[T]hese considerations have the unifying theme of a material change in circumstances since the sentence was imposed. The language of the provisions contemplate that the court will have evidence of something having occurred to justify the review\u2026 6 The burden of proving that there has been a material change in circumstances justifying a review is borne by the young person on a balance of probabilities: _R. v. T.P._ , [2017 ABPC 253](/en/ab/abpc/doc/2017/2017abpc253/2017abpc253.html) at para. [36](/en/ab/abpc/doc/2017/2017abpc253/2017abpc253.html#par36); _R. v. A.A.Z._ , [2013 MBCA 33](/en/mb/mbca/doc/2013/2013mbca33/2013mbca33.html) at para. [121](/en/mb/mbca/doc/2013/2013mbca33/2013mbca33.html#par121); _R. v. D.H._ , [2008 ONCJ 78](/en/on/oncj/doc/2008/2008oncj78/2008oncj78.html) at para. [17](/en/on/oncj/doc/2008/2008oncj78/2008oncj78.html#par17). 7 Sub-ss. 94(6) and (19) appear to describe a two-staged process: first, the court screens the case to determine whether there has been a change in circumstances sufficient to warrant a review; second, if the court is satisfied that the criteria for convening a review have been met, the court must determine, having regard to the needs of the young person and the interests of society, whether the young person ought to be released or the sentence left alone. This is consistent with judicial interpretation of sub-[ss. 28(1)](/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html#sec28subsec1_smooth) and [(3)](/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html#sec28subsec3_smooth) of the _[Young Offenders Act](/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html)\u2026_in _R. v._[_J.J.M_.]_\u2026_[that]\u2026 \u2026 17 Reviews, intended to be salutary, underline the objectives of the _[Young Offenders Act](/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html)_ to explore and develop all reasonable prospects for guiding and assisting young people toward the positive potential life offers. 10 Cases that have dealt with sub-s. 94(16) [_sic_ - clearly referring to the criteria for review in ss.(6)] _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ reviews have required, typically, evidence of \"significant changes . . . made during the course of the young person serving his sentence\" or \"exceptional evidence of change\", the more serious the offence, the greater the need for exceptional evidence: _R. v. A.A.Z._ , [2013 MBCA 33](/en/mb/mbca/doc/2013/2013mbca33/2013mbca33.html) at paras. [124-125](/en/mb/mbca/doc/2013/2013mbca33/2013mbca33.html#par124); _R v. A.C._ , [2005 BCPC 450](/en/bc/bcpc/doc/2005/2005bcpc450/2005bcpc450.html) at para. [21](/en/bc/bcpc/doc/2005/2005bcpc450/2005bcpc450.html#par21); _R. v. D.H._ , [2008 ONCJ 78](/en/on/oncj/doc/2008/2008oncj78/2008oncj78.html) at paras. [20-21](/en/on/oncj/doc/2008/2008oncj78/2008oncj78.html#par20); _R. v. T.P._ , _supra_ ; _R. v. D.F._ , [2017 ONCJ 495](/en/on/oncj/doc/2017/2017oncj495/2017oncj495.html) at para. [7](/en/on/oncj/doc/2017/2017oncj495/2017oncj495.html#par7). While exceptional evidence might be required to be presented to the court, the principles of sentencing as set out in [s. 38](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec38_smooth) of the _YCJA_ [the purpose and principles of sentencing] lay out the criteria to which that exceptional evidence ought to apply\u2026 11 In _R. v. S.M._ , 2014 ONSCJ 5510 at para. 15, the Court stated: 15 The [YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html) is very much focused on rehabilitation. Indeed, s. 38 outlines the purpose and principles of sentencing under that Act. It notes that the purpose of sentencing a youth is to: ... promote his or her rehabilitation and reintegration into society thereby contributing to the long-term protection of the public. 16 If we are truly committed to that principle of rehabilitation then when a young person does all that can be reasonably expected of them, and more, to demonstrate that they are committed to improving themselves as a person, we, as the society to which that young person will eventually return, ought to both reward that change and encourage its continuation. That is in our own self-interest as much as it is in the young person's interest. It is that basic concept that s. 94(6) encapsulates. If we simply hold rigidly to the notion that more time in custody equates to increased safety, we will never achieve the desired objective of rehabilitation\u2026 12 It is clear from these authorities that the purpose of a review is not to affirm the correctness of the original sentence of the court, but to determine, should grounds exist warranting a review, whether the young person ought to be released, given the needs of the young person, not as they were at the time of sentencing, but as they are at the time of the review hearing, and given the interests of society as the court might determine them to be, again, at the time of the hearing.",
+    "As noted earlier, the defence relies upon s. 94(6)(a) and (d) for this review. I find Justice Barrow's reasons in _R. v. S.N.J.S._ at para. 7 to be particularly instructive: [7] Section 94(6)(a) invites the court to consider the young person's circumstances at the time of the application and determine whether those circumstances are such that they would justify a change in the sentence initially imposed. Section 94(6)(d) invites the court to consider whether community\u2011based rehabilitation options are greater at the time of the application than they were at the time the sentence was initially imposed\u2026",
+    "Like the review provisions of the preceding legislation, the _[Young Offenders Act](/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html)_ , R.S.C. 1985, c Y-1 (_YOA_), the review provisions of [s. 94](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html#sec94_smooth) of the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ create an incentive to young offenders to perform well and to improve their behaviour significantly as quickly as possible. As Judge Stuart of the Yukon Youth Court eloquently observed in _R v MT_ , [1995] Y.J. No 6, 26 WCB (2d) 488 when addressing the purpose of the review under the provisions of the _YOA_ : 13 A mandatory review is designed to assess whether the circumstances have sufficiently changed since the sentence was imposed to warrant altering the sentence. In making this determination, the principal considerations and objectives moulding the initial sentence are relevant, but not determinative. Unlike a sentencing appeal, the review focuses on what can now best advance the needs of the young offender and the interests of society, not on whether the sentencing adequately addressed the guiding principles of sentencing and properly accounted for all mitigating and aggravating circumstances at the time of the sentence. It must be taken as a given that the original sentence was appropriate. 14 Reviews, broader in scope and purpose than parole hearings (R. v. J.J.M. (1993), [1993 CanLII 91 (SCC)](/en/ca/scc/doc/1993/1993canlii91/1993canlii91.html), 81 C.C.C. (3d) 487 S.C.C. at 497), are perceived by some as a \"cornerstone\" of the young offender process, Priscilla Platt, Young Offenders Law in Canada, (Vancouver: Butterworths, 1989) at p. 18.1. They afford an invaluable opportunity to achieve the over-riding objectives of the Act by fine-tuning the initial sentence. Reviews, unlike adult probation, are an integral part of the sentencing process by the Court. 15 Since most young offenders in a mandatory review are likely to be close to adult age or significantly immersed in a dysfunctional lifestyle, mandatory reviews can be particularly crucial, as they may offer the last significant opportunity for successful state intervention. 16 A mandatory review offers a young offender an opportunity and a challenge. The opportunity is to reduce the original sentence, the challenge is to walk the talk of rehabilitation sufficiently to move the focus of the state along the spectrum of intervention from punishment to rehabilitation. Equally, a mandatory review offers an invaluable opportunity for young offenders and their communities to reconnect in a constructive manner. The review ought to rally family, friends and the community to develop a supportive environment capable of rescuing young people from being driven further into crime by the demise of their self-esteem, self-respect, and loss of hope arising from the disconnecting experience of incarceration. 17 Reviews, intended to be salutary, underline the objectives of the [Young Offenders Act](/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html) to explore and develop all reasonable prospects for guiding and assisting young people toward the positive potential life offers. 18 The inherent rehabilitative focus of reviews was recognized by the Supreme Court of Canada in R. v. J.J.M., supra at p. 497: \"The section is obviously salutary. It provides an incentive to young offenders to perform well and to improve their behaviour significantly as quickly as possible. As well, it gives an opportunity to the court to assess the offenders again and to make certain that the appropriate treatment or assistance has been made available to them. It introduces an aspect of review and flexibility into the sentencing procedure, with the result that any marked improvement in the behaviour, outlook and performance of the offender can be rewarded and any deterioration assessed.\"",
+    "These observations as to the purpose of the _[YOA](/en/ca/laws/stat/rsc-1985-c-y-1/latest/rsc-1985-c-y-1.html)_ review provisions are equally apposite to the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ review process.",
+    "Finally, as I observed in my original Reasons for Sentence: [66] Section 38(2)(e) specifically codifies the four \"Rs\" of youth sentencing: the principles of restraint, rehabilitation, reintegration, and responsibility. These principles, along with the terms accountability, just sanctions, and meaningful consequences collectively form the guiding principles, touchstones, and nomenclature of sentencing in the youth criminal justice system. [67] Sentencing proceedings are based on an individualized process, balancing both the particular needs and circumstances of the young person with the applicable sentencing provisions, making the proceedings perhaps more \"offender centric\": see _R. v. L.M_., [2008 SCC 31](/en/ca/scc/doc/2008/2008scc31/2008scc31.html) at para. [18](/en/ca/scc/doc/2008/2008scc31/2008scc31.html#par18). However, the values of society and the need to protect the public remain important factors. And so, while the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html) _may be offender centric, it is not offender exclusive: see _R. v. S.N.J.S._ , [2013 BCCA 379](/en/bc/bcca/doc/2013/2013bcca379/2013bcca379.html) at para. [28](/en/bc/bcca/doc/2013/2013bcca379/2013bcca379.html#par28).",
+    "Those observations remain applicable in the context of a s. 98 review of the sentence imposed. # Application of the Principles",
+    "J.C.P.-B. has made many positive steps and a host of positive accomplishments during his time at Xaws Scho:lha Correctional Centre. I commend him for his hard work and positive steps in demonstrating his commitment to rehabilitation. There is no doubt J.C.P.-B. has made progress and has demonstrated a largely positive work ethic.",
+    "However, more recently, his behaviour and attitude have deteriorated to such an extent that he has been removed from a fairly prestigious position on the fire crew and, indeed, from that program. This is a disappointing development. And, I have no doubt that at some level J.C.P.-B. is disappointed with his own behaviour. Engaging in immature and juvenile behaviour may not be surprising given J.C.P.-B.'s particular personal circumstances. But the recent deliberate non-compliance with the correctional supervisor's direction to remove the hockey court is not acceptable and not the type of behaviour consistent with the expectations of a team leader, which J.C.P.-B. was until his reassignment",
+    "In _S.N.J.S._ Justice Barrow observed: [22] To the extent that acceptance of responsibility for one's actions augers well for the prospect of rehabilitation, this remains a troublesome aspect of SNJS's situation. As Tomkins J. wrote in R. v. J.P. at paras. 72 and 73: [72] \u2026Rehabilitation is a primary focus in a review application but it does not override the public interest which includes both the safety of the public and confidence in the administration of justice. The latter will be compromised if the sentence - whether initial or upon review - does not adequately reflect the seriousness of the offence. [73] Indeed, rehabilitation itself requires that [the offender] recognizes the seriousness of his actions and society's intolerance and abhorrence of what he did. This degree of accountability includes, in its core, respect for the administration of justice and the public interest. In this manner, rehabilitation and the public interest are intertwined. And as Barrow J. did, I too question whether the public interest would be served in reducing the custodial portion of this sentence. To state the matter more pointedly, I must determine whether there is exceptional evidence of change in J.C.P.-B.'s life, that is to say, whether he has made \"sufficient progress\" to justify a change in the initial sentence. I am not satisfied that he has.",
+    "Nor am I satisfied that the opportunities for rehabilitation in the community are now greater than they were in October 2023. They remain largely the same. Indeed, J.C.P.-B. does not appear to have fully exhausted the rehabilitative opportunities available to him in the extremely rehabilitation- focused correctional centre where he is currently serving the custodial portion of his sentence.",
+    "I acknowledge that J.C.P.-B. has made commendable efforts towards rehabilitation while in custody. However, after viewing the overall arc of his behaviour and efforts while serving this sentence, I would not characterize his overall efforts as qualifying as exceptional.",
+    "The balancing process requires the Court to have regard to \"the needs of the young person and the interests of society\" in determining whether to alter the sentence imposed. The \"interests of society\" includes the need to protect public confidence in the administration of justice. It seems to me that that confidence would be undermined or shaken were the Court to change J.C.P.-B.'s sentence such that he could be released to the community to live with his mother and return to work in light of the recent seeming deterioration in his attitude and ability to follow the orders and directions of correctional staff.",
+    "J.C.P.-B.'s custodial sentence was required to appropriately balance and recognize all the purposes and principles of the _[YCJA](/en/ca/laws/stat/sc-2002-c-1/latest/sc-2002-c-1.html)_ including accountability and meaningful consequences: see the Reasons for Sentence at paras. 97-104.",
+    "J.C.P.-B.'s custodial sentence was required to promote his sense of responsibility and acknowledgement of the harm done, and to deter other similarly inclined young persons who find themselves in a similar situation. As Justice Schultes noted in _A.S.D._ : (64) A sentence that is truncated before it can properly reflect the seriousness of the offence and these important sentencing objectives would not be in keeping with the public interest.",
+    "In this case, within the portion of the sentence served thus far, I am unable to conclude that J.C.P.-B. has done \"all that can be expected\" of him and therefore terminating the custodial portion of the sentence in my view would not advance the original purposes of the sentence, nor would it foster public confidence in the administration of justice.",
+    "In conclusion, while I acknowledge and recognize that J.C.P.-B. has made progress in many areas of his life, I am not satisfied that overall his progress has been sufficient to warrant the relief he is seeking.",
+    "In balancing the needs of J.C.P.-B. and the interests of society as detailed above, I confirm the youth sentence originally imposed and dismiss the review application to vary it. \"Ker J.\""
+  ]
+}

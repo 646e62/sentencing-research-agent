@@ -310,6 +310,8 @@ def generate_report_cmd(
     if section_heading and paragraphs:
         paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
 
+    if verbose:
+        typer.echo("Cleaning header text...")
     # Quick formatting for the header
     # Remove redundant header data and text
     header = remove_before_string(header, "Most recent unfavourable mention")
@@ -362,6 +364,8 @@ def generate_report_cmd(
 
     if verbose:
         typer.echo("Fetching metadata for related cases...")
+    if verbose:
+        typer.echo("Collecting cited legislation...")
     report = {
         "citation": citation,
         "metadata": _make_json_safe(metadata),
@@ -374,6 +378,8 @@ def generate_report_cmd(
         "body_paragraphs": paragraphs,
     }
 
+    if verbose:
+        typer.echo("Writing report JSON...")
     output_dir = os.path.join(".", "data", "json")
     os.makedirs(output_dir, exist_ok=True)
     case_id = metadata.get("case_id") or "unknown"
