@@ -1,0 +1,500 @@
+{
+  "citation": "R v Bone, 2025 SKPC 26",
+  "metadata": {
+    "citation": "R v Bone, 2025 SKPC 26 (CanLII)",
+    "case_id": "2025skpc26",
+    "style_of_cause": "R v Bone",
+    "atomic_citation": "2025 SKPC 26",
+    "citation_type": "neutral",
+    "official_reporter_citation": null,
+    "year": "2025",
+    "court": "skpc",
+    "decision_number": "26",
+    "jurisdiction": "sk",
+    "court_name": "Provincial Court of Saskatchewan",
+    "court_level": "provincial",
+    "long_url": "https://www.canlii.org/en/sk/skpc/doc/2025/2025skpc26/2025skpc26.html",
+    "short_url": "https://canlii.ca/t/kfn09",
+    "language": "en",
+    "docket_number": "991269149",
+    "decision_date": "2025-09-26",
+    "keywords": [
+      "Evidence",
+      "Disclosure obligations",
+      "Unredacted video evidence",
+      "Defence sought unredacted body-worn camera footage",
+      "Crown redacted portions of video for privacy and policy reasons",
+      "Does R v Stinchcombe require disclosure of unredacted video evidence?",
+      "Crown must disclose all relevant information unless privileged or clearly irrelevant",
+      "R v Stinchcombe, [1991] 3 SCR 326; R v Taillefer, 2003 SCC 70 | Evidence",
+      "Privacy rights",
+      "Witness contact information",
+      "Defence requested complainant\u2019s address and phone number",
+      "Whether privacy rights limit disclosure obligations under R v Stinchcombe",
+      "Witness contact details deemed \u201chighly sensitive material\u201d",
+      "Disclosure of such information is a last resort",
+      "R v McNeil, 2009 SCC 3; The Local Authority Freedom of Information and Protection of Privacy Act, SS 1990-91, c L-27.1 | Evidence",
+      "Police notebooks and screens",
+      "Relevance of masked video portions",
+      "Defence sought unmasking of police notebook pages and computer screens",
+      "Whether masked portions of video evidence are relevant and discloseable",
+      "Information irrelevant if unrelated to the accused or investigation",
+      "Tactical burden shifts to defence to establish relevance",
+      "R v Egger, [1993] 2 SCR 451 | Evidence",
+      "Verification of disclosed materials",
+      "Defence requested unmasking of video showing note-taking process",
+      "Whether defence is entitled to verify accuracy of disclosed notes",
+      "Defence entitled to unmasking to confirm consistency between video and disclosed notes",
+      "Crown must provide unmasked portions showing note-taking process",
+      "R v Chaplin, [1995] 1 SCR 727"
+    ],
+    "categories": [
+      "Criminal or statutory infractions"
+    ]
+  },
+  "references": {
+    "cited_cases_metadata": [
+      {
+        "citation": "Automated Tank Manufacturing Inc v Miller, 2012 SKQB 300 (CanLII)",
+        "metadata": {
+          "citation": "Automated Tank Manufacturing Inc v Miller, 2012 SKQB 300 (CanLII)",
+          "case_id": "2012skqb300",
+          "style_of_cause": "Automated Tank Manufacturing Inc v Miller",
+          "atomic_citation": "2012 SKQB 300",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2012",
+          "court": "skqb",
+          "decision_number": "300",
+          "jurisdiction": "sk",
+          "court_name": "Court of King's Bench for Saskatchewan",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/sk/skqb/doc/2012/2012skqb300/2012skqb300.html",
+          "short_url": null,
+          "language": "en",
+          "docket_number": null,
+          "decision_date": null,
+          "keywords": [],
+          "categories": []
+        }
+      },
+      {
+        "citation": "Big Sky Farms inc. (Re), 2010 SKQB 255 (CanLII)",
+        "metadata": {
+          "citation": "Big Sky Farms inc (Re), 2010 SKQB 255 (CanLII)",
+          "case_id": "2010skqb255",
+          "style_of_cause": "Big Sky Farms inc (Re)",
+          "atomic_citation": "2010 SKQB 255",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2010",
+          "court": "skqb",
+          "decision_number": "255",
+          "jurisdiction": "sk",
+          "court_name": "Court of King's Bench for Saskatchewan",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/sk/skqb/doc/2010/2010skqb255/2010skqb255.html",
+          "short_url": null,
+          "language": "en",
+          "docket_number": null,
+          "decision_date": null,
+          "keywords": [],
+          "categories": []
+        }
+      },
+      {
+        "citation": "K+s Potash Canada General Partnership v Aecon Construction Group Inc, 2023 SKKB 225 (CanLII)",
+        "metadata": {
+          "citation": "K+s Potash Canada General Partnership v Aecon Construction Group Inc, 2023 SKKB 225 (CanLII)",
+          "case_id": "2023skkb225",
+          "style_of_cause": "K+s Potash Canada General Partnership v Aecon Construction Group Inc",
+          "atomic_citation": "2023 SKKB 225",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2023",
+          "court": "skqb",
+          "decision_number": "225",
+          "jurisdiction": "sk",
+          "court_name": "Court of King's Bench for Saskatchewan",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/sk/skqb/doc/2023/2023skkb225/2023skkb225.html",
+          "short_url": null,
+          "language": "en",
+          "docket_number": null,
+          "decision_date": null,
+          "keywords": [],
+          "categories": []
+        }
+      },
+      {
+        "citation": "R. v. Chaplin, 1995 CanLII 126 (SCC), [1995] 1 SCR 727",
+        "metadata": {
+          "citation": "R v Chaplin, 1995 CanLII 126 (SCC) (CanLII)",
+          "case_id": "1995canlii126",
+          "style_of_cause": "R v Chaplin",
+          "atomic_citation": "1995 CanLII 126 (SCC)",
+          "citation_type": "canlii",
+          "official_reporter_citation": "[1995] 1 SCR 727",
+          "year": "1995",
+          "court": "csc-scc",
+          "decision_number": "126",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/1995/1995canlii126/1995canlii126.html",
+          "short_url": "https://canlii.ca/t/1frl0",
+          "language": "en",
+          "docket_number": "23865",
+          "decision_date": "1995-02-23",
+          "keywords": [
+            "Constitutional law",
+            "Charter of Rights",
+            "Fundamental justice",
+            "Disclosure",
+            "Canadian Charter of Rights and Freedoms, s. 7",
+            "Canada Evidence Act, R.S.C., 1985, c. C\u20105, s. 37(2)."
+          ],
+          "categories": [
+            "Constitution",
+            "Criminal or statutory infractions",
+            "Rights and freedoms"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Egger, 1993 CanLII 98 (SCC), [1993] 2 SCR 451",
+        "metadata": {
+          "citation": "R v Egger, 1993 CanLII 98 (SCC) (CanLII)",
+          "case_id": "1993canlii98",
+          "style_of_cause": "R v Egger",
+          "atomic_citation": "1993 CanLII 98 (SCC)",
+          "citation_type": "canlii",
+          "official_reporter_citation": "[1993] 2 SCR 451",
+          "year": "1993",
+          "court": "csc-scc",
+          "decision_number": "98",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/1993/1993canlii98/1993canlii98.html",
+          "short_url": "https://canlii.ca/t/1fs37",
+          "language": "en",
+          "docket_number": "22816",
+          "decision_date": "1993-06-10",
+          "keywords": [
+            "Criminal law",
+            "Impaired driving",
+            "Canadian Charter of Rights and Freedoms, s. 7",
+            "Criminal Code, R.S.C., 1985, c. C\u201046, ss. 253(b), 255(2), 258(1)(d), (7), 676(1)(a)."
+          ],
+          "categories": [
+            "Constitution",
+            "Criminal or statutory infractions",
+            "Rights and freedoms"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. McNeil, 2009 SCC 3 (CanLII), [2009] 1 SCR 66",
+        "metadata": {
+          "citation": "R v McNeil, 2009 SCC 3 (CanLII)",
+          "case_id": "2009scc3",
+          "style_of_cause": "R v McNeil",
+          "atomic_citation": "2009 SCC 3",
+          "citation_type": "neutral",
+          "official_reporter_citation": "[2009] 1 SCR 66",
+          "year": "2009",
+          "court": "csc-scc",
+          "decision_number": "3",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/2009/2009scc3/2009scc3.html",
+          "short_url": "https://canlii.ca/t/2254d",
+          "language": "en",
+          "docket_number": "31852",
+          "decision_date": "2009-01-16",
+          "keywords": [
+            "Constitutional law",
+            "Charter of Rights",
+            "Fundamental justice",
+            "Full answer and defence",
+            "Disclosure",
+            "Criminal Code, R.S.C. 1985, c. C\u201046, ss. 278.1 to 278.91, 278.3(4), 698(1), 700",
+            "Canadian Charter of Rights and Freedoms, s. 7."
+          ],
+          "categories": [
+            "Constitution"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Stinchcombe, 1991 CanLII 45 (SCC), [1991] 3 SCR 326",
+        "metadata": {
+          "citation": "R v Stinchcombe, 1991 CanLII 45 (SCC) (CanLII)",
+          "case_id": "1991canlii45",
+          "style_of_cause": "R v Stinchcombe",
+          "atomic_citation": "1991 CanLII 45 (SCC)",
+          "citation_type": "canlii",
+          "official_reporter_citation": "[1991] 3 SCR 326",
+          "year": "1991",
+          "court": "csc-scc",
+          "decision_number": "45",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/1991/1991canlii45/1991canlii45.html",
+          "short_url": "https://canlii.ca/t/1fsgp",
+          "language": "en",
+          "docket_number": "21904",
+          "decision_date": "1991-11-07",
+          "keywords": [
+            "Criminal law",
+            "Evidence",
+            "Duty to disclose"
+          ],
+          "categories": [
+            "Constitution",
+            "Criminal or statutory infractions",
+            "Rights and freedoms"
+          ]
+        }
+      },
+      {
+        "citation": "R. v. Taillefer; R. v. Duguay, 2003 SCC 70 (CanLII), [2003] 3 SCR 307",
+        "metadata": {
+          "citation": "R v Taillefer; R v Duguay, 2003 SCC 70 (CanLII)",
+          "case_id": "2003scc70",
+          "style_of_cause": "R v Taillefer; R v Duguay",
+          "atomic_citation": "2003 SCC 70",
+          "citation_type": "neutral",
+          "official_reporter_citation": "[2003] 3 SCR 307",
+          "year": "2003",
+          "court": "csc-scc",
+          "decision_number": "70",
+          "jurisdiction": "ca",
+          "court_name": "Supreme Court of Canada",
+          "court_level": "federal appellate",
+          "long_url": "https://www.canlii.org/en/ca/csc-scc/doc/2003/2003scc70/2003scc70.html",
+          "short_url": "https://canlii.ca/t/1g992",
+          "language": "en",
+          "docket_number": "28903; 28899",
+          "decision_date": "2003-12-12",
+          "keywords": [
+            "Constitutional law",
+            "Charter of Rights",
+            "Fundamental justice",
+            "Full answer and defence",
+            "Canadian Charter of Rights and Freedoms, ss. 7, 24(1). | Criminal law",
+            "Rule against multiple convictions"
+          ],
+          "categories": [
+            "Constitution",
+            "Evidence",
+            "Practice and procedure",
+            "Rights and freedoms"
+          ]
+        }
+      },
+      {
+        "citation": "Vogel v Vogel, 2024 SKKB 182 (CanLII)",
+        "metadata": {
+          "citation": "Vogel v Vogel, 2024 SKKB 182 (CanLII)",
+          "case_id": "2024skkb182",
+          "style_of_cause": "Vogel v Vogel",
+          "atomic_citation": "2024 SKKB 182",
+          "citation_type": "neutral",
+          "official_reporter_citation": null,
+          "year": "2024",
+          "court": "skqb",
+          "decision_number": "182",
+          "jurisdiction": "sk",
+          "court_name": "Court of King's Bench for Saskatchewan",
+          "court_level": "superior",
+          "long_url": "https://www.canlii.org/en/sk/skqb/doc/2024/2024skkb182/2024skkb182.html",
+          "short_url": null,
+          "language": "en",
+          "docket_number": null,
+          "decision_date": null,
+          "keywords": [],
+          "categories": []
+        }
+      }
+    ],
+    "citing_cases_metadata": [],
+    "cited_legislation": [
+      [
+        "/en/sk/laws/stat/ss-1990-91-c-l-27.1/latest/ss-1990-91-c-l-27.1.html",
+        null,
+        [
+          10
+        ]
+      ]
+    ]
+  },
+  "document_structure": [
+    {
+      "heading": "Saskatoon Police Service policy on redaction",
+      "heading_id": "Saskatoon Police Service policy on redaction",
+      "paragraph_index": 2
+    },
+    {
+      "heading": "Reasoning behind redactions",
+      "heading_id": "Reasoning behind redactions",
+      "paragraph_index": 3
+    },
+    {
+      "heading": "Video masking and audio bleeping process",
+      "heading_id": "Video masking and audio bleeping process",
+      "paragraph_index": 4
+    },
+    {
+      "heading": "Accused's position on disclosure",
+      "heading_id": "Accused's position on disclosure",
+      "paragraph_index": 6
+    },
+    {
+      "heading": "Crown's disclosure obligation and relevance test",
+      "heading_id": "Crown's disclosure obligation and relevance test",
+      "paragraph_index": 7
+    },
+    {
+      "heading": "Stinchcombe disclosure and privacy rights",
+      "heading_id": "Stinchcombe disclosure and privacy rights",
+      "paragraph_index": 8
+    },
+    {
+      "heading": "Provincial legislation's relevance to Stinchcombe disclosure",
+      "heading_id": "Provincial legislation's relevance to Stinchcombe disclosure",
+      "paragraph_index": 9
+    },
+    {
+      "heading": "Discrete periods in the video to consider",
+      "heading_id": "Discrete periods in the video to consider",
+      "paragraph_index": 10
+    },
+    {
+      "heading": "Computer screen in the police vehicle",
+      "heading_id": "Computer screen in the police vehicle",
+      "paragraph_index": 11
+    },
+    {
+      "heading": "Disclosure of SGI screen information",
+      "heading_id": "Disclosure of SGI screen information",
+      "paragraph_index": 12
+    },
+    {
+      "heading": "Conclusion on computer screen disclosure",
+      "heading_id": "Conclusion on computer screen disclosure",
+      "paragraph_index": 13
+    },
+    {
+      "heading": "Cst. Crawford's notebook - page under elastic band",
+      "heading_id": "Cst. Crawford's notebook - page under elastic band",
+      "paragraph_index": 14
+    },
+    {
+      "heading": "Disclosure of page under elastic band",
+      "heading_id": "Disclosure of page under elastic band",
+      "paragraph_index": 15
+    },
+    {
+      "heading": "Cst. Crawford's notebook - pages he wrote on during the investigation of Mr. Bone, prior to calling complainant",
+      "heading_id": "Cst. Crawford's notebook - pages he wrote on during the investigation of Mr. Bone, prior to calling complainant",
+      "paragraph_index": 16
+    },
+    {
+      "heading": "Disclosure of note-making process",
+      "heading_id": "Disclosure of note-making process",
+      "paragraph_index": 17
+    },
+    {
+      "heading": "Cst. Crawford's notebook - after receiving complainant's address and phone number",
+      "heading_id": "Cst. Crawford's notebook - after receiving complainant's address and phone number",
+      "paragraph_index": 18
+    },
+    {
+      "heading": "Witness contact rights",
+      "heading_id": "Witness contact rights",
+      "paragraph_index": 19
+    },
+    {
+      "heading": "Complainant contact information disclosure",
+      "heading_id": "Complainant contact information disclosure",
+      "paragraph_index": 20
+    },
+    {
+      "heading": "Relevance of contact information",
+      "heading_id": "Relevance of contact information",
+      "paragraph_index": 21
+    },
+    {
+      "heading": "Disclosure standard for sensitive material",
+      "heading_id": "Disclosure standard for sensitive material",
+      "paragraph_index": 22
+    },
+    {
+      "heading": "Contact information as a last resort",
+      "heading_id": "Contact information as a last resort",
+      "paragraph_index": 23
+    },
+    {
+      "heading": "Cell phone screen after Cst. Crawford reaches the information pertaining to the investigation of Mr. Bone",
+      "heading_id": "Cell phone screen after Cst. Crawford reaches the information pertaining to the investigation of Mr. Bone",
+      "paragraph_index": 24
+    },
+    {
+      "heading": "Disclosure of cell phone screen content",
+      "heading_id": "Disclosure of cell phone screen content",
+      "paragraph_index": 25
+    },
+    {
+      "heading": "Order regarding cell phone screen disclosure",
+      "heading_id": "Order regarding cell phone screen disclosure",
+      "paragraph_index": 26
+    },
+    {
+      "heading": "Audio of the address and phone number of the complainant",
+      "heading_id": "Audio of the address and phone number of the complainant",
+      "paragraph_index": 27
+    }
+  ],
+  "header": " --- IN THE PROVINCIAL COURT OF SASKATCHEWAN Citation: 2025 SKPC 26 Date: September 26, 2025 Information: 991269149 Location: Saskatoon Between: His Majesty the King \\- and - Mitchell James Bone Appearing: C. E. Yuskiw For the Crown A. Pearse For the Accused VOIR DIRE DECISION Q. D. AGNEW, J ",
+  "body_paragraphs": [
+    "This matter came before me as the assigned trial judge, on a pre-trial motion for disclosure. Mr. Bone is accused of impaired driving and having a blood-alcohol level over the legal limit after driving. The Crown had disclosed to defence a copy of video from the body-worn camera of one of the investigating officers, Constable Crawford. Aspects of that video were redacted in the copy provided to defence, by \"masking\" or blurring certain portions of the screen with respect to visuals, and by \"bleeping\" or silencing certain portions of the audio. Defence seeks to obtain a copy of the unredacted video. The application proceeded by way of a _voir dire_ , in which the Crown called two witnesses (Sgt. Gutek, the officer in charge of the redacting process at the time it was done, and Cst. Crawford). The video as disclosed was played during the _voir dire_.",
+    "As the application was heard roughly one month before the scheduled trial date, I informed counsel that I would provide them with my decision on the outcome of this application as soon as possible, with reasons to follow thereafter, in order to give them time to consider and comply with my decision without jeopardizing the trial date. My decision was provided by email on September 17; these are the reasons for that decision.",
+    "Sgt. Gutek testified that, as a matter of Saskatoon Police Service policy, redaction is always done for, _inter alia_ , police computer screens, police notebooks and police cell phone screens. With respect to audio, redaction includes witnesses' addresses, dates of birth and telephone numbers, but not names. This is in accordance with a national standard, although the origin of that standard is not clear in the evidence. It does not appear to be a matter of legislation.",
+    "The reasoning behind those redactions is that such screens will often include irrelevant information, or information pertaining to persons other than the accused, or confidential information regarding police investigations. With respect to police notebooks, the same reasoning applies, with the additional factor that the notebooks themselves will in any event be disclosed to defence to the extent that they are relevant to the accused. Witness information is considered to be personal or private information.",
+    "The video masking and audio bleeping or silencing are done by civilian technicians under the direction of Sgt. Gutek or his subsequent replacement, utilizing software for that purpose. The technician selects the material to be obscured, using the criteria of the national standard. Once the technician outlines an area to be blurred, the software will typically keep that mask applied to that area (for example, a computer screen) even as it moves location on the video; that is, the technician does not have to manually apply the mask to each frame of video. Sgt. Gutek indicated that this process is imperfect, and sometimes requires manual assistance from the technician after the original masking. The original recording is left unaltered, and the redaction applies only to the copy produced as a result of this process. Sgt. Gutek confirmed that the unredacted video regarding Mr. Bone remains intact.",
+    "There is a significant element of automation in the process, and I surmise that doing otherwise would require a greater commitment of time and effort. The Crown expressly chose not to make any argument in this application on the basis of efficiency or cost.",
+    "The accused takes the position that he is entitled to disclosure of the entire, unredacted video, pursuant to _R v Stinchcombe_ , [1991 CanLII 45 (SCC)](/en/ca/scc/doc/1991/1991canlii45/1991canlii45.html), [1991] 3 SCR 326 [_Stinchcombe_], other than the portions of audio or video showing Cst. Crawford unlocking the phone, navigating from the opening screen to the portion dealing with the investigation of Mr. Bone, and the complainant's date of birth.",
+    "It is clear that the Crown's obligation generally under _Stinchcombe_ is to disclose all relevant information, save that which is privileged or \"plainly irrelevant\" (_R v Taillefer; R v Duguay_ , [2003 SCC 70](/en/ca/scc/doc/2003/2003scc70/2003scc70.html) at para [59](/en/ca/scc/doc/2003/2003scc70/2003scc70.html#par59), [2003] 3 SCR 307. Relevant information is that which \"can reasonably be used by the accused either in meeting the case for the Crown, advancing a defence or otherwise in making a decision which may affect the conduct of the defence such as, for example, whether to call evidence\" (_R v Egger_ , [1993 CanLII 98 (SCC)](/en/ca/scc/doc/1993/1993canlii98/1993canlii98.html), [1993] 2 SCR 451 at para [20](/en/ca/scc/doc/1993/1993canlii98/1993canlii98.html#par20) [_Egger_]). If the Crown does not disclose information on the basis that it is not relevant, the onus is on it to show the irrelevance; further, the test is that the evidence must be \"clearly irrelevant\" (_R v Chaplin_ , [1995 CanLII 126 (SCC)](/en/ca/scc/doc/1995/1995canlii126/1995canlii126.html), [1995] 1 SCR 727 at para [25](/en/ca/scc/doc/1995/1995canlii126/1995canlii126.html#par25)).",
+    "It is also clear, with all due respect to defence counsel's position to the contrary, that _Stinchcombe_ does not automatically override privacy rights. The Supreme Court of Canada stated as much, in _R v McNeil_ , [2009 SCC 3](/en/ca/scc/doc/2009/2009scc3/2009scc3.html) at para [19](/en/ca/scc/doc/2009/2009scc3/2009scc3.html#par19), [2009] 1 SCR 66 [_McNeil_], and specifically referred to personal addresses and phone numbers as \"highly sensitive material\" in that context.",
+    "Further, notwithstanding defence counsel's position that provincial legislation is irrelevant to the accused's right to _Stinchcombe_ disclosure, the Supreme Court of Canada thinks otherwise. _McNeil_ (again at para [19](/en/ca/scc/doc/2009/2009scc3/2009scc3.html#par19)), in discussing _Stinchcombe_ disclosure, makes specific reference to the legislation in each province which addresses the disclosure of information in police files. Reference in _McNeil_ was to _The_ _Freedom of Information and Protection of Privacy Act_ , but police in Saskatchewan are now governed in this respect by _The[Local Authority Freedom of Information and Protection of Privacy Act](/en/sk/laws/stat/ss-1990-91-c-l-27.1/latest/ss-1990-91-c-l-27.1.html)_, SS 1990-91, c L-27.1.",
+    "There are several discrete periods in the video which must be considered separately, as the issues are different with respect to each. They are as follows: 1. computer screen in the police vehicle; 2. Cst. Crawford's notebook - page under elastic band; 3. Cst. Crawford's notebook - pages he wrote on during the investigation of Mr. Bone, prior to calling complainant; 4. Cst. Crawford's notebook - after receiving complainant's address and phone number; 5. cell phone screen after Cst. Crawford reaches the information pertaining to the investigation of Mr. Bone; and 6. audio of the address and phone number of the complainant. _1. Computer screen in the police vehicle_",
+    "There is no direct evidence of what is shown on the screen during the time it is masked in the video. Both Sgt. Gutek and Cst. Crawford gave evidence as to what might have been or would likely have been on the screen at that time. Clearly, it would have been preferable if the evidence had disclosed exactly what was shown on the screen, under the mask. However, I am satisfied that I have sufficient evidence in this case to determine the issue. On the evidence, there are essentially two possibilities for what was being shown at any point when the screen was visible on the video: (a) one of a number of \"police\" screens - screens involving information which could include both the accused and other persons, or involving the accused but containing information which would not be discloseable (for example, that he was under covert surveillance although, to be clear, there is no suggestion that this is or was actually the case with Mr. Bone), or involving unrelated events; (b) a screen showing Saskatchewan Government Insurance (SGI) information regarding Mr. Bone, including potentially his address, his driving record, vehicles registered in his name, and similar information. Cst. Crawford testified that (b) was likely to have been what was visible.",
+    "Defence concedes that (a) screens would not be discloseable. Clearly, some of them would be irrelevant, others would be privileged or not discloseable for policy reasons such as not informing the accused that he is under covert surveillance. Defence argues, however, that (b) screens would be discloseable. With respect, I disagree.",
+    "As noted above, the test for disclosure is relevance; at that, the test is a low bar, as per _Egger_. None the less, it is clear on the evidence presented to me that there is nothing that would be shown on the SGI screen that meets the _Egger_ test. What vehicles are registered to the accused, what SGI shows as his address, what his SGI driving record is: none of this has any relevance to the case before me. Defence attempted to argue otherwise, but was able to offer no coherent example or explanation of how any of this information might meet the _Egger_ test. Additionally, there was no testimony from Cst. Crawford that he used any of the information on that screen in his subsequent actions, which might have otherwise raised a possible argument for disclosure.",
+    "Accordingly, whether the screen shows an example of screen (a) or screen (b), it is clearly irrelevant or not discloseable. _2. Cst. Crawford's notebook - page under elastic band_",
+    "This aspect of the application refers to the last of a number of pages in Cst. Crawford's notebook which were bound together by an elastic band. The last of those pages would be visible on the video, were it not for the fact that the notebook is masked. Defence seeks unmasking, so that the contents of the page under the elastic can be seen.",
+    "The uncontradicted evidence from Cst. Crawford is that the notes bound in elastic in his notebook are from prior to his encounter with Mr. Bone. He testified that he begins a new page in his notebook for each investigation; accordingly, everything within the elastic band was from prior to commencing the investigation of Mr. Bone. Although the burden is on the Crown to show \"clear irrelevance\", I am entitled to presume that anything prior to the commencement of this investigation is irrelevant unless the contrary is shown. That is, once the evidence establishes that the page under the elastic band was written prior to the commencement of this investigation, it is presumptively irrelevant and the tactical burden shifts to the defence to show otherwise. Here, defence had full opportunity to investigate in cross-examination what, if any, connection that page might have with the charges before the court. No such connection was established.",
+    "Accordingly, the page under the elastic band is clearly irrelevant and does not have to be disclosed. _ _ _3. Cst. Crawford's notebook - pages he wrote on during the investigation of Mr. Bone, prior to calling complainant_",
+    "Cst. Crawford's body-worn camera captured the constable writing in his notebook from time to time during the investigation of Mr. Bone. Those notes are clearly relevant, and have been disclosed to defence. Defence however also seeks to have the making of those notes unmasked in the video. The Crown's position is that this is unnecessary, as defence already has the disclosed copy of the notes.",
+    "It may be that the unmasking of the notes as Cst. Crawford was making them will reveal nothing new. However, defence is not required to take that on faith. The video shows, at least in part, the making of the notes, and defence is entitled to see that. If it were to turn out, for example, that the notes as shown in the video are different in some way from the notes as disclosed, defence would likely want to know that and be able to question Cst. Crawford about why this was so.",
+    "Accordingly, the video must be unmasked to the extent of showing the page on which Cst. Crawford is writing, from the commencement of the video to the point at which Cst. Crawford telephones the complainant. However, any contact information for the complainant or any other witness, if any, is not to be unmasked, for reasons referred to in the next section. _4. Cst. Crawford's notebook - after receiving complainant's address and phone number_",
+    "Defence argued fervently that there is no property in a witness, that he is entitled to speak with (or ask someone else to speak with) a Crown witness, and that accordingly he is entitled to the contact information of the complainant. I agree with him on the first two points, but not the third.",
+    "It is clear that a witness does not \"belong\" to either party. Many courts have quoted Lord Denning's statement in _Harmony Shipping Co. S.A. v Davis,_ [1979] 3 All ER 177 that there is no property in a witness, including courts in this province (see, for example: _Vogel v Vogel_ , [2024 SKKB 182](/en/sk/skkb/doc/2024/2024skkb182/2024skkb182.html) at para [24](/en/sk/skkb/doc/2024/2024skkb182/2024skkb182.html#par24); _K+S Potash Canada General Partnership v Aecon Construction Group Inc._ , [2023 SKKB 225](/en/sk/skkb/doc/2023/2023skkb225/2023skkb225.html) at paras [29 and 35](/en/sk/skkb/doc/2023/2023skkb225/2023skkb225.html#par29); _Automated Tank Manufacturing Inc. v Miller_ , [2012 SKQB 300](/en/sk/skqb/doc/2012/2012skqb300/2012skqb300.html), at para [41](/en/sk/skqb/doc/2012/2012skqb300/2012skqb300.html#par41), [2012] 10 WWR 743; _Big Sky Farms Inc. (Re),_ [2010 SKQB 255](/en/sk/skqb/doc/2010/2010skqb255/2010skqb255.html) at para [19](/en/sk/skqb/doc/2010/2010skqb255/2010skqb255.html#par19), 360 Sask R 76). Barring some other rule, either side is entitled to attempt to speak with any witness, whether directly through counsel or through a third-party investigator. Whether or not the witness wishes to speak with them is, of course, another matter, and is typically up to the witness themselves. Thus my agreement with the first two points raised by defence.",
+    "Where I differ from defence, however, is on the assertion that the first two points necessarily imply the third: that is, since he is entitled to try to speak with the complainant here, Crown is obliged to disclose the complainant's contact information to him.",
+    "I return to the fundamental principle that the accused is entitled to disclosure of all relevant material in the hands of the Crown. What is the relevance of the address and phone number of the complainant? On the evidence that I have been provided, it has no relevance other than providing defence counsel with a mechanism to contact the complainant. It has no possible bearing on this case other than that: it does not describe the event, for example, or identify the accused; it does not provide an avenue for defence to cross-examine anyone, nor does it assist the accused in deciding whether or not to testify. It is absolutely irrelevant except as a tool to assist the accused or his counsel in contacting the witness. And that is enough, says defence.",
+    "Again, with respect, I disagree - and so does the Supreme Court of Canada. I refer again to the portion of _McNeil_ in which that court specifically cited addresses and phone numbers as \"highly sensitive material\" in the question of what is or is not to be disclosed.",
+    "Combining these concepts, I am left with the conclusion that a witness' address and phone number are relevant if, and only if, they are necessary to allow defence to contact the witness. I note in the present case, for example, that defence did not indicate any intention to do so; rather, he speculated that he might want to (have an investigator) do so. I certainly accept that an accused's right to offer full answer and defence will normally entail defence counsel being able to attempt to contact witnesses - but there is no evidence before me that defence has not been able to do so.",
+    "Once again, given that the address and phone number are irrelevant to the trial itself, the Crown has established _prima facie_ that disclosure is not required. The tactical burden once again shifts to the accused, to show that disclosure should be ordered because, in this case, it is impossible for him to attempt to contact the complainant without that information. He has failed to do so. It may be, for example, that the Crown would ask the complainant if he would consent to his contact information being disclosed to defence. It may be that the Crown would facilitate contact with the complainant in some way that would not involve providing that information but would still allow defence to speak with the complainant about this case. It may be that there are other possibilities as well. The point is that disclosure of this \"highly sensitive material\" (_McNeil_) is a last, not a first, resort.",
+    "The complainant's address and phone number being irrelevant, this portion of the video is not required to be disclosed. _ _ _ _ _ _ _5. Cell phone screen after Cst. Crawford reaches the information pertaining to the investigation of Mr. Bone_",
+    "Cst. Crawford had with him a police-issued cell phone that did not contain any personal information. He testified that after he unlocked it with a PIN, he navigated to an app specifically used by the Saskatoon Police Service. Opening that app showed him a variety of calls that police were then actively engaged in, including the investigation of Mr. Bone. He selected Mr. Bone's investigation, which then opened. He found within it the telephone number for the complainant, which he then called. Thereafter, he testified, the screen would either have been black or it would have shown the phone number he had dialed, namely that of the complainant.",
+    "There is unfortunately no other information as to what was within the folder, as it were, pertaining to Mr. Bone. Presumptively, the information regarding the investigation of Mr. Bone would be discloseable. Absent any other information, I cannot find it clearly irrelevant. However, the information shown on the cell phone screen until reaching the investigation of Mr. Bone is clearly irrelevant - there is no basis for disclosing the home screen of the phone, or the app used, or whatever is shown relating to other investigations then ongoing. Once the call is made to the complainant, if the screen is black then it is obviously irrelevant; if, on the other hand, it shows the number dialed then that is not discloseable for the reasons noted above with respect to disclosure of the complainant's address and phone number.",
+    "At the same time, I have to be aware that I do not know what else, if anything, was in the investigation file as shown on the cell phone screen. If, for example, there were addresses or phone numbers of other witnesses, those would be subject to the same presumption of non-disclosure as the complainant's.",
+    "Accordingly, I order that the video be unmasked from the point of opening the file or folder on the investigation of Mr. Bone until the selection of the phone number of the complainant, to call him. Any phone numbers, addresses or other contact information are not to be unmasked, nor is any other privileged information, if any. _6. Audio of the address and phone number of the complainant_",
+    "This information is not required to be disclosed, for the same reasons as the written versions of the same do not have to be disclosed.",
+    "The Crown is therefore to provide to defence either a new copy of the video which complies with this decision, or portions of video which provide the disclosure required by sections 3 and 5, above. \n______________________________\nQ. D. Agnew, J"
+  ]
+}

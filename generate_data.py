@@ -9,6 +9,8 @@ import json
 import os
 import time
 from typing import Any
+from rich.console import Console
+from rich.progress import Progress, TextColumn, SpinnerColumn
 
 import typer
 import pandas as pd
@@ -28,6 +30,7 @@ from reference_processing import get_case_relations, get_cited_legislation
 from genai_processing import body_headings
 
 app = typer.Typer(help="Sentencing research CLI")
+console = Console()
 
 def _make_json_safe(value: Any) -> Any:
     if isinstance(value, pd.DataFrame):
@@ -306,19 +309,42 @@ def generate_report_cmd(
 
     def _collect_case_metadata(cases: list[dict], delay: float, label: str) -> list[dict]:
         collected: list[dict] = []
-        for idx, case_item in enumerate(cases):
-            citation_value = _extract_case_citation(case_item)
-            if not citation_value:
-                continue
-            typer.echo(f"Fetching {label} metadata {idx + 1}/{len(cases)}")
-            metadata = get_metadata_from_citation(citation_value)
-            if metadata:
-                collected.append({
-                    "citation": citation_value,
-                    "metadata": _make_json_safe(metadata),
-                })
-            if idx < len(cases) - 1 and delay > 0:
-                time.sleep(delay)
+        total_cases = len(cases)
+        
+        # We define a custom progress display for a single line
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            transient=True, # This removes the line once the loop finishes
+        ) as progress:
+            
+            # Add a task to track
+            task = progress.add_task(description="", total=len(cases))
+            
+            for idx, case_item in enumerate(cases):
+                # Update the description on the same line
+                progress.update(task, description=f"Fetching {label} metadata {idx + 1}/{len(cases)}")
+                
+                citation_value = _extract_case_citation(case_item)
+                if not citation_value:
+                    progress.advance(task) # Still advance the bar even if we skip
+                    continue
+                    
+                metadata = get_metadata_from_citation(citation_value)
+                if metadata:
+                    collected.append({
+                        "citation": citation_value,
+                        "metadata": _make_json_safe(metadata),
+                    })
+                    
+                if idx < len(cases) - 1 and delay > 0:
+                    time.sleep(delay)
+                
+                progress.advance(task)
+                
+        if total_cases:
+            console.print(f"  Found {len(collected)}/{total_cases} {label} cases")
+            console.print(f"  {label.title()} metadata: [bold green]Done[/bold green]")
         return collected
 
     # Extract the citation from the header
@@ -340,38 +366,42 @@ def generate_report_cmd(
         raise typer.Exit(code=1)
 
     # Remove unnecessary text and split the body into paragraphs
-    typer.echo("Structuring document text:")
-    body = remove_after_string(body, "Back to top")
-    paragraphs = split_body_into_paragraphs(body)
-    paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
-    if section_heading and paragraphs:
-        paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
-    typer.echo(f"  * Done.")
+    with console.status("Structuring document text:", spinner="dots"):
+        body = remove_after_string(body, "Back to top")
+        paragraphs = split_body_into_paragraphs(body)
+        paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
+        if section_heading and paragraphs:
+            paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
+        time.sleep(2)
+    console.print("  Structuring document text: [bold green]Done[/bold green]")
 
     # Analyze the document structure using genai
-    typer.echo("Analyzing document structure...")
-    headings = body_headings(paragraphs, model="gemini-flash-lite-latest")
-    document_structure = [heading.model_dump() for heading in headings]
-    typer.echo(f"  * Done.")
+    with console.status("Analyzing document structure:", spinner="dots"):
+        headings = body_headings(paragraphs, model="gemini-flash-lite-latest")
+        document_structure = [heading.model_dump() for heading in headings]
+        time.sleep(2)
+    console.print("  Analyzing document structure: [bold green]Done[/bold green]")
 
     # Remove redundant header data and text
-    typer.echo("Cleaning header text...\n")
-    header = remove_before_string(header, "Most recent unfavourable mention")
-    header = re.sub(r"\*", "", header) # Remove asterisks
-    header = re.sub(r"_", "", header) # Remove underscores
-    header = re.sub(r"\s+", " ", header) # Remove extra whitespace
-    typer.echo(f"  * Done.")
+    with console.status("Cleaning header text:", spinner="dots"):
+        header = remove_before_string(header, "Most recent unfavourable mention")
+        header = re.sub(r"\*", "", header) # Remove asterisks
+        header = re.sub(r"_", "", header) # Remove underscores
+        header = re.sub(r"\s+", " ", header) # Remove extra whitespace
+        time.sleep(2)
+    console.print("  Cleaning header text: [bold green]Done[/bold green]")
 
-    
-    typer.echo("Fetching cited/citing cases...")
-    cited_cases = get_case_relations(citation, "citedCases")
-    citing_cases = get_case_relations(citation, "citingCases")
+
+    with console.status("Fetching cited/citing cases:", spinner="dots"):
+        cited_cases = get_case_relations(citation, "citedCases")
+        citing_cases = get_case_relations(citation, "citingCases")
+        time.sleep(2)
+    console.print("  Fetching cited/citing cases: [bold green]Done[/bold green]")
 
     cited_case_items = cited_cases.get("citedCases", [])
     citing_case_items = citing_cases.get("citingCases", [])
 
-    typer.echo("Fetching metadata for related cases...")
-    typer.echo("Collecting cited legislation...")
+    
     report = {
         "citation": citation,
         "metadata": _make_json_safe(metadata),
@@ -385,7 +415,6 @@ def generate_report_cmd(
         "body_paragraphs": paragraphs,
     }
 
-    typer.echo("Writing report JSON...")
     output_dir = os.path.join(".", "data", "json")
     os.makedirs(output_dir, exist_ok=True)
     case_id = metadata.get("case_id") or "unknown"
@@ -393,7 +422,7 @@ def generate_report_cmd(
     with open(output_path, "w", encoding="utf-8") as handle:
         json.dump(report, handle, indent=2)
 
-    typer.echo(f"Wrote report to {output_path}")
+    console.print(f"\nWrote report to {output_path}")
 
 
 @app.command("legislation")

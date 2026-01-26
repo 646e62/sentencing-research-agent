@@ -402,6 +402,38 @@
       ]
     ]
   },
+  "document_structure": [
+    {
+      "heading": "Background",
+      "heading_id": "Background",
+      "paragraph_index": 0
+    },
+    {
+      "heading": "Sentencing Materials",
+      "heading_id": "Sentencing Materials",
+      "paragraph_index": 7
+    },
+    {
+      "heading": "Background of the accused",
+      "heading_id": "Background of the accused",
+      "paragraph_index": 21
+    },
+    {
+      "heading": "Sentencing Positions",
+      "heading_id": "Sentencing Positions",
+      "paragraph_index": 22
+    },
+    {
+      "heading": "Analysis:",
+      "heading_id": "Analysis:",
+      "paragraph_index": 24
+    },
+    {
+      "heading": "Sentence",
+      "heading_id": "Sentence",
+      "paragraph_index": 31
+    }
+  ],
   "header": " In the Alberta Court of Justice Citation: R v Parsons, 2024 ABCJ 264 Date: 20241218 Docket: 230980468P1 Registry: Calgary Between: His Majesty the King \\- and - Anthony Grant Parsons Sentencing Judgment of the Honourable JusticeB.C. Stevenson ",
   "body_paragraphs": [
     "Parsons stands convicted of Aggravated Assault, contrary to s 268. # Background",
