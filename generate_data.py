@@ -137,7 +137,7 @@ def sentencing_row_cmd(
 
     row_index = max(0, min(row_index, len(df) - 1))
     row = df.iloc[row_index]
-    parsed = process_master_row(row, offences_file=offences_file, verbose=False)
+    parsed = process_master_row(row, offences_file=offences_file)
 
     if json_output:
         typer.echo(json.dumps(_make_json_safe(parsed), indent=2))
@@ -279,60 +279,18 @@ def generate_report_cmd(
         "--metadata-delay",
         help="Delay in seconds between related-case metadata calls",
     ),
-    verbose: bool = typer.Option(
-        False,
-        "--verbose",
-        help="Print progress while generating the report",
-    ),
 ) -> None:
     """
     Generate a JSON report from an HTML file and save to ./data/json/test.json.
     """
     try:
         header, section_heading = _get_clean_header(filename)
-        typer.echo("Processing file...")
         body, _body_section_heading = _get_body(filename)
     except FileNotFoundError as exc:
         typer.echo(str(exc))
         raise typer.Exit(code=1)
 
-    citation = extract_citation(header)
-    if not citation:
-        typer.echo("No citation found.")
-        raise typer.Exit(code=1)
-    else:
-        typer.echo(f"Citation: {citation}")
-
-    metadata = get_metadata_from_citation(citation)
-    if not metadata:
-        typer.echo("No metadata found.")
-        raise typer.Exit(code=1)
-
-    body = remove_after_string(body, "Back to top")
-    paragraphs = split_body_into_paragraphs(body)
-    paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
-    if section_heading and paragraphs:
-        paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
-
-    if verbose:
-        typer.echo("Analyzing document structure...")
-    headings = body_headings(paragraphs)
-    document_structure = [heading.model_dump() for heading in headings]
-    if verbose:
-        typer.echo(f"\tDone.")
-    if verbose:
-        typer.echo("Cleaning header text...")
-    # Quick formatting for the header
-    # Remove redundant header data and text
-    header = remove_before_string(header, "Most recent unfavourable mention")
-
-    # Remove asterisks and underscores
-    header = re.sub(r"\*", "", header)
-    header = re.sub(r"_", "", header)
-
-    # Remove extra whitespace
-    header = re.sub(r"\s+", " ", header)
-
+    
     def _extract_case_citation(case_item: dict) -> str | None:
         title = case_item.get("title")
         citation_value = case_item.get("citation")
@@ -352,8 +310,7 @@ def generate_report_cmd(
             citation_value = _extract_case_citation(case_item)
             if not citation_value:
                 continue
-            if verbose:
-                typer.echo(f"Fetching {label} metadata {idx + 1}/{len(cases)}")
+            typer.echo(f"Fetching {label} metadata {idx + 1}/{len(cases)}")
             metadata = get_metadata_from_citation(citation_value)
             if metadata:
                 collected.append({
@@ -364,18 +321,57 @@ def generate_report_cmd(
                 time.sleep(delay)
         return collected
 
-    if verbose:
-        typer.echo("Fetching cited/citing cases...")
+    # Extract the citation from the header
+    # Assume the file is invalid if there's no citation in the header
+    citation = extract_citation(header)
+    if not citation:
+        typer.echo("No citation found in the header. Please verify the file \
+            is a valid CanLII html file.\n")
+        raise typer.Exit(code=1)
+    else:
+        typer.echo(f"Processing {citation}\n")
+
+    # Extract the metadata from the citation
+    # Assume there is a mismatch somewhere if the program locates a citation 
+    # but no metadata
+    metadata = get_metadata_from_citation(citation)
+    if not metadata:
+        typer.echo("No metadata found for this citation.")
+        raise typer.Exit(code=1)
+
+    # Remove unnecessary text and split the body into paragraphs
+    typer.echo("Structuring document text:")
+    body = remove_after_string(body, "Back to top")
+    paragraphs = split_body_into_paragraphs(body)
+    paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
+    if section_heading and paragraphs:
+        paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
+    typer.echo(f"  * Done.")
+
+    # Analyze the document structure using genai
+    typer.echo("Analyzing document structure...")
+    headings = body_headings(paragraphs, model="gemini-flash-lite-latest")
+    document_structure = [heading.model_dump() for heading in headings]
+    typer.echo(f"  * Done.")
+
+    # Remove redundant header data and text
+    typer.echo("Cleaning header text...\n")
+    header = remove_before_string(header, "Most recent unfavourable mention")
+    header = re.sub(r"\*", "", header) # Remove asterisks
+    header = re.sub(r"_", "", header) # Remove underscores
+    header = re.sub(r"\s+", " ", header) # Remove extra whitespace
+    typer.echo(f"  * Done.")
+
+    
+    typer.echo("Fetching cited/citing cases...")
     cited_cases = get_case_relations(citation, "citedCases")
     citing_cases = get_case_relations(citation, "citingCases")
 
     cited_case_items = cited_cases.get("citedCases", [])
     citing_case_items = citing_cases.get("citingCases", [])
 
-    if verbose:
-        typer.echo("Fetching metadata for related cases...")
-    if verbose:
-        typer.echo("Collecting cited legislation...")
+    typer.echo("Fetching metadata for related cases...")
+    typer.echo("Collecting cited legislation...")
     report = {
         "citation": citation,
         "metadata": _make_json_safe(metadata),
@@ -389,8 +385,7 @@ def generate_report_cmd(
         "body_paragraphs": paragraphs,
     }
 
-    if verbose:
-        typer.echo("Writing report JSON...")
+    typer.echo("Writing report JSON...")
     output_dir = os.path.join(".", "data", "json")
     os.makedirs(output_dir, exist_ok=True)
     case_id = metadata.get("case_id") or "unknown"

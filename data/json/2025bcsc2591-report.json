@@ -31,211 +31,6 @@
     ]
   },
   "references": {
-    "cited_cases": {
-      "citedCases": [
-        {
-          "databaseId": "bcca",
-          "caseId": {
-            "en": "2020bcca297"
-          },
-          "title": "R. v. Anderson",
-          "citation": "2020 BCCA 297 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcca",
-          "caseId": {
-            "en": "2016bcca182"
-          },
-          "title": "R. v. Engebretsen",
-          "citation": "2016 BCCA 182 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2025bcsc1823"
-          },
-          "title": "R. v. Kim",
-          "citation": "2025 BCSC 1823 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2017bcsc145"
-          },
-          "title": "R. v. McCormick",
-          "citation": "2017 BCSC 145 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2016bcsc1440"
-          },
-          "title": "R. v. Newton",
-          "citation": "2016 BCSC 1440 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcca",
-          "caseId": {
-            "en": "2015bcca423"
-          },
-          "title": "R. v. Plowman",
-          "citation": "2015 BCCA 423 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2016bcsc2184"
-          },
-          "title": "R. v. Quigley",
-          "citation": "2016 BCSC 2184 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2025bcsc394"
-          },
-          "title": "R. v Bell",
-          "citation": "2025 BCSC 394 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2022bcsc1835"
-          },
-          "title": "R. v Deo",
-          "citation": "2022 BCSC 1835 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2024bcsc2463"
-          },
-          "title": "R. v Keyler",
-          "citation": "2024 BCSC 2463 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2025bcsc1665"
-          },
-          "title": "R. v Losch",
-          "citation": "2025 BCSC 1665 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2018bcsc1942"
-          },
-          "title": "R. v McGenn",
-          "citation": "2018 BCSC 1942 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2020bcsc2101"
-          },
-          "title": "R. v Milne",
-          "citation": "2020 BCSC 2101 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2025bcsc992"
-          },
-          "title": "R. v Ognibene-Hebbourn",
-          "citation": "2025 BCSC 992 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2024bcsc1288"
-          },
-          "title": "R. v Regis",
-          "citation": "2024 BCSC 1288 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2023bcsc1956"
-          },
-          "title": "R. v Sanford",
-          "citation": "2023 BCSC 1956 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2018bcsc2344"
-          },
-          "title": "R. v Smith",
-          "citation": "2018 BCSC 2344 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2018bcsc296"
-          },
-          "title": "R. v Taniskishayinew",
-          "citation": "2018 BCSC 296 (CanLII)",
-          "aiContentId": {}
-        },
-        {
-          "databaseId": "bcsc",
-          "caseId": {
-            "en": "2020bcsc1552"
-          },
-          "title": "R. v Zhao",
-          "citation": "2020 BCSC 1552 (CanLII)",
-          "aiContentId": {}
-        }
-      ],
-      "error": null,
-      "metadata": {}
-    },
-    "citing_cases": {
-      "citingCases": [],
-      "error": null,
-      "metadata": {}
-    },
-    "cited_legislation": [
-      [
-        "Criminal Code",
-        "sec235subsec1",
-        [
-          2
-        ]
-      ],
-      [
-        "Criminal Code",
-        "sec182",
-        [
-          2
-        ]
-      ],
-      [
-        "Criminal Code",
-        "sec718",
-        [
-          21
-        ]
-      ]
-    ],
     "cited_cases_metadata": [
       {
         "citation": "R. v. Anderson, 2020 BCCA 297 (CanLII)",
@@ -841,8 +636,88 @@
         }
       }
     ],
-    "citing_cases_metadata": []
+    "citing_cases_metadata": [],
+    "cited_legislation": [
+      [
+        "Criminal Code",
+        "sec235subsec1",
+        [
+          2
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec182",
+        [
+          2
+        ]
+      ],
+      [
+        "Criminal Code",
+        "sec718",
+        [
+          21
+        ]
+      ]
+    ]
   },
+  "document_structure": [
+    {
+      "heading": "Introduction",
+      "heading_id": "# Introduction",
+      "paragraph_index": 0
+    },
+    {
+      "heading": "Chelsea Gauthier",
+      "heading_id": "# Chelsea Gauthier",
+      "paragraph_index": 4
+    },
+    {
+      "heading": "Victim Impact Statements",
+      "heading_id": "# Victim Impact Statements",
+      "paragraph_index": 9
+    },
+    {
+      "heading": "Mr. Losch",
+      "heading_id": "# Mr. Losch",
+      "paragraph_index": 11
+    },
+    {
+      "heading": "Sentencing Principles",
+      "heading_id": "# Sentencing Principles",
+      "paragraph_index": 22
+    },
+    {
+      "heading": "Gladue Considerations",
+      "heading_id": "# Gladue Considerations",
+      "paragraph_index": 30
+    },
+    {
+      "heading": "Consecutive or Concurrent Sentences",
+      "heading_id": "# Consecutive or Concurrent Sentences",
+      "paragraph_index": 36
+    },
+    {
+      "heading": "Interfering With a Dead Body",
+      "heading_id": "# Interfering With a Dead Body",
+      "paragraph_index": 38
+    },
+    {
+      "heading": "Manslaughter",
+      "heading_id": "# Manslaughter",
+      "paragraph_index": 42
+    },
+    {
+      "heading": "Aggravating Factors",
+      "heading_id": "# Aggravating Factors",
+      "paragraph_index": 51
+    },
+    {
+      "heading": "Mitigating Factors",
+      "heading_id": "# Mitigating Factors",
+      "paragraph_index": 56
+    }
+  ],
   "header": " IN THE SUPREME COURT OF BRITISH COLUMBIA Citation: | R. v. Losch , ---|--- | 2025 BCSC 2591 Date: 20251218 Docket: 95517-2 Registry: Abbotsford Rex v. Gary Donald Losch Before: The Honourable Justice Dley Oral Reasons for Sentence Counsel for the Crown: | M.A. MacDonald, K.C. K.R.D. Gillespie S. Daniels, Articled Student ---|--- Counsel for the Accused: | J.A. Cochrane S.E. Leamon (appearing via videoconference) Place and Dates of Hearing: | Abbotsford, B.C. December 2-3, 8 & 18, 2025 Place and Date of Judgment: | Abbotsford, B.C. December 18, 2025",
   "body_paragraphs": [
     "**THE COURT:** I shall reserve the right to edit and format the written reasons if a request is made for the transcript of this decision. In those written reasons, any reference to the parties other than Mr. Losch or Ms. Gauthier shall be anonymized so as to protect their privacy. # Introduction",

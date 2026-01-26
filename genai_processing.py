@@ -20,7 +20,8 @@ client = genai.Client()
 
 # Have the client review the body paragraphs and identify the headings and
 # subheadings.
-def body_headings(body_paragraphs: list[str]) -> list[DocumentStructure]:
+def body_headings(body_paragraphs: list[str],
+    model: str = "gemini-3-flash-preview") -> list[DocumentStructure]:
     """
     Identify the headings and subheadings in the body paragraphs.
     """
@@ -35,7 +36,7 @@ def body_headings(body_paragraphs: list[str]) -> list[DocumentStructure]:
     """
 
     response = client.models.generate_content(
-        model="gemini-3-flash-preview",
+        model=model,
         contents=prompt,
         config={
             "response_mime_type": "application/json",
