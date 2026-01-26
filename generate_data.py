@@ -27,7 +27,7 @@ from case_data_processing import (
 from metadata_processing import get_metadata_from_citation
 from sentencing_data_processing import process_master_row, load_master_csv
 from reference_processing import get_case_relations, get_cited_legislation
-from genai_processing import body_headings
+from genai_processing import body_headings, generate_summary
 
 app = typer.Typer(help="Sentencing research CLI")
 console = Console()
@@ -323,7 +323,7 @@ def generate_report_cmd(
             
             for idx, case_item in enumerate(cases):
                 # Update the description on the same line
-                progress.update(task, description=f"Fetching {label} metadata {idx + 1}/{len(cases)}")
+                progress.update(task, description=f"Retrieving {idx + 1}/{len(cases)} {label.title()} cases")
                 
                 citation_value = _extract_case_citation(case_item)
                 if not citation_value:
@@ -343,19 +343,15 @@ def generate_report_cmd(
                 progress.advance(task)
                 
         if total_cases:
-            console.print(f"  Found {len(collected)}/{total_cases} {label} cases")
-            console.print(f"  {label.title()} metadata: [bold green]Done[/bold green]")
+            console.print(f"[bold green]✓[/bold green] Retrieved {len(collected)}/{total_cases} {label} cases")
         return collected
 
     # Extract the citation from the header
-    # Assume the file is invalid if there's no citation in the header
     citation = extract_citation(header)
     if not citation:
         typer.echo("No citation found in the header. Please verify the file \
             is a valid CanLII html file.\n")
         raise typer.Exit(code=1)
-    else:
-        typer.echo(f"Processing {citation}\n")
 
     # Extract the metadata from the citation
     # Assume there is a mismatch somewhere if the program locates a citation 
@@ -365,42 +361,46 @@ def generate_report_cmd(
         typer.echo("No metadata found for this citation.")
         raise typer.Exit(code=1)
 
+    # Summarize the case
+    with console.status(f"Summarizing {citation}", spinner="dots"):
+        summary = generate_summary(body)
+        time.sleep(2)
+    console.print(f"[bold orange]{citation}[/bold orange]\n\n[bold]Summary[/bold]\n{summary}\n\n")
+
     # Remove unnecessary text and split the body into paragraphs
-    with console.status("Structuring document text:", spinner="dots"):
+    with console.status("Structuring document text", spinner="dots"):
         body = remove_after_string(body, "Back to top")
         paragraphs = split_body_into_paragraphs(body)
         paragraphs = [clean_text_section(paragraph) for paragraph in paragraphs]
         if section_heading and paragraphs:
             paragraphs[0] = f"{section_heading}\n\n{paragraphs[0]}"
         time.sleep(2)
-    console.print("  Structuring document text: [bold green]Done[/bold green]")
+    console.print("[bold green]✓[/bold green] Structuring document text")
 
     # Analyze the document structure using genai
-    with console.status("Analyzing document structure:", spinner="dots"):
+    with console.status("Analyzing document structure", spinner="dots"):
         headings = body_headings(paragraphs, model="gemini-flash-lite-latest")
         document_structure = [heading.model_dump() for heading in headings]
         time.sleep(2)
-    console.print("  Analyzing document structure: [bold green]Done[/bold green]")
+    console.print("[bold green]✓[/bold green] Analyzing document structure")
 
     # Remove redundant header data and text
-    with console.status("Cleaning header text:", spinner="dots"):
+    with console.status("Cleaning header text", spinner="dots"):
         header = remove_before_string(header, "Most recent unfavourable mention")
         header = re.sub(r"\*", "", header) # Remove asterisks
         header = re.sub(r"_", "", header) # Remove underscores
         header = re.sub(r"\s+", " ", header) # Remove extra whitespace
         time.sleep(2)
-    console.print("  Cleaning header text: [bold green]Done[/bold green]")
+    console.print("[bold green]✓[/bold green] Cleaning header text")
 
-
-    with console.status("Fetching cited/citing cases:", spinner="dots"):
+    # Runs the CanLII API to fetch the cited and citing cases
+    with console.status("Fetching case references", spinner="dots"):
         cited_cases = get_case_relations(citation, "citedCases")
         citing_cases = get_case_relations(citation, "citingCases")
+        cited_case_items = cited_cases.get("citedCases", [])
+        citing_case_items = citing_cases.get("citingCases", [])
         time.sleep(2)
-    console.print("  Fetching cited/citing cases: [bold green]Done[/bold green]")
-
-    cited_case_items = cited_cases.get("citedCases", [])
-    citing_case_items = citing_cases.get("citingCases", [])
-
+    console.print("[bold green]✓[/bold green] Fetching case references")
     
     report = {
         "citation": citation,
